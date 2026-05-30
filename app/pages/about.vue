@@ -43,11 +43,12 @@ const facts = [
         </p>
       </div>
       <div class="col-span-12 md:col-span-5 md:col-start-8">
-        <!-- Portrait placeholder. Real image lands in Phase 5 (image strategy). -->
-        <div
-          class="aspect-[4/5] border border-brand-hairline bg-brand-surface"
-          role="img"
-          aria-label="Portrait of Jérémy Martin — placeholder, real image lands later."
+        <UiMediaPlaceholder
+          :src="null"
+          alt="Portrait of Jérémy Martin in the workshop at HEIG-VD."
+          aspect="aspect-[4/5]"
+          sizes="(min-width: 768px) 500px, 100vw"
+          eager
         />
         <span
           class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted mt-3 block"

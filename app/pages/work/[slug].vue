@@ -72,11 +72,14 @@ const active = useScrollSpy(sections.map((s) => s.id))
         </NuxtLink>
       </div>
 
-      <!-- Hero image placeholder. Phase 5 swaps in @nuxt/image. -->
-      <div
-        class="w-full aspect-[21/9] md:aspect-[21/8] bg-brand-surface border-y border-brand-hairline"
-        role="img"
-        :aria-label="study.heroAlt"
+      <UiMediaPlaceholder
+        :src="study.hero"
+        :alt="study.heroAlt"
+        aspect="aspect-[21/9] md:aspect-[21/8]"
+        sizes="100vw"
+        full-bleed
+        eager
+        class="w-full"
       />
 
       <div class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 pt-12 md:pt-20 pb-16 md:pb-24">
@@ -326,10 +329,11 @@ const active = useScrollSpy(sections.map((s) => s.id))
             :key="i"
             class="flex flex-col gap-2"
           >
-            <div
-              class="aspect-[4/3] border border-brand-hairline bg-brand-surface"
-              role="img"
-              :aria-label="g.alt"
+            <UiMediaPlaceholder
+              :src="g.src"
+              :alt="g.alt"
+              aspect="aspect-[4/3]"
+              sizes="(min-width: 768px) 33vw, 50vw"
             />
             <figcaption
               class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"

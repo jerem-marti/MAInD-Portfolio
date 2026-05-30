@@ -92,11 +92,11 @@ const hovered = ref<IndexRow | null>(null)
             </h3>
           </div>
           <div class="col-span-12 md:col-span-9 md:col-start-4 mt-2">
-            <!-- Hero image placeholder. Phase 5 swaps in @nuxt/image. -->
-            <div
-              class="aspect-[16/9] border border-brand-hairline bg-brand-surface"
-              role="img"
-              :aria-label="c.alt"
+            <UiMediaPlaceholder
+              :src="c.image"
+              :alt="c.alt"
+              aspect="aspect-[16/9]"
+              sizes="(min-width: 1024px) 900px, (min-width: 768px) 720px, 100vw"
             />
           </div>
           <div class="col-span-12 md:col-span-5 md:col-start-4 flex flex-col gap-4">
@@ -272,7 +272,8 @@ const hovered = ref<IndexRow | null>(null)
         </ul>
       </div>
 
-      <!-- Hover preview rail (lg+ only). Text-only at v1; Phase 5 swaps in real images. -->
+      <!-- Hover preview rail (lg+ only). Shows the row's preview image when uploaded;
+           falls back to the row's metadata text otherwise. -->
       <aside class="hidden lg:block lg:col-span-3" aria-hidden="true">
         <div class="sticky top-32">
           <div
@@ -281,24 +282,38 @@ const hovered = ref<IndexRow | null>(null)
             Preview
           </div>
           <div
-            class="aspect-[3/4] border border-brand-hairline bg-brand-surface overflow-hidden p-4 flex flex-col justify-end"
+            class="aspect-[3/4] border border-brand-hairline bg-brand-surface overflow-hidden"
           >
-            <template v-if="hovered">
-              <span class="text-[14px] leading-tight text-brand-ink max-w-[20ch]">
-                {{ hovered.title }}
-              </span>
-              <span
-                class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted mt-2"
-              >
-                {{ hovered.tags.join(' / ') }}
-              </span>
-            </template>
-            <span
+            <NuxtImg
+              v-if="hovered?.preview"
+              :key="hovered.preview"
+              :src="hovered.preview"
+              :alt="hovered.alt ?? hovered.title"
+              sizes="(min-width: 1024px) 300px, 100vw"
+              loading="lazy"
+              class="w-full h-full object-cover"
+            />
+            <div
               v-else
-              class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"
+              class="w-full h-full p-4 flex flex-col justify-end"
             >
-              Hover a row.
-            </span>
+              <template v-if="hovered">
+                <span class="text-[14px] leading-tight text-brand-ink max-w-[20ch]">
+                  {{ hovered.title }}
+                </span>
+                <span
+                  class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted mt-2"
+                >
+                  {{ hovered.tags.join(' / ') }}
+                </span>
+              </template>
+              <span
+                v-else
+                class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"
+              >
+                Hover a row.
+              </span>
+            </div>
           </div>
           <div
             v-if="hovered"
@@ -323,11 +338,11 @@ const hovered = ref<IndexRow | null>(null)
     <UiSectionHead num="04" label="About" class="mb-12 md:mb-20" />
     <div class="grid grid-cols-12 gap-x-6 gap-y-10">
       <div class="col-span-12 md:col-span-4">
-        <!-- Portrait placeholder. Phase 5 swaps in a real image. -->
-        <div
-          class="aspect-[4/5] border border-brand-hairline bg-brand-surface"
-          role="img"
-          aria-label="Portrait of Jérémy Martin — placeholder."
+        <UiMediaPlaceholder
+          :src="null"
+          alt="Portrait of Jérémy Martin."
+          aspect="aspect-[4/5]"
+          sizes="(min-width: 768px) 400px, 100vw"
         />
       </div>
       <div class="col-span-12 md:col-span-7 md:col-start-6 flex flex-col gap-8">

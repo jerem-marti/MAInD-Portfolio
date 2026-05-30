@@ -55,11 +55,12 @@ defineProps<{
         <path d="m12 5 7 7-7 7" />
       </svg>
     </div>
-    <!-- Image placeholder. Phase 5 swaps in @nuxt/image. -->
-    <div
-      class="aspect-[16/10] border border-brand-hairline bg-brand-surface mb-4"
-      role="img"
-      :aria-label="item.alt"
+    <UiMediaPlaceholder
+      :src="item.image"
+      :alt="item.alt"
+      aspect="aspect-[16/10]"
+      sizes="(min-width: 768px) 50vw, 100vw"
+      class="mb-4"
     />
     <div>
       <h3

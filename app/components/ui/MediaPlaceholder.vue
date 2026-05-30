@@ -14,7 +14,7 @@
  * `public/images/...` and point `src` at it to flip from placeholder to image.
  */
 
-defineProps<{
+const props = defineProps<{
   /** Path under `public/`, e.g. `/images/about/portrait.jpg`. Falsy → placeholder. */
   src?: string | null
   /** Real alt text. Required regardless of placeholder vs image state. */
@@ -25,12 +25,18 @@ defineProps<{
   sizes?: string
   /** Disable lazy loading (e.g. for above-the-fold hero images). */
   eager?: boolean
+  /** Use top/bottom border only (for full-bleed presentations like a case-study hero). */
+  fullBleed?: boolean
 }>()
+
+const borderClass = computed(() =>
+  props.fullBleed ? 'border-y border-brand-hairline' : 'border border-brand-hairline',
+)
 </script>
 
 <template>
   <div
-    :class="['border border-brand-hairline bg-brand-surface overflow-hidden', aspect]"
+    :class="[borderClass, 'bg-brand-surface overflow-hidden', aspect]"
   >
     <NuxtImg
       v-if="src"

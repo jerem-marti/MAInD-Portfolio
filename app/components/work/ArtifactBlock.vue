@@ -17,11 +17,11 @@ const widthClass: Record<typeof props.width, string> = {
 
 <template>
   <figure :class="['flex flex-col gap-3 mt-10 first:mt-0', widthClass[width]]">
-    <!-- Image placeholder. Phase 5 swaps in @nuxt/image. -->
-    <div
-      class="border border-brand-hairline bg-brand-surface aspect-[16/10]"
-      role="img"
-      :aria-label="alt"
+    <UiMediaPlaceholder
+      :src="src"
+      :alt="alt"
+      aspect="aspect-[16/10]"
+      sizes="(min-width: 1280px) 1200px, 100vw"
     />
     <figcaption class="flex flex-col gap-1">
       <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink">
