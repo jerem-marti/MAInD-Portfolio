@@ -61,6 +61,23 @@ export default defineNuxtConfig({
     experimental: { sqliteConnector: 'native' },
   },
 
+  // @nuxt/image — AVIF/WebP with JPG fallback, 1× + 2× densities. Sizes are
+  // requested per-image via the `sizes` attribute on <NuxtImg> calls (see
+  // components/ui/MediaPlaceholder.vue). Static IPX provider runs at build
+  // time, so no runtime image service is needed.
+  image: {
+    format: ['avif', 'webp', 'jpg'],
+    quality: 80,
+    densities: [1, 2],
+    screens: {
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      '2xl': 1536,
+    },
+  },
+
   // PDFs (CVs) are user-supplied static assets dropped into public/, not Nuxt routes.
   // Skip them in link-check so generate doesn't fail before the user uploads them.
   linkChecker: {

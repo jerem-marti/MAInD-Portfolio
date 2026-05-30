@@ -27,6 +27,8 @@ export type IndexRow = {
   year: string
   /** Internal route (e.g. /work/<slug>) or external URL. Omit for non-linked rows. */
   href?: string
+  /** Path under public/images/index/ for the desktop hover preview. Omit until uploaded. */
+  preview?: string
   /** Real alt text for the hover-preview image. Required even before Phase 5 images land. */
   alt?: string
 }
