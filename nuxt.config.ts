@@ -36,11 +36,12 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
 
-  // OG image generation is deferred to the production-readiness phase. Disabling it
-  // avoids nuxt-og-image's renderer-selection prompt, which crashes `nuxt dev` in a
-  // non-interactive shell. To enable later: install a renderer (e.g. `npm i satori`),
-  // then set `enabled: true`.
-  ogImage: { enabled: false },
+  // OG image generation via Satori (installed as a peer dep). Renders one PNG per
+  // page from useHead title + description into .output/public/__og-image__/ at
+  // build time, so the static host serves them with no runtime image service.
+  ogImage: {
+    zeroRuntime: true,
+  },
 
   // Fade page transition (~200ms); fade CSS + reduced-motion guard live in main.css.
   // Page titles are just the context (e.g. "About"); @nuxtjs/seo's seo-utils

@@ -20,6 +20,15 @@ useSchemaOrg([
     },
   }),
 ])
+
+// Auto-generated OG image per page. NuxtSeo template pulls title + description
+// from useHead, so each route gets a unique 1200×600 PNG at build time. Theme
+// keyed to the brand-accent yellow; siteName replaces the default tag.
+defineOgImage('NuxtSeo', {
+  theme: '#f5d547',
+  colorMode: 'light',
+  siteName: 'jeremymartin.ch',
+})
 </script>
 
 <template>
