@@ -3,7 +3,7 @@ title: "Household energy interface"
 summary: "A tangible interface that made domestic energy use legible without requiring an app."
 status: "live"
 heroAlt: "An oak block sitting on a kitchen counter with a column of softly backlit segments along one edge."
-meta:
+brief:
   role: "Bachelor thesis"
   year: "2024 – 2025"
   host: "HEIG-VD"

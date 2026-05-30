@@ -21,7 +21,9 @@ export default defineContentConfig({
         hero: z.string().optional(),
 
         // 5-column meta dl on the hero block: Role / Year / Host / Scope / Shipped.
-        meta: z
+        // Named `brief` rather than `meta` to avoid collision with @nuxt/content's
+        // reserved page-meta field (which auto-binds to <head> meta tags).
+        brief: z
           .object({
             role: z.string(),
             year: z.string(),
