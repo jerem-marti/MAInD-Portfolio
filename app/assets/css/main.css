@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Brand tokens — locked in CLAUDE.md.
+   Names use the --color-brand-* and --font-* shape so Tailwind v4 auto-generates
+   utility classes (bg-brand-bg, text-brand-ink-muted, font-sans, font-mono, …). */
+@theme {
+  --color-brand-bg: #f4f5f7;
+  --color-brand-surface: #ffffff;
+  --color-brand-ink: #0a0a0a;
+  --color-brand-ink-muted: #5b6168;
+  --color-brand-hairline: #d7dae0;
+  --color-brand-accent: #f5d547;
+
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    background: var(--color-brand-bg);
+    color: var(--color-brand-ink);
+  }
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand-accent);
+    outline-offset: 2px;
+  }
+}
+
+/* Locked behaviour: page transitions fade ~200ms, respect reduced-motion. */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 200ms ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: none;
+  }
+}
