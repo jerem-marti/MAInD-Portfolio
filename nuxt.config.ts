@@ -2,7 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: '2026-05-30',
   devtools: { enabled: true },
 
   modules: [
@@ -42,7 +42,11 @@ export default defineNuxtConfig({
   // then set `enabled: true`.
   ogImage: { enabled: false },
 
-  // Fade page transition (~200ms); fade CSS + reduced-motion guard live in main.css
+  // Fade page transition (~200ms); fade CSS + reduced-motion guard live in main.css.
+  // Page titles are just the context (e.g. "About"); @nuxtjs/seo's seo-utils
+  // appends the site name automatically ("About | Jérémy Martin — Interaction
+  // Designer"). The home page sets no title so the suffix renders alone — no
+  // duplication.
   app: {
     pageTransition: { name: 'fade', mode: 'out-in' },
   },
@@ -85,6 +89,12 @@ export default defineNuxtConfig({
       '/jeremy-martin-cv-en.pdf',
       '/jeremy-martin-cv-fr.pdf',
     ],
+  },
+
+  // SSG: sitemap has no dynamic sources, so skip the runtime helper and ship a
+  // smaller server bundle (also silences the build hint from prior phases).
+  sitemap: {
+    zeroRuntime: true,
   },
 
   typescript: {

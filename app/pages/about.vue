@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'About — Jérémy Martin',
+  title: 'About',
   meta: [
     {
       name: 'description',

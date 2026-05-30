@@ -8,7 +8,7 @@ const props = defineProps<{
 const is404 = computed(() => props.error.statusCode === 404)
 
 useHead({
-  title: () => (is404.value ? '404 — Not found' : `Error · Jérémy Martin`),
+  title: () => (is404.value ? '404' : 'Error'),
 })
 
 const ways = [

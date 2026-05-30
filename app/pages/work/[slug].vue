@@ -13,7 +13,7 @@ if (!study.value) {
 }
 
 useHead({
-  title: () => `${study.value!.title} — Jérémy Martin`,
+  title: () => study.value!.title,
   meta: [
     { name: 'description', content: study.value!.summary },
   ],
