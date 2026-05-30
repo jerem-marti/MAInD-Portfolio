@@ -26,6 +26,10 @@ export default defineNuxtConfig({
     preset: 'static',
     prerender: {
       crawlLinks: true,
+      // The home page links to /work/* slugs whose dynamic route lands in
+      // Phase 4b. Skip them in the crawl until then — remove this entry
+      // when /work/[slug] is added.
+      ignore: ['/work/'],
     },
   },
 
@@ -63,10 +67,12 @@ export default defineNuxtConfig({
 
   // PDFs (CVs) are user-supplied static assets dropped into public/, not Nuxt routes.
   // Skip them in link-check so generate doesn't fail before the user uploads them.
+  // /work/** is excluded until Phase 4b ships the case-study dynamic route.
   linkChecker: {
     excludeLinks: [
       '/jeremy-martin-cv-en.pdf',
       '/jeremy-martin-cv-fr.pdf',
+      '/work/**',
     ],
   },
 
