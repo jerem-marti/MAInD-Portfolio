@@ -61,6 +61,15 @@ export default defineNuxtConfig({
     experimental: { sqliteConnector: 'native' },
   },
 
+  // PDFs (CVs) are user-supplied static assets dropped into public/, not Nuxt routes.
+  // Skip them in link-check so generate doesn't fail before the user uploads them.
+  linkChecker: {
+    excludeLinks: [
+      '/jeremy-martin-cv-en.pdf',
+      '/jeremy-martin-cv-fr.pdf',
+    ],
+  },
+
   typescript: {
     strict: true,
   },
