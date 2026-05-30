@@ -49,3 +49,11 @@
     transition: none;
   }
 }
+
+/* Smooth-scroll on hash-link clicks (case-study TOC). Disabled for users who
+   prefer reduced motion — they get instant jumps instead. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

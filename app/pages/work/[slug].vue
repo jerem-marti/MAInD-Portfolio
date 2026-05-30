@@ -20,10 +20,29 @@ useHead({
 })
 
 const isLive = computed(() => study.value?.status === 'live')
+
+const sections = [
+  { id: 'problem', num: '01', label: 'Problem' },
+  { id: 'role', num: '02', label: 'Role' },
+  { id: 'approach', num: '03', label: 'Approach' },
+  { id: 'outcome', num: '04', label: 'Outcome' },
+  { id: 'reflection', num: '05', label: 'Reflection' },
+  { id: 'artifacts', num: '06', label: 'Artifacts' },
+  { id: 'next', num: '07', label: 'More work' },
+] as const
+
+const active = useScrollSpy(sections.map((s) => s.id))
 </script>
 
 <template>
   <article v-if="study">
+    <!-- Scroll progress + TOC (live case studies only) -->
+    <template v-if="isLive">
+      <WorkScrollProgress />
+      <WorkMobileTOC :sections="sections" :active="active" />
+      <WorkDesktopTOC :sections="sections" :active="active" />
+    </template>
+
     <!-- Hero -->
     <section class="pt-8 md:pt-12">
       <div
