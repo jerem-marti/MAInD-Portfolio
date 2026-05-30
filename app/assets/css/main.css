@@ -43,17 +43,26 @@
   opacity: 0;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: none;
-  }
-}
-
 /* Smooth-scroll on hash-link clicks (case-study TOC). Disabled for users who
    prefer reduced motion — they get instant jumps instead. */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
+  }
+}
+
+/* Global reduced-motion guard. Flattens every animation and transition to a
+   near-instant tick (1ms) so future-added motion doesn't accidentally skip the
+   guard; also disables the case-study scroll-spy smooth scroll. WCAG 2.3.3.
+   The 1ms (vs 0) keeps :hover / .v-enter-from listeners firing for callers
+   that depend on transitionend events. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
   }
 }
