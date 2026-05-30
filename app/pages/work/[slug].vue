@@ -19,6 +19,15 @@ useHead({
   ],
 })
 
+useSchemaOrg([
+  defineArticle({
+    '@type': 'Article',
+    headline: () => study.value!.title,
+    description: () => study.value!.summary,
+    author: { '@id': '#/schema/person' },
+  }),
+])
+
 const isLive = computed(() => study.value?.status === 'live')
 
 const sections = [

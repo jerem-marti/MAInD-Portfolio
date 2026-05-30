@@ -1,3 +1,27 @@
+<script setup lang="ts">
+// Site-wide schema.org graph — every page picks this up via the default layout
+// (error.vue wraps in <NuxtLayout> too, so it gets the same).
+useSchemaOrg([
+  defineWebSite({
+    name: 'Jérémy Martin — Interaction Designer',
+    url: 'https://jeremymartin.ch',
+    inLanguage: 'en',
+  }),
+  definePerson({
+    name: 'Jérémy Martin',
+    jobTitle: 'Interaction Designer',
+    email: 'mailto:hi@jeremymartin.ch',
+    url: 'https://jeremymartin.ch',
+    sameAs: ['https://www.linkedin.com/in/jermarti'],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Mendrisio',
+      addressCountry: 'CH',
+    },
+  }),
+])
+</script>
+
 <template>
   <div class="min-h-dvh flex flex-col">
     <a

@@ -10,6 +10,8 @@ useHead({
   ],
 })
 
+useSchemaOrg([defineWebPage({ '@type': 'AboutPage' })])
+
 const facts = [
   { key: 'Currently', value: 'Master in Interaction Design, SUPSI Mendrisio · graduating 2027' },
   {

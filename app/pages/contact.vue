@@ -9,6 +9,8 @@ useHead({
     },
   ],
 })
+
+useSchemaOrg([defineWebPage({ '@type': 'ContactPage' })])
 </script>
 
 <template>
