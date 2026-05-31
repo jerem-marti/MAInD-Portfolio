@@ -17,12 +17,12 @@ const facts = [
   {
     key: 'Previously',
     value:
-      'BSc Media Engineering, HEIG-VD · one semester Microengineering, EPFL · CFC Electronics',
+      'BSc Media Engineering, HEIG-VD · one semester Microengineering, EPFL · CMS preparatory bridge year, EPFL · CFC Electronics, HEIA-FR',
   },
-  { key: 'Languages', value: 'French (native) · English (B2) · Italian (working)' },
+  { key: 'Languages', value: 'French (native) · English (B2)' },
   { key: 'Based', value: 'Mendrisio, Switzerland' },
   { key: 'Available', value: 'From August 2026' },
-  { key: 'Other', value: 'Festival president (30-person committee, 1,000 attendees)' },
+  { key: 'Festival', value: "Baleinev: programmer (2023), head of comms (2024), president (2025). Committee ~25, ~1'000 attendees." },
 ] as const
 </script>
 
@@ -40,8 +40,8 @@ const facts = [
           class="text-[28px] md:text-[44px] leading-[1.15] tracking-[-0.02em] text-brand-ink max-w-[22ch] font-medium"
         >
           I'm Jérémy Martin, an interaction design master's student at SUPSI in Mendrisio. I came to
-          design through electronics and media engineering, and I write about evaluating AI-driven
-          products.
+          design through electronics and media engineering, and I focus on agentic experiences
+          (AX): designing them around user intent, and using AI honestly inside the design process.
         </p>
       </div>
       <div class="col-span-12 md:col-span-5 md:col-start-8">
@@ -63,48 +63,45 @@ const facts = [
 
   <!-- Story -->
   <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28">
-    <UiSectionHead num="01" label="The Maker-Engineer story" class="mb-10 md:mb-16" />
+    <UiSectionHead num="01" label="How I got here" class="mb-10 md:mb-16" />
     <div class="grid grid-cols-12 gap-x-6">
       <div class="col-span-12 md:col-span-8 md:col-start-3 flex flex-col gap-6">
         <p
           class="text-[22px] md:text-[26px] leading-[1.4] tracking-[-0.005em] text-brand-ink max-w-[58ch]"
         >
-          I work at the intersection of research, evaluation, and interface design, with a
-          particular focus on how AI-driven products actually behave for the people using them.
-          Generation became cheap;
+          My work sits at the intersection of research, design, and evaluation, especially in
+          agentic experiences. Generation became cheap;
           <em class="not-italic [box-shadow:inset_0_-0.35em_0_var(--color-brand-accent)]">
             knowing whether what you generated is any good
           </em>
-          did not.
+          did not. The prompt itself isn't free either: it deserves the same grounding as any
+          other design decision.
         </p>
         <p class="text-[17px] md:text-[18px] leading-[1.6] text-brand-ink max-w-[64ch]">
-          I'm finishing a master's in Interaction Design at SUPSI in Mendrisio. The programme's
-          strength, for me, is its insistence on building things and then evaluating them honestly,
-          not as a final defence, but as the everyday method. I arrived expecting design school; I
-          found an evaluation school in disguise, and that framing has shaped how I think about
-          every project since.
+          I'm finishing a master of arts in Interaction Design at SUPSI in Mendrisio. It's a
+          practice-driven programme: each course is a real project, taught by people working in
+          their field. It has expanded the way I think and given me two areas I now build around:
+          physical prototyping, and designing for agentic experiences.
         </p>
         <p class="text-[17px] md:text-[18px] leading-[1.6] text-brand-ink max-w-[64ch]">
-          Before SUPSI I completed a BSc in Media Engineering at HEIG-VD, where I learned the craft
-          skills that still do most of the work: signal processing, front-end engineering, UX
-          research methods, and the rigour of a final-year thesis. I spent one semester at EPFL in
-          Microengineering. I left because the fit was wrong for what I was trying to become;
-          staying would have been more comfortable than honest, and I prefer the latter.
+          Before SUPSI I completed a BSc in Media Engineering at HEIG-VD. The curriculum gave me
+          a 360° view on digital projects and the craft skills I still rely on: UX/UI design,
+          front-end and back-end web development, digital marketing, and project management.
+          Before HEIG-VD I spent one semester at EPFL in Microengineering. I left because the
+          fit was wrong for what I was trying to become; staying would have been more comfortable
+          than honest, and I prefer the latter. I reached that EPFL semester via CMS, EPFL's
+          demanding bridge year for students with a maturité professionnelle rather than the
+          gymnasiale that EPFL normally requires.
         </p>
         <p class="text-[17px] md:text-[18px] leading-[1.6] text-brand-ink max-w-[64ch]">
-          Underneath all of this is a four-year electronics apprenticeship (CFC) that I rarely
-          mention up front and quietly rely on every day. It taught me that systems have
-          substrates, that something always has to actually carry the signal, and that the
-          difference between a clever idea and a working thing is mostly measurement. That
-          apprenticeship is the reason I find software interfaces interesting and the reason I
-          don't entirely trust them.
+          Underneath all of this is a four-year electronics apprenticeship (CFC) at HEIA-FR that
+          I rarely mention up front and quietly rely on every day.
         </p>
         <p class="text-[17px] md:text-[18px] leading-[1.6] text-brand-ink max-w-[64ch]">
-          What I'm building toward is a practice that sits one step before the screen. Design that
-          takes the substrate seriously, that treats evaluation as the work rather than a quality
-          gate at the end, and that earns its aesthetic decisions instead of decorating around
-          them. Most of the writing on this site is me thinking out loud about what that practice
-          looks like in product contexts.
+          What I'm building toward is a design practice that takes AI as material, not as
+          marketing: agentic experiences shaped around user intent, prompts grounded with the
+          same discipline as any other design decision, and aesthetics earned rather than applied
+          at the end. The projects on this portfolio website are how I've been putting it into practice.
         </p>
       </div>
     </div>
@@ -122,25 +119,26 @@ const facts = [
           <p
             class="text-[20px] md:text-[24px] leading-[1.4] tracking-[-0.005em] text-brand-ink max-w-[60ch]"
           >
-            I designed a tangible household energy interface as my final-year thesis at HEIG-VD.
-            <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">
-              A working prototype is still in use at the host institution
-            </span>
-            after the study closed, and the calibration routine has been picked up by another
-            student project. It's the artifact I would point to if you only had one minute to look
-            at my work.
+            For my Bachelor thesis at HEIG-VD I designed
+            <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">DataBloom</span>,
+            a tangible interface that makes the energy impact of digital usage perceptible at home.
+            A flower whose stem wilts as the household's weekly data consumption grows, and whose
+            centre lights up to signal the live data rate. Built at the Media Engineering Institute
+            on simulated data from CarbonViz Home, and published on the MEI research blog. It's the
+            piece I would point to if you only had one minute to look at my work.
           </p>
         </div>
         <div class="flex flex-col gap-4">
           <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-            Festival · 2022 — 2024
+            Festival · 2023 — 2025
           </span>
           <p class="text-[17px] md:text-[18px] leading-[1.65] text-brand-ink max-w-[64ch]">
-            Three years involved with a music festival of around 1,000 attendees, one of them as
-            president of a roughly 30-person organising committee. It taught me, with no
-            ambiguity, that the hard part of design is not the design; it is the schedule, the
-            budget, the volunteers who didn't show up, and the very small decisions that compound.
-            I list it on this page because it shaped my practice more than any class.
+            Three years on the organising committee of Baleinev, a student-run music festival of
+            around 1'000 attendees: programmer in 2023, head of communications in 2024, then
+            president in 2025 (committee of about 25). The head-of-comms year put the digital
+            marketing and brand strategy from my BSc into a much bigger test, and the presidency
+            made the project management and budgeting training meet the real schedule, the
+            volunteers who didn't show up, and the very small decisions that compound.
           </p>
         </div>
       </div>
@@ -153,12 +151,11 @@ const facts = [
     <div class="grid grid-cols-12 gap-x-6">
       <div class="col-span-12 md:col-span-8 md:col-start-3">
         <p class="text-[18px] md:text-[20px] leading-[1.6] text-brand-ink max-w-[60ch]">
-          Right now: how product teams should evaluate AI-driven features before they become
-          promises. The substrate beneath a screen (what hardware, what data path, what the object
-          actually is) and how that substrate quietly determines the interface. Evidence before
-          aesthetics, and substance over surface as a working discipline rather than a slogan.
-          None of these are positions I've concluded; they're the live questions I'm carrying into
-          the next year of work.
+          Right now: how to keep designing for the user when the technological possibilities
+          won't stop changing. Agentic AI doesn't change the discipline, but it makes it tempting
+          to start with the tool instead of the user's intent. So my current question is the
+          inverse: how do we anchor design around intent first, and only then bring the agent in?
+          None of these are positions I've concluded; they are live questions in my current work.
         </p>
       </div>
     </div>

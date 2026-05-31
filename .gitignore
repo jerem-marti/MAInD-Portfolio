@@ -24,6 +24,12 @@ Thumbs.db
 .claude
 *.local
 
+# Local working docs (specs, drafts) — not for the public repo
+docs/superpowers/
+
+# Project memory — kept local, not shared
+CLAUDE.md
+
 # Local env files
 .env
 .env.*
