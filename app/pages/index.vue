@@ -7,7 +7,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Interaction designer evaluating how AI-driven products work for the people using them. Master at SUPSI, available from August 2026.',
+        'Interaction designer working on agentic experiences (AX), designed around user intent. Master at SUPSI Mendrisio, available from August 2026.',
     },
   ],
 })
@@ -20,6 +20,11 @@ const hovered = ref<IndexRow | null>(null)
   <section
     class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 pt-16 md:pt-32 pb-20 md:pb-32"
   >
+    <span
+      class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted mb-6 md:mb-10 block"
+    >
+      00 / Portfolio · Jérémy Martin · 2026
+    </span>
     <h1
       class="text-[15vw] md:text-[clamp(72px,9.2vw,160px)] leading-[0.92] tracking-[-0.035em] font-medium text-brand-ink"
     >
@@ -28,8 +33,8 @@ const hovered = ref<IndexRow | null>(null)
     <p
       class="mt-10 md:mt-16 text-[18px] md:text-[22px] leading-[1.45] max-w-[58ch] text-brand-ink"
     >
-      Interaction designer evaluating how AI-driven products work for the people using them.
-      Master's at SUPSI, available from August 2026.
+      Interaction designer working on agentic experiences (AX), designed around user intent.
+      Master's at SUPSI Mendrisio, available from August 2026.
     </p>
   </section>
 
@@ -48,12 +53,10 @@ const hovered = ref<IndexRow | null>(null)
         >
           AI made design generation cheap.
           <em class="not-italic [box-shadow:inset_0_-0.35em_0_var(--color-brand-accent)]">
-            Evaluation is now the scarce skill
-          </em>:
-          knowing whether a generated interface actually works for the people who have to use it.
-          I bring a media engineering background, four years of electronics training, and a
-          research-led process to that question. My work pairs hands-on prototyping with rigorous
-          evaluation.
+            What changed is the tool, not the discipline
+          </em>.
+          My focus is agentic experiences (AX): designed around user intent, prompts grounded as
+          design decisions, outputs evaluated against the people who use them.
         </p>
       </div>
     </div>
@@ -354,16 +357,14 @@ const hovered = ref<IndexRow | null>(null)
         <p
           class="text-[20px] md:text-[24px] leading-[1.4] text-brand-ink max-w-[42ch] tracking-[-0.005em]"
         >
-          Jérémy Martin trained in electronics before moving to media engineering at HEIG-VD and
-          a master's at SUPSI. He works at the intersection of research, evaluation, and interface
-          design, with a particular interest in how AI features actually behave in product
-          contexts.
+          Jérémy's current focus is agentic experiences (AX), designed around user intent. His
+          practice spans hardware prototyping, front-end build, UX research, and service design.
         </p>
         <NuxtLink
           to="/about"
           class="inline-flex items-center gap-2 text-[15px] self-start pb-[2px] border-b border-brand-ink hover:[box-shadow:inset_0_-0.4em_0_var(--color-brand-accent)]"
         >
-          About
+          More about Jérémy
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -392,7 +393,7 @@ const hovered = ref<IndexRow | null>(null)
         <p
           class="text-[32px] md:text-[56px] leading-[1.05] tracking-[-0.025em] font-medium text-brand-ink max-w-[16ch]"
         >
-          Available for internship from
+          Available for internships from
           <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">
             August 2026
           </span>.

@@ -16,35 +16,35 @@ export type FeaturedCase = {
 export const featured: readonly FeaturedCase[] = [
   {
     num: 'F·01',
-    slug: 'household-energy-interface',
-    title: 'Household energy interface',
+    slug: 'databloom',
+    title: 'DataBloom',
     problem:
-      'Domestic energy use is invisible until the bill arrives, and another app is the wrong place to put it.',
+      'Domestic digital usage carries a large invisible energy cost. Another app is the wrong place to put it.',
     outcome:
-      'A tangible, ambient interface now in continued use at the host institution after a six-week field trial.',
-    meta: 'Tangible interface / Field study / 2025',
-    alt: 'An oak block sitting on a kitchen counter with a column of softly backlit segments along one edge.',
+      "A tangible flower whose stem wilts with the household's weekly digital footprint. Validated in user testing and published by the MEI research lab.",
+    meta: 'Tangible interface / Bachelor thesis / 2025',
+    alt: "DataBloom prototype: an artificial flower with a green stem and ultramarine petals in a terracotta pot, on a kitchen counter, an LED at the flower's centre.",
   },
   {
     num: 'F·02',
-    slug: 'ai-evaluation-framework',
-    title: 'Evaluation framework for AI features',
+    slug: 'wematch',
+    title: 'WeMatch',
     problem:
-      'Product teams shipped AI features without a shared way to tell if they actually helped users complete real tasks.',
+      "Group travel works when the group fits. Booking strangers by trip and date doesn't predict that.",
     outcome:
-      'A repeatable evaluation method, piloted on a Swiss product team and adopted across two subsequent releases.',
-    meta: 'Method / AI evaluation / 2025',
-    alt: 'A printed evaluation rubric annotated by hand with yellow tape marking the disagreement rows.',
+      'An AX matching service for the WeRoad world, shown through behavior rather than labeled as AI. Delivered as an end-to-end design presentation, a testable agent, and a one-page editorial story.',
+    meta: 'AX design / Service narrative / 2026',
+    alt: 'WeMatch one-pager: an editorial web layout with a Sofia character mark above a large opening quote, restrained typography, generous white space.',
   },
   {
     num: 'F·03',
-    slug: 'primary-sources-reader',
-    title: 'Reading interface for primary sources',
+    slug: 'elen',
+    title: 'ELEN',
     problem:
-      'Researchers lost context every time they jumped from a source citation back to the surrounding argument.',
+      "What if a camera could photograph the wireless infrastructure we live inside? Wi-Fi and Bluetooth signals fill rooms with presences we can't perceive.",
     outcome:
-      "A linked-margin reading interface used by two research groups and a peer-reviewed publication's online edition.",
-    meta: 'Editorial / Research tool / 2024',
-    alt: 'A two-column reading layout with marginalia connected to inline citations by hairline lines.',
+      "A handheld camera that turns detected Wi-Fi and Bluetooth signals into spectral entities drifting through a live fluid simulation. Designed for Marco De Mutiis's Shadow Creatures brief at Fotomuseum Winterthur, then selected for Milan Design Week.",
+    meta: 'Speculative design / Exhibition piece / 2026',
+    alt: 'ELEN device: a handheld camera with orange accents and plexiglass panels, screen showing live video overlaid with spectral fluid entities.',
   },
 ] as const
