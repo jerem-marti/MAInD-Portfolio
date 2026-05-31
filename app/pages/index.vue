@@ -13,6 +13,8 @@ useHead({
 })
 
 const hovered = ref<IndexRow | null>(null)
+
+const isExternal = (href?: string) => /^https?:\/\//.test(href ?? '')
 </script>
 
 <template>
@@ -165,7 +167,7 @@ const hovered = ref<IndexRow | null>(null)
         <span
           class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted text-right max-w-[28ch]"
         >
-          Eight entries. Some link to case studies, some don't. Both are honest.
+          Ten projects from Master and Bachelor work: case studies and live repositories.
         </span>
       </div>
     </div>
@@ -197,6 +199,8 @@ const hovered = ref<IndexRow | null>(null)
             <component
               :is="r.href ? 'a' : 'div'"
               :href="r.href"
+              :target="isExternal(r.href) ? '_blank' : undefined"
+              :rel="isExternal(r.href) ? 'noopener' : undefined"
               :class="[
                 'group block py-5 md:py-4 border-b border-brand-hairline transition-colors',
                 r.href ? 'hover:bg-brand-accent/15' : 'cursor-default',
@@ -228,9 +232,9 @@ const hovered = ref<IndexRow | null>(null)
                   {{ r.year }}
                 </div>
                 <div class="hidden md:flex md:col-span-1 justify-end">
-                  <!-- Lucide ArrowUpRight when linked, mono dash when not -->
+                  <!-- Lucide ArrowUpRight for external (leaves site), ArrowRight for internal /work/[slug] (stays), dash for no link -->
                   <svg
-                    v-if="r.href"
+                    v-if="r.href && isExternal(r.href)"
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="18"
@@ -245,6 +249,23 @@ const hovered = ref<IndexRow | null>(null)
                   >
                     <path d="M7 7h10v10" />
                     <path d="M7 17 17 7" />
+                  </svg>
+                  <svg
+                    v-else-if="r.href"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-brand-ink-muted group-hover:text-brand-ink transition-transform group-hover:translate-x-0.5"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
                   </svg>
                   <span
                     v-else
