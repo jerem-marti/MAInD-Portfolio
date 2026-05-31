@@ -39,9 +39,10 @@ const facts = [
         <p
           class="text-[28px] md:text-[44px] leading-[1.15] tracking-[-0.02em] text-brand-ink max-w-[22ch] font-medium"
         >
-          I'm Jérémy Martin, an interaction design master's student at SUPSI in Mendrisio. I came to
-          design through electronics and media engineering, and I focus on agentic experiences
-          (AX): designing them around user intent, and using AI honestly inside the design process.
+          I focus on
+          <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">agentic experiences (AX)</span>,
+          designed around user intent. I'm Jérémy Martin, an interaction design master's student
+          at SUPSI in Mendrisio, with a background in electronics and media engineering.
         </p>
       </div>
       <div class="col-span-12 md:col-span-5 md:col-start-8">
@@ -69,8 +70,8 @@ const facts = [
         <p
           class="text-[22px] md:text-[26px] leading-[1.4] tracking-[-0.005em] text-brand-ink max-w-[58ch]"
         >
-          My work sits at the intersection of research, design, and evaluation, especially in
-          agentic experiences. Generation became cheap;
+          I work on agentic experiences, where the hard part isn't generation. Generation became
+          cheap;
           <em class="not-italic [box-shadow:inset_0_-0.35em_0_var(--color-brand-accent)]">
             knowing whether what you generated is any good
           </em>
@@ -85,23 +86,26 @@ const facts = [
         </p>
         <p class="text-[17px] md:text-[18px] leading-[1.6] text-brand-ink max-w-[64ch]">
           Before SUPSI I completed a BSc in Media Engineering at HEIG-VD. The curriculum gave me
-          a 360° view on digital projects and the craft skills I still rely on: UX/UI design,
-          front-end and back-end web development, digital marketing, and project management.
-          Before HEIG-VD I spent one semester at EPFL in Microengineering. I left because the
-          fit was wrong for what I was trying to become; staying would have been more comfortable
-          than honest, and I prefer the latter. I reached that EPFL semester via CMS, EPFL's
-          demanding bridge year for students with a maturité professionnelle rather than the
-          gymnasiale that EPFL normally requires.
+          a 360° view on digital projects, and the craft skills I still rely on: UX/UI design,
+          front-end and back-end web development, digital marketing, project management.
+        </p>
+        <p class="text-[17px] md:text-[18px] leading-[1.6] text-brand-ink max-w-[64ch]">
+          Before HEIG-VD I spent one semester at EPFL in Microengineering. I left because the fit
+          was wrong for what I was trying to become, and staying would have been more comfortable
+          than honest. I reached that EPFL semester via CMS, EPFL's demanding bridge year for
+          students with a maturité professionnelle rather than the gymnasiale that EPFL normally
+          requires.
         </p>
         <p class="text-[17px] md:text-[18px] leading-[1.6] text-brand-ink max-w-[64ch]">
           Underneath all of this is a four-year electronics apprenticeship (CFC) at HEIA-FR that
           I rarely mention up front and quietly rely on every day.
         </p>
         <p class="text-[17px] md:text-[18px] leading-[1.6] text-brand-ink max-w-[64ch]">
-          What I'm building toward is a design practice that takes AI as material, not as
-          marketing: agentic experiences shaped around user intent, prompts grounded with the
-          same discipline as any other design decision, and aesthetics earned rather than applied
-          at the end. The projects on this portfolio website are how I've been putting it into practice.
+          What I'm building toward is a design practice that takes
+          <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">AI as material, not as marketing</span>.
+          That means agentic experiences shaped around user intent, prompts grounded like any
+          other design decision, and aesthetics earned rather than applied at the end. The
+          projects on this portfolio website are how I've been putting it into practice.
         </p>
       </div>
     </div>
@@ -138,7 +142,8 @@ const facts = [
             president in 2025 (committee of about 25). The head-of-comms year put the digital
             marketing and brand strategy from my BSc into a much bigger test, and the presidency
             made the project management and budgeting training meet the real schedule, the
-            volunteers who didn't show up, and the very small decisions that compound.
+            missing volunteers, and
+            <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">the very small decisions that compound</span>.
           </p>
         </div>
       </div>
@@ -155,7 +160,7 @@ const facts = [
           won't stop changing. Agentic AI doesn't change the discipline, but it makes it tempting
           to start with the tool instead of the user's intent. So my current question is the
           inverse: how do we anchor design around intent first, and only then bring the agent in?
-          None of these are positions I've concluded; they are live questions in my current work.
+          None of these are positions I've concluded. They are live questions in my current work.
         </p>
       </div>
     </div>

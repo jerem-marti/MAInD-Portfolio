@@ -26,6 +26,7 @@ Thumbs.db
 
 # Local working docs (specs, drafts) — not for the public repo
 docs/superpowers/
+docs/superpowers/*
 
 # Project memory — kept local, not shared
 CLAUDE.md
