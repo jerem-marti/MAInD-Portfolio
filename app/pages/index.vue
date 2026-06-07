@@ -167,7 +167,7 @@ const isExternal = (href?: string) => /^https?:\/\//.test(href ?? '')
         <span
           class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted text-right max-w-[28ch]"
         >
-          Ten projects from Master and Bachelor work: case studies and live repositories.
+          Eleven projects from Master and Bachelor work: case studies and live repositories.
         </span>
       </div>
     </div>
