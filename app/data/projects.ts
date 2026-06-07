@@ -77,7 +77,7 @@ export const projects: readonly IndexRow[] = [
   },
   {
     num: '06',
-    title: 'E-banking Family Space',
+    title: 'UBS Family Space',
     tags: ['UX research', 'Interaction design', 'Information architecture'],
     year: '2025',
     href: '/work/family-space',
