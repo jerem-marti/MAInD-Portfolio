@@ -12,6 +12,7 @@ export const indexTags = [
   'Accessibility',
   'Tangible interface',
   'Front-end build',
+  'Back-end build',
   'Brand / Editorial',
   'AI evaluation',
   'Machine learning',
@@ -110,7 +111,7 @@ export const projects: readonly IndexRow[] = [
   {
     num: '10',
     title: 'Cultural Trails Web App',
-    tags: ['Front-end build', 'Interaction design', 'Accessibility'],
+    tags: ['Back-end build', 'Front-end build', 'Information architecture'],
     year: '2024',
     href: '/work/cultural-trails',
     alt: 'Mobile screens for a gamified walking-trails app, showing a map, points of interest with quizzes, audio guide controls.',
