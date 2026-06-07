@@ -119,9 +119,9 @@ export const projects: readonly IndexRow[] = [
   {
     num: '11',
     title: 'BeReal Like Web App',
-    tags: ['Front-end build', 'Prototyping'],
+    tags: ['Back-end build', 'Front-end build', 'Prototyping'],
     year: '2024',
-    href: 'https://github.com/HEIG-COMEM/HEIG-VD_DevMobil_REST',
-    alt: 'Mobile capture screen for a BeReal-like prototype: time-bounded photo capture with the back camera.',
+    href: '/work/bereal',
+    alt: 'Mobile capture screen for a BeReal-like prototype: simultaneous front and back camera capture.',
   },
 ] as const
