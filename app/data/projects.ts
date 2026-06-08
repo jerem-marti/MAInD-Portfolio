@@ -19,6 +19,12 @@ export const indexTags = [
   'Hardware',
   'Sustainability',
   'Business strategy',
+  'Marketing strategy',
+  'Design thinking',
+  'Scrollytelling',
+  'Data visualization',
+  'Small data',
+  'DevOps',
 ] as const
 
 export type IndexTag = (typeof indexTags)[number]
@@ -57,7 +63,7 @@ export const projects: readonly IndexRow[] = [
   {
     num: '03',
     title: 'An Aura of Words',
-    tags: ['Front-end build', 'Information architecture', 'Brand / Editorial'],
+    tags: ['Scrollytelling', 'Data visualization', 'Front-end build', 'Small data'],
     year: '2026',
     href: '/work/an-aura-of-words',
     alt: "Scrollytelling data story: Google Reviews of Lugano's parks encoded into colour-weighted organic 'aura' shapes.",
@@ -73,7 +79,7 @@ export const projects: readonly IndexRow[] = [
   {
     num: '05',
     title: 'UEFA Female Coaches Campaign',
-    tags: ['UX research', 'Interaction design', 'UX writing'],
+    tags: ['Design thinking', 'Brand / Editorial', 'Marketing strategy', 'Scrollytelling'],
     year: '2025',
     href: '/work/uefa-female-coaches',
     alt: 'Landing page mockup for a campaign encouraging women into football coaching, with scrollytelling testimonials.',
@@ -97,7 +103,7 @@ export const projects: readonly IndexRow[] = [
   {
     num: '08',
     title: 'ELEN',
-    tags: ['Prototyping', 'Hardware', 'Front-end build'],
+    tags: ['Prototyping', 'Hardware', 'Front-end build', 'DevOps'],
     year: '2026',
     href: '/work/elen',
     alt: 'ELEN device: a handheld camera with orange accents and plexiglass panels, screen showing live video overlaid with spectral fluid entities.',
@@ -113,7 +119,7 @@ export const projects: readonly IndexRow[] = [
   {
     num: '10',
     title: 'À ta Dispo',
-    tags: ['Business strategy', 'UX research', 'Interaction design'],
+    tags: ['Business strategy', 'UX research', 'Marketing strategy'],
     year: '2025',
     href: '/work/a-ta-dispo',
     alt: 'À ta Dispo concept: a matchmaking app connecting volunteers with associations, NGOs, and events, with recognition badges.',
