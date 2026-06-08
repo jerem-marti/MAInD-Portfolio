@@ -151,12 +151,12 @@ gallery:
     caption: "Flow — making the value of money tangible."
 
 prev:
-  slug: "meeting-pond"
-  title: "Meeting Pond — connected light objects for distant presence"
-  alt: "A 32×32 LED matrix mounted in a frame, displaying ripples spreading across a luminous surface."
+  slug: "wematch"
+  title: "WeMatch — an AX matching service for the WeRoad world"
+  alt: "WeMatch concept: a WeRoad trip card re-ranked by group fit, carrying a compatibility score and a one-line reason."
 
 next:
-  slug: "brushbuddy"
-  title: "BrushBuddy — a monster cube that guides two-minute toothbrushing"
-  alt: "A 15cm cube with a monster face, two googly eyes, and a row of softly lit teeth in the mouth."
+  slug: "databloom"
+  title: "DataBloom — making the energy impact of digital usage visible"
+  alt: "DataBloom prototype: a 30cm artificial flower with green stem and ultramarine petals in a terracotta pot, on a kitchen counter."
 ---

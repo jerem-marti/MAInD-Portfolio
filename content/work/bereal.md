@@ -122,7 +122,7 @@ prev:
   alt: "Cultural Trails: a map-based web app showing a themed walking trail with points of interest, audio guides, and quizzes."
 
 next:
-  slug: "databloom"
-  title: "DataBloom — making the energy impact of digital usage visible"
-  alt: "DataBloom prototype: a 30cm artificial flower with green stem and ultramarine petals in a terracotta pot, on a kitchen counter."
+  slug: "elen"
+  title: "ELEN — a speculative camera for invisible wireless presences"
+  alt: "ELEN device: a handheld camera with orange accents and plexiglass panels, screen showing live video overlaid with spectral fluid entities."
 ---

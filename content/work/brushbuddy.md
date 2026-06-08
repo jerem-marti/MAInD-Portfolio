@@ -120,12 +120,12 @@ gallery:
     caption: "The loop — storyboarded across a session."
 
 prev:
-  slug: "meeting-pond"
-  title: "Meeting Pond — connected light objects for distant presence"
-  alt: "A 32×32 LED matrix mounted in a frame, displaying ripples spreading across a luminous surface."
+  slug: "an-aura-of-words"
+  title: "An Aura of Words — Lugano's parks, told by their reviews"
+  alt: "Lugano's five parks shown on a map, each as a colour-blended organic aura sized by review volume."
 
 next:
-  slug: "databloom"
-  title: "DataBloom — making the energy impact of digital usage visible"
-  alt: "DataBloom prototype: a 30cm artificial flower with green stem and ultramarine petals in a terracotta pot, on a kitchen counter."
+  slug: "uefa-female-coaches"
+  title: "Why Not You? — the UEFA female coaches campaign"
+  alt: "The Why Not You? campaign: bold display typography over a female coach, with the line Lead Your Passion, Shape the Game."
 ---

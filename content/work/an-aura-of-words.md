@@ -155,7 +155,7 @@ prev:
   alt: "Phone mounted next to a kitchen sink, showing a small animated character on the screen during dishwashing."
 
 next:
-  slug: "goldilocks-worlds"
-  title: "Goldilocks Worlds — making exoplanet habitability legible"
-  alt: "Dark, space-like data-story scene: an exoplanet plot with a habitable-zone constraint band and an explanation sidebar."
+  slug: "brushbuddy"
+  title: "BrushBuddy — a monster cube that guides two-minute toothbrushing"
+  alt: "A 15cm cube with a monster face, two googly eyes, and a row of softly lit teeth in the mouth."
 ---

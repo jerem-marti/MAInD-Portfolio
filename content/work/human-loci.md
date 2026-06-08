@@ -153,9 +153,9 @@ gallery:
     caption: "Electronics — RFID and Pico, bench bring-up."
 
 prev:
-  slug: "elen"
-  title: "ELEN — a speculative camera for invisible wireless presences"
-  alt: "ELEN device: a handheld camera with orange accents and plexiglass panels, screen showing live video overlaid with spectral fluid entities."
+  slug: "a-ta-dispo"
+  title: "À ta Dispo — matching event volunteers with organizers"
+  alt: "À ta Dispo: a matchmaking concept connecting festival volunteers with event organizers."
 
 next:
   slug: "wama"

@@ -38,13 +38,13 @@ export const featured: readonly FeaturedCase[] = [
   },
   {
     num: 'F·03',
-    slug: 'elen',
-    title: 'ELEN',
+    slug: 'family-space',
+    title: 'UBS Family Space',
     problem:
-      "What if a camera could photograph the wireless infrastructure we live inside? Wi-Fi and Bluetooth signals fill rooms with presences we can't perceive.",
+      'A bank\'s mobile app is built for one account holder. A parent and child have no shared place to manage money, set limits, and learn together.',
     outcome:
-      "A handheld camera that turns detected Wi-Fi and Bluetooth signals into spectral entities drifting through a live fluid simulation. Designed for Marco De Mutiis's Shadow Creatures brief at Fotomuseum Winterthur, then selected for Milan Design Week.",
-    meta: 'Speculative design / Exhibition piece / 2026',
-    alt: 'ELEN device: a handheld camera with orange accents and plexiglass panels, screen showing live video overlaid with spectral fluid entities.',
+      'A research-led concept: from interviews and personas to end-to-end user flows for a shared family space, prototyped in Figma and presented to the UBS team.',
+    meta: 'UX research / Banking / 2025',
+    alt: "UBS Family Space concept: paired mobile screens, a parent overview with spending limits and goals, and a child's analytics, savings, and lessons.",
   },
 ] as const

@@ -145,12 +145,12 @@ gallery:
     caption: "Packaging — interlocking, fastener-free."
 
 prev:
-  slug: "wematch"
-  title: "WeMatch — an AX matching service for the WeRoad world"
-  alt: "WeMatch concept: a WeRoad trip card re-ranked by group fit, carrying a compatibility score and a one-line reason."
+  slug: "bereal"
+  title: "Re-coding BeReal — a dual-camera capture and image pipeline"
+  alt: "A BeReal-like capture screen: front and back cameras firing simultaneously, the rear photo full-frame with the front-camera selfie inset."
 
 next:
-  slug: "databloom"
-  title: "DataBloom — making the energy impact of digital usage visible"
-  alt: "DataBloom prototype: a 30cm artificial flower with green stem and ultramarine petals in a terracotta pot, on a kitchen counter."
+  slug: "beau-rivage"
+  title: "Beau-Rivage Eco-Redesign — a 95% lighter luxury hotel site"
+  alt: "The redesigned Beau-Rivage Palace site: restrained, elegant, far lighter than the original."
 ---

@@ -199,9 +199,9 @@ gallery:
     caption: "End of a heavy-use day — stem bent forward."
 
 prev:
-  slug: "elen"
-  title: "ELEN — a speculative camera for invisible wireless presences"
-  alt: "ELEN device: a handheld camera with orange accents and plexiglass panels, screen showing live video overlaid with spectral fluid entities."
+  slug: "family-space"
+  title: "UBS Family Space — a family's shared place to manage money"
+  alt: "UBS Family Space concept: paired mobile screens, a parent overview with limits and goals, and a child's analytics and savings."
 
 next:
   slug: "wematch"
