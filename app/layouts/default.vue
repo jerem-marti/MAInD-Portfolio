@@ -3,13 +3,13 @@
 // (error.vue wraps in <NuxtLayout> too, so it gets the same).
 useSchemaOrg([
   defineWebSite({
-    name: 'Jérémy Martin — Interaction Designer',
+    name: 'Jérémy Martin, Interaction and Product Designer',
     url: 'https://jeremymartin.ch',
     inLanguage: 'en',
   }),
   definePerson({
     name: 'Jérémy Martin',
-    jobTitle: 'Interaction Designer',
+    jobTitle: 'Interaction and Product Designer',
     email: 'mailto:hi@jeremymartin.ch',
     url: 'https://jeremymartin.ch',
     sameAs: ['https://www.linkedin.com/in/jermarti'],

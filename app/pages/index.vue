@@ -7,7 +7,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Interaction designer working on agentic experiences (AX), designed around user intent. Master at SUPSI Mendrisio, available from August 2026.',
+        "Interaction and product designer, currently working on agentic experiences (AX) designed around human intent and its consequences. Master's student at SUPSI Mendrisio, available from August 2026.",
     },
   ],
 })
@@ -54,8 +54,9 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
     <p
       class="mt-10 md:mt-16 text-[18px] md:text-[22px] leading-[1.45] max-w-[58ch] text-brand-ink"
     >
-      Interaction designer working on agentic experiences (AX), designed around user intent.
-      Master's at SUPSI Mendrisio, available from August 2026.
+      Interaction and product designer, currently working on agentic experiences (AX) designed
+      around human intent and its consequences. Master's student at SUPSI Mendrisio, available
+      from August 2026.
     </p>
   </section>
 
@@ -72,12 +73,12 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
         <p
           class="text-[22px] md:text-[28px] leading-[1.4] tracking-[-0.005em] max-w-[42ch] text-brand-ink"
         >
-          AI made design generation cheap.
+          AI made design generation cheap. Judging whether it's any good did not.
           <em class="not-italic [box-shadow:inset_0_-0.35em_0_var(--color-brand-accent)]">
             What changed is the tool, not the discipline
           </em>.
-          My focus is agentic experiences (AX): designed around user intent, prompts grounded as
-          design decisions, outputs evaluated against the people who use them.
+          Lately, my work is centred on agentic experiences (AX): designed around human intent,
+          prompts grounded as design decisions, outputs evaluated against the people who use them.
         </p>
       </div>
     </div>

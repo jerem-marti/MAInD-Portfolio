@@ -4,7 +4,7 @@
   >
     <NuxtLink to="/" class="text-[15px] text-brand-ink">Jérémy Martin</NuxtLink>
     <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-      Interaction designer
+      Interaction and product designer
     </span>
   </header>
 </template>

@@ -16,7 +16,7 @@ const navItems = [
       <NuxtLink to="/" class="flex items-baseline gap-3">
         <span class="text-[15px] text-brand-ink">Jérémy Martin</span>
         <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-          Interaction designer
+          Interaction and product designer
         </span>
       </NuxtLink>
       <nav class="flex items-center gap-10" aria-label="Primary">

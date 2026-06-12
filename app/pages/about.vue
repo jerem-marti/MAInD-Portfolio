@@ -39,10 +39,10 @@ const facts = [
         <p
           class="text-[28px] md:text-[44px] leading-[1.15] tracking-[-0.02em] text-brand-ink max-w-[22ch] font-medium"
         >
-          I focus on
-          <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">agentic experiences (AX)</span>,
-          designed around user intent. I'm Jérémy Martin, an interaction design master's student
-          at SUPSI in Mendrisio, with a background in electronics and media engineering.
+          I'm Jérémy Martin, an interaction and product designer currently working on
+          <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">agentic experiences (AX)</span>
+          designed around human intent and its consequences. I'm finishing a Master's in Interaction
+          Design at SUPSI in Mendrisio, with a background in electronics and media engineering.
         </p>
       </div>
       <div class="col-span-12 md:col-span-5 md:col-start-8">
@@ -70,7 +70,7 @@ const facts = [
         <p
           class="text-[22px] md:text-[26px] leading-[1.4] tracking-[-0.005em] text-brand-ink max-w-[58ch]"
         >
-          I work on agentic experiences, where the hard part isn't generation. Generation became
+          Take agentic experiences: the hard part there isn't generation. Generation became
           cheap;
           <em class="not-italic [box-shadow:inset_0_-0.35em_0_var(--color-brand-accent)]">
             knowing whether what you generated is any good
@@ -103,7 +103,7 @@ const facts = [
         <p class="text-[17px] md:text-[18px] leading-[1.6] text-brand-ink max-w-[64ch]">
           What I'm building toward is a design practice that takes
           <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">AI as material, not as marketing</span>.
-          That means agentic experiences shaped around user intent, prompts grounded like any
+          That means experiences shaped around user intent, prompts grounded like any
           other design decision, and aesthetics earned rather than applied at the end. The
           projects on this portfolio website are how I've been putting it into practice.
         </p>
@@ -157,9 +157,9 @@ const facts = [
       <div class="col-span-12 md:col-span-8 md:col-start-3">
         <p class="text-[18px] md:text-[20px] leading-[1.6] text-brand-ink max-w-[60ch]">
           Right now: how to keep designing for the user when the technological possibilities
-          won't stop changing. Agentic AI doesn't change the discipline, but it makes it tempting
+          won't stop changing. AI doesn't change the discipline, but it makes it tempting
           to start with the tool instead of the user's intent. So my current question is the
-          inverse: how do we anchor design around intent first, and only then bring the agent in?
+          inverse: how do we anchor design around intent first, and only then bring AI generation in?
           None of these are positions I've concluded. They are live questions in my current work.
         </p>
       </div>
