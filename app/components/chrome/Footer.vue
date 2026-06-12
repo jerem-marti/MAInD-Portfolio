@@ -21,6 +21,14 @@
         >
           LinkedIn — jermarti
         </a>
+        <a
+          href="https://github.com/jerem-marti"
+          rel="me noopener"
+          target="_blank"
+          class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink hover:text-brand-ink-muted transition-colors"
+        >
+          GitHub — jerem-marti
+        </a>
       </div>
       <div class="col-span-6 md:col-span-4 flex flex-col gap-1">
         <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">

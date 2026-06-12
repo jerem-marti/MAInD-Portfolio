@@ -32,6 +32,21 @@
   }
 }
 
+/* Text selection uses a distinct indigo (#4748F5) with the page background as
+   the text colour. Yellow is the inline-emphasis colour, so selection avoids it
+   to stay unambiguous; indigo also echoes the familiar browser-default blue, so
+   "selected" reads instantly. The indigo/background pairing is ~5.5:1, above AA.
+   Two separate rules on purpose: a combined ::selection, ::-moz-selection list
+   is dropped wholesale by some engines when one half is unrecognised. */
+::selection {
+  background-color: #4748F5;
+  color: var(--color-brand-bg);
+}
+::-moz-selection {
+  background-color: #4748F5;
+  color: var(--color-brand-bg);
+}
+
 /* Locked behaviour: page transitions fade ~200ms, respect reduced-motion. */
 .fade-enter-active,
 .fade-leave-active {
