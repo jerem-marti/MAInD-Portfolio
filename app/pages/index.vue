@@ -15,6 +15,25 @@ useHead({
 const hovered = ref<IndexRow | null>(null)
 
 const isExternal = (href?: string) => /^https?:\/\//.test(href ?? '')
+
+// Mobile preview enrichment for the Index rows. The desktop hover-rail lives at
+// lg+, so this is gated to < lg. The row stays a real <a href> (progressive
+// enhancement): with no JS, or via keyboard / screen-reader activation, it just
+// navigates. On a touch tap, the title toggles the preview open and closed,
+// while a tap on the revealed image or the "Open case study" cue navigates.
+const expanded = ref<string | null>(null)
+const isLargeScreen = useMediaQuery('(min-width: 1024px)')
+
+function onRowActivate(r: IndexRow, e: MouseEvent) {
+  if (isLargeScreen.value || !r.href) return
+  // Keyboard / assistive-tech activation reports detail 0 — let it navigate.
+  if (e.detail === 0) return
+  // A tap inside the open panel (image or "Open" cue) opens the case study.
+  if ((e.target as HTMLElement | null)?.closest('[data-open]')) return
+  // Any other tap toggles the preview open or closed.
+  e.preventDefault()
+  expanded.value = expanded.value === r.num ? null : r.num
+}
 </script>
 
 <template>
@@ -205,6 +224,7 @@ const isExternal = (href?: string) => /^https?:\/\//.test(href ?? '')
                 'group block py-5 md:py-4 border-b border-brand-hairline transition-colors',
                 r.href ? 'hover:bg-brand-accent/15' : 'cursor-default',
               ]"
+              @click="onRowActivate(r, $event)"
               @mouseenter="hovered = r"
               @mouseleave="hovered = null"
               @focusin="hovered = r"
@@ -284,12 +304,71 @@ const isExternal = (href?: string) => /^https?:\/\//.test(href ?? '')
                   >
                     {{ r.tags.join(' / ') }}
                   </span>
-                  <span
-                    class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"
-                  >
-                    {{ r.year }}
+                  <span class="flex items-center gap-2 shrink-0">
+                    <span
+                      class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"
+                    >
+                      {{ r.year }}
+                    </span>
+                    <!-- Chevron signals the row expands to a preview on tap. -->
+                    <svg
+                      v-if="r.href"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      :class="[
+                        'text-brand-ink-muted transition-transform motion-reduce:transition-none',
+                        expanded === r.num ? 'rotate-180' : '',
+                      ]"
+                      aria-hidden="true"
+                    >
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
                   </span>
                 </div>
+                <!-- Mobile preview reveal: first tap expands, second tap opens (< lg only). -->
+                <Transition name="reveal">
+                  <div
+                    v-if="r.href && expanded === r.num"
+                    data-open
+                    class="lg:hidden col-span-12 mt-4"
+                    aria-hidden="true"
+                  >
+                    <UiMediaPlaceholder
+                      :src="r.preview ?? null"
+                      :alt="r.alt ?? r.title"
+                      aspect="aspect-[4/3]"
+                      sizes="100vw"
+                    />
+                    <div
+                      class="mt-3 flex items-center gap-2 font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink"
+                    >
+                      <span>Open case study</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="text-brand-accent"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </Transition>
               </div>
             </component>
           </li>
@@ -470,3 +549,26 @@ const isExternal = (href?: string) => /^https?:\/\//.test(href ?? '')
     </div>
   </section>
 </template>
+
+<style scoped>
+/* Mobile Index preview reveal. Honours prefers-reduced-motion (see below). */
+.reveal-enter-active,
+.reveal-leave-active {
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.reveal-enter-from,
+.reveal-leave-to {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-enter-active,
+  .reveal-leave-active {
+    transition: none;
+  }
+  .reveal-enter-from,
+  .reveal-leave-to {
+    transform: none;
+  }
+}
+</style>
