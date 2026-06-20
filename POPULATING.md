@@ -14,6 +14,7 @@ It assumes the migration is complete (all six phases merged to `main`). If you'r
 | Activate a Featured card on the home page | `app/data/featured.ts` | [Featured cards](#featured-cards-home-section-02) |
 | Write a full case study | `content/work/<slug>.md` (set `status: "live"`) | [Case studies](#case-studies) |
 | Activate an in-progress case study | Same as above — flip `status` + add the blocks | [Case studies](#case-studies) |
+| Add resources (links, video) to a case study | `content/work/<slug>.md` (`resources` block) | [Case studies](#case-studies) |
 | Replace a placeholder with an image | Drop file into `public/images/...`, then set the matching `src` / `hero` / `preview` / `image` field | [Images](#images) |
 | Wire the CV PDFs | Drop into `public/jeremy-martin-cv-*.pdf`, remove from `linkChecker.excludeLinks` in `nuxt.config.ts` | [CVs](#cvs) |
 | Change page titles, descriptions, OG content | Per-page `useHead({ title, meta })` in `app/pages/...` | [SEO](#seo) |
@@ -184,7 +185,48 @@ gallery:
 
 `alt` is required; `caption` is required; `src` is optional. Renders as a 2-col mobile / 3-col `md+` grid with numbered figcaptions (`01 · Unit H-02, in use.`).
 
-##### `prev` / `next` — section 07 (adjacency)
+##### `resources` — section 07
+
+Outbound links and an optional click-to-load video. The section (and its TOC entry) only appear when `resources` has at least one item.
+
+```yaml
+resources:
+  - type: pdf            # pdf | github | demo | web
+    title: "Bachelor thesis paper"
+    url: "/files/<slug>-thesis.pdf"            # external URL, or a path under public/
+  - type: github
+    title: "Firmware, schematics, and printable parts"
+    url: "https://github.com/jerem-marti/<repo>"
+  - type: demo
+    title: "Live web simulation"
+    url: "https://<demo-url>"
+  - type: web
+    title: "Research blog write-up"
+    url: "https://<article-url>"
+  - type: video
+    title: "90-second walkthrough"
+    poster: "/images/work/<slug>/video-poster.jpg"
+    src: "/videos/<slug>/walkthrough.mp4"      # self-hosted…
+    # …OR an external provider instead of src:
+    # provider: youtube   # youtube | vimeo
+    # id: "dQw4w9WgXcQ"
+```
+
+Each item is one of two shapes:
+
+| Shape | Required fields | Notes |
+|---|---|---|
+| Link row | `type` (`pdf` / `github` / `demo` / `web`), `title`, `url` | Always opens in a new tab. `url` is an external URL or a `public/` path. |
+| Video | `type: video`, `title`, `poster`, and **exactly one** source | Source is either `src` (self-hosted file) OR `provider` + `id` (`youtube` / `vimeo`). |
+
+- **Title-only by design.** A row shows the mono type tag + title + an external arrow, nothing else. The type tag carries the context, so keep titles self-explanatory. The five types are a fixed set (`pdf`, `github`, `demo`, `video`, `web`).
+- **The video is a facade.** At rest only the `poster` image loads; the player (a native `<video>` for `src`, or a `youtube-nocookie` / Vimeo-DNT iframe for a provider) is injected only when the visitor clicks play. Nothing third-party loads and no cookies are set until then — this is a privacy + performance decision, keep it that way.
+- **Files**: downloads/PDFs go in `public/files/`, self-hosted videos in `public/videos/<slug>/`, posters in `public/images/work/<slug>/`.
+- The schema rejects a video with neither or both sources, so a wrong shape fails `npm run generate`.
+
+Schema lives in `content.config.ts`; components are `app/components/work/Resources*.vue` with shared types in `app/utils/resources.ts`.
+
+##### `prev` / `next` — section 08 (adjacency)
 
 ```yaml
 prev:
@@ -212,9 +254,10 @@ Open `content/work/<slug>.md` and:
 5. Add an `outcome:` block (1-2 paragraphs with the concrete results).
 6. Add a `reflection:` paragraph.
 7. Add a `gallery:` block (4-9 figcaptions).
-8. Add `prev` / `next` adjacency (pick the two closest neighbours).
-9. Run `npm run dev`, visit `/work/<slug>`, scroll the whole page, click each TOC item, confirm nothing's missing.
-10. Commit on a feature branch (`feat/case-study-<slug>`), merge through `dev` to `main` once you're happy.
+8. (Optional) Add a `resources:` block (links and/or a walkthrough video).
+9. Add `prev` / `next` adjacency (pick the two closest neighbours).
+10. Run `npm run dev`, visit `/work/<slug>`, scroll the whole page, click each TOC item, confirm nothing's missing.
+11. Commit on a feature branch (`feat/case-study-<slug>`), merge through `dev` to `main` once you're happy.
 
 ---
 
@@ -344,6 +387,7 @@ You don't have to use these filenames — they're examples. The actual filenames
 | Artifact figure | 16:10 | 1800 px | `approach[].artifacts[]` |
 | Gallery tile | 4:3 | 1200 px | `gallery[]` |
 | Adjacent card | 16:10 | 1200 px | `prev` / `next` |
+| Video poster | 16:9 | 1600 px | `resources[]` video facade |
 | About / portrait | 4:5 | 1200 px | `/about` hero + home section 04 |
 | Index preview | 3:4 | 900 px | Home section 03 hover rail |
 
