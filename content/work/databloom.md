@@ -2,7 +2,8 @@
 title: "DataBloom"
 summary: "A tangible interface that makes the energy impact of digital usage perceptible at home. The flower's stem wilts as the household's weekly data consumption grows, and a light at the centre signals the live data rate."
 status: "live"
-heroAlt: "DataBloom prototype: a 30cm artificial flower with green stem and ultramarine petals in a terracotta pot, sitting on a kitchen counter. A light glows at the flower's centre."
+hero: "/images/work/databloom/hero.jpg"
+heroAlt: "The finished DataBloom flower in a small terracotta pot — cobalt-blue felt petals, a pale wooden centre, a segmented green stem — on a white studio backdrop, surrounded by the 3D-printed parts and electronics it is built from."
 
 brief:
   role: "Bachelor thesis, solo"
@@ -60,7 +61,8 @@ approach:
         that change with consumption. The third family is the smallest and the most promising,
         because it earns the attention the room already gives the object.
     artifacts:
-      - alt: "Comparative matrix of tangible energy projects plotted on two axes: interaction (passive to active) and representation (symbolic to analytical)."
+      - src: "/images/work/databloom/approach-1-matrix.jpg"
+        alt: "Comparative matrix of tangible energy projects plotted on two axes: interaction (passive to active) and representation (symbolic to analytical)."
         caption: "Comparative matrix — energy interfaces by interaction and representation."
         decision: "Mapped the design space. The calm, intuitive quadrant (passive and symbolic) was nearly empty, and became the target zone."
         width: "wide"
@@ -78,7 +80,8 @@ approach:
         user test decide between them. That turned the first iteration into a comparison instead
         of a commitment, and kept the decision grounded in how people actually read each object.
     artifacts:
-      - alt: "Two early concept renders side by side: a small anthropomorphic character with an animated face, and an artificial daisy in a terracotta pot."
+      - src: "/images/work/databloom/approach-2-concepts.jpg"
+        alt: "Two early concept renders side by side: a small anthropomorphic character with an animated screen face, and an artificial daisy in a terracotta pot."
         caption: "The two concepts — expressive character and wilting flower."
         decision: "Both carried real emotional potential. Choosing between them by intuition felt risky, so the choice was handed to a comparative user test."
         width: "wide"
@@ -99,7 +102,8 @@ approach:
         understood without a word of explanation, where the character needed to be read and
         interpreted first. The flower became the object to build for real.
     artifacts:
-      - alt: "Two low-fidelity 3D-printed prototypes on a bench: the character with slots for printed e-Ink mockups, and the flower with a visible cable through its stem."
+      - src: "/images/work/databloom/approach-3-lowfi.jpg"
+        alt: "Two low-fidelity 3D-printed prototypes side by side: a white character with a screen-face slot, and a white daisy whose segmented stem has a cable run through it to bend the flower."
         caption: "Low-fidelity prototypes — both 3D-printed for the comparative test."
         decision: "The flower's metaphor read instantly; the character had to be decoded. Comparative testing made the choice evidence-based, not personal taste."
         width: "wide"
@@ -126,14 +130,26 @@ approach:
         into screw-joined segments let the cables flex without snapping, and made every part
         replaceable by hand.
     artifacts:
-      - alt: "Two versions of the 3D-printed flower stem: a one-piece version with integrated joints, and the final segmented version joined with M2 screws."
+      - src: "/images/work/databloom/approach-4-stem.jpg"
+        alt: "Two close-ups of the 3D-printed stem: an early one-piece joint held with masking tape, and the final segmented version articulated with small M2 screws."
         caption: "Stem iterations — one-piece (broke) → segmented with screws (final)."
         decision: "Segmented assembly cost more parts and longer build time, and bought cable routing plus field repair. For an object meant to live in a home, durability won."
         width: "half"
-      - alt: "Close-up of the flower head: the light source seated inside the centre, with felt petals around it."
+      - src: "/images/work/databloom/approach-5-flowerhead.jpg"
+        alt: "Close-up of the flower head: cobalt felt petals around the pale wooden centre that houses the light."
         caption: "Flower head — light diffused through felt petals."
         decision: "Diffusing the light through the felt rather than exposing it kept the object calm. A dimming curve was added once it proved too bright at night."
         width: "half"
+      - src: "/images/work/databloom/approach-circuit.jpg"
+        alt: "KiCad electrical schematic of the digital flower: an ESP32 Feather, a 74HCT08 logic buffer on veroboard, an MT3608 boost converter, an MG90S servo, a WS2812B LED, and a Lipo battery."
+        caption: "The circuit — ESP32, servo, boost converter, addressable LED."
+        decision: "Drawing a full schematic before soldering kept the veroboard build honest, and made the electronics reproducible rather than a one-off tangle of wires."
+        width: "wide"
+      - src: "/images/work/databloom/approach-assembly.jpg"
+        alt: "Exploded 3D assembly render of the digital flower: the full body with the ESP32 and veroboard exploded out at the base, with a numbered parts list."
+        caption: "Mechanical assembly — the whole flower, exploded."
+        decision: "Documenting the build as a step-by-step exploded guide meant any part could be reprinted and the whole flower reassembled by hand."
+        width: "wide"
 
   - label: "Evaluation"
     title: "What the flower changed"
@@ -158,8 +174,9 @@ approach:
         télécharger la musique et l'écouter en local." That register of attention, felt rather
         than calculated, is the whole point of the object.
     artifacts:
-      - alt: "A participant at a table during the test, setting a weekly threshold on a laptop while the flower prototype sits beside it."
-        caption: "Second user test — a week of use compressed into ten minutes."
+      - src: "/images/work/databloom/approach-6-usertest.jpg"
+        alt: "The simulation's threshold-setting screen from the second user test, where each participant set a personal weekly digital-consumption limit before the run."
+        caption: "Second user test — setting the weekly threshold, a week compressed into ten minutes."
         decision: "Watching real reactions mattered more than any score. With four participants, the qualitative signal was the honest one to trust."
         width: "wide"
 
@@ -185,18 +202,27 @@ reflection: >-
   job.
 
 gallery:
-  - alt: "DataBloom on a kitchen counter beside a fruit bowl, in afternoon light, stem upright."
-    caption: "In use — kitchen counter, stem upright."
-  - alt: "Detail of the segmented 3D-printed stem with M2 screw joints visible at each articulation."
-    caption: "Stem detail — segmented, screw-joined."
-  - alt: "Close-up of the flower's centre, the light diffused through the felt petals."
-    caption: "Centre light — diffused through felt."
-  - alt: "Workshop bench mid-assembly: the controller board, servo, and the partly-assembled stem laid out."
-    caption: "Workshop — components mid-assembly."
-  - alt: "The web simulation interface used during testing: a daily activity grid and a threshold setting."
+  - src: "/images/work/databloom/gallery-1.jpg"
+    alt: "DataBloom on a wooden wall shelf beside a woven basket, its stem bent partway down, in a home interior."
+    caption: "At home — on a shelf, stem partly bent."
+  - src: "/images/work/databloom/gallery-2.jpg"
+    alt: "DataBloom on a desk beside an open laptop and a small live plant, its stem gently bent."
+    caption: "On a desk — beside the screen time it reflects."
+  - src: "/images/work/databloom/gallery-3.jpg"
+    alt: "Looking down into the flower: cobalt felt petals around a pale wooden centre, the green stem entering the pot."
+    caption: "From above — felt petals and centre."
+  - src: "/images/work/databloom/gallery-4.jpg"
+    alt: "Printed parts from across the project laid out on foam beside a shipping box: the white low-fidelity daisy alongside the final green stem links, servo arm and electronics."
+    caption: "Parts across iterations — the low-fi daisy beside the final printed components."
+  - src: "/images/work/databloom/gallery-5.jpg"
+    alt: "The web simulation interface used in testing: a weekly grid of daily digital activities with a consumption threshold."
     caption: "Simulation interface — used during testing."
-  - alt: "DataBloom on a counter at the end of a simulated heavy-use day, stem bent forward."
-    caption: "End of a heavy-use day — stem bent forward."
+  - src: "/images/work/databloom/gallery-6.jpg"
+    alt: "DataBloom with its stem bent fully forward at the end of a simulated heavy-use week."
+    caption: "End of a heavy-use week — stem bent forward."
+  - src: "/images/work/databloom/gallery-7.jpg"
+    alt: "Hand-drawn ideation sketch of the flower concept: the felt bloom, the segmented stem with its pull-cable and servo, and a small screen interface, annotated in French."
+    caption: "Ideation — the flower, sketched by hand."
 
 prev:
   slug: "family-space"

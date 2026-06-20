@@ -85,7 +85,7 @@ const active = useScrollSpy(sections.map((s) => s.id))
         :src="study.hero"
         :alt="study.heroAlt"
         aspect="aspect-[21/9] md:aspect-[21/8]"
-        sizes="100vw"
+        sizes="sm:100vw md:100vw lg:100vw xl:100vw 2xl:100vw"
         full-bleed
         eager
         class="w-full"
@@ -342,7 +342,7 @@ const active = useScrollSpy(sections.map((s) => s.id))
               :src="g.src"
               :alt="g.alt"
               aspect="aspect-[4/3]"
-              sizes="(min-width: 768px) 33vw, 50vw"
+              sizes="sm:50vw md:33vw lg:33vw xl:33vw 2xl:33vw"
             />
             <figcaption
               class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"

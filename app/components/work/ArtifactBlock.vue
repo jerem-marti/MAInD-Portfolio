@@ -21,7 +21,7 @@ const widthClass: Record<typeof props.width, string> = {
       :src="src"
       :alt="alt"
       aspect="aspect-[16/10]"
-      sizes="(min-width: 1280px) 1200px, 100vw"
+      sizes="sm:100vw md:100vw lg:100vw xl:1200px 2xl:1200px"
     />
     <figcaption class="flex flex-col gap-1">
       <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink">

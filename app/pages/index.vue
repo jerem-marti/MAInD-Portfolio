@@ -121,7 +121,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
               :src="c.image"
               :alt="c.alt"
               aspect="aspect-[16/9]"
-              sizes="(min-width: 1024px) 900px, (min-width: 768px) 720px, 100vw"
+              sizes="sm:100vw md:720px lg:900px xl:900px 2xl:900px"
             />
           </div>
           <div class="col-span-12 md:col-span-5 md:col-start-4 flex flex-col gap-4">
@@ -345,7 +345,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
                       :src="r.preview ?? null"
                       :alt="r.alt ?? r.title"
                       aspect="aspect-[4/3]"
-                      sizes="100vw"
+                      sizes="sm:100vw md:100vw lg:100vw xl:100vw 2xl:100vw"
                     />
                     <div
                       class="mt-3 flex items-center gap-2 font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink"
@@ -393,7 +393,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
               :key="hovered.preview"
               :src="hovered.preview"
               :alt="hovered.alt ?? hovered.title"
-              sizes="(min-width: 1024px) 300px, 100vw"
+              sizes="sm:100vw md:100vw lg:300px xl:300px 2xl:300px"
               loading="lazy"
               class="w-full h-full object-cover"
             />
@@ -446,7 +446,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
           :src="null"
           alt="Portrait of Jérémy Martin."
           aspect="aspect-[4/5]"
-          sizes="(min-width: 768px) 400px, 100vw"
+          sizes="sm:100vw md:400px lg:400px xl:400px 2xl:400px"
         />
       </div>
       <div class="col-span-12 md:col-span-7 md:col-start-6 flex flex-col gap-8">

@@ -50,7 +50,7 @@ const facts = [
           :src="null"
           alt="Portrait of Jérémy Martin in the workshop at HEIG-VD."
           aspect="aspect-[4/5]"
-          sizes="(min-width: 768px) 500px, 100vw"
+          sizes="sm:100vw md:500px lg:500px xl:500px 2xl:500px"
           eager
         />
         <span

@@ -59,7 +59,7 @@ defineProps<{
       :src="item.image"
       :alt="item.alt"
       aspect="aspect-[16/10]"
-      sizes="(min-width: 768px) 50vw, 100vw"
+      sizes="sm:100vw md:50vw lg:50vw xl:50vw 2xl:50vw"
       class="mb-4"
     />
     <div>

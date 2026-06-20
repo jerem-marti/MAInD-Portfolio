@@ -2,7 +2,8 @@
 title: "WeMatch"
 summary: "An AX travel-compatibility companion for the group-travel platform WeRoad. It helps travelers find the right group, not just the right trip: reading how someone travels, building a behavioral profile, scoring each group against it, and explaining every match in plain language."
 status: "live"
-heroAlt: "WeMatch concept: a WeRoad trip card re-ranked by group fit, carrying a compatibility score and a one-line reason, in a restrained editorial layout."
+hero: "/images/work/wematch/hero.jpg"
+heroAlt: "A title slide on a soft white-to-pink gradient: 'WeMatch finds your group before you find your trip' set large in coral and ink, with the round Matchy agent character to the right."
 
 brief:
   role: "Research · AX design · story"
@@ -54,11 +55,6 @@ approach:
         experienced socially. A traveler's profile shifts with context and time, so static
         profiling cannot capture it. And a good match has to feel recognizable, because compatibility
         only convinces when people can see themselves in it.
-    artifacts:
-      - alt: "Research methodology diagram: three columns (secondary research, primary research, Trustpilot analysis) converging on one finding."
-        caption: "Three lenses — literature, eight interviews, 1,660 reviews."
-        decision: "Triangulating three independent sources turned a category intuition into a finding that survived scrutiny in the room."
-        width: "wide"
 
   - label: "Reframe"
     title: "Groups disguised as trips"
@@ -72,6 +68,12 @@ approach:
         price exactly as before. What is added is a compatibility score on every trip, and the
         ability to sort by group fit instead of by date or price. The familiar search stays; one
         new, readable signal changes what it optimises for.
+    artifacts:
+      - src: "/images/work/wematch/approach-reframe.jpg"
+        alt: "A presentation slide titled 'The most decisive variable in a WeRoad trip is the only one left to chance': a checklist of what WeRoad controls (itinerary, accommodations, tour leaders, experiences, pacing) beside a panel reading 'What's left to chance: the group', noting 18% of negative reviews trace back to it."
+        caption: "WeRoad controls everything but the group — the one variable left to chance."
+        decision: "Naming the group as the single unmanaged variable turned a catalogue of destinations into a catalogue of groups, and gave the concept its anchor."
+        width: "wide"
 
   - label: "The agent"
     title: "One companion, six phases"
@@ -87,7 +89,8 @@ approach:
         lived experience and trip feedback. The arc runs from the first session to long after the
         traveler comes home.
     artifacts:
-      - alt: "Six-phase agent diagram: discovering, profiling, curating, explaining, check-in, evolve, each with a one-word role."
+      - src: "/images/work/wematch/approach-2-agent.jpg"
+        alt: "Six-phase agent diagram: discovering, profiling, curating, explaining, check-in, evolve, each with a one-word role."
         caption: "The agent's role — six phases, from first signal to post-trip learning."
         decision: "Designing the agent as a journey, not a feature, kept compatibility a living profile rather than a one-time questionnaire result."
         width: "wide"
@@ -108,7 +111,8 @@ approach:
         younger group." And the profile is visible and editable, so the traveler can see what the
         agent inferred and correct it, which makes the match more accurate the more they engage.
     artifacts:
-      - alt: "The behavioral-DNA model: two inputs (conversation, navigation) feeding an eight-dimension profile, then trip cards ranked by compatibility score."
+      - src: "/images/work/wematch/approach-3-model.jpg"
+        alt: "The behavioral-DNA model: two inputs (conversation, navigation) feeding an eight-dimension profile, then trip cards ranked by compatibility score."
         caption: "From signal to match — two inputs, an eight-dimension profile, ranked group fit."
         decision: "Scoring the group rather than the trip, with a visible reason and an editable profile, made the intelligence legible instead of magical."
         width: "wide"
@@ -145,18 +149,18 @@ reflection: >-
   framing reshaped how I design with AI, and it is the lens I bring to the rest of my work now.
 
 gallery:
-  - alt: "The problem framing: three identical Japan trip cards, same price and dates, captioned 'different twelve people'."
-    caption: "Same trip, different group — the variable left to chance."
-  - alt: "The 58% headline: share of 1,660 Trustpilot reviews mentioning the group or the people."
-    caption: "58% of reviews mention the group, more than destination or hotels."
-  - alt: "Two contrasting Trustpilot reviews, Morocco five-star and China one-star, side by side."
-    caption: "Two voices — same brand, opposite group."
-  - alt: "The Compatibility Seeker archetype with four priorities: atmosphere, experience, social, culture."
-    caption: "The archetype — one traveler, four priorities."
-  - alt: "A re-ranked WeRoad search showing trips ordered by compatibility score rather than date or price."
-    caption: "Search, re-ranked by group fit."
-  - alt: "An editable behavioral-DNA profile, the agent's analysis made visible and adjustable."
-    caption: "The profile — visible, editable, increasingly accurate."
+  - src: "/images/work/wematch/gallery-1.jpg"
+    alt: "The designed product: a WeRoad search re-ranked by group fit, trips carrying green compatibility badges under a 'Best Matches' heading."
+    caption: "The product — search, re-ranked by group fit."
+  - src: "/images/work/wematch/gallery-2.jpg"
+    alt: "The behavioral-DNA radar in a group overview: a traveler's compatibility dimensions plotted against a group's, with a plain-language read of the match."
+    caption: "The model, made real — the behavioral-DNA radar."
+  - src: "/images/work/wematch/gallery-3.jpg"
+    alt: "The live Matchy agent on the WeRoad site, profiling in conversation: it turns a traveler's trip story into a follow-up question with three answer options."
+    caption: "The live agent — profiling through conversation."
+  - src: "/images/work/wematch/gallery-4.jpg"
+    alt: "A scene from the scrollytelling one-pager, 'It reads her': the agent turning Sofia's travel behaviour into a live behavioral-DNA profile, with Sofia reading on her phone beside it."
+    caption: "The story — the scrollytelling one-pager, Sofia at its centre."
 
 prev:
   slug: "databloom"
