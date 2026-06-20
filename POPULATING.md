@@ -29,15 +29,15 @@ It assumes the migration is complete (all six phases merged to `main`). If you'r
 
 Case studies live in `content/work/<slug>.md`, are validated by the Zod schema in `content.config.ts`, and render via `app/pages/work/[slug].vue`. The slug in the filename **must** match the slug in `app/data/featured.ts` and in the `prev` / `next` adjacency blocks.
 
-Three slugs are already on the site:
+The three Featured case studies are live:
 
 | Slug | Status | What to do |
 |---|---|---|
-| `household-energy-interface` | `live` | Edit prose only |
-| `ai-evaluation-framework` | `in-progress` | Fill in blocks, flip status |
-| `primary-sources-reader` | `in-progress` | Fill in blocks, flip status |
+| `databloom` | `live` | Edit prose only |
+| `wematch` | `live` | Edit prose only |
+| `family-space` | `live` | Edit prose only |
 
-To add a fourth case study, also add an entry to `app/data/featured.ts` (or just leave it as an Index-list row in `app/data/projects.ts` if it shouldn't be one of the three Featured cards).
+Beyond the three Featured studies, the Index-linked case studies (`an-aura-of-words`, `elen`, `wama`, `brushbuddy`, `human-loci`, `beau-rivage`, `uefa-female-coaches`, `a-ta-dispo`, `bereal`, `cultural-trails`) also live in `content/work/`. To add another case study, create the markdown file and either add an entry to `app/data/featured.ts` (to make it one of the three Featured cards) or an Index-list row in `app/data/projects.ts`.
 
 ### Frontmatter — every field
 
@@ -230,15 +230,15 @@ Schema lives in `content.config.ts`; components are `app/components/work/Resourc
 
 ```yaml
 prev:
-  slug: "primary-sources-reader"
-  title: "Reading interface for primary sources"
-  alt: "A two-column reading layout with marginalia connected to inline citations by hairline lines."
-  # image: "/images/work/primary-sources-reader/adjacent.jpg"
+  slug: "family-space"
+  title: "UBS Family Space — a family's shared place to manage money"
+  alt: "UBS Family Space concept: paired mobile screens, a parent overview with limits and goals, and a child's analytics and savings."
+  # image: "/images/work/family-space/adjacent.jpg"
 
 next:
-  slug: "ai-evaluation-framework"
-  title: "Evaluation framework for AI features"
-  alt: "A printed evaluation rubric annotated by hand with yellow tape marking the disagreement rows."
+  slug: "wematch"
+  title: "WeMatch — an AX matching service for the WeRoad world"
+  alt: "WeMatch one-pager: an editorial web layout with a Sofia character mark above a large opening quote, restrained typography, generous white space."
 ```
 
 `slug` must match a real `content/work/<slug>.md` file (the link checker will catch you if it doesn't). The two cards render side-by-side in a 16:10 placeholder until `image` is set. Either or both can be omitted (last case study has no `next`, first has no `prev`).
@@ -263,20 +263,20 @@ Open `content/work/<slug>.md` and:
 
 ## Featured cards (home, section 02)
 
-`app/data/featured.ts` defines the three big case-study cards on the home page. Locked to three slots by `CLAUDE.md` (Bachelor thesis / AI evaluation framework / third TBD).
+`app/data/featured.ts` defines the three big case-study cards on the home page. Locked to three slots by `CLAUDE.md` (DataBloom / WeMatch / UBS Family Space).
 
 ```ts
 {
   num: 'F·01',                                // display number, mono
-  slug: 'household-energy-interface',         // must match content/work/<slug>.md
-  title: 'Household energy interface',        // h3 on the card
+  slug: 'databloom',                          // must match content/work/<slug>.md
+  title: 'DataBloom',                         // h3 on the card
   problem:                                    // one-liner under "Problem"
-    'Domestic energy use is invisible until the bill arrives, and another app is the wrong place to put it.',
+    'Domestic digital usage carries a large invisible energy cost. Another app is the wrong place to put it.',
   outcome:                                    // one-liner under "Outcome"
-    'A tangible, ambient interface now in continued use at the host institution after a six-week field trial.',
-  meta: 'Tangible interface / Field study / 2025',
-  alt: 'An oak block sitting on a kitchen counter with a column of softly backlit segments along one edge.',
-  // image: '/images/featured/household-energy-interface.jpg',  // uncomment when uploaded
+    "A tangible flower whose stem wilts with the household's weekly digital footprint. Validated in user testing and published by the MEI research lab.",
+  meta: 'Tangible interface / Bachelor thesis / 2025',
+  alt: "DataBloom prototype: an artificial flower with a green stem and ultramarine petals in a terracotta pot, on a kitchen counter, an LED at the flower's centre.",
+  // image: '/images/featured/databloom.jpg',  // uncomment when uploaded
 }
 ```
 
@@ -293,17 +293,17 @@ To **add** a fourth case study (drops the locked F·01–F·03 constraint — co
 
 ## Index list rows (home, section 03)
 
-`app/data/projects.ts` powers the typed table at the bottom of the home page. Eight rows currently; can grow without limit (the prototype's introductory caption reads "Eight entries" — update that string in `app/pages/index.vue` if you change the count).
+`app/data/projects.ts` powers the typed table at the bottom of the home page. Ten rows currently, in reverse-chronological order; can grow without limit. The Index section header reads "Index — all other work" — there's no hard-coded count to keep in sync.
 
 ```ts
 {
   num: '01',                                  // mono index number
-  title: 'Energy interface prototype',        // row title
-  tags: ['Tangible interface', 'UX research'],// 2-4 tags from the controlled vocabulary
-  year: '2025',                               // string, four digits
-  href: '/work/household-energy-interface',   // optional — omit for non-linked rows
-  preview: '/images/index/01-energy-interface.jpg',  // optional — hover preview
-  alt: 'Oak enclosure prototype on a workbench beside calibration notes.',
+  title: 'An Aura of Words',                  // row title
+  tags: ['Scrollytelling', 'Data visualization', 'Front-end build', 'Small data'], // 2-4 from the vocabulary
+  year: '2026',                               // string, four digits
+  href: '/work/an-aura-of-words',             // optional — omit for non-linked rows
+  // preview: '/images/index/an-aura-of-words.jpg',  // optional — hover preview
+  alt: "Scrollytelling data story: Google Reviews of Lugano's parks encoded into colour-weighted organic 'aura' shapes.",
 }
 ```
 
@@ -319,9 +319,19 @@ Design systems
 Accessibility
 Tangible interface
 Front-end build
+Back-end build
 Brand / Editorial
 AI evaluation
+Machine learning
 Hardware
+Sustainability
+Business strategy
+Marketing strategy
+Design thinking
+Scrollytelling
+Data visualization
+Small data
+DevOps
 ```
 
 TypeScript will catch a typo or any tag not in this list at build time. To add a new tag to the vocabulary, edit the `indexTags` array in `app/data/projects.ts` — but do this sparingly; the vocabulary is part of the brand voice (see CLAUDE.md).
@@ -356,12 +366,12 @@ public/images/
 ├── about/
 │   └── portrait.jpg                                      # 4:5, ≥1200px wide
 ├── featured/
-│   ├── household-energy-interface.jpg                    # 16:9, ≥1600px wide
-│   ├── ai-evaluation-framework.jpg
-│   └── primary-sources-reader.jpg
+│   ├── databloom.jpg                                     # 16:9, ≥1600px wide
+│   ├── wematch.jpg
+│   └── family-space.jpg
 ├── index/
-│   ├── 01-energy-interface.jpg                           # 3:4, ≥900px wide
-│   ├── 02-festival.jpg
+│   ├── an-aura-of-words.jpg                              # 3:4, ≥900px wide
+│   ├── elen.jpg
 │   └── ...                                               # one per linked row in projects.ts
 └── work/
     └── <slug>/                                           # one folder per case study
@@ -470,7 +480,7 @@ Don't touch unless you're moving the domain or rebranding.
 | *(none)* (home) | `Jérémy Martin — Interaction Designer` |
 | `'About'` | `About \| Jérémy Martin — Interaction Designer` |
 | `'Contact'` | `Contact \| Jérémy Martin — Interaction Designer` |
-| `study.title` | `Household energy interface \| Jérémy Martin — Interaction Designer` |
+| `study.title` | `DataBloom \| Jérémy Martin — Interaction Designer` |
 
 **Set just the page context** in `useHead({ title: 'About' })` — don't add the brand suffix manually (causes duplication). The home page sets no title; the site name renders alone.
 
@@ -532,7 +542,7 @@ The ejected component lives at `app/components/OgImage/NuxtSeo.satori.vue`. To m
 
 #### How many OG images are emitted
 
-One per route, into `.output/public/_og/s/`. Currently six (home, about, contact, three case studies). Adding a new case study automatically gets one. Filenames encode the route as base64 (e.g. `…p_Ii9hYm91dCI.png` is the OG image for `/about`).
+One per route, into `.output/public/_og/s/`. Currently 16 (home, about, contact, and 13 case-study pages). Adding a new case study automatically gets one. Filenames encode the route as base64 (e.g. `…p_Ii9hYm91dCI.png` is the OG image for `/about`).
 
 #### Per-page override
 
@@ -666,7 +676,7 @@ npx nuxi typecheck                  # full TypeScript check
 - Compiles every `@nuxt/image` source into AVIF + WebP variants
 - Self-hosts Geist + Geist Mono (`@nuxt/fonts` downloads at build time)
 
-Expected output: **24 routes** with the current setup. Adding a fourth case study brings it to ~26 (case study page + OG image).
+Expected output: **16 HTML pages** (home, about, contact, and 13 case-study pages), plus one OG image per page. Adding a case study adds its page + OG image. (Nitro's prerender log reports a much larger total — 275 in the last run — because it also counts every generated AVIF/WebP image variant, not just pages.)
 
 ### TLS gotcha on this machine
 
