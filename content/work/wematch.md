@@ -162,10 +162,22 @@ gallery:
     alt: "A scene from the scrollytelling one-pager, 'It reads her': the agent turning Sofia's travel behaviour into a live behavioral-DNA profile, with Sofia reading on her phone beside it."
     caption: "The story — the scrollytelling one-pager, Sofia at its centre."
 
+resources:
+  - type: pdf
+    title: "Final presentation"
+    url: "/files/wematch-presentation.pdf"
+  - type: demo
+    title: "Live agent"
+    url: "https://maind-wematch.vercel.app/"
+  - type: web
+    title: "Scrollytelling one-pager"
+    url: "https://jerem-marti.github.io/MAInD-Designing_Intelligent_Experiences-OnePager-2026/"
+
 prev:
   slug: "databloom"
   title: "DataBloom — making the energy impact of digital usage visible"
-  alt: "DataBloom prototype: a 30cm artificial flower with green stem and ultramarine petals in a terracotta pot, on a kitchen counter."
+  image: "/images/work/databloom/adjacent.jpg"
+  alt: "The DataBloom flower: ultramarine felt petals on a green segmented stem in a small terracotta pot, on a white studio backdrop."
 
 next:
   slug: "family-space"

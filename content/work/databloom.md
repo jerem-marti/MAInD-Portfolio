@@ -224,21 +224,19 @@ gallery:
     alt: "Hand-drawn ideation sketch of the flower concept: the felt bloom, the segmented stem with its pull-cable and servo, and a small screen interface, annotated in French."
     caption: "Ideation — the flower, sketched by hand."
 
-# PLACEHOLDER URLs — replace with the real thesis PDF, repo, blog write-up, and video file.
 resources:
   - type: pdf
-    title: "Bachelor thesis paper"
+    title: "Travail de Bachelor"
     url: "/files/databloom-thesis.pdf"
+  - type: pdf
+    title: "Affiche du projet"
+    url: "/files/databloom-poster.pdf"
+  - type: pdf
+    title: "Project poster"
+    url: "/files/databloom-swissviz-poster.pdf"
   - type: web
-    title: "MEI research blog write-up"
-    url: "https://example.com/mei-databloom"
-  - type: github
-    title: "Firmware, KiCad schematics, and printable parts"
-    url: "https://github.com/jerem-marti/databloom"
-  - type: video
-    title: "DataBloom in motion — the stem responding live"
-    poster: "/images/work/databloom/gallery-1.jpg"
-    src: "/videos/databloom/walkthrough.mp4"
+    title: "Article du blog de recherche du MEI"
+    url: "https://blog.comem.ch/2025/10/03/databloom-une-interface-de-visualisation-de-limpact-energetique-du-numerique-dans-un-foyer/"
 
 prev:
   slug: "family-space"
@@ -248,5 +246,6 @@ prev:
 next:
   slug: "wematch"
   title: "WeMatch — an AX matching service for the WeRoad world"
-  alt: "WeMatch one-pager: an editorial web layout with a Sofia character mark above a large opening quote, restrained typography, generous white space."
+  image: "/images/work/wematch/adjacent.jpg"
+  alt: "WeMatch title card: 'WeMatch finds your group before you find your trip' in coral and ink on a soft white-to-pink gradient, with the round Matchy agent character."
 ---

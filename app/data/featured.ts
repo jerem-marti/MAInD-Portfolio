@@ -23,7 +23,8 @@ export const featured: readonly FeaturedCase[] = [
     outcome:
       "A tangible flower whose stem wilts with the household's weekly digital footprint. Validated in user testing and published by the MEI research lab.",
     meta: 'Tangible interface / Bachelor thesis / 2025',
-    alt: "DataBloom prototype: an artificial flower with a green stem and ultramarine petals in a terracotta pot, on a kitchen counter, an LED at the flower's centre.",
+    image: '/images/featured/databloom.jpg',
+    alt: 'The DataBloom flower: ultramarine felt petals on a green segmented stem in a small terracotta pot, standing on a white studio backdrop.',
   },
   {
     num: 'F·02',
@@ -34,7 +35,8 @@ export const featured: readonly FeaturedCase[] = [
     outcome:
       'An AX matching service for the WeRoad world, shown through behavior rather than labeled as AI. Delivered as an end-to-end design presentation, a testable agent, and a one-page editorial story.',
     meta: 'AX design / Service narrative / 2026',
-    alt: 'WeMatch one-pager: an editorial web layout with a Sofia character mark above a large opening quote, restrained typography, generous white space.',
+    image: '/images/featured/wematch.jpg',
+    alt: "WeMatch title card: the line 'WeMatch finds your group before you find your trip' set in coral and ink on a soft white-to-pink gradient, beside the round Matchy agent character.",
   },
   {
     num: 'F·03',
