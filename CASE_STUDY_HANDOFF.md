@@ -60,11 +60,15 @@ If material is missing, ask for it before producing anything. Some studies (NDA,
 3. **Propose the image plan → CONFIRM.** Hero concept; one artifact per approach step (each proving a specific claim); a small gallery showing range. State what each image is and why it earns its place. Wait for OK.
 4. **Produce images.** See the pipeline in §5. Targets: hero 21:8, artifacts 16:10, gallery 4:3 (floors in `POPULATING.md`). Write to `public/images/work/[slug]/`.
 5. **Wire frontmatter.** Set `hero`, `approach[].artifacts[].src`, `gallery[].src`. Write real `alt` (what's in it + what it shows) and `caption`. **Alts/captions in the document's language where the artwork is language-specific.**
-6. **Resources.** PDFs → `public/files/[slug]-*.pdf`, referenced as `/files/...`. External URLs as-is. `type` ∈ `pdf | github | demo | web | video`. **Title each row in the resource's own language.** Drop any stub rows. (Full schema: `POPULATING.md` §resources.)
-7. **Regenerate + verify.** `NODE_OPTIONS=--use-system-ca npm run generate`. Confirm: link-check passes, the page references the new images, srcset is real (not `_ipx/w_1`/`w_2`), files land in `.output/public/images/...` and `.output/public/files/`.
-8. **Present for review.** Show what changed, flag any compromises, wait for sign-off before the next study.
+6. **Derived card images — same pass, from the hero.** Reuse the hero so the card matches the page:
+   - **Featured study** → featured card (16:9) → `public/images/featured/[slug].jpg`, wire `app/data/featured.ts` `image:`; plus an adjacent card (16:10) → `public/images/work/[slug]/adjacent.jpg`, wire the neighbours' `prev.image` / `next.image`.
+   - **Index study** → Index hover preview (3:4) → `public/images/index/[slug].jpg`, wire `app/data/projects.ts` `preview:`; plus an adjacent card (16:10).
+   - **How:** centre-crop a photographic hero; **re-render** a composed (HTML) hero at the target aspect — cropping a wide composition cuts the edges. The 3:4 Index preview rarely crops cleanly from a wide hero; use a portrait-friendly gallery shot if needed. Update each card `alt` to match its derived image.
+7. **Resources.** PDFs → `public/files/[slug]-*.pdf`, referenced as `/files/...`. External URLs as-is. `type` ∈ `pdf | github | demo | web | video`. **Title each row in the resource's own language.** Drop any stub rows. (Full schema: `POPULATING.md` §resources.)
+8. **Regenerate + verify.** `NODE_OPTIONS=--use-system-ca npm run generate`. Confirm: link-check passes, the page references the new images, srcset is real (not `_ipx/w_1`/`w_2`), files land in `.output/public/images/...` and `.output/public/files/`. An OG-image `createImage timeout` is flaky (Satori) — just re-run.
+9. **Present for review.** Show what changed, flag any compromises, wait for sign-off before the next study.
 
-Then update the **tracker** (§7) and the **derived assets** note (§8).
+Then update the **tracker** (§7).
 
 ---
 
@@ -116,6 +120,8 @@ Keep scratch in `scripts/_prev/` and **delete it before committing**.
 - **Mind big PDFs.** The DataBloom thesis is 18.6 MB in-repo; consider hosting very large deliverables externally and linking out.
 - **External resource URLs are link-checked** at `generate`. If a third-party site flakes, add it to `linkChecker.excludeLinks` in `nuxt.config.ts` (don't disable link-check).
 - **TLS on this machine:** prefix network commands with `NODE_OPTIONS=--use-system-ca` (`UNABLE_TO_VERIFY_LEAF_SIGNATURE` otherwise).
+- **Flaky OG-image timeout.** `generate` sometimes dies with `[@nuxtjs/og-image] renderer.createImage timeout` for a random `/work/<slug>` (Satori under load). It's not your change — re-run `generate`. Link-check runs *before* it, so a passing link-check + this timeout means the content is fine.
+- **Derived cards reuse the hero:** centre-crop photographic heroes, re-render composed (HTML) heroes at the target aspect. Keep the composed-hero HTML/assets handy — you'll need them again for cards and OG.
 - **Commits:** no `Co-Authored-By: Claude` trailer; the user works on `main`.
 
 ---
@@ -153,11 +159,8 @@ Legend: ✅ done · 🟡 in progress · ⬜ to do · ⛔ blocked
 
 ---
 
-## 8. Derived assets (do after the studies)
+## 8. Final pass (after the studies)
 
-These reuse case-study imagery, so populate them last:
+Card images (featured / Index preview / adjacent) are now produced **per study** in §3 step 6. The only asset not derived from a study hero:
 
-- **Work / home — Featured card heroes** (16:9) → `app/data/featured.ts` `image:`
-- **Home — Index hover previews** (3:4) → `app/data/projects.ts` `preview:`
-- **Adjacent cards** (prev/next, 16:10) → each study's `prev.image` / `next.image`
-- **About — portrait** (4:5) → `app/pages/about.vue` + `app/pages/index.vue` (`:src`)
+- **About — portrait** (4:5, a real photo of Jérémy) → `app/pages/about.vue` + `app/pages/index.vue` (`:src`). User-provided, wired once.
