@@ -122,6 +122,7 @@ Keep scratch in `scripts/_prev/` and **delete it before committing**.
 - **TLS on this machine:** prefix network commands with `NODE_OPTIONS=--use-system-ca` (`UNABLE_TO_VERIFY_LEAF_SIGNATURE` otherwise).
 - **Flaky OG-image timeout.** `generate` sometimes dies with `[@nuxtjs/og-image] renderer.createImage timeout` for a random `/work/<slug>` (Satori under load). It's not your change — re-run `generate`. Link-check runs *before* it, so a passing link-check + this timeout means the content is fine.
 - **Derived cards reuse the hero:** centre-crop photographic heroes, re-render composed (HTML) heroes at the target aspect. Keep the composed-hero HTML/assets handy — you'll need them again for cards and OG.
+- **Verify "clean" supplied assets before publishing.** A user-supplied `…-NO-LOGO.pdf` still carried the UBS keys watermark on its red divider slides (p8/p17) and an embedded lesson-video frame (p15) — the de-logo pass was incomplete. Always render/scan a supplied file (mupdf contact sheet) before wiring it as a resource. Same for prototype screen-recordings: the logo can hide in one embedded clip (here, a UBS-watermarked coaching video late in the kid walkthrough), so scan the full timeline and trim or blur.
 - **Commits:** no `Co-Authored-By: Claude` trailer; the user works on `main`.
 
 ---
@@ -135,7 +136,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ to do · ⛔ blocked
 |---|---|---|---|
 | `databloom` | ✅ | ✅ | Done |
 | `wematch` | ✅ | ✅ | Done |
-| `family-space` | ⬜ | ⬜ | ⛔ Waiting on FigJam exports (affinity diagram, Sophie/Leo personas, big idea, kebab mechanic). **No UBS logo in any image.** |
+| `family-space` | ✅ | ✅ | **Done.** Images: composed flat paired-phone hero, 4 re-rendered artifacts (research quote, affinity, big-idea pillars, real 03.png activation), 5-item gallery (personas Sophie/Leo, limits, analytics, goal, kebab) — all phones are flat app screens (no device-frame / notch / black bezel). Resources: presentation deck (PDF, user-supplied NO-LOGO export, p15 watermark blurred by the user) + 2 video walkthroughs (parent full; kid trimmed to 0:41 to drop the watermarked lesson clip). |
 
 ### Index-linked (home section 03)
 | Study | Images | Resources | Status |

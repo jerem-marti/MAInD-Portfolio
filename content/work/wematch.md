@@ -182,5 +182,6 @@ prev:
 next:
   slug: "family-space"
   title: "UBS Family Space — a family's shared place to manage money"
-  alt: "UBS Family Space concept: paired mobile screens, a parent overview with limits and goals, and a child's analytics and savings."
+  image: "/images/work/family-space/adjacent.jpg"
+  alt: "UBS Family Space concept: two phone screens on a soft red gradient, a parent's hub for the child's analytics, limits, and goals, and the child's savings-goal screen."
 ---

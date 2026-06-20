@@ -2,7 +2,8 @@
 title: "UBS Family Space"
 summary: "A project briefed by UBS to simplify its mobile app around financial education. The team's response was a shared family space for parents and children. My part was the collaborative user research and the detailed user flows that mapped how it would actually work."
 status: "live"
-heroAlt: "UBS Family Space concept: paired mobile screens, a parent overview with spending limits and goals on one side, a child's personal analytics and savings goals on the other."
+heroAlt: "Two phone screens on a soft red gradient beside the line A shared space for a parent and a child: a parent's hub showing the child's analytics, limits, and goals, and the child's savings-goal screen with progress toward a bicycle."
+hero: "/images/work/family-space/hero.jpg"
 
 brief:
   role: "Research & user flows"
@@ -51,6 +52,12 @@ approach:
         struggle with banking language and a crowded interface, and they value being helped to
         understand money rather than just being shown more products. Pulling those threads into a single
         clustered picture was the bridge into the define work I then led.
+    artifacts:
+      - src: "/images/work/family-space/artifact-research-quote.jpg"
+        alt: "A large pull-quote from a parent interview: a child overspends and runs out of money, gets a small top-up, and has to learn to be careful because money does not grow on trees."
+        caption: "Research — a parent, in an interview."
+        decision: "The interviews kept pointing back to teaching the value of money, not adding another product."
+        width: "wide"
 
   - label: "Direction"
     title: "Making the 'nice to have' the point"
@@ -80,6 +87,12 @@ approach:
         and two sharp problem statements. Sophie needs a simple way to teach everyday banking while
         keeping safe limits, because she does not feel equipped to guide them; Leo needs a clear,
         visual way to see what he can spend and save, because he sees money only as something for fun.
+    artifacts:
+      - src: "/images/work/family-space/artifact-define-affinity.jpg"
+        alt: "An affinity diagram of six clustered research themes: avoiding the conversation, control versus trust, the value of money, starting young by age, spender versus saver, and the lessons parents pass on."
+        caption: "Define — the affinity diagram."
+        decision: "Clustering surfaced the real tension: parents want to help without surveilling."
+        width: "wide"
 
   - label: "Ideate"
     title: "From gaps to a big idea"
@@ -97,6 +110,12 @@ approach:
         pillar came straight from the research: parents told us they did not actually want the fine
         detail of their child's spending, because too much oversight reads as control and erodes trust.
         The line that kept us honest was "less parental-control app, more coaching and support."
+    artifacts:
+      - src: "/images/work/family-space/artifact-ideate-pillars.jpg"
+        alt: "The big idea laid out as three pillars: practice with guardrails, everyday banking as money missions, and a Family Space built for conversation rather than surveillance."
+        caption: "Ideate — the big idea, in three pillars."
+        decision: "Framing it as coaching rather than control set the tone for the whole concept."
+        width: "wide"
 
   - label: "Flows"
     title: "Four flows, end to end"
@@ -115,6 +134,12 @@ approach:
         understand, "twenty francs is about two kebabs", making the value of money tangible rather than
         abstract. The teen gets their own flow because their relationship to money, autonomy, and
         privacy is genuinely different, and the flows are the part of this project I owned end to end.
+    artifacts:
+      - src: "/images/work/family-space/artifact-flows-activation.jpg"
+        alt: "A three-step activation flow shown on phone screens: open the new Family section, select the child, then monitor the child's analytics, limits, and goals."
+        caption: "Flows — activating the Family Space."
+        decision: "Pre-filled recommended limits mean a parent never configures from a blank slate."
+        width: "wide"
 
 outcome:
   - >-
@@ -135,28 +160,44 @@ reflection: >-
   client constraint, for an app as dense as UBS's, made that rigour matter more, not less.
 
 gallery:
-  - alt: "A slide from the everyday-banking survey: how often people use mobile banking and where money causes friction."
-    caption: "Research — the everyday-banking survey."
-  - alt: "The affinity diagram clustering research insights into themes like education goals, the value of money, and parental control versus trust."
-    caption: "Define — the affinity diagram."
-  - alt: "The two personas: Sophie, a 41-year-old working mother, and Leo, a 13-year-old with his first bank card."
+  - src: "/images/work/family-space/gallery-personas.jpg"
+    alt: "Two persona cards side by side: Sophie, 41, a working mother and UBS client, and Leo, 13, with his first bank card, each with a short quote and their main need."
     caption: "Define — personas Sophie and Leo."
-  - alt: "The big idea and its three pillars: practice with guardrails, everyday banking as money missions, and a family space for conversation."
-    caption: "Ideate — the big idea, in three pillars."
-  - alt: "The Family Space activation user flow, with decision points, system steps, and pre-filled recommended limits."
-    caption: "Flow — activating the Family Space."
-  - alt: "The parent and child space flows side by side: limits and chores on one side, missions and savings on the other."
-    caption: "Flow — the parent and child spaces."
-  - alt: "The money-comparison mechanic: a child's spend translated into an everyday equivalent, like twenty francs being about two kebabs."
-    caption: "Flow — making the value of money tangible."
+  - src: "/images/work/family-space/gallery-limits.jpg"
+    alt: "A parent's spending-limits screen with a monthly and a daily limit and category limits for online purchases, leisure, food, and sport, each showing an amount and the percentage spent."
+    caption: "Parent — spending limits by category."
+  - src: "/images/work/family-space/gallery-analytics.jpg"
+    alt: "A child's analytics screen with a bar chart of monthly spending, money-in and money-out totals, and the account balance."
+    caption: "Child — personal spending analytics."
+  - src: "/images/work/family-space/gallery-goal.jpg"
+    alt: "A child's savings-goal screen for a bicycle showing CHF 366 saved of CHF 3'000, a progress bar at 13 percent, and a piggy-bank illustration."
+    caption: "Child — saving toward a goal."
+  - src: "/images/work/family-space/gallery-kebab.jpg"
+    alt: "A statement that CHF 20 is about two kebabs, showing how the app translates a spend into an everyday equivalent a teenager understands."
+    caption: "Flows — making the value of money tangible."
+
+resources:
+  - type: pdf
+    title: "Presentation deck"
+    url: "/files/family-space-presentation.pdf"
+  - type: video
+    title: "Parent walkthrough"
+    poster: "/images/work/family-space/parent-poster.jpg"
+    src: "/videos/family-space/parent-walkthrough.mp4"
+  - type: video
+    title: "Kid walkthrough"
+    poster: "/images/work/family-space/kid-poster.jpg"
+    src: "/videos/family-space/kid-walkthrough.mp4"
 
 prev:
   slug: "wematch"
   title: "WeMatch — an AX matching service for the WeRoad world"
+  image: "/images/work/wematch/adjacent.jpg"
   alt: "WeMatch concept: a WeRoad trip card re-ranked by group fit, carrying a compatibility score and a one-line reason."
 
 next:
   slug: "databloom"
   title: "DataBloom — making the energy impact of digital usage visible"
+  image: "/images/work/databloom/adjacent.jpg"
   alt: "DataBloom prototype: a 30cm artificial flower with green stem and ultramarine petals in a terracotta pot, on a kitchen counter."
 ---

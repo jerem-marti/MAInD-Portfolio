@@ -47,6 +47,7 @@ export const featured: readonly FeaturedCase[] = [
     outcome:
       'A research-led concept: from interviews and personas to end-to-end user flows for a shared family space, prototyped in Figma and presented to the UBS team.',
     meta: 'UX research / Banking / 2025',
-    alt: "UBS Family Space concept: paired mobile screens, a parent overview with spending limits and goals, and a child's analytics, savings, and lessons.",
+    image: '/images/featured/family-space.jpg',
+    alt: "UBS Family Space featured card: two phone screens on a soft red gradient, a parent's hub for the child's analytics, limits, and goals, and the child's savings-goal screen.",
   },
 ] as const
