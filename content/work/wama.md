@@ -137,5 +137,6 @@ prev:
 next:
   slug: "an-aura-of-words"
   title: "An Aura of Words — Lugano's parks, told by their reviews"
+  image: "/images/work/an-aura-of-words/adjacent.jpg"
   alt: "Lugano's five parks shown on a map, each as a colour-blended organic aura sized by review volume."
 ---

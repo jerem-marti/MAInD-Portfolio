@@ -341,12 +341,26 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
                     class="lg:hidden col-span-12 mt-4"
                     aria-hidden="true"
                   >
-                    <UiMediaPlaceholder
-                      :src="r.preview ?? null"
-                      :alt="r.alt ?? r.title"
-                      aspect="aspect-[4/3]"
-                      sizes="sm:100vw md:100vw lg:100vw xl:100vw 2xl:100vw"
-                    />
+<!-- Raw <img> (see the hover rail): this reveal renders only after a tap,
+                         so the static IPX pass never sees it. Mirrors MediaPlaceholder's
+                         frame, but serves the source file so it works on a static host. -->
+                    <div
+                      class="aspect-[4/3] border border-brand-hairline bg-brand-surface overflow-hidden"
+                    >
+                      <img
+                        v-if="r.preview"
+                        :src="r.preview"
+                        :alt="r.alt ?? r.title"
+                        loading="lazy"
+                        class="w-full h-full object-cover"
+                      />
+                      <div
+                        v-else
+                        class="w-full h-full"
+                        role="img"
+                        :aria-label="r.alt ?? r.title"
+                      />
+                    </div>
                     <div
                       class="mt-3 flex items-center gap-2 font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink"
                     >
@@ -388,12 +402,15 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
           <div
             class="aspect-[3/4] border border-brand-hairline bg-brand-surface overflow-hidden"
           >
-            <NuxtImg
+<!-- Raw <img>, not <NuxtImg>: this hover-only, aria-hidden thumbnail renders
+                 only on the client, so the static IPX pass never pre-generates its
+                 variants. Pointing at the source file keeps it working on a static
+                 host (an unoptimised ~300px preview is a fair trade for a decoration). -->
+            <img
               v-if="hovered?.preview"
               :key="hovered.preview"
               :src="hovered.preview"
               :alt="hovered.alt ?? hovered.title"
-              sizes="sm:100vw md:100vw lg:300px xl:300px 2xl:300px"
               loading="lazy"
               class="w-full h-full object-cover"
             />

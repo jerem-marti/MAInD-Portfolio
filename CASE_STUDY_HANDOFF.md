@@ -123,6 +123,7 @@ Keep scratch in `scripts/_prev/` and **delete it before committing**.
 - **Flaky OG-image timeout.** `generate` sometimes dies with `[@nuxtjs/og-image] renderer.createImage timeout` for a random `/work/<slug>` (Satori under load). It's not your change — re-run `generate`. Link-check runs *before* it, so a passing link-check + this timeout means the content is fine.
 - **Derived cards reuse the hero:** centre-crop photographic heroes, re-render composed (HTML) heroes at the target aspect. Keep the composed-hero HTML/assets handy — you'll need them again for cards and OG.
 - **Verify "clean" supplied assets before publishing.** A user-supplied `…-NO-LOGO.pdf` still carried the UBS keys watermark on its red divider slides (p8/p17) and an embedded lesson-video frame (p15) — the de-logo pass was incomplete. Always render/scan a supplied file (mupdf contact sheet) before wiring it as a resource. Same for prototype screen-recordings: the logo can hide in one embedded clip (here, a UBS-watermarked coaching video late in the kid walkthrough), so scan the full timeline and trim or blur.
+- **Index hover preview needs a raw `<img>`, not `<NuxtImg>`.** The hover rail and the mobile tap-reveal render the preview only on interaction, so the static IPX pass never crawls them and never builds their `_ipx` variants. On a static host the optimised URL (e.g. `/_ipx/w_300&q_80/images/index/<slug>.jpg`) 404s while the source file 200s — a broken thumbnail on hover. `app/pages/index.vue` now serves the source file directly for both (an unoptimised ~300px decoration is a fair trade). This bites *every* Index preview, not just the first one; the case-study hero/gallery/artifact and the prev/next adjacent cards are unaffected because they render in crawled HTML. Verify a new preview with a static serve of `.output/public` + a scripted hover, not just `npm run dev` (dev has a live IPX server that masks it).
 - **Commits:** no `Co-Authored-By: Claude` trailer; the user works on `main`.
 
 ---
@@ -141,7 +142,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ to do · ⛔ blocked
 ### Index-linked (home section 03)
 | Study | Images | Resources | Status |
 |---|---|---|---|
-| `an-aura-of-words` | ⬜ | ⬜ | To do |
+| `an-aura-of-words` | ✅ | ✅ | **Done.** Images: live-site captures (clean 21:8 five-aura map hero; gallery opening / comparison / map / word-map / contribution-with-live-classification) + a composed six-lens framework board (real category data, project-styled) + the methodology lab promoted to a Lexicon artifact, with the comparison view swapped into the gallery to avoid duplication. Resources: live demo, repo, a self-hosted 24 MB walkthrough (facade), and the Parco Tassino park poster (PDF). Index hover preview wired (see the raw-`<img>` learning below). |
 | `elen` | ⬜ | ⬜ | To do |
 | `wama` | ⬜ | ⬜ | To do |
 | `brushbuddy` | ⬜ | ⬜ | To do |

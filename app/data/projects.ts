@@ -56,6 +56,7 @@ export const projects: readonly IndexRow[] = [
     tags: ['Scrollytelling', 'Data visualization', 'Front-end build', 'Small data'],
     year: '2026',
     href: '/work/an-aura-of-words',
+    preview: '/images/index/an-aura-of-words.jpg',
     alt: "Scrollytelling data story: Google Reviews of Lugano's parks encoded into colour-weighted organic 'aura' shapes.",
   },
   {

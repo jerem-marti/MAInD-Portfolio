@@ -3,6 +3,7 @@ title: "An Aura of Words"
 summary: "A scrollytelling portrait of Lugano's five green spaces, built entirely from the words of the people who visit them. It encodes thousands of citizen reviews into six semantic lenses to give each park a colour-blended 'aura', then asks the only question that matters: is this how you see this park?"
 status: "live"
 heroAlt: "An Aura of Words: Lugano's five parks on a map, each shown as a colour-blended organic aura whose size reflects its volume of citizen reviews."
+hero: "/images/work/an-aura-of-words/hero.jpg"
 
 brief:
   role: "Data pipeline & front-end"
@@ -77,6 +78,12 @@ approach:
         The encoding is a hand-curated lexicon matched word by word across each park's reviews. Each
         occurrence also records the other meaningful words that appear alongside it in the same review,
         so the data captures not just which words are used, but which ones tend to appear together.
+    artifacts:
+      - src: "/images/work/an-aura-of-words/artifact-lexicon.jpg"
+        alt: "A single Google review with each meaningful word tinted by its lens: quiet in green, families in yellow, benches and playground in orange, neglected boxed in red, with thin lines tracing each term down to the six-lens legend."
+        caption: "The lexicon, applied — one review, matched word by word."
+        decision: "Matching words against a hand-built lexicon, rather than scoring sentiment automatically, is what let the encoding keep a review's ambiguity instead of flattening it to a rating."
+        width: "wide"
 
   - label: "Encoding"
     title: "Language as a living aura"
@@ -93,7 +100,8 @@ approach:
         ones tend to occur together, which is what makes one park's portrait recognisably different
         from another's.
     artifacts:
-      - alt: "A single park's colour-blended aura beside the six-category legend, the area of each colour showing its proportional weight."
+      - src: "/images/work/an-aura-of-words/artifact-encoding.jpg"
+        alt: "A single park's colour-blended aura beside the six-category legend, the area of each colour showing its proportional weight."
         caption: "The aura — six lenses, blended by proportional weight."
         decision: "Encoding category weight as blended area, not bars, kept the data poetic and legible at once, which is the whole point of the piece."
         width: "wide"
@@ -136,18 +144,39 @@ reflection: >-
   back to the people the words came from.
 
 gallery:
-  - alt: "The opening of the interface: the project title over a drifting backdrop of real Google Review snippets."
+  - src: "/images/work/an-aura-of-words/gallery-01-opening.jpg"
+    alt: "The opening of the interface: the project title over a drifting backdrop of real Google Review snippets."
     caption: "Opening — grounded in real citizen sentiment."
-  - alt: "The six-category framework explained: inner state, sensory environment, action, social context, infrastructure, tension."
+  - src: "/images/work/an-aura-of-words/gallery-02-framework.jpg"
+    alt: "The six-category framework explained: inner state, sensory environment, action, social context, infrastructure, tension."
     caption: "The framework — six semantic lenses."
-  - alt: "The methodology lab: a single review taken apart word by word, each meaningful term lit in its category colour."
-    caption: "Methodology lab — an aura, built live from one review."
-  - alt: "Lugano's five parks on a map, each a colour-blended aura sized by its volume of reviews."
+  - src: "/images/work/an-aura-of-words/gallery-03-comparison.jpg"
+    alt: "All five park auras shown side by side at equal size with volume removed, so only their colour balance can be compared."
+    caption: "Comparison — five auras, sized equally so only the colour speaks."
+  - src: "/images/work/an-aura-of-words/gallery-04-map.jpg"
+    alt: "Lugano's five parks on a map, each a colour-blended aura sized by its volume of reviews."
     caption: "The map — five auras, sized by review volume."
-  - alt: "A per-park word map: every categorised word shown as a colour-coded network of interconnected themes."
+  - src: "/images/work/an-aura-of-words/gallery-05-wordmap.jpg"
+    alt: "A per-park word map: every categorised word shown as a colour-coded network of interconnected themes."
     caption: "Word map — how a park's themes interconnect."
-  - alt: "The contribution prompt: a reader types their ideal park and the words are classified live against the six lenses."
+  - src: "/images/work/an-aura-of-words/gallery-06-contribution.jpg"
+    alt: "The contribution prompt: a reader types their ideal park and the words are classified live against the six lenses."
     caption: "Contribution — the reader becomes another voice."
+
+resources:
+  - type: demo
+    title: "Live visualization"
+    url: "https://jerem-marti.github.io/MAInD-Making_Use_of_Data-2026-Lugano_Parks/"
+  - type: github
+    title: "Source, scraper, and lexicon"
+    url: "https://github.com/jerem-marti/MAInD-Making_Use_of_Data-2026-Lugano_Parks"
+  - type: video
+    title: "Project walkthrough"
+    poster: "/images/work/an-aura-of-words/video-poster.jpg"
+    src: "/videos/an-aura-of-words/walkthrough.mp4"
+  - type: pdf
+    title: "Park poster"
+    url: "/files/an-aura-of-words-poster.pdf"
 
 prev:
   slug: "wama"
