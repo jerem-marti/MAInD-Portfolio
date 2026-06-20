@@ -30,17 +30,27 @@ useSchemaOrg([
 
 const isLive = computed(() => study.value?.status === 'live')
 
-const sections = [
-  { id: 'problem', num: '01', label: 'Problem' },
-  { id: 'role', num: '02', label: 'Role' },
-  { id: 'approach', num: '03', label: 'Approach' },
-  { id: 'outcome', num: '04', label: 'Outcome' },
-  { id: 'reflection', num: '05', label: 'Reflection' },
-  { id: 'artifacts', num: '06', label: 'Artifacts' },
-  { id: 'next', num: '07', label: 'More work' },
-] as const
+// TOC entries derive from which content a study actually has. Numbers come from a
+// fixed master order, so a section's number never shifts based on what else exists;
+// absent sections simply drop out of the contents list (no dead TOC entries).
+const sections = computed(() => {
+  const s = study.value
+  if (!s) return []
+  return [
+    { id: 'problem', num: '01', label: 'Problem', present: !!s.problem?.length },
+    { id: 'role', num: '02', label: 'Role', present: !!s.role },
+    { id: 'approach', num: '03', label: 'Approach', present: !!s.approach?.length },
+    { id: 'outcome', num: '04', label: 'Outcome', present: !!s.outcome?.length },
+    { id: 'reflection', num: '05', label: 'Reflection', present: !!s.reflection },
+    { id: 'gallery', num: '06', label: 'Gallery', present: !!s.gallery?.length },
+    { id: 'resources', num: '07', label: 'Resources', present: !!s.resources?.length },
+    { id: 'next', num: '08', label: 'More work', present: !!(s.prev || s.next) },
+  ]
+    .filter((d) => d.present)
+    .map(({ id, num, label }) => ({ id, num, label }))
+})
 
-const active = useScrollSpy(sections.map((s) => s.id))
+const active = useScrollSpy(sections.value.map((s) => s.id))
 </script>
 
 <template>
@@ -241,10 +251,16 @@ const active = useScrollSpy(sections.map((s) => s.id))
           <UiSectionHead num="03" label="Approach" class="mb-10 md:mb-16" />
         </div>
         <div class="flex flex-col gap-24 md:gap-32">
+          <!--
+            w-full is required: this wrapper is a flex item (parent is flex-col). Without a
+            definite width, mx-auto makes a flex item shrink-to-fit its content and centre,
+            so each step sizes independently and the labels misalign between steps at wide
+            viewports. w-full forces fill-then-cap, matching the block <section> wrappers.
+          -->
           <div
             v-for="(sub, i) in study.approach"
             :key="sub.label"
-            class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16"
+            class="mx-auto w-full max-w-[1280px] px-5 md:px-10 lg:px-16"
           >
             <div class="grid grid-cols-12 gap-x-6">
               <div class="col-span-12 md:col-span-2 mb-4 md:mb-0">
@@ -325,13 +341,13 @@ const active = useScrollSpy(sections.map((s) => s.id))
         </div>
       </section>
 
-      <!-- 06 Artifacts gallery -->
+      <!-- 06 Gallery -->
       <section
         v-if="study.gallery"
-        id="artifacts"
+        id="gallery"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead num="06" label="Artifacts" class="mb-10 md:mb-16" />
+        <UiSectionHead num="06" label="Gallery" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           <figure
             v-for="(g, i) in study.gallery"
@@ -353,13 +369,23 @@ const active = useScrollSpy(sections.map((s) => s.id))
         </div>
       </section>
 
-      <!-- 07 Next / Previous -->
+      <!-- 07 Resources -->
+      <section
+        v-if="study.resources?.length"
+        id="resources"
+        class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
+      >
+        <UiSectionHead num="07" label="Resources" class="mb-10 md:mb-16" />
+        <WorkResources :resources="study.resources" />
+      </section>
+
+      <!-- 08 Next / Previous -->
       <section
         v-if="study.prev || study.next"
         id="next"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead num="07" label="More work" class="mb-10 md:mb-16" />
+        <UiSectionHead num="08" label="More work" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           <WorkAdjacentCard v-if="study.prev" dir="prev" :item="study.prev" />
           <WorkAdjacentCard v-if="study.next" dir="next" :item="study.next" />

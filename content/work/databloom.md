@@ -224,6 +224,22 @@ gallery:
     alt: "Hand-drawn ideation sketch of the flower concept: the felt bloom, the segmented stem with its pull-cable and servo, and a small screen interface, annotated in French."
     caption: "Ideation — the flower, sketched by hand."
 
+# PLACEHOLDER URLs — replace with the real thesis PDF, repo, blog write-up, and video file.
+resources:
+  - type: pdf
+    title: "Bachelor thesis paper"
+    url: "/files/databloom-thesis.pdf"
+  - type: web
+    title: "MEI research blog write-up"
+    url: "https://example.com/mei-databloom"
+  - type: github
+    title: "Firmware, KiCad schematics, and printable parts"
+    url: "https://github.com/jerem-marti/databloom"
+  - type: video
+    title: "DataBloom in motion — the stem responding live"
+    poster: "/images/work/databloom/gallery-1.jpg"
+    src: "/videos/databloom/walkthrough.mp4"
+
 prev:
   slug: "family-space"
   title: "UBS Family Space — a family's shared place to manage money"

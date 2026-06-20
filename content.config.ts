@@ -78,6 +78,37 @@ export default defineContentConfig({
           )
           .optional(),
 
+        // Resources section: outbound links + one click-to-load video facade.
+        // Each item is either a link row (pdf/github/demo/web) or a video. A video
+        // needs exactly one source: a self-hosted `src`, OR `provider` + `id`.
+        resources: z
+          .array(
+            z.union([
+              z.object({
+                type: z.enum(['pdf', 'github', 'demo', 'web']),
+                title: z.string(),
+                url: z.string(),
+              }),
+              z
+                .object({
+                  type: z.literal('video'),
+                  title: z.string(),
+                  poster: z.string(),
+                  src: z.string().optional(),
+                  provider: z.enum(['youtube', 'vimeo']).optional(),
+                  id: z.string().optional(),
+                })
+                .refine(
+                  (v) => (v.src ? !v.provider && !v.id : !!v.provider && !!v.id),
+                  {
+                    message:
+                      'video resource needs either `src` or both `provider` and `id`, not both',
+                  },
+                ),
+            ]),
+          )
+          .optional(),
+
         prev: z
           .object({
             slug: z.string(),
