@@ -8,7 +8,7 @@ const { data: study } = await useAsyncData(`work-${route.params.slug}`, () =>
 
 // Ring neighbours for the "More work" section, derived from the single ordered
 // chain in app/data/workChain.ts. Both null for off-chain pages → no section.
-const slug = route.params.slug as string
+const slug = String(route.params.slug)
 const { prev, next } = chainNeighbours(slug)
 
 const { data: cards } = await useAsyncData('work-cards', () =>
@@ -19,8 +19,10 @@ const cardFor = (s: string | null) => {
   const doc = cards.value?.find((d) => d.path === `/work/${s}`)
   return doc?.card ? { slug: s, ...doc.card } : null
 }
-const prevCard = computed(() => cardFor(prev))
-const nextCard = computed(() => cardFor(next))
+// prev/next are fixed for a given page and the work-cards query is awaited
+// above, so resolve the neighbour cards once — no reactivity to track here.
+const prevCard = cardFor(prev)
+const nextCard = cardFor(next)
 
 if (!study.value) {
   throw createError({
@@ -63,7 +65,7 @@ const sections = computed(() => {
     { id: 'reflection', label: 'Reflection', present: !!s.reflection },
     { id: 'gallery', label: 'Gallery', present: !!s.gallery?.length },
     { id: 'resources', label: 'Resources', present: !!s.resources?.length },
-    { id: 'next', label: 'More work', present: !!(prevCard.value || nextCard.value) },
+    { id: 'next', label: 'More work', present: !!(prevCard || nextCard) },
   ]
     .filter((d) => d.present)
     .map(({ id, label }, i) => ({ id, label, num: String(i + 1).padStart(2, '0') }))
