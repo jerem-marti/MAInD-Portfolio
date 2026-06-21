@@ -65,7 +65,8 @@ export const projects: readonly IndexRow[] = [
     tags: ['Prototyping', 'Hardware', 'Front-end build', 'DevOps'],
     year: '2026',
     href: '/work/elen',
-    alt: 'ELEN device: a handheld camera with orange accents and plexiglass panels, screen showing live video overlaid with spectral fluid entities.',
+    preview: '/images/index/elen.jpg',
+    alt: 'ELEN, a handheld speculative camera: a detail of its translucent orange body, white handle, control button, and antenna on a grey backdrop.',
   },
   {
     num: '03',

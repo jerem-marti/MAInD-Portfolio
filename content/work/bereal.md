@@ -124,5 +124,6 @@ prev:
 next:
   slug: "elen"
   title: "ELEN — a speculative camera for invisible wireless presences"
-  alt: "ELEN device: a handheld camera with orange accents and plexiglass panels, screen showing live video overlaid with spectral fluid entities."
+  image: "/images/work/elen/adjacent.jpg"
+  alt: "ELEN, a handheld camera with a translucent orange body and twin white handles, lit on a grey studio backdrop, its deep-blue screen showing through the plexiglass."
 ---

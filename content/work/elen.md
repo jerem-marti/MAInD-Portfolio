@@ -2,7 +2,8 @@
 title: "ELEN"
 summary: "A speculative camera that photographs the invisible. ELEN detects the Wi-Fi and Bluetooth signals saturating a room and renders each one as a spectral entity drifting across a live video feed, reframing wireless infrastructure as a contemporary kind of haunting."
 status: "live"
-heroAlt: "ELEN device: a handheld camera with a 3D-printed body, laser-cut plexiglass panels, and orange accents. Its screen shows a live video feed overlaid with drifting spectral fluid entities."
+heroAlt: "ELEN, a handheld camera with a translucent orange 3D-printed body and twin white handles, lit on a grey studio backdrop. Its deep-blue screen and internal wiring show through the plexiglass."
+hero: "/images/work/elen/hero.jpg"
 
 brief:
   role: "Software & signal engineering"
@@ -53,11 +54,6 @@ approach:
         That decided the project's register. ELEN is not a data visualization with a spooky skin.
         It is a camera whose subject happens to be the electromagnetic presence of the people and
         devices in a space, treated with the seriousness the ghost metaphor deserves.
-    artifacts:
-      - alt: "A conceptual board linking historical spirit photography to modern wireless-signal imaging, under the Shadow Creatures framing."
-        caption: "Conceptual framing — from spirit photography to infrastructural haunting."
-        decision: "Committing to the haunting as a real subject, not a visual style, kept every later technical choice in service of perception rather than decoration."
-        width: "wide"
 
   - label: "Measurement"
     title: "From metaphor to signal"
@@ -72,7 +68,8 @@ approach:
         moment they arrive and never stored. ELEN reveals presence without surveilling identity,
         which is the difference between a poetic instrument and a tracking device.
     artifacts:
-      - alt: "A diagram of the detection stage: passive wireless monitoring capturing signal strength and anonymized identifiers."
+      - src: "/images/work/elen/artifact-measurement.jpg"
+        alt: "ELEN's system diagram: passive Wi-Fi and Bluetooth monitoring captures signal strength and device identifiers, which are anonymized, normalized, and mapped to the live visual render."
         caption: "Detection — passive monitoring, identifiers hashed on arrival."
         decision: "Anonymizing every identifier at the source was a design ethic, not an afterthought. The camera shows that something is present, never who."
         width: "wide"
@@ -91,7 +88,8 @@ approach:
         sixty frames a second. Holding that frame rate while signals appeared and dissolved in real
         time was the engineering that made the illusion convincing.
     artifacts:
-      - alt: "The signal-to-entity mapping: signal strength to apparition size, device count to density, network activity to motion, rendered as a fluid field."
+      - src: "/images/work/elen/artifact-translation.jpg"
+        alt: "An ELEN capture on a terrace overlooking Lugano: translucent coloured apparitions of different sizes drift over the scene, each tagged with an anonymized hexadecimal identifier."
         caption: "Translation — strength to scale, count to density, activity to motion."
         decision: "Mapping radio characteristics directly to fluid behaviour made the entities feel derived from the signal rather than designed to look like ghosts."
         width: "wide"
@@ -109,6 +107,12 @@ approach:
         plexiglass and orange accents that reads like a piece of speculative field equipment. Nerea
         shaped the visual identity and the look of the fluid. My part was making the sensing, the
         translation, and the hardware hold together in real time without dropping a frame.
+    artifacts:
+      - src: "/images/work/elen/artifact-object.jpg"
+        alt: "A visitor holds ELEN up in both hands in an indoor public space, framing the room through its screen, the orange body glowing against the daylight behind."
+        caption: "In the hand — scanning the space by turning through it."
+        decision: "Motion sensing lets the apparitions hold their place in the room as you move, so scanning feels like looking rather than browsing a screen."
+        width: "wide"
 
 outcome:
   - >-
@@ -131,18 +135,43 @@ reflection: >-
   resolving things.
 
 gallery:
-  - alt: "ELEN held in two hands, screen showing the live feed with spectral entities drifting across a room."
-    caption: "In use — scanning a room by hand."
-  - alt: "The 3D-printed and plexiglass enclosure with orange accents, seen from the front."
+  - src: "/images/work/elen/gallery-01.jpg"
+    alt: "A person holds ELEN up in both hands outdoors, framing the space through its screen, the translucent orange body lit by daylight."
+    caption: "In use — scanning the space by hand."
+  - src: "/images/work/elen/gallery-02.jpg"
+    alt: "ELEN at a three-quarter angle on a grey backdrop: translucent orange body, white frame and twin handles, antenna, and the deep-blue screen."
     caption: "The object — speculative field equipment."
-  - alt: "A close-up of the screen: fluid spectral entities of different sizes over a live video background."
+  - src: "/images/work/elen/gallery-03.jpg"
+    alt: "An ELEN capture of a lakeside promenade: pale spectral blobs of different sizes drift over the scene, each tagged with an anonymized identifier."
     caption: "Apparitions — scaled by signal strength."
-  - alt: "The system architecture diagram: wireless monitor, reducer, backend, and WebGL overlay."
-    caption: "The pipeline — monitor to overlay, running live."
-  - alt: "A captured ELEN snapshot saved to the gallery, freezing one moment of the invisible layer."
+  - src: "/images/work/elen/gallery-04.jpg"
+    alt: "The back of ELEN seen through the orange plexiglass: the Raspberry Pi, camera module, wiring, and battery, with the team's engraving."
+    caption: "The hardware — Raspberry Pi, camera, and antenna."
+  - src: "/images/work/elen/gallery-05.jpg"
+    alt: "An ELEN capture inside a baroque church: faint spectral presences drift among the gilded altar, angels, and frescoes."
     caption: "A capture — one moment of the invisible layer."
-  - alt: "ELEN with its custom interlocking cardboard packaging."
+  - src: "/images/work/elen/gallery-06.jpg"
+    alt: "ELEN in its open packaging: the device nestled in foam inside the interlocking white box, with its antenna and a printed brochure."
     caption: "Packaging — interlocking, fastener-free."
+
+resources:
+  - type: web
+    title: "Digital Design Week, Milan Design Week"
+    url: "https://www.ddweek.com/projects/6c1b9d00-31b4-41a4-8266-60bf49777fbf"
+  - type: github
+    title: "Source code and documentation"
+    url: "https://github.com/jerem-marti/MAInD-Prototyping_Spatial_Experiences-2026"
+  - type: video
+    title: "Project walkthrough"
+    poster: "/images/work/elen/video-poster.jpg"
+    src: "/videos/elen/walkthrough.mp4"
+  - type: video
+    title: "Exhibition film, Saceba"
+    poster: "/images/work/elen/exhibition-poster.jpg"
+    src: "/videos/elen/exhibition-saceba.mp4"
+  - type: pdf
+    title: "Brochure"
+    url: "/files/elen-brochure.pdf"
 
 prev:
   slug: "bereal"
