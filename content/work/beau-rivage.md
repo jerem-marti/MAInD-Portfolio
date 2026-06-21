@@ -2,7 +2,8 @@
 title: "Beau-Rivage Eco-Redesign"
 summary: "A ground-up eco-redesign of the Beau-Rivage Palace website that cut its weight and carbon by roughly 95% while keeping the feel of a five-star hotel. An audit of the existing site, a fresh design, and a Nuxt 3 build tuned for sustainability."
 status: "live"
-heroAlt: "The redesigned Beau-Rivage Palace site: a restrained, elegant luxury-hotel homepage, far lighter than the original, with optimised imagery."
+heroAlt: "The redesigned Beau-Rivage Palace homepage at rest: a restrained top navigation and the centred 'Beau-Rivage Palace, Lausanne Switzerland' logo over a field of fine gold lines, far lighter than the original site."
+hero: "/images/work/beau-rivage/hero.jpg"
 
 brief:
   role: "Eco-design & build"
@@ -45,6 +46,17 @@ approach:
         We also mapped the real user journeys (a prospect informing themselves, a guest comparing rooms)
         so the redesign could keep what people actually came for while shedding the weight they never
         asked for.
+    artifacts:
+      - src: "/images/work/beau-rivage/artifact-audit-1.jpg"
+        alt: "A project slide titled 'Revue des éléments du site non écoconçus' with three columns, Vidéos, Images and Animations, listing the original site's media as high quality, oversized, uncompressed and on autoplay."
+        caption: "Audit — the original site's media, reviewed."
+        decision: "Naming every heavy ingredient first showed that video and images were most of the weight, so that is where the redesign would be won or lost."
+        width: "half"
+      - src: "/images/work/beau-rivage/artifact-audit-2.jpg"
+        alt: "A project slide titled 'Revue des éléments du site non écoconçus' noting illustrations with no informative value, very large quantities of high-quality media, and pages that repeat another page's content."
+        caption: "Audit — how much of it carried no information."
+        decision: "Most of the media was decorative, so we could cut weight without cutting anything a guest actually came for."
+        width: "half"
 
   - label: "Redesign"
     title: "Luxury without the weight"
@@ -54,6 +66,12 @@ approach:
         the heavy ingredients that usually signal it? We rebuilt the key pages (the homepage, the rooms
         and suites, a suite like the Riviera) around restraint, treating generous space and careful
         typography as the luxury signal instead of autoplay spectacle.
+    artifacts:
+      - src: "/images/work/beau-rivage/artifact-redesign.jpg"
+        alt: "A project slide titled 'Comment retranscrire le luxe de manière écoconçue?' pairing a four-point design approach (refined layout, revalued colours, lighter media via sober SVGs, less content) with mockups of the redesigned homepage, the La Plage page and the Suite Riviera."
+        caption: "Redesign — keeping the luxury, dropping the weight."
+        decision: "We treated restraint as the luxury signal, putting refined type and space and sober SVGs in place of autoplay spectacle."
+        width: "wide"
 
   - label: "Build"
     title: "Nuxt 3, SSR, and image discipline"
@@ -69,6 +87,17 @@ approach:
         therefore device energy low, and disciplined image handling turns the heaviest pages into the
         lightest. The point throughout was that sustainability here is not a vibe, it is specific
         technical choices with measurable effects.
+    artifacts:
+      - src: "/images/work/beau-rivage/artifact-build-1.jpg"
+        alt: "A project slide titled 'Nuxt Image' showing a Beau-Rivage interior converted to AVIF and resized, dropping from 51.5 kB to 22.5 kB, a 56% saving, beside the NuxtImg code that does it."
+        caption: "Build — Nuxt Image does the heavy lifting."
+        decision: "Automatic conversion to WebP and AVIF, plus resizing to the viewport, turned the heaviest source of weight into the lightest."
+        width: "half"
+      - src: "/images/work/beau-rivage/artifact-build-2.jpg"
+        alt: "A project slide titled 'Server-Side Rendering (SSR)' with a diagram of the request flow where the server sends ready-made HTML so the page displays with minimal work on the visitor's device."
+        caption: "Build — server-side rendering on Nuxt 3."
+        decision: "Rendering on the server means the page arrives ready to show, keeping client-side work and device energy low."
+        width: "half"
 
   - label: "Hosting"
     title: "Looking for green, honestly"
@@ -91,6 +120,12 @@ approach:
       - >-
         That is roughly a 95% reduction in weight and carbon, a site about twenty times lighter, with
         usability and performance going up rather than down. The luxury survived the diet.
+    artifacts:
+      - src: "/images/work/beau-rivage/artifact-results.jpg"
+        alt: "Four measurement tools comparing the original and redesigned site: Website Carbon (F to A, 368 to 15.35 kg CO2 a year), Beacon (13.11 MB to 504 KB), Ecograder (36 to 73) and Lighthouse (performance 66 to 98)."
+        caption: "Results — measured across four tools, before and after."
+        decision: "Every number in this study is one of these four readings, before and after, not an assertion."
+        width: "full"
 
 outcome:
   - >-
@@ -112,20 +147,35 @@ reflection: >-
   digital visible, and then doing something about it.
 
 gallery:
-  - alt: "The redesigned Beau-Rivage Palace homepage, restrained and elegant, far lighter than the original."
-    caption: "Redesign — prestige through restraint."
-  - alt: "A redesigned suite page (the Riviera), with optimised imagery instead of autoplay video."
-    caption: "A suite page — luxury without the weight."
-  - alt: "The audit of the existing site: a deep page structure and a thirteen-megabyte page weighed and mapped."
-    caption: "Audit — measuring the baseline."
-  - alt: "The before-and-after comparison: EcoIndex F versus A, 13.11 MB versus 504 KB, 368 versus 15 kg of CO2 a year."
-    caption: "Results — F to A, measured."
-  - alt: "The Nuxt Image optimisation in action: an image converted to WebP and resized to the screen."
-    caption: "Build — automatic image optimisation."
-  - alt: "The Green Web Foundation check on the hosting platform, noted honestly as a grey area."
-    caption: "Hosting — green, with an honest asterisk."
+  - alt: "Redesigned homepage editorial band: the Beau-Rivage Palace facade above its outdoor pool and Lake Geneva, under the heading Le Beau Rivage."
+    caption: "Homepage — the hotel, set on the lake."
+    src: "/images/work/beau-rivage/gallery-01.jpg"
+  - alt: "Redesigned Chambres et Suites page: four room cards (Supérieure vue ville, vue lac et alpes, Deluxe, Deluxe Riviera) in optimised interior photography."
+    caption: "Rooms — the listing, rebuilt light."
+    src: "/images/work/beau-rivage/gallery-02.jpg"
+  - alt: "The Suite Riviera page: a four-image grid of the suite's salon, bedroom and lake-view bathroom in optimised photography."
+    caption: "Suite Riviera — luxury without the weight."
+    src: "/images/work/beau-rivage/gallery-03.jpg"
+  - alt: "Redesigned Restaurants et Bars page: cards for PIC au Beau-Rivage Palace, Café Beau-Rivage and La Terrasse in optimised photography."
+    caption: "Restaurants and bars — the range, kept light."
+    src: "/images/work/beau-rivage/gallery-04.jpg"
+
+resources:
+  - type: demo
+    title: "Version éconçue du site (démo)"
+    url: "https://heig-ecoconception-brp.netlify.app/"
+  - type: github
+    title: "Code source (Nuxt 3)"
+    url: "https://github.com/jerem-marti/HEIG-VD_COMEM_IM51_EcoC_Groupe-CJJN"
+  - type: pdf
+    title: "Présentation du projet"
+    url: "/files/beau-rivage-presentation.pdf"
+  - type: pdf
+    title: "Déclaration d'écoconception (RGESN)"
+    url: "/files/beau-rivage-rgesn.pdf"
 
 card:
   title: "Beau-Rivage Eco-Redesign — a 95% lighter luxury hotel site"
   alt: "The redesigned Beau-Rivage Palace site: restrained, elegant, far lighter than the original."
+  image: "/images/work/beau-rivage/adjacent.jpg"
 ---

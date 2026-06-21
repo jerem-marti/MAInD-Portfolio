@@ -101,7 +101,8 @@ export const projects: readonly IndexRow[] = [
     tags: ['Sustainability', 'Front-end build', 'UX research'],
     year: '2025',
     href: '/work/beau-rivage',
-    alt: 'A redesigned, far lighter luxury-hotel homepage for the Beau-Rivage Palace, with optimised imagery.',
+    preview: '/images/index/beau-rivage.jpg',
+    alt: 'The redesigned Beau-Rivage Palace homepage on mobile: the shell logo, a Réserver button and the centred wordmark over fine gold lines, far lighter than the original.',
   },
   {
     num: '07',
