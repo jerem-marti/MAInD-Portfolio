@@ -117,13 +117,7 @@ gallery:
   - alt: "The role-based access structure separating public explorers from editor accounts."
     caption: "Roles — explorers and editors, one app."
 
-prev:
-  slug: "uefa-female-coaches"
-  title: "Why Not You? — the UEFA female coaches campaign"
-  alt: "The Why Not You? campaign: bold display typography over a female coach, with the line Lead Your Passion, Shape the Game."
-
-next:
-  slug: "bereal"
-  title: "BeReal-like web app — a REST API and image pipeline"
-  alt: "Mobile capture screen for a BeReal-like prototype: time-bounded photo capture with the back camera."
+card:
+  title: "Cultural Trails — a full-stack heritage walking app"
+  alt: "Mobile screens for a gamified walking-trails app, showing a map, points of interest with quizzes, and audio guide controls."
 ---

@@ -146,13 +146,7 @@ gallery:
   - alt: "The two-column desktop layout: a large visualization area beside the persistent explanation sidebar."
     caption: "The layout — viz left, explanation right."
 
-prev:
-  slug: "an-aura-of-words"
-  title: "An Aura of Words — Lugano's parks, told by their reviews"
-  alt: "Lugano's five parks shown on a map, each as a colour-blended organic aura sized by review volume."
-
-next:
-  slug: "meeting-pond"
-  title: "Meeting Pond — connected light objects for distant presence"
-  alt: "A 32×32 LED matrix mounted in a frame, displaying ripples spreading across a luminous surface."
+card:
+  title: "Goldilocks Worlds — making exoplanet habitability legible"
+  alt: "Dark, space-like data-story scene: an exoplanet plot with a habitable-zone constraint band and an explanation sidebar."
 ---

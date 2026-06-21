@@ -189,15 +189,8 @@ resources:
     poster: "/images/work/family-space/kid-poster.jpg"
     src: "/videos/family-space/kid-walkthrough.mp4"
 
-prev:
-  slug: "wematch"
-  title: "WeMatch — an AX matching service for the WeRoad world"
-  image: "/images/work/wematch/adjacent.jpg"
-  alt: "WeMatch concept: a WeRoad trip card re-ranked by group fit, carrying a compatibility score and a one-line reason."
-
-next:
-  slug: "databloom"
-  title: "DataBloom — making the energy impact of digital usage visible"
-  image: "/images/work/databloom/adjacent.jpg"
-  alt: "DataBloom prototype: a 30cm artificial flower with green stem and ultramarine petals in a terracotta pot, on a kitchen counter."
+card:
+  title: "UBS Family Space — a family's shared place to manage money"
+  image: "/images/work/family-space/adjacent.jpg"
+  alt: "UBS Family Space concept: two phone screens on a soft red gradient, a parent's hub for the child's analytics, limits, and goals, and the child's savings-goal screen."
 ---

@@ -197,14 +197,8 @@ resources:
     title: "Prototyping process"
     url: "https://master-interaction-design.notion.site/HUMAN-LOCI-2cc89104ecf9806a921fd48164a01938"
 
-prev:
-  slug: "a-ta-dispo"
-  title: "À ta Dispo — matching event volunteers with organizers"
-  alt: "À ta Dispo: a matchmaking concept connecting festival volunteers with event organizers."
-
-next:
-  slug: "wama"
-  title: "Wama — machine learning as a sink-side witness"
-  alt: "Wama's built sink rig at an angle: a tap pouring into a clear basin, the phone in its laser-cut holder showing the character."
-  image: "/images/work/wama/adjacent.jpg"
+card:
+  title: "Human Loci — a synesthetic listening object"
+  image: "/images/work/human-loci/adjacent.jpg"
+  alt: "Human Loci: a transparent acrylic listening box with three plaster disks for a park, a marina, and a train station."
 ---

@@ -238,15 +238,8 @@ resources:
     title: "Article du blog de recherche du MEI"
     url: "https://blog.comem.ch/2025/10/03/databloom-une-interface-de-visualisation-de-limpact-energetique-du-numerique-dans-un-foyer/"
 
-prev:
-  slug: "family-space"
-  title: "UBS Family Space — a family's shared place to manage money"
-  image: "/images/work/family-space/adjacent.jpg"
-  alt: "UBS Family Space concept: two phone screens on a soft red gradient, a parent's hub for the child's analytics, limits, and goals, and the child's savings-goal screen."
-
-next:
-  slug: "wematch"
-  title: "WeMatch — an AX matching service for the WeRoad world"
-  image: "/images/work/wematch/adjacent.jpg"
-  alt: "WeMatch title card: 'WeMatch finds your group before you find your trip' in coral and ink on a soft white-to-pink gradient, with the round Matchy agent character."
+card:
+  title: "DataBloom — making the energy impact of digital usage visible"
+  image: "/images/work/databloom/adjacent.jpg"
+  alt: "The DataBloom flower: ultramarine felt petals on a green segmented stem in a small terracotta pot, on a white studio backdrop."
 ---

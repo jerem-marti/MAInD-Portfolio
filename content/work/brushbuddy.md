@@ -150,14 +150,8 @@ resources:
     poster: "/images/work/brushbuddy/video-poster.jpg"
     src: "/videos/brushbuddy/interaction-film.mp4"
 
-prev:
-  slug: "an-aura-of-words"
-  title: "An Aura of Words — Lugano's parks, told by their reviews"
-  image: "/images/work/an-aura-of-words/adjacent.jpg"
-  alt: "Lugano's five parks shown on a map, each as a colour-blended organic aura sized by review volume."
-
-next:
-  slug: "uefa-female-coaches"
-  title: "Why Not You? — the UEFA female coaches campaign"
-  alt: "The Why Not You? campaign: bold display typography over a female coach, with the line Lead Your Passion, Shape the Game."
+card:
+  title: "BrushBuddy — a monster cube that guides two-minute toothbrushing"
+  image: "/images/work/brushbuddy/adjacent.jpg"
+  alt: "A hand lifts the toothbrush from the dock on top of the BrushBuddy cube, which has a worried yellow monster face."
 ---

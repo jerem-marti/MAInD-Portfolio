@@ -125,14 +125,7 @@ gallery:
   - alt: "The Green Web Foundation check on the hosting platform, noted honestly as a grey area."
     caption: "Hosting — green, with an honest asterisk."
 
-prev:
-  slug: "elen"
-  title: "ELEN — a speculative camera for invisible wireless presences"
-  image: "/images/work/elen/adjacent.jpg"
-  alt: "ELEN, a handheld camera with a translucent orange body and twin white handles, lit on a grey studio backdrop, its deep-blue screen showing through the plexiglass."
-
-next:
-  slug: "a-ta-dispo"
-  title: "À ta Dispo — matching event volunteers with organizers"
-  alt: "À ta Dispo: a matchmaking concept connecting festival volunteers with event organizers."
+card:
+  title: "Beau-Rivage Eco-Redesign — a 95% lighter luxury hotel site"
+  alt: "The redesigned Beau-Rivage Palace site: restrained, elegant, far lighter than the original."
 ---

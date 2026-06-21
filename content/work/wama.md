@@ -157,15 +157,8 @@ resources:
     title: "Source code"
     url: "https://github.com/jerem-marti/MAInD-Intelligence_As_A_Material-2026-Wama"
 
-prev:
-  slug: "human-loci"
-  title: "Human Loci — a synesthetic listening object"
-  alt: "Human Loci: a transparent acrylic listening box with three plaster disks for a park, a marina, and a train station."
-  image: "/images/work/human-loci/adjacent.jpg"
-
-next:
-  slug: "an-aura-of-words"
-  title: "An Aura of Words — Lugano's parks, told by their reviews"
-  image: "/images/work/an-aura-of-words/adjacent.jpg"
-  alt: "Lugano's five parks shown on a map, each as a colour-blended organic aura sized by review volume."
+card:
+  title: "Wama — machine learning as a sink-side witness"
+  image: "/images/work/wama/adjacent.jpg"
+  alt: "Wama's built sink rig at an angle: a tap pouring into a clear basin, the phone in its laser-cut holder showing the character."
 ---

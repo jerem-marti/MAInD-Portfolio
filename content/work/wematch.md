@@ -173,15 +173,8 @@ resources:
     title: "Scrollytelling one-pager"
     url: "https://jerem-marti.github.io/MAInD-Designing_Intelligent_Experiences-OnePager-2026/"
 
-prev:
-  slug: "databloom"
-  title: "DataBloom — making the energy impact of digital usage visible"
-  image: "/images/work/databloom/adjacent.jpg"
-  alt: "The DataBloom flower: ultramarine felt petals on a green segmented stem in a small terracotta pot, on a white studio backdrop."
-
-next:
-  slug: "family-space"
-  title: "UBS Family Space — a family's shared place to manage money"
-  image: "/images/work/family-space/adjacent.jpg"
-  alt: "UBS Family Space concept: two phone screens on a soft red gradient, a parent's hub for the child's analytics, limits, and goals, and the child's savings-goal screen."
+card:
+  title: "WeMatch — an AX matching service for the WeRoad world"
+  image: "/images/work/wematch/adjacent.jpg"
+  alt: "WeMatch title card: 'WeMatch finds your group before you find your trip' in coral and ink on a soft white-to-pink gradient, with the round Matchy agent character."
 ---

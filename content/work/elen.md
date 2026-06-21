@@ -173,13 +173,8 @@ resources:
     title: "Brochure"
     url: "/files/elen-brochure.pdf"
 
-prev:
-  slug: "bereal"
-  title: "Re-coding BeReal — a dual-camera capture and image pipeline"
-  alt: "A BeReal-like capture screen: front and back cameras firing simultaneously, the rear photo full-frame with the front-camera selfie inset."
-
-next:
-  slug: "beau-rivage"
-  title: "Beau-Rivage Eco-Redesign — a 95% lighter luxury hotel site"
-  alt: "The redesigned Beau-Rivage Palace site: restrained, elegant, far lighter than the original."
+card:
+  title: "ELEN — a speculative camera for invisible wireless presences"
+  image: "/images/work/elen/adjacent.jpg"
+  alt: "ELEN, a handheld camera with a translucent orange body and twin white handles, lit on a grey studio backdrop, its deep-blue screen showing through the plexiglass."
 ---

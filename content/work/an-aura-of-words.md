@@ -178,15 +178,8 @@ resources:
     title: "Park poster"
     url: "/files/an-aura-of-words-poster.pdf"
 
-prev:
-  slug: "wama"
-  title: "Wama — machine learning as a sink-side witness"
-  alt: "Wama's built sink rig at an angle: a tap pouring into a clear basin, the phone in its laser-cut holder showing the character."
-  image: "/images/work/wama/adjacent.jpg"
-
-next:
-  slug: "brushbuddy"
-  title: "BrushBuddy — a monster cube that guides two-minute toothbrushing"
-  image: "/images/work/brushbuddy/adjacent.jpg"
-  alt: "A hand lifts the toothbrush from the dock on top of the BrushBuddy cube, which has a worried yellow monster face."
+card:
+  title: "An Aura of Words — Lugano's parks, told by their reviews"
+  image: "/images/work/an-aura-of-words/adjacent.jpg"
+  alt: "Lugano's five parks shown on a map, each as a colour-blended organic aura sized by review volume."
 ---

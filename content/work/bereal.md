@@ -116,14 +116,7 @@ gallery:
   - alt: "The auto-generated Swagger documentation for the REST API's endpoints."
     caption: "API — documented with Swagger."
 
-prev:
-  slug: "cultural-trails"
-  title: "Cultural Trails — a full-stack heritage walking app"
-  alt: "Cultural Trails: a map-based web app showing a themed walking trail with points of interest, audio guides, and quizzes."
-
-next:
-  slug: "elen"
-  title: "ELEN — a speculative camera for invisible wireless presences"
-  image: "/images/work/elen/adjacent.jpg"
-  alt: "ELEN, a handheld camera with a translucent orange body and twin white handles, lit on a grey studio backdrop, its deep-blue screen showing through the plexiglass."
+card:
+  title: "Re-coding BeReal — a dual-camera capture and image pipeline"
+  alt: "A BeReal-like capture screen: front and back cameras firing simultaneously, the rear photo full-frame with the front-camera selfie inset."
 ---

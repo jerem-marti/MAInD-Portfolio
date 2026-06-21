@@ -122,14 +122,7 @@ gallery:
   - alt: "The reworked finances from the Crunch pass, framed for a bank-financing simulation."
     caption: "Iteration — financeable on the second pass."
 
-prev:
-  slug: "beau-rivage"
-  title: "Beau-Rivage Eco-Redesign — a 95% lighter luxury hotel site"
-  alt: "The redesigned Beau-Rivage Palace site: restrained, elegant, far lighter than the original."
-
-next:
-  slug: "human-loci"
-  title: "Human Loci — a synesthetic listening object"
-  alt: "Human Loci: a transparent acrylic listening box with three plaster disks for a park, a marina, and a train station."
-  image: "/images/work/human-loci/adjacent.jpg"
+card:
+  title: "À ta Dispo — matching event volunteers with organizers"
+  alt: "À ta Dispo: a matchmaking concept connecting festival volunteers with event organizers."
 ---

@@ -110,14 +110,7 @@ gallery:
   - alt: "The Start your journey section: a concrete licensing path from the Animator License to the UEFA C Diploma, after a no-pressure workshop invite."
     caption: "Landing page — from a workshop to a real licensing path."
 
-prev:
-  slug: "brushbuddy"
-  title: "BrushBuddy — a monster cube that guides two-minute toothbrushing"
-  image: "/images/work/brushbuddy/adjacent.jpg"
-  alt: "A hand lifts the toothbrush from the dock on top of the BrushBuddy cube, which has a worried yellow monster face."
-
-next:
-  slug: "cultural-trails"
-  title: "Cultural Trails Web App — a gamified heritage walking app"
-  alt: "Mobile screens for a gamified walking-trails app, showing a map, points of interest with quizzes, and audio guide controls."
+card:
+  title: "Why Not You? — the UEFA female coaches campaign"
+  alt: "The Why Not You? campaign: bold display typography over a female coach, with the line Lead Your Passion, Shape the Game."
 ---
