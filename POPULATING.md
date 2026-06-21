@@ -27,7 +27,7 @@ It assumes the migration is complete (all six phases merged to `main`). If you'r
 
 ## Case studies
 
-Case studies live in `content/work/<slug>.md`, are validated by the Zod schema in `content.config.ts`, and render via `app/pages/work/[slug].vue`. The slug in the filename **must** match the slug in `app/data/featured.ts` and in the `prev` / `next` adjacency blocks.
+Case studies live in `content/work/<slug>.md`, are validated by the Zod schema in `content.config.ts`, and render via `app/pages/work/[slug].vue`. The slug in the filename **must** match the slug used in `app/data/featured.ts` / `app/data/projects.ts` and in `app/data/workChain.ts` (the More-work navigation order).
 
 The three Featured case studies are live:
 
@@ -226,22 +226,24 @@ Each item is one of two shapes:
 
 Schema lives in `content.config.ts`; components are `app/components/work/Resources*.vue` with shared types in `app/utils/resources.ts`.
 
-##### `prev` / `next` — section 08 (adjacency)
+##### `card` — the More-work entry (section 08)
+
+Each study carries one `card:` block — the title, alt, and optional image shown when a *neighbouring* study links to it in section 08 ("More work"). It is the study's canonical self-description.
 
 ```yaml
-prev:
-  slug: "family-space"
+card:
   title: "UBS Family Space — a family's shared place to manage money"
   alt: "UBS Family Space concept: paired mobile screens, a parent overview with limits and goals, and a child's analytics and savings."
-  # image: "/images/work/family-space/adjacent.jpg"
-
-next:
-  slug: "wematch"
-  title: "WeMatch — an AX matching service for the WeRoad world"
-  alt: "WeMatch one-pager: an editorial web layout with a Sofia character mark above a large opening quote, restrained typography, generous white space."
+  # image: "/images/work/family-space/adjacent.jpg"   # optional — omit when there's no adjacent.jpg
 ```
 
-`slug` must match a real `content/work/<slug>.md` file (the link checker will catch you if it doesn't). The two cards render side-by-side in a 16:10 placeholder until `image` is set. Either or both can be omitted (last case study has no `next`, first has no `prev`).
+You do **not** author prev/next here. The order is a single ring in `app/data/workChain.ts`: an ordered list of slugs where the last study's Next wraps round to the first. The page finds the current study's position in that list, takes its two neighbours, and renders each neighbour's `card`. So:
+
+- to reorder the chain or change which studies sit next to each other, edit the array in `workChain.ts`;
+- to fix a card's copy, edit that study's `card:` block;
+- a study whose slug is **not** in `workChain.ts` (e.g. an off-Index page) shows no "More work" section at all.
+
+The card renders in a 16:10 placeholder until `image` is set. `slug` matching is automatic — the chain references each study by its filename slug.
 
 ### From in-progress to live — the checklist
 
@@ -255,7 +257,7 @@ Open `content/work/<slug>.md` and:
 6. Add a `reflection:` paragraph.
 7. Add a `gallery:` block (4-9 figcaptions).
 8. (Optional) Add a `resources:` block (links and/or a walkthrough video).
-9. Add `prev` / `next` adjacency (pick the two closest neighbours).
+9. Add a `card:` block (title, alt, optional image), then add the slug to `app/data/workChain.ts` at the position you want it in the More-work ring.
 10. Run `npm run dev`, visit `/work/<slug>`, scroll the whole page, click each TOC item, confirm nothing's missing.
 11. Commit on a feature branch (`feat/case-study-<slug>`), merge through `dev` to `main` once you're happy.
 
@@ -381,7 +383,7 @@ public/images/
         ├── ...
         ├── gallery-01.jpg                                # 4:3, ≥1200px wide
         ├── gallery-02.jpg
-        └── adjacent.jpg                                  # 16:10, ≥1200px wide (for prev/next cards)
+        └── adjacent.jpg                                  # 16:10, ≥1200px wide (for More-work cards)
 ```
 
 You don't have to use these filenames — they're examples. The actual filenames are whatever you reference from your data files / frontmatter.
@@ -396,7 +398,7 @@ You don't have to use these filenames — they're examples. The actual filenames
 | Case-study hero | 21:8 | 2400 px | `/work/<slug>` hero |
 | Artifact figure | 16:10 | 1800 px | `approach[].artifacts[]` |
 | Gallery tile | 4:3 | 1200 px | `gallery[]` |
-| Adjacent card | 16:10 | 1200 px | `prev` / `next` |
+| Adjacent card | 16:10 | 1200 px | More-work card (`card.image`) |
 | Video poster | 16:9 | 1600 px | `resources[]` video facade |
 | About / portrait | 4:5 | 1200 px | `/about` hero + home section 04 |
 | Index preview | 3:4 | 900 px | Home section 03 hover rail |
@@ -416,7 +418,7 @@ Each image position has a specific field to set. After dropping the file into `p
 | Case-study hero | `content/work/<slug>.md` | `hero: '/images/work/<slug>/hero.jpg'` |
 | Artifact figure | `content/work/<slug>.md` | `approach[N].artifacts[M].src: '/images/work/<slug>/...'` |
 | Gallery tile | `content/work/<slug>.md` | `gallery[N].src: '/images/work/<slug>/gallery-XX.jpg'` |
-| Adjacent (prev/next) | `content/work/<slug>.md` | `prev.image:` and `next.image:` |
+| Adjacent (More-work) | `content/work/<slug>.md` | `card.image:` |
 | About hero portrait | `app/pages/about.vue` | Change `:src="null"` to `:src="'/images/about/portrait.jpg'"` |
 | Home About-preview portrait | `app/pages/index.vue` | Change `:src="null"` to the same path |
 
