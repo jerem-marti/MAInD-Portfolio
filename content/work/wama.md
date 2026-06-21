@@ -2,7 +2,8 @@
 title: "Wama"
 summary: "A quiet machine-learning companion that lives beside the sink. Wama senses your presence and the running tap with a trained vision model, reads a simple hand gesture, and answers through an animated character, treating ML as a witness rather than an optimiser."
 status: "live"
-heroAlt: "Wama running on a phone mounted beside a kitchen sink, a small animated character anchored to the lower half of the screen during dishwashing."
+heroAlt: "Wama running on a phone in a laser-cut wooden holder at a built sink rig: a tap pours into a clear basin while the screen shows a small blue cloud character."
+hero: "/images/work/wama/hero.jpg"
 
 brief:
   role: "Integration & development"
@@ -67,6 +68,12 @@ approach:
         is the project's ethical position made concrete. A device can watch your kitchen sink only
         because what it sees never leaves the room. Presence-sensing at home is one short step from
         surveillance, and keeping the model on the device is how Wama refuses to take that step.
+    artifacts:
+      - src: "/images/work/wama/artifact-sensing.jpg"
+        alt: "A two-by-two matrix mapping presence against running water into the model's four classes, each tied to a character response: sleeps, greets, accompanies, and a highlighted worried state when the tap runs with no one there."
+        caption: "The four-class vision model: presence × water."
+        decision: "Framing the scene as presence times water, not litres, is what lets the character carry concern instead of a meter."
+        width: "wide"
 
   - label: "Response"
     title: "A character, not a dashboard"
@@ -81,6 +88,22 @@ approach:
         gamification: the concern is expressed as affect, which keeps the whole thing in the register
         of feeling rather than accounting. The character work that makes this land was a teammate's;
         my job was to make it run.
+    artifacts:
+      - src: "/images/work/wama/screen-askmusic.jpg"
+        alt: "The Wama app asking 'Want Some Music?' with a thumbs up for yes and thumbs down for no, the cloud character holding up a small jukebox."
+        caption: "Asks once if you want music."
+        decision: "A thumb up or down held briefly, never a tap, is the one input that works with wet, busy hands."
+        width: "half"
+      - src: "/images/work/wama/screen-musicplaying.jpg"
+        alt: "The Wama app playing music: the cloud character with eyes closed, swaying, small music notes rising beside it."
+        caption: "Plays along when you say yes."
+        decision: "Music is the only thing Wama ever offers, and only once, so it stays a companion rather than a nag."
+        width: "half"
+      - src: "/images/work/wama/screen-worried.jpg"
+        alt: "The Wama app worried: the cloud character looks anxious over a rising blue water level, with the line 'I still hear the water but I don't see you'."
+        caption: "Worries when the tap runs alone."
+        decision: "The worried face is the entire environmental signal. No counter, no litres, just concern."
+        width: "wide"
 
   - label: "Integration"
     title: "Bringing three parts into one product"
@@ -116,18 +139,23 @@ reflection: >-
   companion stay on the right side of surveillance rather than drift into it.
 
 gallery:
-  - alt: "Wama on a phone mounted beside a sink, greeting the user with its hello animation, tap off."
+  - src: "/images/work/wama/gallery-01-hello.jpg"
+    alt: "The full Wama sink rig seen head-on, tap closed, the phone in its laser-cut holder showing a smiling blue cloud."
     caption: "Detected — Wama wakes and greets."
-  - alt: "Wama's working state during the task, the character settled in while the water runs."
+  - src: "/images/work/wama/gallery-02-working.jpg"
+    alt: "The sink rig with the tap running into the clear basin, the character settled on screen while the water flows."
     caption: "Task active — accompanying the task."
-  - alt: "Wama's worried state: the character anxious while the tap runs with nobody present."
-    caption: "Interruption — water running, nobody there."
-  - alt: "A hand held up in a thumbs-up gesture in front of the sink camera, the only input vocabulary."
-    caption: "Input — a single gesture for wet hands."
-  - alt: "The four context classes of the vision model: idle, detected, task active, interruption."
-    caption: "State model — four relational classes."
-  - alt: "Wama added to a phone home screen as a Progressive Web App, running full-screen at the sink."
-    caption: "Local by design — a PWA, processing on-device."
+  - src: "/images/work/wama/gallery-03-arm.jpg"
+    alt: "A hand reaching in to open the blue tap handle over the basin, the phone showing Wama mid-task."
+    caption: "Tested at a real sink — a hand at the tap."
+  - src: "/images/work/wama/gallery-04-holder.jpg"
+    alt: "Close-up of the finger-jointed plywood holder engraved Wama, the phone showing the blue cloud greeting."
+    caption: "The companion up close — character and laser-cut holder."
+
+resources:
+  - type: github
+    title: "Source code"
+    url: "https://github.com/jerem-marti/MAInD-Intelligence_As_A_Material-2026-Wama"
 
 prev:
   slug: "human-loci"

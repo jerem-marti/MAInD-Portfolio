@@ -74,7 +74,8 @@ export const projects: readonly IndexRow[] = [
     tags: ['Machine learning', 'Interaction design', 'Prototyping', 'Front-end build'],
     year: '2026',
     href: '/work/wama',
-    alt: 'Phone mounted next to a kitchen sink, showing a small animated character on the screen during dishwashing.',
+    preview: '/images/index/wama.jpg',
+    alt: 'Wama in its laser-cut holder at a built sink rig, the phone showing a small blue cloud character.',
   },
   {
     num: '04',

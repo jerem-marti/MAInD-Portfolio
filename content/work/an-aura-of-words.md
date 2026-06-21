@@ -181,7 +181,8 @@ resources:
 prev:
   slug: "wama"
   title: "Wama — machine learning as a sink-side witness"
-  alt: "Phone mounted next to a kitchen sink, showing a small animated character on the screen during dishwashing."
+  alt: "Wama's built sink rig at an angle: a tap pouring into a clear basin, the phone in its laser-cut holder showing the character."
+  image: "/images/work/wama/adjacent.jpg"
 
 next:
   slug: "brushbuddy"
