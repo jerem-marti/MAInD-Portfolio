@@ -16,7 +16,7 @@ const widthClass: Record<typeof props.width, string> = {
 </script>
 
 <template>
-  <figure :class="['flex flex-col gap-3 mt-10 first:mt-0', widthClass[width]]">
+  <figure :class="['flex flex-col gap-3', widthClass[width]]">
     <UiMediaPlaceholder
       :src="src"
       :alt="alt"

@@ -30,25 +30,30 @@ useSchemaOrg([
 
 const isLive = computed(() => study.value?.status === 'live')
 
-// TOC entries derive from which content a study actually has. Numbers come from a
-// fixed master order, so a section's number never shifts based on what else exists;
-// absent sections simply drop out of the contents list (no dead TOC entries).
+// TOC entries and section numbers both derive from which content a study actually
+// has. Present sections are numbered contiguously (01, 02, 03 …) in master order, so
+// an absent section leaves no gap: a study without Resources numbers More work 07,
+// not 08. Section headings read their number back via numFor() to stay in sync.
 const sections = computed(() => {
   const s = study.value
   if (!s) return []
   return [
-    { id: 'problem', num: '01', label: 'Problem', present: !!s.problem?.length },
-    { id: 'role', num: '02', label: 'Role', present: !!s.role },
-    { id: 'approach', num: '03', label: 'Approach', present: !!s.approach?.length },
-    { id: 'outcome', num: '04', label: 'Outcome', present: !!s.outcome?.length },
-    { id: 'reflection', num: '05', label: 'Reflection', present: !!s.reflection },
-    { id: 'gallery', num: '06', label: 'Gallery', present: !!s.gallery?.length },
-    { id: 'resources', num: '07', label: 'Resources', present: !!s.resources?.length },
-    { id: 'next', num: '08', label: 'More work', present: !!(s.prev || s.next) },
+    { id: 'problem', label: 'Problem', present: !!s.problem?.length },
+    { id: 'role', label: 'Role', present: !!s.role },
+    { id: 'approach', label: 'Approach', present: !!s.approach?.length },
+    { id: 'outcome', label: 'Outcome', present: !!s.outcome?.length },
+    { id: 'reflection', label: 'Reflection', present: !!s.reflection },
+    { id: 'gallery', label: 'Gallery', present: !!s.gallery?.length },
+    { id: 'resources', label: 'Resources', present: !!s.resources?.length },
+    { id: 'next', label: 'More work', present: !!(s.prev || s.next) },
   ]
     .filter((d) => d.present)
-    .map(({ id, num, label }) => ({ id, num, label }))
+    .map(({ id, label }, i) => ({ id, label, num: String(i + 1).padStart(2, '0') }))
 })
+
+// Section headings look their number up here so the heading, the TOC, and the
+// scroll-spy all read from one contiguous numbering.
+const numFor = (id: string) => sections.value.find((s) => s.id === id)?.num ?? ''
 
 const active = useScrollSpy(sections.value.map((s) => s.id))
 </script>
@@ -207,7 +212,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="problem"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead num="01" label="Problem" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('problem')" label="Problem" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-12 gap-x-6">
           <div class="col-span-12 md:col-span-8 md:col-start-3 flex flex-col gap-6">
             <p
@@ -232,7 +237,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="role"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead num="02" label="Role" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('role')" label="Role" class="mb-10 md:mb-16" />
         <WorkRoleColumns
           :led="study.role.led"
           :contributed="study.role.contributed"
@@ -248,7 +253,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         class="py-16 md:py-28 scroll-mt-32 border-t border-brand-hairline bg-brand-surface/40"
       >
         <div class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16">
-          <UiSectionHead num="03" label="Approach" class="mb-10 md:mb-16" />
+          <UiSectionHead :num="numFor('approach')" label="Approach" class="mb-10 md:mb-16" />
         </div>
         <div class="flex flex-col gap-24 md:gap-32">
           <!--
@@ -265,7 +270,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
             <div class="grid grid-cols-12 gap-x-6">
               <div class="col-span-12 md:col-span-2 mb-4 md:mb-0">
                 <span class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted">
-                  03.{{ String(i + 1).padStart(2, '0') }} / {{ sub.label.toUpperCase() }}
+                  {{ numFor('approach') }}.{{ String(i + 1).padStart(2, '0') }} / {{ sub.label.toUpperCase() }}
                 </span>
               </div>
               <div class="col-span-12 md:col-span-8 md:col-start-3">
@@ -287,7 +292,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
             </div>
             <div
               v-if="sub.artifacts"
-              class="mt-12 md:mt-16 grid grid-cols-12 gap-x-6 gap-y-0"
+              class="mt-12 md:mt-16 grid grid-cols-12 gap-x-6 gap-y-10"
             >
               <WorkArtifactBlock
                 v-for="a in sub.artifacts"
@@ -309,7 +314,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="outcome"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead num="04" label="Outcome" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('outcome')" label="Outcome" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-12 gap-x-6">
           <div class="col-span-12 md:col-span-8 md:col-start-3 flex flex-col gap-6">
             <p
@@ -329,7 +334,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="reflection"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead num="05" label="Reflection" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('reflection')" label="Reflection" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-12 gap-x-6">
           <div class="col-span-12 md:col-span-8 md:col-start-3">
             <p
@@ -347,7 +352,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="gallery"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead num="06" label="Gallery" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('gallery')" label="Gallery" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           <figure
             v-for="(g, i) in study.gallery"
@@ -375,7 +380,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="resources"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead num="07" label="Resources" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('resources')" label="Resources" class="mb-10 md:mb-16" />
         <WorkResources :resources="study.resources" />
       </section>
 
@@ -385,7 +390,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="next"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead num="08" label="More work" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('next')" label="More work" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           <WorkAdjacentCard v-if="study.prev" dir="prev" :item="study.prev" />
           <WorkAdjacentCard v-if="study.next" dir="next" :item="study.next" />
