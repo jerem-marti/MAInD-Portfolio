@@ -110,7 +110,8 @@ export const projects: readonly IndexRow[] = [
     tags: ['Design thinking', 'Brand / Editorial', 'Marketing strategy', 'Scrollytelling'],
     year: '2025',
     href: '/work/uefa-female-coaches',
-    alt: 'Landing page mockup for a campaign encouraging women into football coaching, with scrollytelling testimonials.',
+    preview: '/images/index/uefa-female-coaches.jpg',
+    alt: 'The Why Not You? awareness poster: nine portraits of real female coaches around a central mirror, under the banner Coach, Woman, Leader.',
   },
   {
     num: '08',
