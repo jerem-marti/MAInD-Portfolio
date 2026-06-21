@@ -83,7 +83,8 @@ export const projects: readonly IndexRow[] = [
     tags: ['Tangible interface', 'Prototyping', 'Hardware'],
     year: '2026',
     href: '/work/brushbuddy',
-    alt: '15cm cube with a monster face, two googly eyes, and a row of softly lit teeth in the mouth.',
+    preview: '/images/index/brushbuddy.jpg',
+    alt: 'Front view of the BrushBuddy cube: a yellow monster face with raised brows, googly eyes and a mouth of grey teeth, the toothbrush standing straight up from the dock.',
   },
   {
     num: '05',

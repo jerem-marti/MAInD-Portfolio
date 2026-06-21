@@ -2,7 +2,8 @@
 title: "BrushBuddy"
 summary: "A monster buddy cube that guides two-minute toothbrushing for children aged 4 to 8. Pull out the toothbrush and the cube's face reacts through light, motion, and sound, lighting twelve teeth in sequence and only advancing while the child is actually brushing."
 status: "live"
-heroAlt: "BrushBuddy: a 15cm cube with a friendly monster face, two googly eyes, and a mouth of twelve teeth that light up in sequence."
+hero: "/images/work/brushbuddy/hero.jpg"
+heroAlt: "A hand lifts the yellow toothbrush from the dock on top of the BrushBuddy cube, whose worried monster face — raised brows, googly eyes, a mouth of twelve grey teeth — waits below on a wide grey field."
 
 brief:
   role: "Electronics & firmware"
@@ -60,6 +61,12 @@ approach:
         how close the child is to the next sticker, and after twelve completed sessions it dispenses
         one and resets the counter. Every condition stays explicit and observable, so a four-year-old
         can read the whole loop without being told.
+    artifacts:
+      - src: "/images/work/brushbuddy/artifact-interaction-storyboard.jpg"
+        alt: "A hand-drawn six-step storyboard of one session: lifting the brush out, the teeth pulsing to prompt toothpaste, a start jingle, the teeth lighting in order while brushing and pausing when it stops, an end cue, and a session counter that pays out a sticker."
+        caption: "Interaction storyboard — one session, start to finish."
+        decision: "Mapping the loop by hand first fixed every state and cue before a line of firmware, so the five-day build had one target to hit."
+        width: "wide"
 
   - label: "System"
     title: "Two microcontrollers, one routine"
@@ -74,6 +81,12 @@ approach:
         The lit teeth were their own small problem, solved with plexiglass teeth sanded to diffuse the
         light evenly instead of glaring. Each subsystem was brought up on the bench before it went into
         the cube, because in a five-day build there is no time to debug everything at once.
+    artifacts:
+      - src: "/images/work/brushbuddy/artifact-system-internals.jpg"
+        alt: "The cube opened into two halves: one holds the ESP32 controller, three servos, the dock sensor, a buzzer and wiring; the other is the plywood shell laser-etched with the BrushBuddy name and course credit."
+        caption: "Inside the cube — one of two microcontrollers."
+        decision: "Splitting brain and brush across two boards is what lets the routine tell real brushing from a toothbrush sitting still."
+        width: "wide"
 
   - label: "Sprint"
     title: "Five days, end to end"
@@ -106,18 +119,36 @@ reflection: >-
   kid ignore the adults and play was the proof those few things were the right ones.
 
 gallery:
-  - alt: "The finished BrushBuddy cube: a 15cm monster with googly eyes and a mouth of twelve teeth lit in sequence."
-    caption: "The cube — a monster buddy, mid-routine."
-  - alt: "The instrumented toothbrush with its embedded motion module, docked on top of the cube."
-    caption: "The toothbrush — motion sensed at the source."
-  - alt: "The twelve teeth lighting up one by one across the mouth, showing brushing progress and order."
-    caption: "Twelve teeth — effort made visible."
-  - alt: "The cube dispensing a sticker from its slot after twelve completed sessions."
-    caption: "The reward — a sticker after twelve sessions."
-  - alt: "The electronics of the two-device system: the cube's controller and the toothbrush module communicating wirelessly."
-    caption: "Two microcontrollers — cube and brush, talking wirelessly."
-  - alt: "The storyboard of the full interaction loop, from removing the brush to the sticker reward."
-    caption: "The loop — storyboarded across a session."
+  - src: "/images/work/brushbuddy/gallery-01.jpg"
+    alt: "The BrushBuddy cube at a three-quarter angle, the toothbrush standing in its top dock, the worried monster face turned to camera, on a clean grey field."
+    caption: "The buddy, at rest."
+  - src: "/images/work/brushbuddy/gallery-02.jpg"
+    alt: "The plywood side of the cube, laser-etched with the BrushBuddy name and course credit, the brush docked on top."
+    caption: "Docked, and quietly branded."
+  - src: "/images/work/brushbuddy/gallery-03.jpg"
+    alt: "The 3D-printed yellow toothbrush standing alone with red bristles at the tip, the only part of the system that moves."
+    caption: "The brush that does the sensing."
+  - src: "/images/work/brushbuddy/gallery-04.jpg"
+    alt: "Close-up of the monster face: two raised printed eyebrows and white-and-black googly eyes above the yellow mouth frame."
+    caption: "The face, up close."
+  - src: "/images/work/brushbuddy/gallery-05.jpg"
+    alt: "The cube powered on, a row of small blue lights along the lower teeth and a sticker dispensed into the mouth."
+    caption: "A sticker, earned."
+
+resources:
+  - type: github
+    title: "Cube firmware (ESP32)"
+    url: "https://github.com/jerem-marti/MAInD-Creating_Tangible_Interfaces-2026-BrushBuddy"
+  - type: github
+    title: "Toothbrush sensor firmware (ESP32)"
+    url: "https://github.com/jerem-marti/MAInD-Creating_Tangible_Interfaces-2026-BrushBuddy-Toothbrush_Sensor"
+  - type: pdf
+    title: "Wiring diagram"
+    url: "/files/brushbuddy-wiring-diagram.pdf"
+  - type: video
+    title: "Interaction film"
+    poster: "/images/work/brushbuddy/video-poster.jpg"
+    src: "/videos/brushbuddy/interaction-film.mp4"
 
 prev:
   slug: "an-aura-of-words"

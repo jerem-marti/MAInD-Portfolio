@@ -187,5 +187,6 @@ prev:
 next:
   slug: "brushbuddy"
   title: "BrushBuddy — a monster cube that guides two-minute toothbrushing"
-  alt: "A 15cm cube with a monster face, two googly eyes, and a row of softly lit teeth in the mouth."
+  image: "/images/work/brushbuddy/adjacent.jpg"
+  alt: "A hand lifts the toothbrush from the dock on top of the BrushBuddy cube, which has a worried yellow monster face."
 ---
