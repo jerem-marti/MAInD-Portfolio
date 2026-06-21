@@ -1,8 +1,26 @@
 <script setup lang="ts">
+import { chainNeighbours } from '~/data/workChain'
+
 const route = useRoute()
 const { data: study } = await useAsyncData(`work-${route.params.slug}`, () =>
   queryCollection('work').path(route.path).first(),
 )
+
+// Ring neighbours for the "More work" section, derived from the single ordered
+// chain in app/data/workChain.ts. Both null for off-chain pages → no section.
+const slug = route.params.slug as string
+const { prev, next } = chainNeighbours(slug)
+
+const { data: cards } = await useAsyncData('work-cards', () =>
+  queryCollection('work').all(),
+)
+const cardFor = (s: string | null) => {
+  if (!s) return null
+  const doc = cards.value?.find((d) => d.path === `/work/${s}`)
+  return doc?.card ? { slug: s, ...doc.card } : null
+}
+const prevCard = computed(() => cardFor(prev))
+const nextCard = computed(() => cardFor(next))
 
 if (!study.value) {
   throw createError({
@@ -45,7 +63,7 @@ const sections = computed(() => {
     { id: 'reflection', label: 'Reflection', present: !!s.reflection },
     { id: 'gallery', label: 'Gallery', present: !!s.gallery?.length },
     { id: 'resources', label: 'Resources', present: !!s.resources?.length },
-    { id: 'next', label: 'More work', present: !!(s.prev || s.next) },
+    { id: 'next', label: 'More work', present: !!(prevCard.value || nextCard.value) },
   ]
     .filter((d) => d.present)
     .map(({ id, label }, i) => ({ id, label, num: String(i + 1).padStart(2, '0') }))
@@ -384,16 +402,16 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         <WorkResources :resources="study.resources" />
       </section>
 
-      <!-- 08 Next / Previous -->
+      <!-- More work (ring neighbours) -->
       <section
-        v-if="study.prev || study.next"
+        v-if="prevCard || nextCard"
         id="next"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
         <UiSectionHead :num="numFor('next')" label="More work" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-          <WorkAdjacentCard v-if="study.prev" dir="prev" :item="study.prev" />
-          <WorkAdjacentCard v-if="study.next" dir="next" :item="study.next" />
+          <WorkAdjacentCard v-if="prevCard" dir="prev" :item="prevCard" />
+          <WorkAdjacentCard v-if="nextCard" dir="next" :item="nextCard" />
         </div>
       </section>
     </template>
