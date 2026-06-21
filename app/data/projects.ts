@@ -92,7 +92,8 @@ export const projects: readonly IndexRow[] = [
     tags: ['Tangible interface', 'Prototyping', 'Hardware'],
     year: '2025',
     href: '/work/human-loci',
-    alt: 'Compact listening box with three pigmented plaster disks beside it, on a wooden surface.',
+    preview: '/images/index/human-loci.jpg',
+    alt: 'The Human Loci listening box: a transparent acrylic box with a record-style tonearm, three-quarter view on a grey backdrop.',
   },
   {
     num: '06',

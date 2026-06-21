@@ -2,7 +2,8 @@
 title: "Human Loci"
 summary: "A synesthetic listening object that plays places instead of music. Three plaster disks, each tied to a public space, let you drop its field recording into the room and sit with the atmosphere of somewhere else, chosen by touch before a sound begins."
 status: "live"
-heroAlt: "Human Loci: a compact transparent acrylic listening box with internal speakers and a tonearm, beside three pigmented plaster disks for a park, a marina, and a train station."
+hero: "/images/work/human-loci/hero.jpg"
+heroAlt: "The Human Loci listening box: a transparent acrylic box with internal speakers and a white tonearm, a textured blue plaster disk resting on its deck, on a seamless grey backdrop."
 
 brief:
   role: "Electronics & enclosure integration"
@@ -55,6 +56,12 @@ approach:
         no labels, no screen. Without a disk the device stays silent even if the arm moves, so disk
         and gesture only mean something together. The experience stays in the foreground; the device
         recedes.
+    artifacts:
+      - alt: "Top-down view of the open object with three labelled parts: a circular volume wheel, the tonearm that starts playback, and the internal two-chamber speaker box, a blue plaster disk on the deck."
+        caption: "Anatomy — tonearm, volume wheel, speaker box."
+        decision: "Three broad gestures (place a disk, move the arm, turn the wheel) replace every menu, label, and screen."
+        width: "wide"
+        src: "/images/work/human-loci/artifact-concept-anatomy.jpg"
 
   - label: "Electronics"
     title: "Place a disk, hear a place"
@@ -77,6 +84,7 @@ approach:
         caption: "Electronics — RFID to controller to audio, the full signal flow."
         decision: "Built on development modules rather than discrete components. A documented one-line library fix made the audio board work on the Pico toolchain."
         width: "wide"
+        src: "/images/work/human-loci/artifact-electronics.jpg"
 
   - label: "Enclosure"
     title: "Sound inside a transparent shell"
@@ -98,10 +106,12 @@ approach:
         caption: "Speaker enclosure — wood prototype before the final acrylic."
         decision: "Acrylic looks ideal but cracks under stress at screw holes, so a wood prototype de-risked the geometry and the assembly order first."
         width: "half"
-      - alt: "A heat-set threaded insert being installed into the acrylic base to create a clean internal mounting point for the electronics."
-        caption: "Mounting — threaded inserts in acrylic, no external screws."
+        src: "/images/work/human-loci/artifact-enclosure-wood.jpg"
+      - alt: "An angled top-down through the transparent shell: boards and the platter sit on 3D-printed internal supports fixed with heat-set inserts, keeping the outer surfaces clean."
+        caption: "Mounting — printed internal supports, no external screws."
         decision: "Internal printed supports plus inserts kept the transparent shell honest and the assembly reversible."
         width: "half"
+        src: "/images/work/human-loci/artifact-enclosure-mounting.jpg"
 
   - label: "Materials"
     title: "Disks you read by touch"
@@ -118,6 +128,12 @@ approach:
         same appetite for unfamiliar materials shaped the body's belt, a continuous live-hinge strip
         that lets rigid acrylic bend around the whole object while staying acoustically open. Most of
         the project's time went into trials like these, and the object is better for it.
+    artifacts:
+      - alt: "Two process shots: laser-cut layered disk patterns stacked as a positive, and a grey vacuum-formed negative mould used to cast the plaster disks."
+        caption: "Disk fabrication — laser-cut layers and a vacuum-formed mould."
+        decision: "Plaster's weight and touch were the point, so the team cut a positive and vacuum-formed a mould to cast it rather than reach for the usual laser-cut palette."
+        width: "wide"
+        src: "/images/work/human-loci/artifact-materials-discmaking.jpg"
 
 outcome:
   - >-
@@ -141,16 +157,45 @@ reflection: >-
 gallery:
   - alt: "The transparent acrylic listening box with its tonearm, seen three-quarter, beside the three plaster disks."
     caption: "The object — transparent body, tonearm, three disks."
+    src: "/images/work/human-loci/gallery-01.jpg"
   - alt: "The three plaster disks for the park, the marina, and the train station, each a different pigment and texture."
     caption: "The disks — park, marina, train station."
+    src: "/images/work/human-loci/gallery-02.jpg"
   - alt: "A close-up of a plaster disk showing its raised texture and tinted surface, read by touch."
     caption: "Disk detail — material identity you can feel."
+    src: "/images/work/human-loci/gallery-03.jpg"
   - alt: "The internal speaker box split into two sealed chambers, mounted inside the transparent shell."
     caption: "Speaker enclosure — two sealed chambers."
+    src: "/images/work/human-loci/gallery-04.jpg"
   - alt: "The full-perimeter live-hinge belt letting rigid acrylic bend around the whole object while staying acoustically open."
     caption: "The belt — rigid acrylic, made to bend and breathe."
+    src: "/images/work/human-loci/gallery-05.jpg"
   - alt: "The electronics on the bench: an RFID reader and a Raspberry Pi Pico before integration."
     caption: "Electronics — RFID and Pico, bench bring-up."
+    src: "/images/work/human-loci/gallery-06.jpg"
+
+resources:
+  - type: github
+    title: "Source code and setup guide"
+    url: "https://github.com/jerem-marti/MAInD-Digital_Fabrication-2025-Human_Loci"
+  - type: video
+    title: "Working demo"
+    poster: "/images/work/human-loci/video-poster-demo.jpg"
+    src: "/videos/human-loci/demo.mp4"
+  - type: video
+    title: "Interaction film"
+    poster: "/images/work/human-loci/video-poster.jpg"
+    src: "/videos/human-loci/walkthrough.mp4"
+  - type: video
+    title: "Assembly animation"
+    poster: "/images/work/human-loci/video-poster-assembly.jpg"
+    src: "/videos/human-loci/assembly.mp4"
+  - type: pdf
+    title: "Electronic schematic"
+    url: "/files/human-loci-electronic-schematic.pdf"
+  - type: web
+    title: "Prototyping process"
+    url: "https://master-interaction-design.notion.site/HUMAN-LOCI-2cc89104ecf9806a921fd48164a01938"
 
 prev:
   slug: "a-ta-dispo"

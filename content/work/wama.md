@@ -161,6 +161,7 @@ prev:
   slug: "human-loci"
   title: "Human Loci — a synesthetic listening object"
   alt: "Human Loci: a transparent acrylic listening box with three plaster disks for a park, a marina, and a train station."
+  image: "/images/work/human-loci/adjacent.jpg"
 
 next:
   slug: "an-aura-of-words"
