@@ -109,18 +109,11 @@ export default defineContentConfig({
           )
           .optional(),
 
-        prev: z
+        // One canonical card per study, used by the "More work" prev/next on
+        // neighbouring pages. Order lives in app/data/workChain.ts. `image` is
+        // omitted for studies without a public/images/work/<slug>/adjacent.jpg.
+        card: z
           .object({
-            slug: z.string(),
-            title: z.string(),
-            image: z.string().optional(),
-            alt: z.string(),
-          })
-          .optional(),
-
-        next: z
-          .object({
-            slug: z.string(),
             title: z.string(),
             image: z.string().optional(),
             alt: z.string(),
