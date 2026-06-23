@@ -2,7 +2,8 @@
 title: "À ta Dispo"
 summary: "A startup concept that matches volunteers with the organisations and events that need them, taken through the full entrepreneurial process. Associations, NGOs, cultural institutions, and festivals all struggle to recruit reliable volunteers; volunteers struggle to find opportunities and get recognised. À ta Dispo is the matchmaking layer between them."
 status: "live"
-heroAlt: "À ta Dispo concept: a matchmaking app connecting volunteers with organisations and events, with profiles, opportunities, and recognition badges."
+hero: "/images/work/a-ta-dispo/hero.jpg"
+heroAlt: "The hand-drawn À ta Dispo wordmark, a coral logo on a pink sticker shape with a small smiley, centred on a plain coral background."
 
 brief:
   role: "Research & strategy"
@@ -61,6 +62,12 @@ approach:
         The discipline was resisting scope. Every existing tool we looked at had drifted into heavy
         event-management software. We kept À ta Dispo focused on the two things that actually move the
         needle: efficient matching and genuine recognition, without the management bloat.
+    artifacts:
+      - alt: "A MoSCoW feature board for À ta Dispo: Must-have includes listing, matchmaking, gamification and badges; Could-have and Won't-have push event scheduling and volunteer ranking out of scope."
+        caption: "Features, sorted by MoSCoW."
+        decision: "Matchmaking and recognition sit in Must-have; planning and management tooling are parked in Won't-have, so the scope stays honest."
+        width: "wide"
+        src: "/images/work/a-ta-dispo/artifact-concept.jpg"
 
   - label: "Business case"
     title: "From idea to a defensible model"
@@ -75,6 +82,12 @@ approach:
         That is the part design school usually skips, and it changed how I think. A concept is only as
         good as the model that can carry it, and putting numbers and a market against an idea is its own
         kind of honesty test.
+    artifacts:
+      - alt: "À ta Dispo's business model canvas: key partners, activities, value propositions, customer relationships and segments, channels, cost structure, and revenue streams, all filled in."
+        caption: "The business model canvas."
+        decision: "Revenue leans on association subscriptions plus complementary commissions, keeping the model on matchmaking and recognition rather than management software."
+        width: "full"
+        src: "/images/work/a-ta-dispo/artifact-model.jpg"
 
   - label: "Iteration"
     title: "Two courses, two passes"
@@ -88,6 +101,12 @@ approach:
         Coming back to the same idea with more rigour is what made it feel real rather than academic. The
         second pass was less about a new feature and more about whether the thing could stand on its own
         two feet.
+    artifacts:
+      - alt: "The financial-projections slide: a ten-year cost and revenue table above a red area chart that climbs from an initial deficit near minus 50'000 to a positive result, crossing zero around year five."
+        caption: "Ten-year financial projection."
+        decision: "The reworked model carries an initial deficit and turns profitable around year five, the honesty test a first pitch usually skips."
+        width: "wide"
+        src: "/images/work/a-ta-dispo/artifact-finances.jpg"
 
 outcome:
   - >-
@@ -109,20 +128,41 @@ reflection: >-
   it is what protects it.
 
 gallery:
-  - alt: "Volunteer and organiser interviews and survey results validating the two-sided recruitment problem."
-    caption: "Research — validating the problem."
-  - alt: "The À ta Dispo concept: simple matchmaking between volunteers and opportunities, with recognition badges."
-    caption: "Concept — matchmaking and recognition."
-  - alt: "A value proposition canvas mapping a volunteer's jobs, pains, and gains."
-    caption: "Strategy — the value proposition canvas."
-  - alt: "The business model canvas for À ta Dispo, with customer segments and revenue blocks worked out."
-    caption: "Strategy — the business model."
-  - alt: "The À ta Dispo pitch deck used to present the venture."
-    caption: "Pitch — presenting the venture."
-  - alt: "The reworked finances from the Crunch pass, framed for a bank-financing simulation."
-    caption: "Iteration — financeable on the second pass."
+  - alt: "The problem slide: two volunteer and organiser quotes on the left, and on the right the validated need, with survey figures of 60% and over 50% backing each side."
+    caption: "The problem, validated."
+    src: "/images/work/a-ta-dispo/gallery-01-problem.jpg"
+  - alt: "A Porter's five forces analysis for À ta Dispo, rating supplier power as low, buyer power as high, rivalry and new entrants as moderate, and substitutes as high."
+    caption: "Porter's five forces."
+    src: "/images/work/a-ta-dispo/gallery-02-porter.jpg"
+  - alt: "A total, serviceable, and obtainable market funnel built from Swiss cultural-event data, narrowing roughly 9'315 events down to around 3'450 that genuinely need outside volunteers."
+    caption: "Sizing the market."
+    src: "/images/work/a-ta-dispo/gallery-03-market.jpg"
+  - alt: "Two value proposition canvases for À ta Dispo, mapping the jobs, pains, and gains of volunteers and organisers against the platform's features."
+    caption: "The value proposition."
+    src: "/images/work/a-ta-dispo/gallery-04-value.jpg"
+  - alt: "A competitive map placing À ta Dispo against EHRO, Swiss Volunteers, and benevol on two axes: matching quality and breadth of the volunteer base."
+    caption: "Where it sits against rivals."
+    src: "/images/work/a-ta-dispo/gallery-05-competition.jpg"
+  - alt: "The pricing model: a Basique, Évolutif, and Premium pack priced per event, with optional supplements for visibility and follow-up."
+    caption: "The pricing model."
+    src: "/images/work/a-ta-dispo/gallery-06-pricing.jpg"
+
+resources:
+  - type: pdf
+    title: "Rapport de projet — version retravaillée"
+    url: "/files/a-ta-dispo-rapport-v2.pdf"
+  - type: pdf
+    title: "Pitch — projet initial"
+    url: "/files/a-ta-dispo-pitch-v1.pdf"
+  - type: pdf
+    title: "Business plan — projet initial"
+    url: "/files/a-ta-dispo-business-plan-v1.pdf"
+  - type: pdf
+    title: "Finances — projet initial"
+    url: "/files/a-ta-dispo-finances-v1.pdf"
 
 card:
   title: "À ta Dispo — matching event volunteers with organizers"
-  alt: "À ta Dispo: a matchmaking concept connecting festival volunteers with event organizers."
+  alt: "The hand-drawn À ta Dispo wordmark, a coral logo on a pink sticker shape, on a plain coral background."
+  image: "/images/work/a-ta-dispo/adjacent.jpg"
 ---

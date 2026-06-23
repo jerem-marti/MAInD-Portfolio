@@ -119,7 +119,8 @@ export const projects: readonly IndexRow[] = [
     tags: ['Business strategy', 'UX research', 'Marketing strategy'],
     year: '2025',
     href: '/work/a-ta-dispo',
-    alt: 'À ta Dispo concept: a matchmaking app connecting volunteers with associations, NGOs, and events, with recognition badges.',
+    preview: '/images/index/a-ta-dispo.jpg',
+    alt: "À ta Dispo's hand-drawn logo: a coral wordmark on a pink sticker shape, the identity for the volunteer-matchmaking startup.",
   },
   {
     num: '09',
