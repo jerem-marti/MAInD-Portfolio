@@ -71,10 +71,10 @@ approach:
         Each stage pointed to the same place. The conversion step, the moment inspiration has to become
         action, was the landing page, and that was mine to own.
     artifacts:
-      - src: "/images/work/uefa-female-coaches/artifact-funnel.jpg"
-        alt: "A four-stage funnel diagram: Awareness (the mirror poster), Activation (the Euro 2025 photobooth), Conversion (the landing page, highlighted in orange and tagged 'the part I owned'), and Loyalty (film and workshops), linked left to right by arrows."
-        caption: "The full funnel — awareness to loyalty, conversion at its centre."
-        decision: "Every stage was built to push toward one place: the landing page, where inspiration had to become action."
+      - src: "/images/work/uefa-female-coaches/artifact-one-pager.jpg"
+        alt: "The team's one-page campaign summary on white, headed Why not you? with the UEFA Women's Euro 2025 and Amazon logos: columns for obstacles, a two-phase program (awareness and activation, then conversion and retention with the landing page), marketing, the trailer booth, and success metrics, beside mockups of the booth and the mirror poster."
+        caption: "The concept on one page — awareness and activation into conversion and retention."
+        decision: "Laying the whole campaign on a single page kept every stage pointed at one conversion: the landing page."
         width: "full"
 
   - label: "Landing page"
