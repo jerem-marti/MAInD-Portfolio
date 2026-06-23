@@ -128,7 +128,8 @@ export const projects: readonly IndexRow[] = [
     tags: ['Back-end build', 'Front-end build', 'Prototyping'],
     year: '2024',
     href: '/work/bereal',
-    alt: 'Mobile capture screen for a BeReal-like prototype: simultaneous front and back camera capture.',
+    preview: '/images/index/bereal.jpg',
+    alt: 'A BeReal-like capture screen on a dark mobile interface: the rear photo full-frame with the front-camera selfie inset, ready to send.',
   },
   {
     num: '10',
