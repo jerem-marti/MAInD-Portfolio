@@ -137,6 +137,7 @@ export const projects: readonly IndexRow[] = [
     tags: ['Back-end build', 'Front-end build', 'Information architecture'],
     year: '2024',
     href: '/work/cultural-trails',
-    alt: 'Mobile screens for a gamified walking-trails app, showing a map, points of interest with quizzes, audio guide controls.',
+    preview: '/images/index/cultural-trails.jpg',
+    alt: 'The Sentiers culturels title card: the project name stacked in heavy black type on a cream ground, above a green, peach and blue ribbon evoking a walking trail.',
   },
 ] as const
