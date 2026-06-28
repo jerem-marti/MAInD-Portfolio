@@ -10,7 +10,7 @@ const items = [
 
 <template>
   <nav
-    class="md:hidden fixed inset-x-0 bottom-0 z-30 bg-brand-bg/95 backdrop-blur border-t border-brand-hairline"
+    class="hidden max-md:pointer-coarse:block fixed inset-x-0 bottom-0 z-30 bg-brand-bg/95 backdrop-blur border-t border-brand-hairline"
     style="padding-bottom: env(safe-area-inset-bottom)"
     aria-label="Primary mobile"
   >

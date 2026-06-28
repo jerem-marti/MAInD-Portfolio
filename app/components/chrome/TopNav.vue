@@ -9,17 +9,20 @@ const navItems = [
 </script>
 
 <template>
+  <!-- Shown for mouse/desktop at every width; hidden only on touch phones
+       (narrow + coarse pointer), where the bottom app bar takes over. A narrow
+       desktop window keeps this bar rather than dropping to the mobile chrome. -->
   <header
-    class="sticky top-0 z-30 hidden md:block bg-brand-bg/85 backdrop-blur border-b border-brand-hairline"
+    class="sticky top-0 z-30 block max-md:pointer-coarse:hidden bg-brand-bg/85 backdrop-blur border-b border-brand-hairline"
   >
-    <div class="mx-auto max-w-[1280px] px-10 lg:px-16 py-5 flex items-baseline justify-between">
+    <div class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-5 flex items-baseline justify-between">
       <NuxtLink to="/" class="flex items-baseline gap-3">
         <span class="text-[15px] text-brand-ink">Jérémy Martin</span>
-        <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
+        <span class="hidden sm:inline font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
           Interaction and product designer
         </span>
       </NuxtLink>
-      <nav class="flex items-center gap-10" aria-label="Primary">
+      <nav class="flex items-center gap-5 md:gap-10" aria-label="Primary">
         <NuxtLink
           v-for="item in navItems"
           :key="item.label"
