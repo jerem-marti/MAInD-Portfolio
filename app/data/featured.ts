@@ -40,14 +40,14 @@ export const featured: readonly FeaturedCase[] = [
   },
   {
     num: 'F·03',
-    slug: 'family-space',
-    title: 'UBS Family Space',
+    slug: 'thea',
+    title: 'Thea',
     problem:
-      'A bank\'s mobile app is built for one account holder. A parent and child have no shared place to manage money, set limits, and learn together.',
+      "Living with a severe allergy means a trigger you cannot see and a reaction that lands before you can act. Another tracker only adds to the anxiety.",
     outcome:
-      'A research-led concept: from interviews and personas to end-to-end user flows for a shared family space, prototyped in Figma and presented to the UBS team.',
-    meta: 'UX research / Banking / 2025',
-    image: '/images/featured/family-space.jpg',
-    alt: "UBS Family Space featured card: two phone screens on a soft red gradient, a parent's hub for the child's analytics, limits, and goals, and the child's savings-goal screen.",
+      'A wrist-worn calm sense of your allergen load nearing your limit, carried by an ambient gauge, a haptic rhythm, and an acknowledge-gated voice. Built as a working prototype on an Arduino UNO Q, with a co-design protocol.',
+    meta: 'Multimodal wearable / SUPSI master / 2026',
+    image: '/images/featured/thea.jpg',
+    alt: 'Thea featured card: the pale wrist cuff suspended in a lattice of orange cords against a cobalt sky with a sprig of wildflower, its ring gauge glowing.',
   },
 ] as const

@@ -47,7 +47,7 @@ export type IndexRow = {
  * One flat Index in true chronological order, newest first. No grouping: rather
  * than impose a single taxonomy (school, capability, medium), the page lets the
  * visitor pick a discipline filter on top of this order (see index.vue). Rows
- * are numbered 01-11 in display order.
+ * are numbered 01-12 in display order.
  */
 export const projects: readonly IndexRow[] = [
   {
@@ -97,6 +97,15 @@ export const projects: readonly IndexRow[] = [
   },
   {
     num: '06',
+    title: 'UBS Family Space',
+    tags: ['UX research', 'Information architecture', 'Interaction design'],
+    year: '2025',
+    href: '/work/family-space',
+    preview: '/images/index/family-space.jpg',
+    alt: "UBS Family Space: the child's savings-goal screen on mobile, a piggy-bank goal tracking progress toward a target amount.",
+  },
+  {
+    num: '07',
     title: 'Human Loci',
     tags: ['Tangible interface', 'Prototyping', 'Hardware'],
     year: '2025',
@@ -105,7 +114,7 @@ export const projects: readonly IndexRow[] = [
     alt: 'The Human Loci listening box: a transparent acrylic box with a record-style tonearm, three-quarter view on a grey backdrop.',
   },
   {
-    num: '07',
+    num: '08',
     title: 'Beau-Rivage Eco-Redesign',
     tags: ['Sustainability', 'Front-end build', 'UX research'],
     year: '2025',
@@ -114,7 +123,7 @@ export const projects: readonly IndexRow[] = [
     alt: 'The redesigned Beau-Rivage Palace homepage on mobile: the shell logo, a Réserver button and the centred wordmark over fine gold lines, far lighter than the original.',
   },
   {
-    num: '08',
+    num: '09',
     title: 'UEFA Female Coaches Campaign',
     tags: ['Design thinking', 'Brand / Editorial', 'Marketing strategy', 'Scrollytelling'],
     year: '2025',
@@ -123,7 +132,7 @@ export const projects: readonly IndexRow[] = [
     alt: 'The Why Not You? awareness poster: nine portraits of real female coaches around a central mirror, under the banner Coach, Woman, Leader.',
   },
   {
-    num: '09',
+    num: '10',
     title: 'À ta Dispo',
     tags: ['Business strategy', 'UX research', 'Marketing strategy'],
     year: '2025',
@@ -132,7 +141,7 @@ export const projects: readonly IndexRow[] = [
     alt: "À ta Dispo's hand-drawn logo: a coral wordmark on a pink sticker shape, the identity for the volunteer-matchmaking startup.",
   },
   {
-    num: '10',
+    num: '11',
     title: 'BeReal Like Web App',
     tags: ['Back-end build', 'Front-end build', 'Prototyping'],
     year: '2024',
@@ -141,7 +150,7 @@ export const projects: readonly IndexRow[] = [
     alt: 'A BeReal-like capture screen on a dark mobile interface: the rear photo full-frame with the front-camera selfie inset, ready to send.',
   },
   {
-    num: '11',
+    num: '12',
     title: 'Cultural Trails Web App',
     tags: ['Back-end build', 'Front-end build', 'Information architecture'],
     year: '2024',
