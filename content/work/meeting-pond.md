@@ -43,8 +43,8 @@ approach:
         close to conventional messaging. The project converged on the metaphor of a living pond,
         because it let presence be expressed as movement and transformation rather than as content.
       - >-
-        A drop is not neutral. It carries the active colour of the sender's pond, and when it
-        reaches the other device it mixes briefly with the local colour, a temporary blend that
+        A drop is not neutral. It carries the active color of the sender's pond, and when it
+        reaches the other device it mixes briefly with the local color, a temporary blend that
         stands for a shared moment. The interaction is relational by design: the gesture is both an
         action and a visual imprint of the person who made it.
 
@@ -76,7 +76,7 @@ approach:
         the object itself, read through the camera as hand movement.
       - >-
         Three gestures carry everything. A tap releases a drop. Moving a hand horizontally changes
-        the pond's colour; moving it vertically changes the intensity of the field. No buttons, no
+        the pond's color; moving it vertically changes the intensity of the field. No buttons, no
         menus. That shift, from a parameter panel to bodily gesture, is what turned a technical setup
         into a coherent object where interaction, form, and meaning hold together.
     artifacts:
@@ -89,7 +89,7 @@ approach:
 outcome:
   - >-
     A working pair of connected light objects. A tap on one ripples across both surfaces in real
-    time, with the sender's colour briefly blending into the receiver's pond.
+    time, with the sender's color briefly blending into the receiver's pond.
   - >-
     A self-contained, screen-free interaction: gesture in, light out, with the whole system
     (sensing, simulation, and networking) embedded in the object instead of a separate controller.
@@ -114,8 +114,8 @@ gallery:
   - alt: "The two connected units side by side, one glowing green and the other magenta, each showing its own rippling pond of light."
     caption: "Two ponds — a gesture here, a ripple there."
     src: "/images/work/meeting-pond/gallery-twoponds.jpg"
-  - alt: "A single pond where green, blue and magenta light mix across the grid, a received drop briefly blending its colour into the local pond."
-    caption: "Blend — the sender's colour, mixing into yours."
+  - alt: "A single pond where green, blue and magenta light mix across the grid, a received drop briefly blending its color into the local pond."
+    caption: "Blend — the sender's color, mixing into yours."
     src: "/images/work/meeting-pond/gallery-blend.jpg"
   - alt: "The build laid out on a light surface: the 32×32 LED matrix panel, a power bank, a USB cable, a smartphone, and the small ESP32 board with its antenna and battery harness."
     caption: "The parts — the matrix, the ESP32, power, and the phone that senses and simulates."

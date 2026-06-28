@@ -1,6 +1,6 @@
 ---
 title: "Wama"
-summary: "A quiet machine-learning companion that lives beside the sink. Wama senses your presence and the running tap with a trained vision model, reads a simple hand gesture, and answers through an animated character, treating ML as a witness rather than an optimiser."
+summary: "A quiet machine-learning companion that lives beside the sink. Wama senses your presence and the running tap with a trained vision model, reads a simple hand gesture, and answers through an animated character, treating ML as a witness rather than an optimizer."
 status: "live"
 heroAlt: "Wama running on a phone in a laser-cut wooden holder at a built sink rig: a tap pours into a clear basin while the screen shows a small blue cloud character."
 hero: "/images/work/wama/hero.jpg"
@@ -23,7 +23,7 @@ problem:
     ritual object that happens to use a camera than to a productivity tool.
   - >-
     The course, Intelligence as a Material, framed the real provocation: an ML system can act as a
-    witness rather than an optimiser. It can notice without demanding resolution. That reframing,
+    witness rather than an optimizer. It can notice without demanding resolution. That reframing,
     and the ethical line it runs straight into (presence-sensing at home can drift into
     surveillance), is the design problem at the heart of the project.
 
@@ -41,10 +41,10 @@ role:
 
 approach:
   - label: "Concept"
-    title: "A witness, not an optimiser"
+    title: "A witness, not an optimizer"
     prose:
       - >-
-        Most ML in the home is sold as optimisation: do the task faster, track the metric, close the
+        Most ML in the home is sold as optimization: do the task faster, track the metric, close the
         loop. Wama refuses that register. Drawing on ambiguous loss theory, the idea that attention
         can exist without clear resolution, the character was given a disposition that notices but
         never instructs. It holds a register rather than issuing a correction.
@@ -72,7 +72,7 @@ approach:
       - src: "/images/work/wama/artifact-sensing.jpg"
         alt: "A two-by-two matrix mapping presence against running water into the model's four classes, each tied to a character response: sleeps, greets, accompanies, and a highlighted worried state when the tap runs with no one there."
         caption: "The four-class vision model: presence × water."
-        decision: "Framing the scene as presence times water, not litres, is what lets the character carry concern instead of a meter."
+        decision: "Framing the scene as presence times water, not liters, is what lets the character carry concern instead of a meter."
         width: "wide"
 
   - label: "Response"
@@ -102,7 +102,7 @@ approach:
       - src: "/images/work/wama/screen-worried.jpg"
         alt: "The Wama app worried: the cloud character looks anxious over a rising blue water level, with the line 'I still hear the water but I don't see you'."
         caption: "Worries when the tap runs alone."
-        decision: "The worried face is the entire environmental signal. No counter, no litres, just concern."
+        decision: "The worried face is the entire environmental signal. No counter, no liters, just concern."
         width: "wide"
 
   - label: "Integration"
@@ -135,7 +135,7 @@ reflection: >-
   Wama was my first hands-on experience with machine learning, and the course was really a discovery:
   a chance to see how these new sensing and interaction modes could become part of a design project
   at all. What stuck was less the model than the framing around it. An agent that notices without
-  optimising, and the realisation that keeping the processing on the device is what lets a sink
+  optimizing, and the realization that keeping the processing on the device is what lets a sink
   companion stay on the right side of surveillance rather than drift into it.
 
 gallery:

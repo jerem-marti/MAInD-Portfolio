@@ -75,7 +75,7 @@ approach:
         stops.
       - >-
         Then there is the engagement layer, which is what makes it feel like a product rather than a
-        catalogue: favorites and completion histories for both trails and points of interest,
+        catalog: favorites and completion histories for both trails and points of interest,
         achievements with a user pivot, reviews, and a role system underneath it all. Getting those
         relationships right up front is the architecture; everything else is built on them.
     artifacts:
@@ -104,7 +104,7 @@ approach:
           A product slide, "Page d'un point d'intérêt", showing a POI page on mobile (Gare de Lausanne)
           with an audio guide, a quiz, and the list of trails that pass through it.
         caption: "A point of interest: audio guide, quiz, and the trails it belongs to."
-        decision: 'Each point of interest carries its own media and quiz and can belong to many trails, which is the many-to-many join at the centre of the model.'
+        decision: 'Each point of interest carries its own media and quiz and can belong to many trails, which is the many-to-many join at the center of the model.'
         width: "half"
         src: "/images/work/cultural-trails/artifact-poi.jpg"
 
@@ -170,13 +170,13 @@ outcome:
     Vue with a MySQL database.
   - >-
     A rich relational data model and a role-based content system that lets local actors publish their
-    own trails, not just a fixed catalogue the team controls.
+    own trails, not just a fixed catalog the team controls.
   - >-
     Interactive mapping and route planning between points of interest, built on MapLibre and
     OpenRouteService, with self-hosting the routing engine flagged as the next step for a live deployment.
 
 reflection: >-
-  This is the project that taught me the back-end is mostly data modelling. The weeks I spent getting
+  This is the project that taught me the back-end is mostly data modeling. The weeks I spent getting
   the relationships right (trails to points of interest, the engagement layer, the role system) are
   what let the rest of the build go quickly, and the messy parts later were almost always places where
   the model had been too loose. Choosing Inertia over a separate API was the pragmatic call I would make
@@ -199,9 +199,9 @@ gallery:
     caption: "Navigation: a trail's stops, step by step."
     src: "/images/work/cultural-trails/gallery-steps.jpg"
   - alt: >-
-      The reviews screen on mobile, "Avis": a 4.5 rating with a star distribution and individual traveller
+      The reviews screen on mobile, "Avis": a 4.5 rating with a star distribution and individual traveler
       reviews carrying dates and text.
-    caption: "Reviews: a rating, a distribution, and traveller notes."
+    caption: "Reviews: a rating, a distribution, and traveler notes."
     src: "/images/work/cultural-trails/gallery-reviews.jpg"
   - alt: >-
       The achievements screen on mobile, "Accomplissements": a grid of earned badges above progress bars

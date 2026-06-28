@@ -47,7 +47,7 @@ role:
     - "Peer review across the project"
   notTouched:
     - "The electronics and the sensing firmware, led by Nicholas Vos; I merged the reflective layer into it, but did not build the hardware side"
-    - "The 3D modelling and the physical form, led by Lucia Ciapessoni"
+    - "The 3D modeling and the physical form, led by Lucia Ciapessoni"
     - "The companion app's UX, UI, and onboarding, led by Nerea Asensio"
     - "The final presentation slides (Nicholas and Nerea), the project video (Nerea), the motion work (Nicholas), and the Notion documentation (Lucia)"
   team: "Team of four for Multimodal Experience Design at SUPSI MAIND: Jérémy Martin, Nerea Asensio, Lucia Ciapessoni, and Nicholas Vos. Tutored by Serena Cangiano and Enrico Bassi, with prototyping support from Arduino (Leonardo Cavagnis and Ernesto Voltaggio), photography by Niccolò Quaresima, and guest sessions from Melanie Bossert (Google Gemini), Laura Ferrarello (EPFL), and Sara Krugman (Verse Design)."
@@ -64,7 +64,7 @@ approach:
         therapy over time.
       - >-
         Reading across the field, one pattern held: a signal that lives in the room, felt rather than
-        read, shifts behaviour more reliably than another screen, which mostly reaches the people
+        read, shifts behavior more reliably than another screen, which mostly reaches the people
         already anxious enough to look. Reframing the project from notification to perception is the
         decision the rest of the work hangs from.
       - >-
@@ -108,7 +108,7 @@ approach:
     prose:
       - >-
         Thea carries its sense on three channels, each with one job. Light shows where you are: a
-        gauge that fills, legible at a glance, its colour tracking the device's state from linen at
+        gauge that fills, legible at a glance, its color tracking the device's state from linen at
         rest to cobalt when engaged. Touch shows how fast things are moving: a haptic rhythm whose
         pulse count encodes the rate of change and whose order encodes direction. Voice is the
         rarest, used only when light and touch are not enough, or when you ask.
@@ -131,7 +131,7 @@ approach:
     title: "A voice that stays silent"
     prose:
       - >-
-        Thea's voice is an agent, and its defining behaviour is restraint. It never speaks first. It
+        Thea's voice is an agent, and its defining behavior is restraint. It never speaks first. It
         runs only when you open a conversation, or after you acknowledge a critical alert, and silence
         is its default output, not a fallback.
       - >-
@@ -224,16 +224,16 @@ reflection: >-
   of its lifecycle emissions, and most of the heavy reasoning could run on the phone a person already
   carries, or on shared, server-side infrastructure that is easier to repair and keeps the silicon
   busy. So the question I would carry into a next version is not whether Thea should exist, but how
-  much of its intelligence truly needs to sit on new hardware, and how to honour the privacy argument
+  much of its intelligence truly needs to sit on new hardware, and how to honor the privacy argument
   without defaulting to local-only. That trade, between a genuinely better interaction and the
   material cost of where its computing lives, is the part I find most worth getting right.
 
 gallery:
   - src: "/images/work/thea/gallery-1.jpg"
-    alt: "The Thea band worn on a wrist, centred in the frame, against a cobalt sky scattered with wildflowers."
+    alt: "The Thea band worn on a wrist, centerd in the frame, against a cobalt sky scattered with wildflowers."
     caption: "Worn, the band against the open sky."
   - src: "/images/work/thea/gallery-2.jpg"
-    alt: "A finger pressing the device worn on the wrist, its ring gauge lit and fine coloured wires visible, against a cobalt sky."
+    alt: "A finger pressing the device worn on the wrist, its ring gauge lit and fine colored wires visible, against a cobalt sky."
     caption: "The single tap: ask where you stand, or acknowledge the edge."
   - src: "/images/work/thea/gallery-3.jpg"
     alt: "The wearable suspended in a lattice of orange cords against a cobalt sky, its ring gauge glowing."

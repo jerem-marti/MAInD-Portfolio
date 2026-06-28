@@ -57,7 +57,7 @@ export const projects: readonly IndexRow[] = [
     year: '2026',
     href: '/work/an-aura-of-words',
     preview: '/images/index/an-aura-of-words.jpg',
-    alt: "Scrollytelling data story: Google Reviews of Lugano's parks encoded into colour-weighted organic 'aura' shapes.",
+    alt: "Scrollytelling data story: Google Reviews of Lugano's parks encoded into color-weighted organic 'aura' shapes.",
   },
   {
     num: '02',
@@ -66,7 +66,7 @@ export const projects: readonly IndexRow[] = [
     year: '2026',
     href: '/work/elen',
     preview: '/images/index/elen.jpg',
-    alt: 'ELEN, a handheld speculative camera: a detail of its translucent orange body, white handle, control button, and antenna on a grey backdrop.',
+    alt: 'ELEN, a handheld speculative camera: a detail of its translucent orange body, white handle, control button, and antenna on a gray backdrop.',
   },
   {
     num: '03',
@@ -93,7 +93,7 @@ export const projects: readonly IndexRow[] = [
     year: '2026',
     href: '/work/brushbuddy',
     preview: '/images/index/brushbuddy.jpg',
-    alt: 'Front view of the BrushBuddy cube: a yellow monster face with raised brows, googly eyes and a mouth of grey teeth, the toothbrush standing straight up from the dock.',
+    alt: 'Front view of the BrushBuddy cube: a yellow monster face with raised brows, googly eyes and a mouth of gray teeth, the toothbrush standing straight up from the dock.',
   },
   {
     num: '06',
@@ -111,7 +111,7 @@ export const projects: readonly IndexRow[] = [
     year: '2025',
     href: '/work/human-loci',
     preview: '/images/index/human-loci.jpg',
-    alt: 'The Human Loci listening box: a transparent acrylic box with a record-style tonearm, three-quarter view on a grey backdrop.',
+    alt: 'The Human Loci listening box: a transparent acrylic box with a record-style tonearm, three-quarter view on a gray backdrop.',
   },
   {
     num: '08',
@@ -120,7 +120,7 @@ export const projects: readonly IndexRow[] = [
     year: '2025',
     href: '/work/beau-rivage',
     preview: '/images/index/beau-rivage.jpg',
-    alt: 'The redesigned Beau-Rivage Palace homepage on mobile: the shell logo, a Réserver button and the centred wordmark over fine gold lines, far lighter than the original.',
+    alt: 'The redesigned Beau-Rivage Palace homepage on mobile: the shell logo, a Réserver button and the centerd wordmark over fine gold lines, far lighter than the original.',
   },
   {
     num: '09',
