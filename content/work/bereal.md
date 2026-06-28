@@ -84,7 +84,7 @@ approach:
         Storage is also where the images get shaped, and I let the CDN do the heavy lifting. The main
         photo is auto-cropped with content-aware gravity to a consistent height, and profile pictures use
         face-aware cropping (Cloudinary's face gravity) into square thumbnails, so a portrait stays
-        centerd on the face instead of the corner of a room.
+        centered on the face instead of the corner of a room.
       - >-
         Offloading the transforms to Cloudinary kept the API thin and the results consistent: format
         conversion, sizing, and smart cropping all happen on delivery, driven by a few transformation
@@ -137,7 +137,7 @@ gallery:
     alt: "The news feed on a dark mobile interface: a friend's dual photo shown full-width, a landscape rear shot with the selfie inset, under the app header and above a bottom navigation bar."
     caption: "Feed — a friend's post, infinite scroll."
   - src: "/images/work/bereal/gallery-gate.jpg"
-    alt: "The feed blurred behind a centerd prompt reading Poste pour voir, telling the user to post their own BeReal before they can see their friends' posts."
+    alt: "The feed blurred behind a centered prompt reading Poste pour voir, telling the user to post their own BeReal before they can see their friends' posts."
     caption: "Honest by reciprocity — post to see."
   - src: "/images/work/bereal/gallery-comments.jpg"
     alt: "A post opened on its detail screen with a comment thread below, showing replies and a comment input field."

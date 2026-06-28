@@ -230,7 +230,7 @@ reflection: >-
 
 gallery:
   - src: "/images/work/thea/gallery-1.jpg"
-    alt: "The Thea band worn on a wrist, centerd in the frame, against a cobalt sky scattered with wildflowers."
+    alt: "The Thea band worn on a wrist, centered in the frame, against a cobalt sky scattered with wildflowers."
     caption: "Worn, the band against the open sky."
   - src: "/images/work/thea/gallery-2.jpg"
     alt: "A finger pressing the device worn on the wrist, its ring gauge lit and fine colored wires visible, against a cobalt sky."
