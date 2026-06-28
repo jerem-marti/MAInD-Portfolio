@@ -1,1 +1,286 @@
-{}
+{
+  "skipToContent": "Skip to content",
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "primaryAria": "Primary",
+    "primaryMobileAria": "Primary mobile"
+  },
+  "chrome": {
+    "tagline": "Interaction and product designer"
+  },
+  "footer": {
+    "contact": "Contact",
+    "linkedin": "LinkedIn — jermarti",
+    "github": "GitHub — jerem-marti",
+    "language": "Language",
+    "copyright": "© 2026",
+    "line": "Jérémy Martin · jeremymartin.ch"
+  },
+  "common": {
+    "availableLead": "Available for internships from",
+    "availableDate": "August 2026",
+    "repliesFrEn": "Replies in French or English, usually within a few working days."
+  },
+  "home": {
+    "lede": "Interaction and product designer, currently working on agentic experiences (AX) designed around human intent and its consequences. Master's student at SUPSI Mendrisio, available from August 2026.",
+    "heroMeta": "00 / Portfolio · Jérémy Martin · 2026",
+    "heroTitleLine1": "Process is",
+    "heroTitleLine2": "the artifact.",
+    "approachLabel": "Approach",
+    "approachPov": "POV — 2026",
+    "approachBody": "AI made design generation cheap. Judging whether it's any good did not. {emphasis}. Lately, my work is centered on agentic experiences (AX): designed around human intent, prompts grounded as design decisions, outputs evaluated against the people who use them.",
+    "approachEmphasis": "What changed is the tool, not the discipline",
+    "selectedWorkLabel": "Selected work",
+    "problem": "Problem",
+    "outcome": "Outcome",
+    "readCaseStudy": "Read the case study",
+    "indexLabel": "Index — all other work",
+    "indexHeading": "Index",
+    "indexCaption": "More work from my Master and Bachelor studies, beyond the three featured above.",
+    "colNumber": "№",
+    "colProject": "Project",
+    "colTags": "Tags",
+    "colYear": "Year",
+    "openCaseStudy": "Open case study",
+    "preview": "Preview",
+    "hoverRow": "Hover a row.",
+    "aboutLabel": "About",
+    "aboutMeta": "Mendrisio · CH",
+    "aboutBody": "Jérémy's current focus is agentic experiences (AX), designed around user intent. His practice spans hardware prototyping, front-end build, UX research, and service design.",
+    "aboutMore": "More about Jérémy",
+    "contactLabel": "Contact",
+    "contactEmail": "Email",
+    "contactLinkedin": "LinkedIn",
+    "contactLanguages": "Languages",
+    "contactLanguagesValue": "FR · EN"
+  },
+  "about": {
+    "metaTitle": "About",
+    "metaDescription": "Interaction design master at SUPSI Mendrisio, coming to design from electronics and media engineering. Available from August 2026.",
+    "heroLabel": "About",
+    "heroBody": "I'm Jérémy Martin, an interaction and product designer currently working on {emphasis} designed around human intent and its consequences. I'm finishing a Master's in Interaction Design at SUPSI in Mendrisio, with a background in electronics and media engineering.",
+    "heroEmphasis": "agentic experiences (AX)",
+    "storyLabel": "How I got here",
+    "storyP1": "Take agentic experiences: the hard part there isn't generation. Generation became cheap; {emphasis} did not. The prompt itself isn't free either: it deserves the same grounding as any other design decision.",
+    "storyP1Emphasis": "knowing whether what you generated is any good",
+    "storyP2": "I'm finishing a master of arts in Interaction Design at SUPSI in Mendrisio. It's a practice-driven program: each course is a real project, taught by people working in their field. It has expanded the way I think and given me two areas I now build around: physical prototyping, and designing for agentic experiences.",
+    "storyP3": "Before SUPSI I completed a BSc in Media Engineering at HEIG-VD. The curriculum gave me a 360° view on digital projects, and the craft skills I still rely on: UX/UI design, front-end and back-end web development, digital marketing, project management.",
+    "storyP4": "Before HEIG-VD I spent one semester at EPFL in Microengineering. I left because the fit was wrong for what I was trying to become, and staying would have been more comfortable than honest. I reached that EPFL semester via CMS, EPFL's demanding bridge year for students with a maturité professionnelle rather than the gymnasiale that EPFL normally requires.",
+    "storyP5": "Underneath all of this is a four-year electronics apprenticeship (CFC) at HEIA-FR that I rarely mention up front and quietly rely on every day.",
+    "storyP6": "What I'm building toward is a design practice that takes {emphasis}. That means experiences shaped around user intent, prompts grounded like any other design decision, and aesthetics earned rather than applied at the end. The projects on this portfolio website are how I've been putting it into practice.",
+    "storyP6Emphasis": "AI as material, not as marketing",
+    "fieldLabel": "Field experience",
+    "thesisMeta": "Bachelor thesis · 2024 — 2025",
+    "thesisBody": "For my Bachelor thesis at HEIG-VD I designed {emphasis}, a tangible interface that makes the energy impact of digital usage perceptible at home. A flower whose stem wilts as the household's weekly data consumption grows, and whose center lights up to signal the live data rate. Built at the Media Engineering Institute on simulated data from CarbonViz Home, and published on the MEI research blog. It's the piece I would point to if you only had one minute to look at my work.",
+    "thesisEmphasis": "DataBloom",
+    "festivalMeta": "Festival · 2023 — 2025",
+    "festivalBody": "Three years on the organizing committee of Baleinev, a student-run music festival of around 1'000 attendees: programmer in 2023, head of communications in 2024, then president in 2025 (committee of about 25). The head-of-comms year put the digital marketing and brand strategy from my BSc into a much bigger test, and the presidency made the project management and budgeting training meet the real schedule, the missing volunteers, and {emphasis}.",
+    "festivalEmphasis": "the very small decisions that compound",
+    "thinkingLabel": "What I'm thinking about",
+    "thinkingBody": "Right now: how to keep designing for the user when the technological possibilities won't stop changing. AI doesn't change the discipline, but it makes it tempting to start with the tool instead of the user's intent. So my current question is the inverse: how do we anchor design around intent first, and only then bring AI generation in? None of these are positions I've concluded. They are live questions in my current work.",
+    "factsLabel": "Facts",
+    "facts": {
+      "currentlyKey": "Currently",
+      "currentlyValue": "Master in Interaction Design, SUPSI Mendrisio · graduating 2027",
+      "previouslyKey": "Previously",
+      "previouslyValue": "BSc Media Engineering, HEIG-VD · one semester Microengineering, EPFL · CMS preparatory bridge year, EPFL · CFC Electronics, HEIA-FR",
+      "languagesKey": "Languages",
+      "languagesValue": "French (native) · English (B2)",
+      "basedKey": "Based",
+      "basedValue": "Mendrisio, Switzerland",
+      "availableKey": "Available",
+      "availableValue": "From August 2026",
+      "festivalKey": "Festival",
+      "festivalValue": "Baleinev: programmer (2023), head of comms (2024), president (2025). Committee ~25, ~1'000 attendees."
+    },
+    "downloadsLabel": "Downloads",
+    "cvEn": "Download CV (English)",
+    "cvFr": "CV (Français)",
+    "cvFrSoon": "soon"
+  },
+  "contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Write to Jérémy Martin at hi{'@'}jeremymartin.ch. Available for internships from August 2026, based in Mendrisio.",
+    "heroMeta": "00 / Contact",
+    "heroTitle": "Write to me.",
+    "essentialsLabel": "The essentials",
+    "linkedinLabel": "LinkedIn:",
+    "based": "Based in Mendrisio, Switzerland."
+  },
+  "error": {
+    "title404": "404",
+    "titleGeneric": "Error",
+    "status404": "404 — Not found",
+    "statusGenericSuffix": "— Something broke",
+    "statusGenericFallback": "Error",
+    "heading404Lead": "That page isn't here.",
+    "heading404Muted": "It may have moved, or it never existed.",
+    "headingGenericLead": "Something went sideways.",
+    "headingGenericMuted": "Try reloading, or pick one of the routes below.",
+    "waysLabel": "Three ways out",
+    "wayHome": "Home",
+    "waySeeWork": "See the work",
+    "wayContact": "Contact"
+  },
+  "work": {
+    "back": "Index",
+    "notFound": "Case study not found",
+    "inProgressLabel": "Case study in progress",
+    "inProgressBody": "The write-up is in progress. Until it lands, the project sits in the Index list on the home page and surfaces in the Selected work card you came from.",
+    "inProgressBack": "Back to Index",
+    "briefRole": "Role",
+    "briefYear": "Year",
+    "briefHost": "Host",
+    "briefScope": "Scope",
+    "briefShipped": "Shipped",
+    "sections": {
+      "problem": "Problem",
+      "role": "Role",
+      "approach": "Approach",
+      "outcome": "Outcome",
+      "reflection": "Reflection",
+      "gallery": "Gallery",
+      "resources": "Resources",
+      "next": "More work"
+    },
+    "roleColumns": {
+      "led": "Led",
+      "contributed": "Contributed to",
+      "notTouched": "Not touched",
+      "team": "Team"
+    },
+    "artifactDecision": "Decision",
+    "toc": {
+      "aria": "Case study sections",
+      "contents": "Contents",
+      "section": "Section"
+    },
+    "adjacent": {
+      "previous": "Previous",
+      "next": "Next",
+      "read": "Read case study"
+    },
+    "resource": {
+      "newTab": " (opens in new tab)",
+      "playVideo": "Play video: {title}",
+      "videoPrefix": "Video",
+      "tags": {
+        "pdf": "PDF",
+        "github": "GitHub",
+        "demo": "Demo",
+        "video": "Video",
+        "web": "Web"
+      }
+    }
+  },
+  "tags": {
+    "UX research": "UX research",
+    "Interaction design": "Interaction design",
+    "Prototyping": "Prototyping",
+    "Information architecture": "Information architecture",
+    "UX writing": "UX writing",
+    "Design systems": "Design systems",
+    "Accessibility": "Accessibility",
+    "Tangible interface": "Tangible interface",
+    "Front-end build": "Front-end build",
+    "Back-end build": "Back-end build",
+    "Brand / Editorial": "Brand / Editorial",
+    "AI evaluation": "AI evaluation",
+    "Machine learning": "Machine learning",
+    "Hardware": "Hardware",
+    "Sustainability": "Sustainability",
+    "Business strategy": "Business strategy",
+    "Marketing strategy": "Marketing strategy",
+    "Design thinking": "Design thinking",
+    "Scrollytelling": "Scrollytelling",
+    "Data visualization": "Data visualization",
+    "Small data": "Small data",
+    "DevOps": "DevOps"
+  },
+  "data": {
+    "featured": {
+      "databloom": {
+        "title": "DataBloom",
+        "problem": "Domestic digital usage carries a large invisible energy cost. Another app is the wrong place to put it.",
+        "outcome": "A tangible flower whose stem wilts with the household's weekly digital footprint. Validated in user testing and published by the MEI research lab.",
+        "meta": "Tangible interface / Bachelor thesis / 2025",
+        "alt": "The DataBloom flower: ultramarine felt petals on a green segmented stem in a small terracotta pot, standing on a white studio backdrop."
+      },
+      "wematch": {
+        "title": "WeMatch",
+        "problem": "Group travel works when the group fits. Booking strangers by trip and date doesn't predict that.",
+        "outcome": "An AX matching service for the WeRoad world, shown through behavior rather than labeled as AI. Delivered as an end-to-end design presentation, a testable agent, and a one-page editorial story.",
+        "meta": "AX design / Service narrative / 2026",
+        "alt": "WeMatch title card: the line 'WeMatch finds your group before you find your trip' set in coral and ink on a soft white-to-pink gradient, beside the round Matchy agent character."
+      },
+      "thea": {
+        "title": "Thea",
+        "problem": "Living with a severe allergy means a trigger you cannot see and a reaction that lands before you can act. Another tracker only adds to the anxiety.",
+        "outcome": "A wrist-worn calm sense of your allergen load nearing your limit, carried by an ambient gauge, a haptic rhythm, and an acknowledge-gated voice. Built as a working prototype on an Arduino UNO Q, with a co-design protocol.",
+        "meta": "Multimodal wearable / SUPSI master / 2026",
+        "alt": "Thea featured card: the pale wrist cuff suspended in a lattice of orange cords against a cobalt sky with a sprig of wildflower, its ring gauge glowing."
+      }
+    },
+    "projects": {
+      "an-aura-of-words": {
+        "title": "An Aura of Words",
+        "alt": "Scrollytelling data story: Google Reviews of Lugano's parks encoded into color-weighted organic 'aura' shapes."
+      },
+      "elen": {
+        "title": "ELEN",
+        "alt": "ELEN, a handheld speculative camera: a detail of its translucent orange body, white handle, control button, and antenna on a gray backdrop."
+      },
+      "meeting-pond": {
+        "title": "Meeting Pond",
+        "alt": "A single Meeting Pond unit glowing green in a dark room, ripples spreading across its 32×32 LED grid."
+      },
+      "wama": {
+        "title": "Wama",
+        "alt": "Wama in its laser-cut holder at a built sink rig, the phone showing a small blue cloud character."
+      },
+      "brushbuddy": {
+        "title": "BrushBuddy",
+        "alt": "Front view of the BrushBuddy cube: a yellow monster face with raised brows, googly eyes and a mouth of gray teeth, the toothbrush standing straight up from the dock."
+      },
+      "family-space": {
+        "title": "UBS Family Space",
+        "alt": "UBS Family Space: the child's savings-goal screen on mobile, a piggy-bank goal tracking progress toward a target amount."
+      },
+      "human-loci": {
+        "title": "Human Loci",
+        "alt": "The Human Loci listening box: a transparent acrylic box with a record-style tonearm, three-quarter view on a gray backdrop."
+      },
+      "beau-rivage": {
+        "title": "Beau-Rivage Eco-Redesign",
+        "alt": "The redesigned Beau-Rivage Palace homepage on mobile: the shell logo, a Réserver button and the centered wordmark over fine gold lines, far lighter than the original."
+      },
+      "uefa-female-coaches": {
+        "title": "UEFA Female Coaches Campaign",
+        "alt": "The Why Not You? awareness poster: nine portraits of real female coaches around a central mirror, under the banner Coach, Woman, Leader."
+      },
+      "a-ta-dispo": {
+        "title": "À ta Dispo",
+        "alt": "À ta Dispo's hand-drawn logo: a coral wordmark on a pink sticker shape, the identity for the volunteer-matchmaking startup."
+      },
+      "bereal": {
+        "title": "BeReal Like Web App",
+        "alt": "A BeReal-like capture screen on a dark mobile interface: the rear photo full-frame with the front-camera selfie inset, ready to send."
+      },
+      "cultural-trails": {
+        "title": "Cultural Trails Web App",
+        "alt": "The Sentiers culturels explore map on mobile: trails shown as pins across the Lausanne and Lavaux shore with thématique, critères and rayon filters, standing on the project's green, peach and blue trail ribbon."
+      }
+    }
+  },
+  "og": {
+    "defaultTitle": "Jérémy Martin",
+    "defaultDescription": "Interaction and product designer. Mendrisio, Switzerland.",
+    "footer": "INTERACTION & PRODUCT DESIGN"
+  },
+  "schema": {
+    "websiteName": "Jérémy Martin, Interaction and Product Designer",
+    "jobTitle": "Interaction and Product Designer"
+  }
+}
