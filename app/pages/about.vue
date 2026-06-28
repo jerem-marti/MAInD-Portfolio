@@ -47,17 +47,12 @@ const facts = [
       </div>
       <div class="col-span-12 md:col-span-5 md:col-start-8">
         <UiMediaPlaceholder
-          :src="null"
-          alt="Portrait of Jérémy Martin in the workshop at HEIG-VD."
+          src="/images/about/portrait.jpg"
+          alt="Studio portrait of Jérémy Martin, shoulder-length curly hair and a moustache, wearing a black t-shirt against a grey backdrop."
           aspect="aspect-[4/5]"
           sizes="sm:100vw md:500px lg:500px xl:500px 2xl:500px"
           eager
         />
-        <span
-          class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted mt-3 block"
-        >
-          Workshop · HEIG-VD · 2024
-        </span>
       </div>
     </div>
   </section>
