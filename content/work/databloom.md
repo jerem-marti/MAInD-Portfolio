@@ -236,7 +236,7 @@ resources:
     url: "/files/databloom-swissviz-poster.pdf"
   - type: web
     title: "Article du blog de recherche du MEI"
-    url: "https://blog.comem.ch/2025/10/03/databloom-une-interface-de-visualization-de-limpact-energetique-du-numerique-dans-un-foyer/"
+    url: "https://blog.comem.ch/2025/10/03/databloom-une-interface-de-visualisation-de-limpact-energetique-du-numerique-dans-un-foyer/"
 
 card:
   title: "DataBloom — making the energy impact of digital usage visible"
