@@ -14,4 +14,3 @@ The `work` collection's source glob is `work/*.md` (top level only — see `cont
 ## Currently parked
 
 - `goldilocks-worlds.md` — Goldilocks Worlds (exoplanet habitability data story)
-- `meeting-pond.md` — Meeting Pond (connected light objects for distant presence)

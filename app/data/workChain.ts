@@ -4,8 +4,8 @@
  * image, alt) lives in its own markdown frontmatter under `card:`.
  *
  * The chain is a ring: the last slug's `next` wraps to the first, and the first
- * slug's `prev` wraps to the last. Slugs not listed here (e.g. goldilocks-worlds,
- * meeting-pond) are off-chain and render no "More work" section.
+ * slug's `prev` wraps to the last. Slugs not listed here (e.g. goldilocks-worlds)
+ * are off-chain and render no "More work" section.
  *
  * To reorder or add a study: edit this array (and ensure the study has a `card:`
  * block in content/work/<slug>.md). Nothing else needs touching.
@@ -16,6 +16,7 @@ export const workChain = [
   'family-space',
   'an-aura-of-words',
   'elen',
+  'meeting-pond',
   'wama',
   'brushbuddy',
   'human-loci',
