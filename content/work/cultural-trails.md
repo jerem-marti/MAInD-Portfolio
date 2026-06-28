@@ -3,7 +3,7 @@ title: "Cultural Trails"
 summary: "A full web application that turns the canton of Vaud's cultural heritage into gamified, accessible walking trails: themed paths, points of interest with audio guides and quizzes, and an editor mode that lets local actors publish their own trails. I was the back-end lead."
 status: "live"
 hero: "/images/work/cultural-trails/hero.jpg"
-heroAlt: "The Sentiers culturels title card: the project name set large in heavy black type on a warm cream ground, above a flowing green, peach and blue ribbon that reads as a winding trail. The project's brand identity."
+heroAlt: "Three screens from the Sentiers culturels app standing on the project's green, peach and blue trail ribbon: a trail page for Les chemins de fer over a photo of Lausanne station, the explore map of trails across the Lausanne and Lavaux shore, and in-walk navigation following a route on a satellite map."
 
 brief:
   role: "Back-end lead"
@@ -227,6 +227,6 @@ resources:
 
 card:
   title: "Cultural Trails — a full-stack heritage walking app"
-  alt: "The Sentiers culturels title card: the project name in heavy black type on a cream ground, above a green, peach and blue ribbon evoking a walking trail."
+  alt: "Two screens from the Sentiers culturels app on the project's green, peach and blue trail ribbon: the explore map of trails across the Lausanne shore, and in-walk navigation following a route on a satellite map."
   image: "/images/work/cultural-trails/adjacent.jpg"
 ---

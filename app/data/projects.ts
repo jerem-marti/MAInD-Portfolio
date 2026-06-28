@@ -147,6 +147,6 @@ export const projects: readonly IndexRow[] = [
     year: '2024',
     href: '/work/cultural-trails',
     preview: '/images/index/cultural-trails.jpg',
-    alt: 'The Sentiers culturels title card: the project name stacked in heavy black type on a cream ground, above a green, peach and blue ribbon evoking a walking trail.',
+    alt: 'The Sentiers culturels explore map on mobile: trails shown as pins across the Lausanne and Lavaux shore with thématique, critères and rayon filters, standing on the project\'s green, peach and blue trail ribbon.',
   },
 ] as const
