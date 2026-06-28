@@ -37,6 +37,9 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
 </script>
 
 <template>
+  <div>
+  <!-- Single root node (this div): the fade page transition can't bind to a multi-root
+       page, which left every page blank on client-side navigation. -->
   <!-- Hero -->
   <section
     class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 pt-16 md:pt-32 pb-20 md:pb-32"
@@ -77,7 +80,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
           <em class="not-italic [box-shadow:inset_0_-0.35em_0_var(--color-brand-accent)]">
             What changed is the tool, not the discipline
           </em>.
-          Lately, my work is centred on agentic experiences (AX): designed around human intent,
+          Lately, my work is centerd on agentic experiences (AX): designed around human intent,
           prompts grounded as design decisions, outputs evaluated against the people who use them.
         </p>
       </div>
@@ -405,7 +408,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
 <!-- Raw <img>, not <NuxtImg>: this hover-only, aria-hidden thumbnail renders
                  only on the client, so the static IPX pass never pre-generates its
                  variants. Pointing at the source file keeps it working on a static
-                 host (an unoptimised ~300px preview is a fair trade for a decoration). -->
+                 host (an unoptimized ~300px preview is a fair trade for a decoration). -->
             <img
               v-if="hovered?.preview"
               :key="hovered.preview"
@@ -460,8 +463,8 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
     <div class="grid grid-cols-12 gap-x-6 gap-y-10">
       <div class="col-span-12 md:col-span-4">
         <UiMediaPlaceholder
-          :src="null"
-          alt="Portrait of Jérémy Martin."
+          src="/images/about/portrait.jpg"
+          alt="Studio portrait of Jérémy Martin, shoulder-length curly hair and a moustache, wearing a black t-shirt against a gray backdrop."
           aspect="aspect-[4/5]"
           sizes="sm:100vw md:400px lg:400px xl:400px 2xl:400px"
         />
@@ -566,10 +569,11 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
       </div>
     </div>
   </section>
+  </div>
 </template>
 
 <style scoped>
-/* Mobile Index preview reveal. Honours prefers-reduced-motion (see below). */
+/* Mobile Index preview reveal. Honors prefers-reduced-motion (see below). */
 .reveal-enter-active,
 .reveal-leave-active {
   transition: opacity 200ms ease, transform 200ms ease;
