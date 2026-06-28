@@ -29,7 +29,8 @@ export default defineNuxtModule({
       .map(f => f.slice(0, -3))
       .sort()
 
-    const routes = [
+    // English llms artifacts. The single handler dispatches by path.
+    const enArtifactRoutes = [
       '/llms.txt',
       '/llms-full.txt',
       '/index.md',
@@ -38,7 +39,19 @@ export default defineNuxtModule({
       ...slugs.map(s => `/work/${s}.md`),
     ]
 
-    for (const route of routes) {
+    // French llms artifacts, mirrored under the French URL segments (the handler
+    // strips /fr and resolves the French content, falling back to English twins).
+    const frArtifactRoutes = [
+      '/fr/llms.txt',
+      '/fr/llms-full.txt',
+      '/fr/index.md',
+      '/fr/a-propos.md',
+      '/fr/contact.md',
+      ...slugs.map(s => `/fr/projets/${s}.md`),
+    ]
+
+    const artifactRoutes = [...enArtifactRoutes, ...frArtifactRoutes]
+    for (const route of artifactRoutes) {
       addServerHandler({ route, handler })
     }
 
@@ -56,6 +69,6 @@ export default defineNuxtModule({
     nuxt.options.nitro ||= {}
     nuxt.options.nitro.prerender ||= {}
     nuxt.options.nitro.prerender.routes ||= []
-    nuxt.options.nitro.prerender.routes.push(...routes, ...frPageRoutes)
+    nuxt.options.nitro.prerender.routes.push(...artifactRoutes, ...frPageRoutes)
   },
 })

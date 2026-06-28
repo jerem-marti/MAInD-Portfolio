@@ -144,8 +144,11 @@ export default defineNuxtConfig({
   sitemap: {
     zeroRuntime: true,
     // The llms artifacts (registered in modules/llms.ts) are prerendered text
-    // files, not human-facing pages — keep them out of the sitemap.
-    exclude: ['/llms.txt', '/llms-full.txt', '/*.md', '/work/*.md'],
+    // files, not human-facing pages — keep them out of the sitemap (both locales).
+    exclude: [
+      '/llms.txt', '/llms-full.txt', '/*.md', '/work/*.md',
+      '/fr/llms.txt', '/fr/llms-full.txt', '/fr/*.md', '/fr/projets/*.md',
+    ],
   },
 
   typescript: {
