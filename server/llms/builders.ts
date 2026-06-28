@@ -23,12 +23,14 @@
 import { featured } from '../../app/data/featured'
 import { projects } from '../../app/data/projects'
 import { workChain } from '../../app/data/workChain'
+import enMessages from '../../i18n/locales/en.json'
 import frMessages from '../../i18n/locales/fr.json'
 
 export const SITE_URL = 'https://jeremymartin.ch'
 
 export type Locale = 'en' | 'fr'
 
+const EN = enMessages as Record<string, unknown>
 const FR = frMessages as Record<string, unknown>
 const pathGet = (obj: unknown, key: string): unknown =>
   key.split('.').reduce<unknown>((o, k) => (o == null ? o : (o as Record<string, unknown>)[k]), obj)
@@ -42,13 +44,15 @@ function L(locale: Locale, key: string, def: string): string {
   return def
 }
 
-/** Localized featured/Index display string from the shared catalog (fr.json `data.*`/`tags.*`). */
-function D(locale: Locale, key: string, def: string): string {
+/** Localized featured/Index display string from the shared catalog (the single
+ * source of truth): fr.json `data.*`/`tags.*` for French, en.json for English. */
+function D(locale: Locale, key: string): string {
   if (locale === 'fr') {
     const v = pathGet(FR, key)
     if (typeof v === 'string' && v) return v
   }
-  return def
+  const e = pathGet(EN, key)
+  return typeof e === 'string' ? e : ''
 }
 
 /** The subset of the `work` collection frontmatter these builders consume. */
@@ -219,7 +223,7 @@ export function buildLlmsIndex(docs: WorkDoc[], locale: Locale = 'en'): string {
   const featuredRows = featured
     .map((f) => {
       const d = bySlug.get(f.slug)
-      return d ? studyRow(D(locale, `data.featured.${f.slug}.title`, f.title), d, locale) : null
+      return d ? studyRow(D(locale, `data.featured.${f.slug}.title`), d, locale) : null
     })
     .filter((row): row is string => !!row)
 
@@ -228,7 +232,7 @@ export function buildLlmsIndex(docs: WorkDoc[], locale: Locale = 'en'): string {
       const s = workSlug(p.href)
       if (!s || featuredSlugs.has(s)) return null
       const d = bySlug.get(s)
-      return d ? studyRow(D(locale, `data.projects.${s}.title`, p.title), d, locale) : null
+      return d ? studyRow(D(locale, `data.projects.${s}.title`), d, locale) : null
     })
     .filter((row): row is string => !!row)
 
@@ -268,13 +272,13 @@ export function buildLlmsFull(docs: WorkDoc[], locale: Locale = 'en'): string {
 
 export function homeMarkdown(locale: Locale = 'en'): string {
   const work = featured
-    .map(f => `- **${D(locale, `data.featured.${f.slug}.title`, f.title)}.** ${L(locale, 'home.problemLabel', 'Problem')}: ${D(locale, `data.featured.${f.slug}.problem`, f.problem)} ${L(locale, 'home.outcomeLabel', 'Outcome')}: ${D(locale, `data.featured.${f.slug}.outcome`, f.outcome)}`)
+    .map(f => `- **${D(locale, `data.featured.${f.slug}.title`)}.** ${L(locale, 'home.problemLabel', 'Problem')}: ${D(locale, `data.featured.${f.slug}.problem`)} ${L(locale, 'home.outcomeLabel', 'Outcome')}: ${D(locale, `data.featured.${f.slug}.outcome`)}`)
     .join('\n')
   const index = projects
     .map((p) => {
       const s = workSlug(p.href)
-      const title = s ? D(locale, `data.projects.${s}.title`, p.title) : p.title
-      const tags = p.tags.map(tg => D(locale, `tags.${tg}`, tg)).join(' / ')
+      const title = s ? D(locale, `data.projects.${s}.title`) : ''
+      const tags = p.tags.map(tg => D(locale, `tags.${tg}`)).join(' / ')
       return `- **${title}** (${p.year}) · ${tags}`
     })
     .join('\n')
