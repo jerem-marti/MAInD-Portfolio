@@ -42,9 +42,20 @@ export default defineNuxtModule({
       addServerHandler({ route, handler })
     }
 
+    // French page routes. `prefix_except_default` + crawlLinks only discovers a
+    // locale's pages through localized links; enumerating them here guarantees
+    // the whole /fr tree prerenders even if a link is missed. Paths must match
+    // the i18n custom-route map in nuxt.config (a-propos, projets/<slug>).
+    const frPageRoutes = [
+      '/fr',
+      '/fr/a-propos',
+      '/fr/contact',
+      ...slugs.map(s => `/fr/projets/${s}`),
+    ]
+
     nuxt.options.nitro ||= {}
     nuxt.options.nitro.prerender ||= {}
     nuxt.options.nitro.prerender.routes ||= []
-    nuxt.options.nitro.prerender.routes.push(...routes)
+    nuxt.options.nitro.prerender.routes.push(...routes, ...frPageRoutes)
   },
 })

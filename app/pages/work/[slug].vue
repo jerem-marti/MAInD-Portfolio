@@ -4,20 +4,43 @@ import { projects } from '~/data/projects'
 import { featured } from '~/data/featured'
 
 const route = useRoute()
-const { data: study } = await useAsyncData(`work-${route.params.slug}`, () =>
-  queryCollection('work_en').path(route.path).first(),
+const { locale } = useI18n()
+const slug = String(route.params.slug)
+
+// Case study for the active locale, looked up by slug — both collections resolve
+// to the same internal /work/<slug> path, while the URL prefix (/work vs
+// /fr/projets) comes from i18n routing. French falls back to the English twin
+// until a French twin exists, so a /fr/projets/<slug> route always renders.
+const { data: study } = await useAsyncData(
+  `work-${locale.value}-${slug}`,
+  async () => {
+    const localized
+      = locale.value === 'fr'
+        ? await queryCollection('work_fr').path(`/work/${slug}`).first()
+        : null
+    return localized ?? (await queryCollection('work_en').path(`/work/${slug}`).first())
+  },
+  { watch: [locale] },
 )
 
 // Ring neighbours for the "More work" section, derived from the single ordered
 // chain in app/data/workChain.ts. Both null for off-chain pages → no section.
-const slug = String(route.params.slug)
 const { prev, next } = chainNeighbours(slug)
 
 // Only path + card are needed to render the prev/next "More work" cards, so
 // project just those fields — otherwise every study's full frontmatter is
-// serialized into each page's payload (~189KB/page).
-const { data: cards } = await useAsyncData('work-cards', () =>
-  queryCollection('work_en').select('path', 'card').all(),
+// serialized into each page's payload (~189KB/page). Prefer the French card
+// where present, falling back to the English one per study.
+const { data: cards } = await useAsyncData(
+  `work-cards-${locale.value}`,
+  async () => {
+    const en = await queryCollection('work_en').select('path', 'card').all()
+    if (locale.value !== 'fr') return en
+    const fr = await queryCollection('work_fr').select('path', 'card').all()
+    const frByPath = new Map(fr.map((d) => [d.path, d]))
+    return en.map((d) => frByPath.get(d.path) ?? d)
+  },
+  { watch: [locale] },
 )
 const cardFor = (s: string | null) => {
   if (!s) return null

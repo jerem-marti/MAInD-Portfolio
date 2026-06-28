@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@nuxt/fonts',
+    '@nuxtjs/i18n', // before @nuxtjs/seo so sitemap/og/hreflang pick up the locales
     '@nuxtjs/seo', // must load before @nuxt/content
     '@nuxt/content',
     '@vueuse/nuxt',
@@ -26,6 +27,11 @@ export default defineNuxtConfig({
     preset: 'static',
     prerender: {
       crawlLinks: true,
+      // i18n localizes every route, including the sitemap module's /sitemap.xml
+      // redirect stub, producing a junk /fr/sitemap.xml SPA page. The real
+      // per-locale sitemaps live at /sitemap_index.xml → /__sitemap__/{en,fr}.xml,
+      // so drop the localized redirect.
+      ignore: ['/fr/sitemap.xml'],
     },
   },
 
@@ -34,6 +40,35 @@ export default defineNuxtConfig({
     url: 'https://jeremymartin.ch',
     name: 'Jérémy Martin — Interaction Designer',
     defaultLocale: 'en',
+  },
+
+  // English stays unprefixed at `/`; French lives under `/fr` with French URL
+  // segments (/fr/a-propos, /fr/projets/<slug>). `language: 'en' | 'fr'` keeps
+  // <html lang> as plain `en`/`fr` (so the EN tree is byte-for-byte unchanged).
+  // SSG specifics: detectBrowserLanguage is off (an nginx rule on `/` owns the
+  // root Accept-Language redirect); strictSeo lets i18n own hreflang/x-default/
+  // canonical/og:locale prerender-safely; prerenderMessages ships the lazy
+  // catalogs as static assets instead of a Nitro route that won't exist on a
+  // static host.
+  i18n: {
+    baseUrl: 'https://jeremymartin.ch',
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    customRoutes: 'config',
+    pages: {
+      about: { fr: '/a-propos' },
+      'work/[slug]': { fr: '/projets/[slug]' },
+    },
+    locales: [
+      { code: 'en', language: 'en', name: 'English', file: 'en.json' },
+      { code: 'fr', language: 'fr', name: 'Français', file: 'fr.json' },
+    ],
+    lazy: true,
+    detectBrowserLanguage: false,
+    experimental: {
+      strictSeo: true,
+      prerenderMessages: true,
+    },
   },
 
   // OG image generation via Satori (installed as a peer dep). Renders one 1200×630
