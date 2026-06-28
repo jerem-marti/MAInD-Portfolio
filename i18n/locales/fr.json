@@ -1,1 +1,391 @@
-{}
+{
+  "skipToContent": "Aller au contenu",
+  "nav": {
+    "work": "Travaux",
+    "about": "À propos",
+    "contact": "Contact",
+    "primaryAria": "Principal",
+    "primaryMobileAria": "Principal mobile"
+  },
+  "chrome": {
+    "tagline": "Designer d'interaction et de produit"
+  },
+  "footer": {
+    "contact": "Contact",
+    "linkedin": "LinkedIn — jermarti",
+    "github": "GitHub — jerem-marti",
+    "language": "Langue",
+    "copyright": "© 2026",
+    "line": "Jérémy Martin · jeremymartin.ch"
+  },
+  "common": {
+    "availableLead": "Disponible pour un stage dès",
+    "availableDate": "août 2026",
+    "repliesFrEn": "Réponse en français ou en anglais, généralement sous quelques jours ouvrés.",
+    "portraitAlt": "Portrait studio de Jérémy Martin, cheveux bouclés mi-longs et moustache, en t-shirt noir sur un fond gris."
+  },
+  "home": {
+    "lede": "Designer d'interaction et de produit, actuellement engagé dans les expériences agentiques (AX) conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI Mendrisio, disponible dès août 2026.",
+    "heroMeta": "00 / Portfolio · Jérémy Martin · 2026",
+    "heroTitleLine1": "Le processus est",
+    "heroTitleLine2": "l'artefact.",
+    "approachLabel": "Approche",
+    "approachPov": "POV — 2026",
+    "approachBody": "L'IA a rendu la génération de design bon marché. Juger de sa qualité, non. {emphasis}. Ces derniers temps, mon travail se concentre sur les expériences agentiques (AX) : conçues autour de l'intention humaine, les prompts ancrés comme des décisions de design, les résultats évalués face aux personnes qui les utilisent.",
+    "approachEmphasis": "Ce qui a changé, c'est l'outil, pas la discipline",
+    "selectedWorkLabel": "Travaux sélectionnés",
+    "problem": "Problème",
+    "outcome": "Résultat",
+    "readCaseStudy": "Lire l'étude de cas",
+    "indexLabel": "Index — tous les autres travaux",
+    "indexHeading": "Index",
+    "indexCaption": "D'autres travaux issus de mes études de master et de bachelor, au-delà des trois mis en avant ci-dessus.",
+    "colNumber": "№",
+    "colProject": "Projet",
+    "colTags": "Tags",
+    "colYear": "Année",
+    "openCaseStudy": "Ouvrir l'étude de cas",
+    "preview": "Aperçu",
+    "hoverRow": "Survolez une ligne.",
+    "aboutLabel": "À propos",
+    "aboutMeta": "Mendrisio · CH",
+    "aboutBody": "Jérémy se concentre aujourd'hui sur les expériences agentiques (AX), conçues autour de l'intention de l'utilisateur. Sa pratique couvre le prototypage hardware, le développement front-end, la recherche UX et le design de service.",
+    "aboutMore": "En savoir plus sur Jérémy",
+    "contactLabel": "Contact",
+    "contactEmail": "E-mail",
+    "contactLinkedin": "LinkedIn",
+    "contactLanguages": "Langues",
+    "contactLanguagesValue": "FR · EN"
+  },
+  "about": {
+    "metaTitle": "À propos",
+    "metaDescription": "Étudiant en master de design d'interaction à la SUPSI Mendrisio, venu au design depuis l'électronique et l'ingénierie des médias. Disponible dès août 2026.",
+    "heroLabel": "À propos",
+    "heroBody": "Je suis Jérémy Martin, designer d'interaction et de produit actuellement engagé dans des {emphasis} conçues autour de l'intention humaine et de ses conséquences. Je termine un master en design d'interaction à la SUPSI de Mendrisio, avec un parcours en électronique et en ingénierie des médias.",
+    "heroEmphasis": "expériences agentiques (AX)",
+    "storyLabel": "Comment j'en suis arrivé là",
+    "storyP1": "Prenons les expériences agentiques : le plus difficile, ce n'est pas la génération. La génération est devenue bon marché ; {emphasis}, non. Le prompt lui-même n'est pas gratuit non plus : il mérite le même ancrage que n'importe quelle autre décision de design.",
+    "storyP1Emphasis": "savoir si ce qu'on a généré vaut quelque chose",
+    "storyP2": "Je termine un master of arts en design d'interaction à la SUPSI de Mendrisio. C'est un programme orienté pratique : chaque cours est un projet réel, enseigné par des personnes qui travaillent dans leur domaine. Il a élargi ma façon de penser et m'a donné deux terrains autour desquels je construis désormais : le prototypage physique et le design pour les expériences agentiques.",
+    "storyP3": "Avant la SUPSI, j'ai obtenu un BSc en ingénierie des médias à la HEIG-VD. Le cursus m'a donné une vue à 360° sur les projets numériques, et les compétences de métier sur lesquelles je m'appuie encore : design UX/UI, développement web front-end et back-end, marketing digital, gestion de projet.",
+    "storyP4": "Avant la HEIG-VD, j'ai passé un semestre à l'EPFL en microtechnique. Je suis parti parce que ça ne correspondait pas à ce que je cherchais à devenir, et rester aurait été plus confortable qu'honnête. J'avais rejoint ce semestre à l'EPFL via le CMS, l'année passerelle exigeante de l'EPFL pour les étudiants titulaires d'une maturité professionnelle plutôt que de la maturité gymnasiale habituellement requise par l'EPFL.",
+    "storyP5": "Sous tout cela, il y a un apprentissage d'électronique de quatre ans (CFC) à la HEIA-FR, que je mentionne rarement d'emblée et sur lequel je m'appuie discrètement chaque jour.",
+    "storyP6": "Ce vers quoi je construis, c'est une pratique de design qui prend l'{emphasis}. Cela veut dire des expériences façonnées autour de l'intention de l'utilisateur, des prompts ancrés comme n'importe quelle autre décision de design, et une esthétique méritée plutôt que plaquée à la fin. Les projets de ce portfolio sont la manière dont je mets cela en pratique.",
+    "storyP6Emphasis": "IA comme matière, pas comme marketing",
+    "fieldLabel": "Expérience de terrain",
+    "thesisMeta": "Travail de Bachelor · 2024 — 2025",
+    "thesisBody": "Pour mon travail de Bachelor à la HEIG-VD, j'ai conçu {emphasis}, une interface tangible qui rend perceptible à la maison l'impact énergétique des usages numériques. Une fleur dont la tige se fane à mesure que la consommation hebdomadaire de données du foyer augmente, et dont le cœur s'illumine pour signaler le débit de données en temps réel. Réalisée au Media Engineering Institute sur des données simulées de CarbonViz Home, et publiée sur le blog de recherche du MEI. C'est la pièce que je montrerais si vous n'aviez qu'une minute pour regarder mon travail.",
+    "thesisEmphasis": "DataBloom",
+    "festivalMeta": "Festival · 2023 — 2025",
+    "festivalBody": "Trois ans au comité d'organisation de Baleinev, un festival de musique étudiant d'environ 1'000 personnes : programmateur en 2023, responsable de la communication en 2024, puis président en 2025 (comité d'environ 25 personnes). L'année à la communication a mis le marketing digital et la stratégie de marque de mon BSc à une épreuve bien plus large, et la présidence a confronté ma formation en gestion de projet et en budgétisation au vrai calendrier, aux bénévoles manquants et {emphasis}.",
+    "festivalEmphasis": "aux toutes petites décisions qui s'additionnent",
+    "thinkingLabel": "Ce à quoi je réfléchis",
+    "thinkingBody": "En ce moment : comment continuer à concevoir pour l'utilisateur quand les possibilités technologiques ne cessent de changer. L'IA ne change pas la discipline, mais elle rend tentant de partir de l'outil plutôt que de l'intention de l'utilisateur. Ma question actuelle est donc l'inverse : comment ancrer le design d'abord autour de l'intention, et n'introduire qu'ensuite la génération par l'IA ? Aucune de ces positions n'est arrêtée. Ce sont des questions vivantes dans mon travail actuel.",
+    "factsLabel": "Repères",
+    "facts": {
+      "currentlyKey": "Actuellement",
+      "currentlyValue": "Master en design d'interaction, SUPSI Mendrisio · diplôme en 2027",
+      "previouslyKey": "Auparavant",
+      "previouslyValue": "BSc ingénierie des médias, HEIG-VD · un semestre de microtechnique, EPFL · année passerelle CMS, EPFL · CFC électronique, HEIA-FR",
+      "languagesKey": "Langues",
+      "languagesValue": "Français (langue maternelle) · Anglais (B2)",
+      "basedKey": "Basé à",
+      "basedValue": "Mendrisio, Suisse",
+      "availableKey": "Disponible",
+      "availableValue": "Dès août 2026",
+      "festivalKey": "Festival",
+      "festivalValue": "Baleinev : programmateur (2023), responsable communication (2024), président (2025). Comité d'environ 25 personnes, environ 1'000 participants."
+    },
+    "downloadsLabel": "Téléchargements",
+    "cvEn": "Télécharger le CV (anglais)",
+    "cvFr": "CV (français)",
+    "cvFrSoon": "bientôt"
+  },
+  "contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Écrivez à Jérémy Martin à hi{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio.",
+    "heroMeta": "00 / Contact",
+    "heroTitle": "Écrivez-moi.",
+    "essentialsLabel": "L'essentiel",
+    "linkedinLabel": "LinkedIn :",
+    "based": "Basé à Mendrisio, Suisse."
+  },
+  "error": {
+    "title404": "404",
+    "titleGeneric": "Erreur",
+    "status404": "404 — Introuvable",
+    "statusGenericSuffix": "— Quelque chose a cassé",
+    "statusGenericFallback": "Erreur",
+    "heading404Lead": "Cette page n'est pas là.",
+    "heading404Muted": "Elle a peut-être été déplacée, ou elle n'a jamais existé.",
+    "headingGenericLead": "Quelque chose a déraillé.",
+    "headingGenericMuted": "Essayez de recharger, ou choisissez l'un des chemins ci-dessous.",
+    "waysLabel": "Trois issues",
+    "wayHome": "Accueil",
+    "waySeeWork": "Voir les travaux",
+    "wayContact": "Contact"
+  },
+  "work": {
+    "back": "Index",
+    "notFound": "Étude de cas introuvable",
+    "inProgressLabel": "Étude de cas en cours",
+    "inProgressBody": "La rédaction est en cours. En attendant qu'elle arrive, le projet figure dans l'Index de la page d'accueil et apparaît dans la carte Travaux sélectionnés d'où vous venez.",
+    "inProgressBack": "Retour à l'Index",
+    "briefRole": "Rôle",
+    "briefYear": "Année",
+    "briefHost": "Cadre",
+    "briefScope": "Périmètre",
+    "briefShipped": "Livré",
+    "sections": {
+      "problem": "Problème",
+      "role": "Rôle",
+      "approach": "Approche",
+      "outcome": "Résultat",
+      "reflection": "Réflexion",
+      "gallery": "Galerie",
+      "resources": "Ressources",
+      "next": "Autres projets"
+    },
+    "roleColumns": {
+      "led": "Piloté",
+      "contributed": "Contribué à",
+      "notTouched": "Non touché",
+      "team": "Équipe"
+    },
+    "artifactDecision": "Décision",
+    "toc": {
+      "aria": "Sections de l'étude de cas",
+      "contents": "Sommaire",
+      "section": "Section"
+    },
+    "adjacent": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "read": "Lire l'étude de cas"
+    },
+    "resource": {
+      "newTab": " (ouvre dans un nouvel onglet)",
+      "playVideo": "Lire la vidéo : {title}",
+      "videoPrefix": "Vidéo",
+      "tags": {
+        "pdf": "PDF",
+        "github": "GitHub",
+        "demo": "Démo",
+        "video": "Vidéo",
+        "web": "Web"
+      }
+    }
+  },
+  "tags": {
+    "UX research": "Recherche UX",
+    "Interaction design": "Design d'interaction",
+    "Prototyping": "Prototypage",
+    "Information architecture": "Architecture de l'information",
+    "UX writing": "Rédaction UX",
+    "Design systems": "Systèmes de design",
+    "Accessibility": "Accessibilité",
+    "Tangible interface": "Interface tangible",
+    "Front-end build": "Développement front-end",
+    "Back-end build": "Développement back-end",
+    "Brand / Editorial": "Marque / Éditorial",
+    "AI evaluation": "Évaluation d'IA",
+    "Machine learning": "Machine learning",
+    "Hardware": "Hardware",
+    "Sustainability": "Durabilité",
+    "Business strategy": "Stratégie d'entreprise",
+    "Marketing strategy": "Stratégie marketing",
+    "Design thinking": "Design thinking",
+    "Scrollytelling": "Scrollytelling",
+    "Data visualization": "Visualisation de données",
+    "Small data": "Small data",
+    "DevOps": "DevOps"
+  },
+  "data": {
+    "featured": {
+      "databloom": {
+        "title": "DataBloom",
+        "problem": "Les usages numériques domestiques ont un coût énergétique invisible et important. Une application de plus est le mauvais endroit où le placer.",
+        "outcome": "Une fleur tangible dont la tige se fane au rythme de l'empreinte numérique hebdomadaire du foyer. Validée en tests utilisateurs et publiée par le laboratoire de recherche du MEI.",
+        "meta": "Interface tangible / Travail de Bachelor / 2025",
+        "alt": "La fleur DataBloom : des pétales en feutre outremer sur une tige verte segmentée, dans un petit pot en terre cuite, posée sur un fond studio blanc."
+      },
+      "wematch": {
+        "title": "WeMatch",
+        "problem": "Le voyage en groupe fonctionne quand le groupe s'accorde. Réunir des inconnus par voyage et par date ne le prédit pas.",
+        "outcome": "Un service de matching AX pour l'univers WeRoad, donné à voir par le comportement plutôt qu'étiqueté comme de l'IA. Livré sous la forme d'une présentation de design de bout en bout, d'un agent testable et d'un récit éditorial d'une page.",
+        "meta": "Design AX / Récit de service / 2026",
+        "alt": "Carte-titre WeMatch : la phrase « WeMatch finds your group before you find your trip » composée en corail et encre sur un dégradé doux du blanc au rose, à côté du personnage rond de l'agent Matchy."
+      },
+      "thea": {
+        "title": "Thea",
+        "problem": "Vivre avec une allergie sévère, c'est un déclencheur qu'on ne peut pas voir et une réaction qui survient avant qu'on puisse agir. Un tracker de plus ne fait qu'ajouter à l'anxiété.",
+        "outcome": "Une perception calme, portée au poignet, de sa charge allergénique qui approche de sa limite, transmise par une jauge ambiante, un rythme haptique et une voix conditionnée à un accusé de réception. Réalisé comme prototype fonctionnel sur un Arduino UNO Q, avec un protocole de co-conception.",
+        "meta": "Wearable multimodal / Master SUPSI / 2026",
+        "alt": "Carte mise en avant de Thea : le bracelet pâle suspendu dans un treillis de cordes orange sur un ciel cobalt avec un brin de fleur sauvage, sa jauge annulaire rayonnante."
+      }
+    },
+    "projects": {
+      "an-aura-of-words": {
+        "title": "An Aura of Words",
+        "alt": "Récit de données en scrollytelling : les avis Google des parcs de Lugano encodés en formes organiques d'« aura » pondérées par la couleur."
+      },
+      "elen": {
+        "title": "ELEN",
+        "alt": "ELEN, une caméra spéculative portative : un détail de son corps orange translucide, sa poignée blanche, son bouton de commande et son antenne, sur un fond gris."
+      },
+      "meeting-pond": {
+        "title": "Meeting Pond",
+        "alt": "Une unité Meeting Pond rayonnant de vert dans une pièce sombre, des ondulations se propageant sur sa grille de LED 32×32."
+      },
+      "wama": {
+        "title": "Wama",
+        "alt": "Wama dans son support découpé au laser sur un montage d'évier, le téléphone affichant un petit personnage nuage bleu."
+      },
+      "brushbuddy": {
+        "title": "BrushBuddy",
+        "alt": "Vue de face du cube BrushBuddy : un visage de monstre jaune aux sourcils levés, aux yeux mobiles et à la bouche garnie de dents grises, la brosse à dents dressée bien droite sur son socle."
+      },
+      "family-space": {
+        "title": "UBS Family Space",
+        "alt": "UBS Family Space : l'écran de l'objectif d'épargne de l'enfant sur mobile, une tirelire suivant la progression vers un montant cible."
+      },
+      "human-loci": {
+        "title": "Human Loci",
+        "alt": "La boîte d'écoute Human Loci : une boîte en acrylique transparent dotée d'un bras de lecture façon tourne-disque, vue de trois quarts sur un fond gris."
+      },
+      "beau-rivage": {
+        "title": "Beau-Rivage Éco-Refonte",
+        "alt": "La page d'accueil refondue du Beau-Rivage Palace sur mobile : le logo coquillage, un bouton Réserver et le wordmark centré au-dessus de fines lignes dorées, bien plus léger que l'original."
+      },
+      "uefa-female-coaches": {
+        "title": "Campagne UEFA Female Coaches",
+        "alt": "L'affiche de sensibilisation Why Not You? : neuf portraits de véritables entraîneuses autour d'un miroir central, sous la bannière Coach, Woman, Leader."
+      },
+      "a-ta-dispo": {
+        "title": "À ta Dispo",
+        "alt": "Le logo dessiné à la main d'À ta Dispo : un wordmark corail sur une forme d'autocollant rose, l'identité de la startup de mise en relation de bénévoles."
+      },
+      "bereal": {
+        "title": "BeReal Like Web App",
+        "alt": "Un écran de capture façon BeReal sur une interface mobile sombre : la photo arrière en plein cadre avec le selfie de la caméra avant en incrustation, prêt à être envoyé."
+      },
+      "cultural-trails": {
+        "title": "Cultural Trails Web App",
+        "alt": "La carte d'exploration des Sentiers culturels sur mobile : des sentiers affichés sous forme d'épingles sur la rive de Lausanne et du Lavaux avec les filtres thématique, critères et rayon, posée sur le ruban de sentier vert, pêche et bleu du projet."
+      }
+    }
+  },
+  "og": {
+    "defaultTitle": "Jérémy Martin",
+    "defaultDescription": "Designer d'interaction et de produit. Mendrisio, Suisse.",
+    "footer": "DESIGN D'INTERACTION & DE PRODUIT"
+  },
+  "schema": {
+    "websiteName": "Jérémy Martin, designer d'interaction et de produit",
+    "jobTitle": "Designer d'interaction et de produit"
+  },
+  "llms": {
+    "res": {
+      "pdf": "PDF",
+      "github": "GitHub",
+      "demo": "Démo en ligne",
+      "web": "Web",
+      "video": "Vidéo"
+    },
+    "study": {
+      "briefRole": "Rôle",
+      "briefYear": "Année",
+      "briefHost": "Cadre",
+      "briefScope": "Périmètre",
+      "briefShipped": "Livré",
+      "hProblem": "Problème",
+      "led": "Piloté",
+      "contributed": "Contribué",
+      "notTouched": "Non touché",
+      "team": "Équipe",
+      "hRole": "Rôle",
+      "hApproach": "Approche",
+      "decision": "Décision",
+      "hOutcome": "Résultat",
+      "hReflection": "Réflexion",
+      "hGallery": "Galerie",
+      "hResources": "Ressources"
+    },
+    "header": "Jérémy Martin — Designer d'interaction",
+    "blockquote": "Portfolio de Jérémy Martin, designer d'interaction et de produit travaillant sur les expériences agentiques (AX) conçues autour de l'intention de l'utilisateur. Le site montre comment il pense : le processus est l'artefact, les résultats en sont la preuve. Ce fichier indexe le portfolio pour les modèles de langage.",
+    "intro": "Jérémy termine un master of arts en design d'interaction à la SUPSI de Mendrisio, en Suisse, diplômé en 2027 et disponible dès août 2026. Son parcours va d'un apprentissage d'électronique de quatre ans (CFC) à un BSc en ingénierie des médias à la HEIG-VD, puis au design d'interaction, et sa pratique couvre le prototypage hardware, le développement front-end, la recherche UX et le design de service. Il travaille en français (langue maternelle) et en anglais (B2). Contact : hi{'@'}jeremymartin.ch.",
+    "pages": {
+      "home": "Accueil",
+      "homeDesc": "Point de vue et les trois études de cas mises en avant.",
+      "about": "À propos",
+      "aboutDesc": "Parcours, formation et téléchargement du CV.",
+      "contact": "Contact",
+      "contactDesc": "E-mail, LinkedIn et disponibilité."
+    },
+    "sec": {
+      "corePages": "Pages principales",
+      "featured": "Études de cas mises en avant",
+      "optional": "Optionnel"
+    },
+    "fullNote": "Ce fichier est le texte intégral du portfolio destiné aux modèles de langage : les pages d'accueil, à propos et contact, suivies de chaque étude de cas dans son intégralité. Pour une carte plus courte avec des liens, voir https://jeremymartin.ch/fr/llms.txt.",
+    "home": {
+      "problemLabel": "Problème",
+      "outcomeLabel": "Résultat",
+      "title": "Le processus est l'artefact.",
+      "blockquote": "Designer d'interaction et de produit, actuellement engagé dans les expériences agentiques (AX) conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI Mendrisio, disponible dès août 2026.",
+      "hApproach": "Approche",
+      "approach": "L'IA a rendu la génération de design bon marché. Juger de sa qualité, non. Ce qui a changé, c'est l'outil, pas la discipline. Le travail se concentre sur les expériences agentiques (AX) : conçues autour de l'intention humaine, les prompts ancrés comme des décisions de design, les résultats évalués face aux personnes qui les utilisent.",
+      "hSelectedWork": "Travaux sélectionnés",
+      "hIndex": "Index",
+      "indexNote": "D'autres travaux issus des études de master et de bachelor, au-delà des trois mis en avant ci-dessus.",
+      "hAbout": "À propos",
+      "about": "Jérémy se concentre aujourd'hui sur les expériences agentiques (AX), conçues autour de l'intention de l'utilisateur. Sa pratique couvre le prototypage hardware, le développement front-end, la recherche UX et le design de service. Basé à Mendrisio, Suisse.",
+      "hContact": "Contact",
+      "contact": "Disponible pour un stage dès août 2026. E-mail hi{'@'}jeremymartin.ch. LinkedIn jermarti. Réponse en français ou en anglais, généralement sous quelques jours ouvrés."
+    },
+    "about": {
+      "fCurrentlyK": "Actuellement",
+      "fCurrentlyV": "Master en design d'interaction, SUPSI Mendrisio · diplôme en 2027",
+      "fPreviouslyK": "Auparavant",
+      "fPreviouslyV": "BSc ingénierie des médias, HEIG-VD · un semestre de microtechnique, EPFL · année passerelle CMS, EPFL · CFC électronique, HEIA-FR",
+      "fLanguagesK": "Langues",
+      "fLanguagesV": "Français (langue maternelle) · Anglais (B2)",
+      "fBasedK": "Basé à",
+      "fBasedV": "Mendrisio, Suisse",
+      "fAvailableK": "Disponible",
+      "fAvailableV": "Dès août 2026",
+      "fFestivalK": "Festival",
+      "fFestivalV": "Baleinev : programmateur (2023), responsable communication (2024), président (2025). Comité d'environ 25 personnes, environ 1'000 participants.",
+      "title": "À propos",
+      "blockquote": "Je suis Jérémy Martin, designer d'interaction et de produit actuellement engagé dans les expériences agentiques (AX) conçues autour de l'intention humaine et de ses conséquences. Je termine un master en design d'interaction à la SUPSI de Mendrisio, avec un parcours en électronique et en ingénierie des médias.",
+      "hStory": "Comment j'en suis arrivé là",
+      "story1": "Prenons les expériences agentiques : le plus difficile, ce n'est pas la génération. La génération est devenue bon marché ; savoir si ce qu'on a généré vaut quelque chose, non. Le prompt lui-même n'est pas gratuit non plus : il mérite le même ancrage que n'importe quelle autre décision de design.",
+      "story2": "Je termine un master of arts en design d'interaction à la SUPSI de Mendrisio. C'est un programme orienté pratique : chaque cours est un projet réel, enseigné par des personnes qui travaillent dans leur domaine. Il a élargi ma façon de penser et m'a donné deux terrains autour desquels je construis désormais : le prototypage physique et le design pour les expériences agentiques.",
+      "story3": "Avant la SUPSI, j'ai obtenu un BSc en ingénierie des médias à la HEIG-VD. Le cursus m'a donné une vue à 360° sur les projets numériques, et les compétences de métier sur lesquelles je m'appuie encore : design UX/UI, développement web front-end et back-end, marketing digital, gestion de projet.",
+      "story4": "Avant la HEIG-VD, j'ai passé un semestre à l'EPFL en microtechnique. Je suis parti parce que ça ne correspondait pas à ce que je cherchais à devenir, et rester aurait été plus confortable qu'honnête. J'avais rejoint ce semestre à l'EPFL via le CMS, l'année passerelle exigeante de l'EPFL pour les étudiants titulaires d'une maturité professionnelle plutôt que de la maturité gymnasiale habituellement requise par l'EPFL.",
+      "story5": "Sous tout cela, il y a un apprentissage d'électronique de quatre ans (CFC) à la HEIA-FR, que je mentionne rarement d'emblée et sur lequel je m'appuie discrètement chaque jour.",
+      "story6": "Ce vers quoi je construis, c'est une pratique de design qui prend l'IA comme matière, pas comme marketing. Cela veut dire des expériences façonnées autour de l'intention de l'utilisateur, des prompts ancrés comme n'importe quelle autre décision de design, et une esthétique méritée plutôt que plaquée à la fin.",
+      "hField": "Expérience de terrain",
+      "thesisLabel": "Travail de Bachelor (2024 — 2025)",
+      "thesis": "Pour mon travail de Bachelor à la HEIG-VD, j'ai conçu DataBloom, une interface tangible qui rend perceptible à la maison l'impact énergétique des usages numériques. Une fleur dont la tige se fane à mesure que la consommation hebdomadaire de données du foyer augmente, et dont le cœur s'illumine pour signaler le débit de données en temps réel. Réalisée au Media Engineering Institute sur des données simulées de CarbonViz Home, et publiée sur le blog de recherche du MEI.",
+      "festivalLabel": "Festival (2023 — 2025)",
+      "festival": "Trois ans au comité d'organisation de Baleinev, un festival de musique étudiant d'environ 1'000 personnes : programmateur en 2023, responsable de la communication en 2024, puis président en 2025 (comité d'environ 25 personnes).",
+      "hThinking": "Ce à quoi je réfléchis",
+      "thinking": "Comment continuer à concevoir pour l'utilisateur quand les possibilités technologiques ne cessent de changer. L'IA ne change pas la discipline, mais elle rend tentant de partir de l'outil plutôt que de l'intention de l'utilisateur. Ma question actuelle est donc l'inverse : comment ancrer le design d'abord autour de l'intention, et n'introduire qu'ensuite la génération par l'IA ?",
+      "hFacts": "Repères",
+      "hDownloads": "Téléchargements",
+      "cvLabel": "Télécharger le CV (anglais)",
+      "cvNote": "PDF. Un CV en français arrivera plus tard."
+    },
+    "contact": {
+      "email": "E-mail",
+      "available": "Disponible pour un stage dès août 2026.",
+      "replies": "Réponse en français ou en anglais, généralement sous quelques jours ouvrés.",
+      "linkedin": "LinkedIn",
+      "based": "Basé à Mendrisio, Suisse.",
+      "title": "Écrivez-moi.",
+      "blockquote": "Contactez Jérémy Martin à hi{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio.",
+      "hEssentials": "L'essentiel"
+    }
+  }
+}
