@@ -5,7 +5,7 @@ import { featured } from '~/data/featured'
 
 const route = useRoute()
 const { data: study } = await useAsyncData(`work-${route.params.slug}`, () =>
-  queryCollection('work').path(route.path).first(),
+  queryCollection('work_en').path(route.path).first(),
 )
 
 // Ring neighbours for the "More work" section, derived from the single ordered
@@ -17,7 +17,7 @@ const { prev, next } = chainNeighbours(slug)
 // project just those fields — otherwise every study's full frontmatter is
 // serialized into each page's payload (~189KB/page).
 const { data: cards } = await useAsyncData('work-cards', () =>
-  queryCollection('work').select('path', 'card').all(),
+  queryCollection('work_en').select('path', 'card').all(),
 )
 const cardFor = (s: string | null) => {
   if (!s) return null

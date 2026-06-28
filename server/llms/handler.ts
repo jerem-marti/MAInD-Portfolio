@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
   const path = getRequestURL(event).pathname
 
   const liveDocs = async (): Promise<WorkDoc[]> =>
-    (await queryCollection(event, 'work').where('status', '=', 'live').all()) as unknown as WorkDoc[]
+    (await queryCollection(event, 'work_en').where('status', '=', 'live').all()) as unknown as WorkDoc[]
 
   if (path === '/llms.txt') {
     setHeader(event, 'Content-Type', 'text/plain; charset=utf-8')
@@ -44,7 +44,7 @@ export default defineEventHandler(async (event) => {
 
   const slug = path.match(/^\/work\/([^/]+)\.md$/)?.[1]
   if (slug) {
-    const doc = (await queryCollection(event, 'work').path(`/work/${slug}`).first()) as unknown as WorkDoc | null
+    const doc = (await queryCollection(event, 'work_en').path(`/work/${slug}`).first()) as unknown as WorkDoc | null
     if (doc && doc.status === 'live') return studyToMarkdown(doc)
   }
 

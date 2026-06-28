@@ -22,7 +22,7 @@ export default defineNuxtModule({
     // Live case-study slugs, read straight from the content files (the content DB
     // isn't available this early). Frontmatter-only files, so a cheap regex on the
     // `status:` line is enough to skip in-progress stubs.
-    const workDir = join(nuxt.options.rootDir, 'content', 'work')
+    const workDir = join(nuxt.options.rootDir, 'content', 'en', 'work')
     const slugs = readdirSync(workDir)
       .filter(f => f.endsWith('.md'))
       .filter(f => /status:\s*["']?live["']?/.test(readFileSync(join(workDir, f), 'utf8')))
