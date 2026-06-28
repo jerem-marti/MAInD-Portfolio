@@ -108,6 +108,9 @@ export default defineNuxtConfig({
   // smaller server bundle (also silences the build hint from prior phases).
   sitemap: {
     zeroRuntime: true,
+    // The llms artifacts (registered in modules/llms.ts) are prerendered text
+    // files, not human-facing pages — keep them out of the sitemap.
+    exclude: ['/llms.txt', '/llms-full.txt', '/*.md', '/work/*.md'],
   },
 
   typescript: {
