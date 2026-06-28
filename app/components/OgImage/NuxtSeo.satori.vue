@@ -1,65 +1,83 @@
-<script setup>
-import { computed } from "vue";
+<script setup lang="ts">
+// Branded OG / social-share card, rendered to a static PNG at build time
+// (Satori, zeroRuntime). Brand tokens are hardcoded here because Satori does not
+// see the site's CSS @theme. Pass title/description/image per page via
+// defineOgImage('NuxtSeo', { title, description, image }) — see
+// app/layouts/default.vue (site default: the portrait) and
+// app/pages/work/[slug].vue (per case study: the study hero).
+//
+// Layout: text on the left (wordmark, title, clamped description, mono footer),
+// the image on the right. With no image it falls back to a full-width text card.
+//
+// Satori notes: every <div> with more than one child needs an explicit display
+// (flex throughout); line-clamp support is narrow, so text is trimmed in script.
 const props = defineProps({
-  colorMode: { type: String, required: false, default: "light" },
-  title: { type: String, required: false, default: "title" },
-  description: { type: String, required: false },
-  isPro: { type: Boolean, required: false }
-});
-const themeColor = computed(() => props.isPro ? "124, 58, 237" : "34, 197, 94");
+  title: { type: String, default: 'Jérémy Martin' },
+  description: { type: String, default: 'Interaction and product designer' },
+  image: { type: String, default: '' },
+})
+
+const clamp = (s: string, max: number) => {
+  if (!s || s.length <= max) return s
+  const cut = s.slice(0, max)
+  const sp = cut.lastIndexOf(' ')
+  return (sp > 0 ? cut.slice(0, sp) : cut).trimEnd() + '…'
+}
+const heading = computed(() => clamp(props.title, 48))
+const desc = computed(() => clamp(props.description, 110))
 </script>
 
 <template>
-  <div
-    class="w-full h-full justify-center items-center relative p-10 lg:p-[60px] bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50"
-  >
-    <!-- Gradient background -->
-    <div
-      class="absolute top-0 left-0 right-0 bottom-0" :style="{
-  backgroundImage: `radial-gradient(ellipse 100% 100% at 100% 100%, rgba(${themeColor}, 0.15) 0%, transparent 60%)`
-}"
-    />
-    <div
-      class="absolute top-0 left-0 right-0 bottom-0" :style="{
-  backgroundImage: `radial-gradient(ellipse 100% 100% at 0.1% 0.1%, rgba(${themeColor}, 0.1) 0%, transparent 50%)`
-}"
-    />
-
-    <div class="w-full flex-col justify-center relative items-center text-center gap-5 lg:gap-8">
-      <!-- Logo -->
-      <div class="flex items-center gap-1">
-        <svg viewBox="0 0 64 64" class="w-10 h-10 lg:w-16 lg:h-16">
-          <defs>
-            <linearGradient :id="isPro ? 'nsLine2' : 'nsLine1'" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" :stop-color="isPro ? '#7c3aed' : '#22c55e'" />
-              <stop offset="100%" :stop-color="isPro ? '#c4b5fd' : '#86efac'" />
-            </linearGradient>
-            <linearGradient :id="isPro ? 'nsFill2' : 'nsFill1'" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" :stop-color="isPro ? '#7c3aed' : '#22c55e'" stop-opacity="0.6" />
-              <stop offset="100%" :stop-color="isPro ? '#7c3aed' : '#22c55e'" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-          <path d="M8 52 Q20 48 24 36 T40 20 T56 12 L56 56 L8 56 Z" :fill="`url(#${isPro ? 'nsFill2' : 'nsFill1'})`" />
-          <path d="M8 52 Q20 48 24 36 T40 20 T56 12" fill="none" :stroke="`url(#${isPro ? 'nsLine2' : 'nsLine1'})`" stroke-width="4" stroke-linecap="round" />
-          <circle cx="56" cy="12" r="6" :fill="`url(#${isPro ? 'nsLine2' : 'nsLine1'})`" />
-        </svg>
-        <span class="text-[32px] lg:text-[42px] font-bold tracking-tight">
-          Nuxt<span :class="isPro ? 'text-violet-500' : 'text-green-500'" class="ml-1">SEO{{ isPro ? " Pro" : "" }}</span>
-        </span>
+  <div style="width: 100%; height: 100%; display: flex; background-color: #f4f5f7; color: #0a0a0a;">
+    <!-- Text column -->
+    <div style="display: flex; flex-direction: column; justify-content: space-between; flex: 1; padding: 72px;">
+      <!-- Wordmark: one disciplined yellow mark + the domain in mono -->
+      <div style="display: flex; align-items: center;">
+        <div style="width: 20px; height: 20px; background-color: #f5d547;" />
+        <div
+          style="display: flex; margin-left: 16px; font-family: 'Geist Mono'; font-size: 24px; letter-spacing: 2px; color: #5b6168;"
+        >
+          jeremymartin.ch
+        </div>
       </div>
 
-      <!-- Title -->
-      <h1
-        class="w-full justify-center text-center text-[48px] lg:text-[80px] font-bold m-0 leading-tight max-w-[700px] lg:max-w-[1000px]"
-        style="display: block; line-clamp: 3; text-overflow: ellipsis; text-wrap: balance;"
-      >
-        {{ title }}
-      </h1>
+      <!-- Title + description (trimmed in script, so safe to render flat) -->
+      <div style="display: flex; flex-direction: column;">
+        <div
+          style="display: flex; font-family: 'Geist'; font-weight: 500; font-size: 64px; line-height: 1.04; letter-spacing: -2px; color: #0a0a0a;"
+        >
+          {{ heading }}
+        </div>
+        <div
+          v-if="desc"
+          style="display: flex; margin-top: 24px; font-family: 'Geist'; font-weight: 400; font-size: 27px; line-height: 1.35; color: #5b6168;"
+        >
+          {{ desc }}
+        </div>
+      </div>
 
-      <!-- Description -->
-      <p v-if="description" class="text-[24px] lg:text-[32px] opacity-70 max-w-[650px] lg:max-w-[900px] leading-relaxed" style="display: block; line-clamp: 2; text-overflow: ellipsis;">
-        {{ description }}
-      </p>
+      <!-- Footer: yellow hairline + discipline label in mono -->
+      <div style="display: flex; align-items: center;">
+        <div style="width: 64px; height: 2px; background-color: #f5d547;" />
+        <div
+          style="display: flex; margin-left: 16px; font-family: 'Geist Mono'; font-size: 20px; letter-spacing: 2px; color: #5b6168;"
+        >
+          INTERACTION &amp; PRODUCT DESIGN
+        </div>
+      </div>
+    </div>
+
+    <!-- Image column (right). Omitted entirely when no image is passed. -->
+    <div
+      v-if="image"
+      style="display: flex; width: 470px; height: 630px; border-left: 1px solid #d7dae0;"
+    >
+      <img
+        :src="image"
+        width="470"
+        height="630"
+        style="width: 470px; height: 630px; object-fit: cover;"
+      />
     </div>
   </div>
 </template>

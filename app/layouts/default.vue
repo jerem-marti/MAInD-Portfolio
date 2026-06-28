@@ -21,13 +21,14 @@ useSchemaOrg([
   }),
 ])
 
-// Auto-generated OG image per page. NuxtSeo template pulls title + description
-// from useHead, so each route gets a unique 1200×600 PNG at build time. Theme
-// keyed to the brand-accent yellow; siteName replaces the default tag.
+// Site-default OG card (brand template in components/OgImage/NuxtSeo.satori.vue).
+// This is the fallback for pages that don't set their own — home, about, contact,
+// error. Content pages override it: pages/work/[slug].vue passes the study title +
+// summary. Title/description must be passed explicitly; nuxt-og-image does not
+// infer them into the prerendered image under zeroRuntime.
 defineOgImage('NuxtSeo', {
-  theme: '#f5d547',
-  colorMode: 'light',
-  siteName: 'jeremymartin.ch',
+  title: 'Jérémy Martin',
+  description: 'Interaction and product designer. Mendrisio, Switzerland.',
 })
 </script>
 
