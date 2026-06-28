@@ -120,7 +120,7 @@ export const projects: readonly IndexRow[] = [
     year: '2025',
     href: '/work/beau-rivage',
     preview: '/images/index/beau-rivage.jpg',
-    alt: 'The redesigned Beau-Rivage Palace homepage on mobile: the shell logo, a Réserver button and the centerd wordmark over fine gold lines, far lighter than the original.',
+    alt: 'The redesigned Beau-Rivage Palace homepage on mobile: the shell logo, a Réserver button and the centered wordmark over fine gold lines, far lighter than the original.',
   },
   {
     num: '09',

@@ -80,7 +80,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
           <em class="not-italic [box-shadow:inset_0_-0.35em_0_var(--color-brand-accent)]">
             What changed is the tool, not the discipline
           </em>.
-          Lately, my work is centerd on agentic experiences (AX): designed around human intent,
+          Lately, my work is centered on agentic experiences (AX): designed around human intent,
           prompts grounded as design decisions, outputs evaluated against the people who use them.
         </p>
       </div>

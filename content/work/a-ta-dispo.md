@@ -3,7 +3,7 @@ title: "À ta Dispo"
 summary: "A startup concept that matches volunteers with the organizations and events that need them, taken through the full entrepreneurial process. Associations, NGOs, cultural institutions, and festivals all struggle to recruit reliable volunteers; volunteers struggle to find opportunities and get recognized. À ta Dispo is the matchmaking layer between them."
 status: "live"
 hero: "/images/work/a-ta-dispo/hero.jpg"
-heroAlt: "The hand-drawn À ta Dispo wordmark, a coral logo on a pink sticker shape with a small smiley, centerd on a plain coral background."
+heroAlt: "The hand-drawn À ta Dispo wordmark, a coral logo on a pink sticker shape with a small smiley, centered on a plain coral background."
 
 brief:
   role: "Research & strategy"

@@ -2,7 +2,7 @@
 title: "Beau-Rivage Eco-Redesign"
 summary: "A ground-up eco-redesign of the Beau-Rivage Palace website that cut its weight and carbon by roughly 95% while keeping the feel of a five-star hotel. An audit of the existing site, a fresh design, and a Nuxt 3 build tuned for sustainability."
 status: "live"
-heroAlt: "The redesigned Beau-Rivage Palace homepage at rest: a restrained top navigation and the centerd 'Beau-Rivage Palace, Lausanne Switzerland' logo over a field of fine gold lines, far lighter than the original site."
+heroAlt: "The redesigned Beau-Rivage Palace homepage at rest: a restrained top navigation and the centered 'Beau-Rivage Palace, Lausanne Switzerland' logo over a field of fine gold lines, far lighter than the original site."
 hero: "/images/work/beau-rivage/hero.jpg"
 
 brief:
