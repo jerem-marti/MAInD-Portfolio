@@ -10,12 +10,12 @@ defineProps<{
 <template>
   <aside
     class="hidden 2xl:block fixed top-1/2 -translate-y-1/2 left-10 z-20 w-[150px]"
-    aria-label="Case study sections"
+    :aria-label="$t('work.toc.aria')"
   >
     <div
       class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted mb-4"
     >
-      Contents
+      {{ $t('work.toc.contents') }}
     </div>
     <ul class="flex flex-col gap-3 border-l border-brand-hairline pl-4">
       <li v-for="s in sections" :key="s.id" class="relative">

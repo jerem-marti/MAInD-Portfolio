@@ -21,7 +21,8 @@
   "common": {
     "availableLead": "Available for internships from",
     "availableDate": "August 2026",
-    "repliesFrEn": "Replies in French or English, usually within a few working days."
+    "repliesFrEn": "Replies in French or English, usually within a few working days.",
+    "portraitAlt": "Studio portrait of Jérémy Martin, shoulder-length curly hair and a moustache, wearing a black t-shirt against a gray backdrop."
   },
   "home": {
     "lede": "Interaction and product designer, currently working on agentic experiences (AX) designed around human intent and its consequences. Master's student at SUPSI Mendrisio, available from August 2026.",

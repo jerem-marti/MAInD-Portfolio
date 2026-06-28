@@ -26,7 +26,7 @@ async function play() {
       v-if="!playing"
       type="button"
       class="group relative block w-full cursor-pointer"
-      :aria-label="`Play video: ${resource.title}`"
+      :aria-label="$t('work.resource.playVideo', { title: resource.title })"
       @click="play"
     >
       <UiMediaPlaceholder
@@ -76,7 +76,7 @@ async function play() {
     </div>
 
     <figcaption class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-      Video · {{ resource.title }}
+      {{ $t('work.resource.videoPrefix') }} · {{ resource.title }}
     </figcaption>
   </figure>
 </template>

@@ -21,14 +21,14 @@ const current = computed(
       class="w-full max-w-[1280px] mx-auto flex items-center justify-between px-5 md:px-10 lg:px-16 py-3"
       :aria-expanded="open"
       aria-controls="case-study-toc-menu"
-      aria-label="Case study sections"
+      :aria-label="$t('work.toc.aria')"
       @click="open = !open"
     >
       <span class="flex items-baseline gap-3">
         <span
           class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"
         >
-          Section
+          {{ $t('work.toc.section') }}
         </span>
         <span
           class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink relative"

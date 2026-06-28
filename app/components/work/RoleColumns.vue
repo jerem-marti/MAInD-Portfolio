@@ -11,7 +11,7 @@ defineProps<{
   <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-10">
     <div class="flex flex-col gap-3 border-t border-brand-ink pt-4">
       <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-        Led
+        {{ $t('work.roleColumns.led') }}
       </span>
       <ul class="flex flex-col gap-2">
         <li
@@ -25,7 +25,7 @@ defineProps<{
     </div>
     <div class="flex flex-col gap-3 border-t border-brand-ink pt-4">
       <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-        Contributed to
+        {{ $t('work.roleColumns.contributed') }}
       </span>
       <ul class="flex flex-col gap-2">
         <li
@@ -39,7 +39,7 @@ defineProps<{
     </div>
     <div class="flex flex-col gap-3 border-t border-brand-ink pt-4">
       <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-        Not touched
+        {{ $t('work.roleColumns.notTouched') }}
       </span>
       <ul class="flex flex-col gap-2">
         <li
@@ -55,7 +55,7 @@ defineProps<{
       <span
         class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted mb-2 block"
       >
-        Team
+        {{ $t('work.roleColumns.team') }}
       </span>
       <p class="text-[16px] leading-[1.55] text-brand-ink max-w-[60ch]">{{ team }}</p>
     </div>

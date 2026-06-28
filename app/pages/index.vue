@@ -2,13 +2,19 @@
 import { featured } from '~/data/featured'
 import { projects, type IndexRow } from '~/data/projects'
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+
+// Display strings for featured/Index rows live in the i18n catalog, keyed by the
+// case-study slug; the data files keep only structure (num, slug, image, tags…).
+const projKey = (r: IndexRow) => r.href?.match(/\/work\/([^/]+)/)?.[1] ?? r.num
+const projTitle = (r: IndexRow) => t(`data.projects.${projKey(r)}.title`)
+const projAlt = (r: IndexRow) => t(`data.projects.${projKey(r)}.alt`)
+const tagList = (r: IndexRow) => r.tags.map((x) => t(`tags.${x}`)).join(' / ')
+
 useHead({
   meta: [
-    {
-      name: 'description',
-      content:
-        "Interaction and product designer, currently working on agentic experiences (AX) designed around human intent and its consequences. Master's student at SUPSI Mendrisio, available from August 2026.",
-    },
+    { name: 'description', content: () => t('home.lede') },
   ],
 })
 
@@ -47,54 +53,52 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
     <span
       class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted mb-6 md:mb-10 block"
     >
-      00 / Portfolio · Jérémy Martin · 2026
+      {{ t('home.heroMeta') }}
     </span>
     <h1
       class="text-[15vw] md:text-[clamp(72px,9.2vw,160px)] leading-[0.92] tracking-[-0.035em] font-medium text-brand-ink"
     >
-      Process is<br />the artifact.
+      {{ t('home.heroTitleLine1') }}<br />{{ t('home.heroTitleLine2') }}
     </h1>
     <p
       class="mt-10 md:mt-16 text-[18px] md:text-[22px] leading-[1.45] max-w-[58ch] text-brand-ink"
     >
-      Interaction and product designer, currently working on agentic experiences (AX) designed
-      around human intent and its consequences. Master's student at SUPSI Mendrisio, available
-      from August 2026.
+      {{ t('home.lede') }}
     </p>
   </section>
 
   <!-- 01 — Approach -->
   <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-20 md:py-32">
-    <UiSectionHead num="01" label="Approach" class="mb-12 md:mb-20" />
+    <UiSectionHead num="01" :label="t('home.approachLabel')" class="mb-12 md:mb-20" />
     <div class="grid grid-cols-12 gap-x-6">
       <div class="hidden md:block md:col-span-3">
         <span class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted">
-          POV — 2026
+          {{ t('home.approachPov') }}
         </span>
       </div>
       <div class="col-span-12 md:col-span-9">
-        <p
+        <i18n-t
+          keypath="home.approachBody"
+          tag="p"
+          scope="global"
           class="text-[22px] md:text-[28px] leading-[1.4] tracking-[-0.005em] max-w-[42ch] text-brand-ink"
         >
-          AI made design generation cheap. Judging whether it's any good did not.
-          <em class="not-italic [box-shadow:inset_0_-0.35em_0_var(--color-brand-accent)]">
-            What changed is the tool, not the discipline
-          </em>.
-          Lately, my work is centered on agentic experiences (AX): designed around human intent,
-          prompts grounded as design decisions, outputs evaluated against the people who use them.
-        </p>
+          <template #emphasis>
+            <em class="not-italic [box-shadow:inset_0_-0.35em_0_var(--color-brand-accent)]">{{ t('home.approachEmphasis') }}</em>
+          </template>
+        </i18n-t>
       </div>
     </div>
   </section>
 
   <!-- 02 — Selected work -->
   <section id="work" class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-12 md:py-20 scroll-mt-24">
-    <UiSectionHead num="02" label="Selected work" class="mb-12 md:mb-20" />
+    <UiSectionHead num="02" :label="t('home.selectedWorkLabel')" class="mb-12 md:mb-20" />
     <div>
       <NuxtLink
         v-for="c in featured"
         :key="c.num"
-        :to="`/work/${c.slug}`"
+        :to="localePath(`/work/${c.slug}`)"
         class="group block border-t border-brand-ink pt-8 md:pt-10 pb-16 md:pb-24"
       >
         <div class="grid grid-cols-12 gap-x-6 gap-y-8">
@@ -109,20 +113,20 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
             <span
               class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted"
             >
-              {{ c.meta }}
+              {{ t(`data.featured.${c.slug}.meta`) }}
             </span>
           </div>
           <div class="col-span-12 md:col-span-9">
             <h3
               class="text-[36px] md:text-[56px] leading-[1.02] tracking-[-0.025em] font-medium text-brand-ink max-w-[22ch]"
             >
-              {{ c.title }}
+              {{ t(`data.featured.${c.slug}.title`) }}
             </h3>
           </div>
           <div class="col-span-12 md:col-span-9 md:col-start-4 mt-2">
             <UiMediaPlaceholder
               :src="c.image"
-              :alt="c.alt"
+              :alt="t(`data.featured.${c.slug}.alt`)"
               aspect="aspect-[16/9]"
               sizes="sm:100vw md:720px lg:900px xl:900px 2xl:900px"
             />
@@ -132,9 +136,9 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
               <div
                 class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted mb-1"
               >
-                Problem
+                {{ t('home.problem') }}
               </div>
-              <p class="text-[17px] leading-[1.55] text-brand-ink">{{ c.problem }}</p>
+              <p class="text-[17px] leading-[1.55] text-brand-ink">{{ t(`data.featured.${c.slug}.problem`) }}</p>
             </div>
           </div>
           <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col gap-4">
@@ -142,14 +146,14 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
               <div
                 class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted mb-1"
               >
-                Outcome
+                {{ t('home.outcome') }}
               </div>
-              <p class="text-[17px] leading-[1.55] text-brand-ink">{{ c.outcome }}</p>
+              <p class="text-[17px] leading-[1.55] text-brand-ink">{{ t(`data.featured.${c.slug}.outcome`) }}</p>
             </div>
             <span
               class="inline-flex items-center gap-2 mt-2 text-[15px] self-start pb-[1px] border-b border-brand-ink group-hover:[box-shadow:inset_0_-0.4em_0_var(--color-brand-accent)]"
             >
-              Read the case study
+              {{ t('home.readCaseStudy') }}
               <!-- Lucide ArrowUpRight, stroke 1.5, 16x16 -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -176,21 +180,21 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
 
   <!-- 03 — Index -->
   <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-20 md:py-32">
-    <UiSectionHead num="03" label="Index — all other work" class="mb-12 md:mb-20" />
+    <UiSectionHead num="03" :label="t('home.indexLabel')" class="mb-12 md:mb-20" />
 
     <div class="grid grid-cols-12 gap-x-6 mb-10 md:mb-16">
       <div class="col-span-12 md:col-span-8">
         <h2
           class="text-[44px] md:text-[88px] leading-[0.95] tracking-[-0.03em] font-medium text-brand-ink"
         >
-          Index
+          {{ t('home.indexHeading') }}
         </h2>
       </div>
       <div class="hidden md:flex md:col-span-4 items-end justify-end">
         <span
           class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted text-right max-w-[28ch]"
         >
-          More work from my Master and Bachelor studies, beyond the three featured above.
+          {{ t('home.indexCaption') }}
         </span>
       </div>
     </div>
@@ -203,16 +207,16 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
           aria-hidden="true"
         >
           <div class="col-span-1 font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-            №
+            {{ t('home.colNumber') }}
           </div>
           <div class="col-span-5 font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-            Project
+            {{ t('home.colProject') }}
           </div>
           <div class="col-span-4 font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-            Tags
+            {{ t('home.colTags') }}
           </div>
           <div class="col-span-1 font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-            Year
+            {{ t('home.colYear') }}
           </div>
           <div class="col-span-1" />
         </div>
@@ -221,7 +225,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
           <li v-for="r in projects" :key="r.num">
             <component
               :is="r.href ? 'a' : 'div'"
-              :href="r.href"
+              :href="r.href ? (isExternal(r.href) ? r.href : localePath(r.href)) : undefined"
               :target="isExternal(r.href) ? '_blank' : undefined"
               :rel="isExternal(r.href) ? 'noopener' : undefined"
               :class="[
@@ -243,12 +247,12 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
                 <div
                   class="col-span-10 md:col-span-5 text-[18px] md:text-[20px] leading-[1.25] text-brand-ink tracking-[-0.005em]"
                 >
-                  {{ r.title }}
+                  {{ projTitle(r) }}
                 </div>
                 <div
                   class="hidden md:block md:col-span-4 font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted"
                 >
-                  {{ r.tags.join(' / ') }}
+                  {{ tagList(r) }}
                 </div>
                 <div
                   class="hidden md:block md:col-span-1 font-mono uppercase tracking-[0.08em] text-[12px] text-brand-ink-muted"
@@ -306,7 +310,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
                   <span
                     class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted truncate"
                   >
-                    {{ r.tags.join(' / ') }}
+                    {{ tagList(r) }}
                   </span>
                   <span class="flex items-center gap-2 shrink-0">
                     <span
@@ -353,7 +357,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
                       <img
                         v-if="r.preview"
                         :src="r.preview"
-                        :alt="r.alt ?? r.title"
+                        :alt="projAlt(r)"
                         loading="lazy"
                         class="w-full h-full object-cover"
                       />
@@ -361,13 +365,13 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
                         v-else
                         class="w-full h-full"
                         role="img"
-                        :aria-label="r.alt ?? r.title"
+                        :aria-label="projAlt(r)"
                       />
                     </div>
                     <div
                       class="mt-3 flex items-center gap-2 font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink"
                     >
-                      <span>Open case study</span>
+                      <span>{{ t('home.openCaseStudy') }}</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -400,7 +404,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
           <div
             class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted mb-3"
           >
-            Preview
+            {{ t('home.preview') }}
           </div>
           <div
             class="aspect-[3/4] border border-brand-hairline bg-brand-surface overflow-hidden"
@@ -413,7 +417,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
               v-if="hovered?.preview"
               :key="hovered.preview"
               :src="hovered.preview"
-              :alt="hovered.alt ?? hovered.title"
+              :alt="projAlt(hovered)"
               loading="lazy"
               class="w-full h-full object-cover"
             />
@@ -423,19 +427,19 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
             >
               <template v-if="hovered">
                 <span class="text-[14px] leading-tight text-brand-ink max-w-[20ch]">
-                  {{ hovered.title }}
+                  {{ projTitle(hovered) }}
                 </span>
                 <span
                   class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted mt-2"
                 >
-                  {{ hovered.tags.join(' / ') }}
+                  {{ tagList(hovered) }}
                 </span>
               </template>
               <span
                 v-else
                 class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"
               >
-                Hover a row.
+                {{ t('home.hoverRow') }}
               </span>
             </div>
           </div>
@@ -444,7 +448,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
             class="mt-3 flex items-baseline justify-between gap-3"
           >
             <span class="text-[14px] leading-tight text-brand-ink max-w-[20ch]">
-              {{ hovered.title }}
+              {{ projTitle(hovered) }}
             </span>
             <span
               class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"
@@ -459,12 +463,12 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
 
   <!-- 04 — About preview -->
   <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-20 md:py-32">
-    <UiSectionHead num="04" label="About" class="mb-12 md:mb-20" />
+    <UiSectionHead num="04" :label="t('home.aboutLabel')" class="mb-12 md:mb-20" />
     <div class="grid grid-cols-12 gap-x-6 gap-y-10">
       <div class="col-span-12 md:col-span-4">
         <UiMediaPlaceholder
           src="/images/about/portrait.jpg"
-          alt="Studio portrait of Jérémy Martin, shoulder-length curly hair and a moustache, wearing a black t-shirt against a gray backdrop."
+          :alt="t('common.portraitAlt')"
           aspect="aspect-[4/5]"
           sizes="sm:100vw md:400px lg:400px xl:400px 2xl:400px"
         />
@@ -473,19 +477,18 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
         <span
           class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted"
         >
-          Mendrisio · CH
+          {{ t('home.aboutMeta') }}
         </span>
         <p
           class="text-[20px] md:text-[24px] leading-[1.4] text-brand-ink max-w-[42ch] tracking-[-0.005em]"
         >
-          Jérémy's current focus is agentic experiences (AX), designed around user intent. His
-          practice spans hardware prototyping, front-end build, UX research, and service design.
+          {{ t('home.aboutBody') }}
         </p>
         <NuxtLink
-          to="/about"
+          :to="localePath('/about')"
           class="inline-flex items-center gap-2 text-[15px] self-start pb-[2px] border-b border-brand-ink hover:[box-shadow:inset_0_-0.4em_0_var(--color-brand-accent)]"
         >
-          More about Jérémy
+          {{ t('home.aboutMore') }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -508,15 +511,15 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
 
   <!-- 05 — Contact -->
   <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-20 md:py-32">
-    <UiSectionHead num="05" label="Contact" class="mb-12 md:mb-20" />
+    <UiSectionHead num="05" :label="t('home.contactLabel')" class="mb-12 md:mb-20" />
     <div class="grid grid-cols-12 gap-x-6 gap-y-12">
       <div class="col-span-12 md:col-span-8">
         <p
           class="text-[32px] md:text-[56px] leading-[1.05] tracking-[-0.025em] font-medium text-brand-ink max-w-[16ch]"
         >
-          Available for internships from
+          {{ t('common.availableLead') }}
           <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">
-            August 2026
+            {{ t('common.availableDate') }}
           </span>.
         </p>
       </div>
@@ -527,7 +530,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
           <span
             class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"
           >
-            Email
+            {{ t('home.contactEmail') }}
           </span>
           <a
             href="mailto:hi@jeremymartin.ch"
@@ -540,7 +543,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
           <span
             class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"
           >
-            LinkedIn
+            {{ t('home.contactLinkedin') }}
           </span>
           <a
             href="https://www.linkedin.com/in/jermarti"
@@ -555,16 +558,16 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
           <span
             class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"
           >
-            Languages
+            {{ t('home.contactLanguages') }}
           </span>
-          <span class="text-[18px] text-brand-ink">FR · EN</span>
+          <span class="text-[18px] text-brand-ink">{{ t('home.contactLanguagesValue') }}</span>
         </div>
       </div>
       <div class="col-span-12 md:col-span-8">
         <p
           class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted"
         >
-          Replies in French or English, usually within a few working days.
+          {{ t('common.repliesFrEn') }}
         </p>
       </div>
     </div>
