@@ -12,7 +12,7 @@ useSchemaOrg([
     jobTitle: 'Interaction and Product Designer',
     email: 'mailto:hi@jeremymartin.ch',
     url: 'https://jeremymartin.ch',
-    sameAs: ['https://www.linkedin.com/in/jermarti'],
+    sameAs: ['https://www.linkedin.com/in/jermarti', 'https://github.com/jerem-marti'],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Mendrisio',

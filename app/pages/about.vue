@@ -55,6 +55,7 @@ const facts = [
           aspect="aspect-[4/5]"
           sizes="sm:100vw md:500px lg:500px xl:500px 2xl:500px"
           eager
+          priority
         />
       </div>
     </div>
@@ -195,7 +196,7 @@ const facts = [
         <a
           href="/jeremy-martin-cv-en.pdf"
           download
-          class="inline-flex items-center justify-between gap-3 px-5 py-3.5 bg-brand-ink text-brand-bg hover:bg-[#1f1f1f] min-w-[240px] transition-colors"
+          class="inline-flex items-center justify-between gap-3 px-5 py-3.5 bg-brand-ink text-brand-bg hover:bg-brand-ink-hover min-w-[240px] transition-colors"
         >
           <span class="text-[14px]">Download CV (English)</span>
           <!-- Lucide Download, stroke 1.5, 16x16 -->

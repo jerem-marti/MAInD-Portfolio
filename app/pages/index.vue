@@ -88,7 +88,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
   </section>
 
   <!-- 02 — Selected work -->
-  <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-12 md:py-20">
+  <section id="work" class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-12 md:py-20 scroll-mt-24">
     <UiSectionHead num="02" label="Selected work" class="mb-12 md:mb-20" />
     <div>
       <NuxtLink

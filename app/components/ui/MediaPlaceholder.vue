@@ -27,6 +27,8 @@ const props = defineProps<{
   eager?: boolean
   /** Use top/bottom border only (for full-bleed presentations like a case-study hero). */
   fullBleed?: boolean
+  /** Mark as the LCP image: emits fetchpriority="high" (pair with `eager` on the hero). */
+  priority?: boolean
 }>()
 
 const borderClass = computed(() =>
@@ -44,6 +46,7 @@ const borderClass = computed(() =>
       :alt="alt"
       :sizes="sizes"
       :loading="eager ? 'eager' : 'lazy'"
+      :fetchpriority="priority ? 'high' : undefined"
       class="w-full h-full object-cover"
     />
     <div

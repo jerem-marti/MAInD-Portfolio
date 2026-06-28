@@ -65,8 +65,8 @@ export default defineNuxtConfig({
   // generates @font-face rules; explicit `families` makes the provider deterministic.
   fonts: {
     families: [
-      { name: 'Geist', provider: 'google', weights: [400, 500, 600, 700] },
-      { name: 'Geist Mono', provider: 'google', weights: [400, 500] },
+      { name: 'Geist', provider: 'google', weights: [400, 500] },
+      { name: 'Geist Mono', provider: 'google', weights: [400] },
     ],
   },
 
