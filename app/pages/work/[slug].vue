@@ -13,8 +13,11 @@ const { data: study } = await useAsyncData(`work-${route.params.slug}`, () =>
 const slug = String(route.params.slug)
 const { prev, next } = chainNeighbours(slug)
 
+// Only path + card are needed to render the prev/next "More work" cards, so
+// project just those fields — otherwise every study's full frontmatter is
+// serialized into each page's payload (~189KB/page).
 const { data: cards } = await useAsyncData('work-cards', () =>
-  queryCollection('work').all(),
+  queryCollection('work').select('path', 'card').all(),
 )
 const cardFor = (s: string | null) => {
   if (!s) return null
@@ -148,6 +151,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         sizes="sm:100vw md:100vw lg:100vw xl:100vw 2xl:100vw"
         full-bleed
         eager
+        priority
         class="w-full"
       />
 
@@ -253,7 +257,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
     <template v-else>
       <!-- 01 Problem -->
       <section
-        v-if="study.problem"
+        v-if="study.problem?.length"
         id="problem"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
@@ -293,7 +297,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
 
       <!-- 03 Approach -->
       <section
-        v-if="study.approach"
+        v-if="study.approach?.length"
         id="approach"
         class="py-16 md:py-28 scroll-mt-32 border-t border-brand-hairline bg-brand-surface/40"
       >
@@ -355,7 +359,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
 
       <!-- 04 Outcome -->
       <section
-        v-if="study.outcome"
+        v-if="study.outcome?.length"
         id="outcome"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
@@ -393,7 +397,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
 
       <!-- 06 Gallery -->
       <section
-        v-if="study.gallery"
+        v-if="study.gallery?.length"
         id="gallery"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
