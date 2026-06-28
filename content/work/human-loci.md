@@ -3,7 +3,7 @@ title: "Human Loci"
 summary: "A synesthetic listening object that plays places instead of music. Three plaster disks, each tied to a public space, let you drop its field recording into the room and sit with the atmosphere of somewhere else, chosen by touch before a sound begins."
 status: "live"
 hero: "/images/work/human-loci/hero.jpg"
-heroAlt: "The Human Loci listening box: a transparent acrylic box with internal speakers and a white tonearm, a textured blue plaster disk resting on its deck, on a seamless grey backdrop."
+heroAlt: "The Human Loci listening box: a transparent acrylic box with internal speakers and a white tonearm, a textured blue plaster disk resting on its deck, on a seamless gray backdrop."
 
 brief:
   role: "Electronics & enclosure integration"
@@ -26,7 +26,7 @@ problem:
   - >-
     The brief was a fast-prototyping course built around making a physical object, so the real
     challenge was turning that concept into a thing you can hold. A screen-free ritual where the
-    choice of place is made by touch and colour, and the technology disappears so the place can
+    choice of place is made by touch and color, and the technology disappears so the place can
     come forward.
 
 role:
@@ -57,7 +57,7 @@ approach:
         and gesture only mean something together. The experience stays in the foreground; the device
         recedes.
     artifacts:
-      - alt: "Top-down view of the open object with three labelled parts: a circular volume wheel, the tonearm that starts playback, and the internal two-chamber speaker box, a blue plaster disk on the deck."
+      - alt: "Top-down view of the open object with three labeled parts: a circular volume wheel, the tonearm that starts playback, and the internal two-chamber speaker box, a blue plaster disk on the deck."
         caption: "Anatomy — tonearm, volume wheel, speaker box."
         decision: "Three broad gestures (place a disk, move the arm, turn the wheel) replace every menu, label, and screen."
         width: "wide"
@@ -93,7 +93,7 @@ approach:
         The object is transparent on purpose; its construction is part of the experience. That left
         nowhere to hide a speaker or a cable, which made the audio enclosure the hardest integration
         problem. We designed a compact internal speaker module split into two sealed chambers, two
-        small drivers each, prioritising airtightness, rigidity, and an assembly that comes apart
+        small drivers each, prioritizing airtightness, rigidity, and an assembly that comes apart
         without glue.
       - >-
         We worked up to it in stages: an acrylic single-speaker mock-up to check vibration and the
@@ -119,8 +119,8 @@ approach:
       - >-
         The disks are the heart of the concept, so they could not be the usual digital-fabrication
         palette of light plastic or laser-cut wood. The team chose plaster for its weight and its
-        stone-like presence, tinted and textured so each place has an identity you recognise by
-        touch and colour before any sound starts. Touch becomes a real dimension of the work, not a
+        stone-like presence, tinted and textured so each place has an identity you recognize by
+        touch and color before any sound starts. Touch becomes a real dimension of the work, not a
         finish.
       - >-
         Making them was its own small engineering problem, solved by the team with a laser-cut
@@ -129,7 +129,7 @@ approach:
         that lets rigid acrylic bend around the whole object while staying acoustically open. Most of
         the project's time went into trials like these, and the object is better for it.
     artifacts:
-      - alt: "Two process shots: laser-cut layered disk patterns stacked as a positive, and a grey vacuum-formed negative mould used to cast the plaster disks."
+      - alt: "Two process shots: laser-cut layered disk patterns stacked as a positive, and a gray vacuum-formed negative mould used to cast the plaster disks."
         caption: "Disk fabrication — laser-cut layers and a vacuum-formed mould."
         decision: "Plaster's weight and touch were the point, so the team cut a positive and vacuum-formed a mould to cast it rather than reach for the usual laser-cut palette."
         width: "wide"
@@ -140,7 +140,7 @@ outcome:
     A working synesthetic object. Place a disk, move the arm, and a public place fills the room as a
     continuous atmosphere; lift the disk and it falls silent.
   - >-
-    Three places realised (a park, a marina, a train station) from on-site field recordings made and
+    Three places realized (a park, a marina, a train station) from on-site field recordings made and
     edited for the project, each carried by a plaster disk you choose by touch rather than from a
     list.
   - >-
@@ -149,7 +149,7 @@ outcome:
 
 reflection: >-
   The lesson I keep from Human Loci is that a concept without purpose holds about as much value as
-  cooking with ingredients that have no flavour. The deep ideation we refused to rush, and Marco's
+  cooking with ingredients that have no flavor. The deep ideation we refused to rush, and Marco's
   push to reinterpret rather than replicate, are what made the object mean something. The technical
   side rewarded the same patience: working with plaster, plexiglass, and vacuum forming for the
   first time only paid off because we let creativity lead first and turned pragmatic second.

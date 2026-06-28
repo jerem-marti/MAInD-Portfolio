@@ -14,6 +14,9 @@ useSchemaOrg([defineWebPage({ '@type': 'ContactPage' })])
 </script>
 
 <template>
+  <div>
+  <!-- Single root node (this div): the fade page transition can't bind to a multi-root
+       page, which left every page blank on client-side navigation. -->
   <!-- Headline -->
   <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 pt-16 md:pt-28 pb-8 md:pb-12">
     <span
@@ -67,4 +70,5 @@ useSchemaOrg([defineWebPage({ '@type': 'ContactPage' })])
       </div>
     </div>
   </section>
+  </div>
 </template>

@@ -3,7 +3,7 @@ title: "BrushBuddy"
 summary: "A monster buddy cube that guides two-minute toothbrushing for children aged 4 to 8. Pull out the toothbrush and the cube's face reacts through light, motion, and sound, lighting twelve teeth in sequence and only advancing while the child is actually brushing."
 status: "live"
 hero: "/images/work/brushbuddy/hero.jpg"
-heroAlt: "A hand lifts the yellow toothbrush from the dock on top of the BrushBuddy cube, whose worried monster face — raised brows, googly eyes, a mouth of twelve grey teeth — waits below on a wide grey field."
+heroAlt: "A hand lifts the yellow toothbrush from the dock on top of the BrushBuddy cube, whose worried monster face — raised brows, googly eyes, a mouth of twelve gray teeth — waits below on a wide gray field."
 
 brief:
   role: "Electronics & firmware"
@@ -111,7 +111,7 @@ outcome:
     sticker reward that carries motivation across days rather than a single brush.
 
 reflection: >-
-  This is my favourite of the fast-prototyping projects, and the moment that sealed it was the final
+  This is my favorite of the fast-prototyping projects, and the moment that sealed it was the final
   presentation. With work all around the room, and not all of it made for children, the one child
   present walked past everything else and planted himself at BrushBuddy. For a toothbrushing toy, no
   usability score beats that. The five-day format is brutal and clarifying in equal measure: it
@@ -120,7 +120,7 @@ reflection: >-
 
 gallery:
   - src: "/images/work/brushbuddy/gallery-01.jpg"
-    alt: "The BrushBuddy cube at a three-quarter angle, the toothbrush standing in its top dock, the worried monster face turned to camera, on a clean grey field."
+    alt: "The BrushBuddy cube at a three-quarter angle, the toothbrush standing in its top dock, the worried monster face turned to camera, on a clean gray field."
     caption: "The buddy, at rest."
   - src: "/images/work/brushbuddy/gallery-02.jpg"
     alt: "The plywood side of the cube, laser-etched with the BrushBuddy name and course credit, the brush docked on top."

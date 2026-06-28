@@ -36,11 +36,20 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
 
-  // OG image generation via Satori (installed as a peer dep). Renders one PNG per
-  // page from useHead title + description into .output/public/__og-image__/ at
-  // build time, so the static host serves them with no runtime image service.
+  // OG image generation via Satori (installed as a peer dep). Renders one 1200×630
+  // PNG per page at build time into .output/public/_og/, so the static host serves
+  // them with no runtime image service. The brand card lives in
+  // app/components/OgImage/NuxtSeo.satori.vue; title/description are passed per page
+  // via defineOgImage (see layouts/default.vue and pages/work/[slug].vue). Geist is
+  // registered for Satori here — without it the card falls back to Inter.
   ogImage: {
     zeroRuntime: true,
+    defaults: {
+      component: 'NuxtSeo',
+      width: 1200,
+      height: 630,
+    },
+    fonts: ['Geist:400', 'Geist:500', 'Geist Mono:400'],
   },
 
   // Fade page transition (~200ms); fade CSS + reduced-motion guard live in main.css.
@@ -56,8 +65,8 @@ export default defineNuxtConfig({
   // generates @font-face rules; explicit `families` makes the provider deterministic.
   fonts: {
     families: [
-      { name: 'Geist', provider: 'google', weights: [400, 500, 600, 700] },
-      { name: 'Geist Mono', provider: 'google', weights: [400, 500] },
+      { name: 'Geist', provider: 'google', weights: [400, 500] },
+      { name: 'Geist Mono', provider: 'google', weights: [400] },
     ],
   },
 

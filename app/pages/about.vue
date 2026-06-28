@@ -27,6 +27,9 @@ const facts = [
 </script>
 
 <template>
+  <div>
+  <!-- Single root node (this div): the fade page transition can't bind to a multi-root
+       page, which left every page blank on client-side navigation. -->
   <!-- Hero -->
   <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 pt-16 md:pt-28 pb-16 md:pb-24">
     <div class="grid grid-cols-12 gap-x-6 gap-y-10 items-end">
@@ -48,10 +51,11 @@ const facts = [
       <div class="col-span-12 md:col-span-5 md:col-start-8">
         <UiMediaPlaceholder
           src="/images/about/portrait.jpg"
-          alt="Studio portrait of Jérémy Martin, shoulder-length curly hair and a moustache, wearing a black t-shirt against a grey backdrop."
+          alt="Studio portrait of Jérémy Martin, shoulder-length curly hair and a moustache, wearing a black t-shirt against a gray backdrop."
           aspect="aspect-[4/5]"
           sizes="sm:100vw md:500px lg:500px xl:500px 2xl:500px"
           eager
+          priority
         />
       </div>
     </div>
@@ -75,7 +79,7 @@ const facts = [
         </p>
         <p class="text-[17px] md:text-[18px] leading-[1.6] text-brand-ink max-w-[64ch]">
           I'm finishing a master of arts in Interaction Design at SUPSI in Mendrisio. It's a
-          practice-driven programme: each course is a real project, taught by people working in
+          practice-driven program: each course is a real project, taught by people working in
           their field. It has expanded the way I think and given me two areas I now build around:
           physical prototyping, and designing for agentic experiences.
         </p>
@@ -122,7 +126,7 @@ const facts = [
             <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">DataBloom</span>,
             a tangible interface that makes the energy impact of digital usage perceptible at home.
             A flower whose stem wilts as the household's weekly data consumption grows, and whose
-            centre lights up to signal the live data rate. Built at the Media Engineering Institute
+            center lights up to signal the live data rate. Built at the Media Engineering Institute
             on simulated data from CarbonViz Home, and published on the MEI research blog. It's the
             piece I would point to if you only had one minute to look at my work.
           </p>
@@ -132,7 +136,7 @@ const facts = [
             Festival · 2023 — 2025
           </span>
           <p class="text-[17px] md:text-[18px] leading-[1.65] text-brand-ink max-w-[64ch]">
-            Three years on the organising committee of Baleinev, a student-run music festival of
+            Three years on the organizing committee of Baleinev, a student-run music festival of
             around 1'000 attendees: programmer in 2023, head of communications in 2024, then
             president in 2025 (committee of about 25). The head-of-comms year put the digital
             marketing and brand strategy from my BSc into a much bigger test, and the presidency
@@ -192,7 +196,7 @@ const facts = [
         <a
           href="/jeremy-martin-cv-en.pdf"
           download
-          class="inline-flex items-center justify-between gap-3 px-5 py-3.5 bg-brand-ink text-brand-bg hover:bg-[#1f1f1f] min-w-[240px] transition-colors"
+          class="inline-flex items-center justify-between gap-3 px-5 py-3.5 bg-brand-ink text-brand-bg hover:bg-brand-ink-hover min-w-[240px] transition-colors"
         >
           <span class="text-[14px]">Download CV (English)</span>
           <!-- Lucide Download, stroke 1.5, 16x16 -->
@@ -223,4 +227,5 @@ const facts = [
       </div>
     </div>
   </section>
+  </div>
 </template>

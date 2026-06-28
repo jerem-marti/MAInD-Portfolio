@@ -1,7 +1,7 @@
 <template>
-  <footer class="border-t border-brand-hairline mt-10 mb-20 md:mb-0">
+  <footer class="border-t border-brand-hairline mt-10 mb-0 max-md:pointer-coarse:mb-20">
     <div
-      class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 pt-10 pb-24 md:pb-10 grid grid-cols-12 gap-x-6 gap-y-6"
+      class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 pt-10 pb-10 max-md:pointer-coarse:pb-24 grid grid-cols-12 gap-x-6 gap-y-6"
     >
       <div class="col-span-12 md:col-span-4 flex flex-col gap-1">
         <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">

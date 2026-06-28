@@ -1,9 +1,9 @@
 ---
 title: "DataBloom"
-summary: "A tangible interface that makes the energy impact of digital usage perceptible at home. The flower's stem wilts as the household's weekly data consumption grows, and a light at the centre signals the live data rate."
+summary: "A tangible interface that makes the energy impact of digital usage perceptible at home. The flower's stem wilts as the household's weekly data consumption grows, and a light at the center signals the live data rate."
 status: "live"
 hero: "/images/work/databloom/hero.jpg"
-heroAlt: "The finished DataBloom flower in a small terracotta pot — cobalt-blue felt petals, a pale wooden centre, a segmented green stem — on a white studio backdrop, surrounded by the 3D-printed parts and electronics it is built from."
+heroAlt: "The finished DataBloom flower in a small terracotta pot — cobalt-blue felt petals, a pale wooden center, a segmented green stem — on a white studio backdrop, surrounded by the 3D-printed parts and electronics it is built from."
 
 brief:
   role: "Bachelor thesis, solo"
@@ -16,7 +16,7 @@ problem:
   - >-
     Around 8% of Switzerland's electricity goes to digital infrastructure, and the digital
     sector accounts for 3 to 4% of global greenhouse-gas emissions, a share that could double
-    or triple by 2030. Half of it comes from data centres and networks, the other half from
+    or triple by 2030. Half of it comes from data centers and networks, the other half from
     the devices in our hands. Yet to the person using the network, none of it has a body.
   - >-
     Streaming a film, scrolling a feed, backing up to the cloud: all of it feels weightless.
@@ -42,7 +42,7 @@ role:
     - "Methodological calls taken with the mandate and supervisors, such as choosing the first concept by comparative test rather than by decision"
     - "Framing the project against CarbonViz Home, the MEI's existing measurement work"
   notTouched:
-    - "CarbonViz Home, the MEI system that measures a household's real digital energy use through a modified router. DataBloom runs on simulated data modelled on it, not on a live feed."
+    - "CarbonViz Home, the MEI system that measures a household's real digital energy use through a modified router. DataBloom runs on simulated data modeled on it, not on a live feed."
   team: "Solo thesis. Supervised by Olivier Ertz and Jonathan Favre-Lamarine (HEIG-VD), mandated by Stéphane Lecorney (Media Engineering Institute)."
 
 approach:
@@ -51,8 +51,8 @@ approach:
     prose:
       - >-
         The literature on eco-feedback points consistently in one direction: data that lives in
-        the room people inhabit changes behaviour more reliably than data behind a tap. The Fogg
-        behaviour model frames it precisely. A behaviour appears when motivation, ability, and a
+        the room people inhabit changes behavior more reliably than data behind a tap. The Fogg
+        behavior model frames it precisely. A behavior appears when motivation, ability, and a
         trigger meet at the same moment. A quiet object in the home can be that trigger.
       - >-
         Energy visualization tends to fall into three families. Statistical (charts and
@@ -113,7 +113,7 @@ approach:
     prose:
       - >-
         The flower became a functional prototype. The cable proof of concept was upgraded to a
-        servo, driven by an ESP32 that also runs the centre light and a deep-sleep circuit, with
+        servo, driven by an ESP32 that also runs the center light and a deep-sleep circuit, with
         a local server holding the consumption logic and the device executing posture and light.
         The stem is segmented, 3D-printed, and joined with M2 screws so it can be taken apart.
         The petals are felt, chosen for a warmer and less technical feel. The pot is an ordinary
@@ -121,7 +121,7 @@ approach:
       - >-
         Two signals carry the information. The stem's posture shows the household's cumulative
         digital consumption for the week against a personal threshold, set at install and meant
-        to tighten over time, nudging consumption gently downward. The light at the centre signals
+        to tighten over time, nudging consumption gently downward. The light at the center signals
         the instantaneous data rate on a green-to-red scale. The week resets every Monday. That is
         the entire interaction surface: no screen, no app, no sound.
       - >-
@@ -136,7 +136,7 @@ approach:
         decision: "Segmented assembly cost more parts and longer build time, and bought cable routing plus field repair. For an object meant to live in a home, durability won."
         width: "half"
       - src: "/images/work/databloom/approach-5-flowerhead.jpg"
-        alt: "Close-up of the flower head: cobalt felt petals around the pale wooden centre that houses the light."
+        alt: "Close-up of the flower head: cobalt felt petals around the pale wooden center that houses the light."
         caption: "Flower head — light diffused through felt petals."
         decision: "Diffusing the light through the felt rather than exposing it kept the object calm. A dimming curve was added once it proved too bright at night."
         width: "half"
@@ -163,7 +163,7 @@ approach:
         personal threshold, worked through a daily activity grid, and watched the flower respond
         live. The stem was read correctly by everyone, with no explanation needed.
       - >-
-        The light was the opposite. It drew the eye every time, but its colour code needed
+        The light was the opposite. It drew the eye every time, but its color code needed
         explaining, and in the sped-up simulation it ended up echoing the stem instead of showing
         the live rate. Its real role could not really be observed, and it became the first thing
         to test properly in a longer study.
@@ -189,7 +189,7 @@ outcome:
     they would place the flower in their own home, mostly in a passing spot like an entry
     table or kitchen counter.
   - >-
-    At the thesis defence, the MEI saw a use for it beyond the project: a teaching object, in
+    At the thesis defense, the MEI saw a use for it beyond the project: a teaching object, in
     schools or with children, to make the energy cost of internet use tangible. I handed over
     a set of recommendations for taking it further, and the MEI later published a write-up on
     its research blog.
@@ -209,8 +209,8 @@ gallery:
     alt: "DataBloom on a desk beside an open laptop and a small live plant, its stem gently bent."
     caption: "On a desk — beside the screen time it reflects."
   - src: "/images/work/databloom/gallery-3.jpg"
-    alt: "Looking down into the flower: cobalt felt petals around a pale wooden centre, the green stem entering the pot."
-    caption: "From above — felt petals and centre."
+    alt: "Looking down into the flower: cobalt felt petals around a pale wooden center, the green stem entering the pot."
+    caption: "From above — felt petals and center."
   - src: "/images/work/databloom/gallery-4.jpg"
     alt: "Printed parts from across the project laid out on foam beside a shipping box: the white low-fidelity daisy alongside the final green stem links, servo arm and electronics."
     caption: "Parts across iterations — the low-fi daisy beside the final printed components."
@@ -236,7 +236,7 @@ resources:
     url: "/files/databloom-swissviz-poster.pdf"
   - type: web
     title: "Article du blog de recherche du MEI"
-    url: "https://blog.comem.ch/2025/10/03/databloom-une-interface-de-visualisation-de-limpact-energetique-du-numerique-dans-un-foyer/"
+    url: "https://blog.comem.ch/2025/10/03/databloom-une-interface-de-visualization-de-limpact-energetique-du-numerique-dans-un-foyer/"
 
 card:
   title: "DataBloom — making the energy impact of digital usage visible"

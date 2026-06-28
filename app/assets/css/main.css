@@ -10,6 +10,7 @@
   --color-brand-ink-muted: #5b6168;
   --color-brand-hairline: #d7dae0;
   --color-brand-accent: #f5d547;
+  --color-brand-ink-hover: #1f1f1f;
 
   --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -26,9 +27,14 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
+  /* Wider signal-yellow focus ring. A 1px ink keyline sits on the outer edge so the
+     indicator still clears the 3:1 non-text contrast bar (WCAG 2.4.11 / 1.4.11) on
+     the light background — yellow alone is only 1.33:1. The ring reads as yellow;
+     the keyline is a thin definition line, not a competing colour. */
   :focus-visible {
-    outline: 2px solid var(--color-brand-accent);
-    outline-offset: 2px;
+    outline: 3px solid var(--color-brand-accent);
+    outline-offset: 0;
+    box-shadow: 0 0 0 4px var(--color-brand-ink);
   }
 }
 

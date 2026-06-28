@@ -1,9 +1,9 @@
 ---
 title: "À ta Dispo"
-summary: "A startup concept that matches volunteers with the organisations and events that need them, taken through the full entrepreneurial process. Associations, NGOs, cultural institutions, and festivals all struggle to recruit reliable volunteers; volunteers struggle to find opportunities and get recognised. À ta Dispo is the matchmaking layer between them."
+summary: "A startup concept that matches volunteers with the organizations and events that need them, taken through the full entrepreneurial process. Associations, NGOs, cultural institutions, and festivals all struggle to recruit reliable volunteers; volunteers struggle to find opportunities and get recognized. À ta Dispo is the matchmaking layer between them."
 status: "live"
 hero: "/images/work/a-ta-dispo/hero.jpg"
-heroAlt: "The hand-drawn À ta Dispo wordmark, a coral logo on a pink sticker shape with a small smiley, centred on a plain coral background."
+heroAlt: "The hand-drawn À ta Dispo wordmark, a coral logo on a pink sticker shape with a small smiley, centerd on a plain coral background."
 
 brief:
   role: "Research & strategy"
@@ -14,15 +14,15 @@ brief:
 
 problem:
   - >-
-    Organisations that run on volunteers (associations, NGOs, cultural institutions, festivals) all hit
+    Organizations that run on volunteers (associations, NGOs, cultural institutions, festivals) all hit
     the same wall: recruiting reliable people is slow and uncertain, and last-minute drop-outs are
     common. On the other side, volunteers find opportunities by word of mouth, have little visibility on
     what suits them, and get no concrete recognition for showing up.
   - >-
     This is a problem I have lived from the inside. Running a music festival's committee taught me
     exactly how fragile volunteer recruitment is, which is part of why this project mattered to me. The
-    numbers backed up the instinct: around 60% of volunteers want to be better recognised for their
-    engagement, and more than half of organisers find it genuinely hard to recruit reliable, committed
+    numbers backed up the instinct: around 60% of volunteers want to be better recognized for their
+    engagement, and more than half of organizers find it genuinely hard to recruit reliable, committed
     people.
 
 role:
@@ -32,7 +32,7 @@ role:
   contributed:
     - "The concept and the entrepreneurial deliverables with the team"
   notTouched:
-    - "Parts of the financial modelling and the pitch, shared within the team"
+    - "Parts of the financial modeling and the pitch, shared within the team"
   team: "Developed across two entrepreneurship courses with shifting teams. In the Startup and Business Plan course (taught by Jacques Panchard): Morgane Devals, Leo Emeri, Joël Gaillard, Jérémy Martin, and Maxime Peretti. Reworked in the Crunch course with Leo Emeri, Jérémy Martin, Tim Cherpillod, and Arthur Junod."
 
 approach:
@@ -41,8 +41,8 @@ approach:
     prose:
       - >-
         We started by validating the problem rather than assuming it. Interviews with volunteers and
-        with the people who organise events surfaced the same two-sided frustration again and again:
-        volunteers who relied on word of mouth and felt invisible, and organisers who could not find
+        with the people who organize events surfaced the same two-sided frustration again and again:
+        volunteers who relied on word of mouth and felt invisible, and organizers who could not find
         reliable people and dreaded the no-shows.
       - >-
         A survey put numbers on it, and the existing tools turned out to be the wrong shape entirely:
@@ -55,7 +55,7 @@ approach:
       - >-
         À ta Dispo is deliberately narrow: a fast, simple way to connect a volunteer with the right
         opportunity, across associations, NGOs, cultural institutions, and events, and a way to value
-        that volunteering so people feel recognised and come back. Recognition is a feature, not an
+        that volunteering so people feel recognized and come back. Recognition is a feature, not an
         afterthought (think badges and certificates for real engagement), because the data said
         recognition is exactly what is missing.
       - >-
@@ -117,7 +117,7 @@ outcome:
     courses from a first concept into a financeable venture.
   - >-
     A genuinely cross-disciplinary project: the part of my training where design thinking met market
-    research, business modelling, and finance.
+    research, business modeling, and finance.
 
 reflection: >-
   À ta Dispo is the project where I learned that a good idea is not enough. Having run a festival
@@ -128,7 +128,7 @@ reflection: >-
   it is what protects it.
 
 gallery:
-  - alt: "The problem slide: two volunteer and organiser quotes on the left, and on the right the validated need, with survey figures of 60% and over 50% backing each side."
+  - alt: "The problem slide: two volunteer and organizer quotes on the left, and on the right the validated need, with survey figures of 60% and over 50% backing each side."
     caption: "The problem, validated."
     src: "/images/work/a-ta-dispo/gallery-01-problem.jpg"
   - alt: "A Porter's five forces analysis for À ta Dispo, rating supplier power as low, buyer power as high, rivalry and new entrants as moderate, and substitutes as high."
@@ -137,7 +137,7 @@ gallery:
   - alt: "A total, serviceable, and obtainable market funnel built from Swiss cultural-event data, narrowing roughly 9'315 events down to around 3'450 that genuinely need outside volunteers."
     caption: "Sizing the market."
     src: "/images/work/a-ta-dispo/gallery-03-market.jpg"
-  - alt: "Two value proposition canvases for À ta Dispo, mapping the jobs, pains, and gains of volunteers and organisers against the platform's features."
+  - alt: "Two value proposition canvases for À ta Dispo, mapping the jobs, pains, and gains of volunteers and organizers against the platform's features."
     caption: "The value proposition."
     src: "/images/work/a-ta-dispo/gallery-04-value.jpg"
   - alt: "A competitive map placing À ta Dispo against EHRO, Swiss Volunteers, and benevol on two axes: matching quality and breadth of the volunteer base."

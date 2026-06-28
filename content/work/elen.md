@@ -2,7 +2,7 @@
 title: "ELEN"
 summary: "A speculative camera that photographs the invisible. ELEN detects the Wi-Fi and Bluetooth signals saturating a room and renders each one as a spectral entity drifting across a live video feed, reframing wireless infrastructure as a contemporary kind of haunting."
 status: "live"
-heroAlt: "ELEN, a handheld camera with a translucent orange 3D-printed body and twin white handles, lit on a grey studio backdrop. Its deep-blue screen and internal wiring show through the plexiglass."
+heroAlt: "ELEN, a handheld camera with a translucent orange 3D-printed body and twin white handles, lit on a gray studio backdrop. Its deep-blue screen and internal wiring show through the plexiglass."
 hero: "/images/work/elen/hero.jpg"
 
 brief:
@@ -30,7 +30,7 @@ problem:
 role:
   led:
     - "The complete software architecture, from wireless monitoring through to the live visual overlay"
-    - "The signal-to-entity translation, turning raw radio data into the behaviour of each apparition"
+    - "The signal-to-entity translation, turning raw radio data into the behavior of each apparition"
     - "Hardware integration, the camera, motion sensing, battery monitoring, and controls"
     - "Technical documentation of the system"
   contributed:
@@ -78,7 +78,7 @@ approach:
     title: "From signal to apparition"
     prose:
       - >-
-        The heart of my work was the translation layer. Each detected signal is normalised and fed
+        The heart of my work was the translation layer. Each detected signal is normalized and fed
         into a real-time fluid simulation running in the browser, where it injects particles into a
         shared turbulent field. Signal strength sets an entity's scale, the number of devices sets
         the density of the field, and network activity drives how fast it all moves.
@@ -89,9 +89,9 @@ approach:
         time was the engineering that made the illusion convincing.
     artifacts:
       - src: "/images/work/elen/artifact-translation.jpg"
-        alt: "An ELEN capture on a terrace overlooking Lugano: translucent coloured apparitions of different sizes drift over the scene, each tagged with an anonymized hexadecimal identifier."
+        alt: "An ELEN capture on a terrace overlooking Lugano: translucent colored apparitions of different sizes drift over the scene, each tagged with an anonymized hexadecimal identifier."
         caption: "Translation — strength to scale, count to density, activity to motion."
-        decision: "Mapping radio characteristics directly to fluid behaviour made the entities feel derived from the signal rather than designed to look like ghosts."
+        decision: "Mapping radio characteristics directly to fluid behavior made the entities feel derived from the signal rather than designed to look like ghosts."
         width: "wide"
 
   - label: "The object"
@@ -124,7 +124,7 @@ outcome:
     too resolved as an object.
   - >-
     After the course it found its room anyway, selected for Milan Design Week in the digital
-    design programme.
+    design program.
 
 reflection: >-
   The most useful feedback was the rejection. "Too product design, not artsy enough" is fair, and
@@ -139,7 +139,7 @@ gallery:
     alt: "A person holds ELEN up in both hands outdoors, framing the space through its screen, the translucent orange body lit by daylight."
     caption: "In use — scanning the space by hand."
   - src: "/images/work/elen/gallery-02.jpg"
-    alt: "ELEN at a three-quarter angle on a grey backdrop: translucent orange body, white frame and twin handles, antenna, and the deep-blue screen."
+    alt: "ELEN at a three-quarter angle on a gray backdrop: translucent orange body, white frame and twin handles, antenna, and the deep-blue screen."
     caption: "The object — speculative field equipment."
   - src: "/images/work/elen/gallery-03.jpg"
     alt: "An ELEN capture of a lakeside promenade: pale spectral blobs of different sizes drift over the scene, each tagged with an anonymized identifier."
@@ -182,5 +182,5 @@ resources:
 card:
   title: "ELEN — a speculative camera for invisible wireless presences"
   image: "/images/work/elen/adjacent.jpg"
-  alt: "ELEN, a handheld camera with a translucent orange body and twin white handles, lit on a grey studio backdrop, its deep-blue screen showing through the plexiglass."
+  alt: "ELEN, a handheld camera with a translucent orange body and twin white handles, lit on a gray studio backdrop, its deep-blue screen showing through the plexiglass."
 ---

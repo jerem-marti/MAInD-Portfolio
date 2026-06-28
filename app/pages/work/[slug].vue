@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { chainNeighbours } from '~/data/workChain'
+import { projects } from '~/data/projects'
+import { featured } from '~/data/featured'
 
 const route = useRoute()
 const { data: study } = await useAsyncData(`work-${route.params.slug}`, () =>
@@ -11,8 +13,11 @@ const { data: study } = await useAsyncData(`work-${route.params.slug}`, () =>
 const slug = String(route.params.slug)
 const { prev, next } = chainNeighbours(slug)
 
+// Only path + card are needed to render the prev/next "More work" cards, so
+// project just those fields — otherwise every study's full frontmatter is
+// serialized into each page's payload (~189KB/page).
 const { data: cards } = await useAsyncData('work-cards', () =>
-  queryCollection('work').all(),
+  queryCollection('work').select('path', 'card').all(),
 )
 const cardFor = (s: string | null) => {
   if (!s) return null
@@ -37,6 +42,29 @@ useHead({
   meta: [
     { name: 'description', content: study.value!.summary },
   ],
+})
+
+// OG card image: prefer the 3:4 Index preview — it matches the card's portrait
+// image column, so it fills it without an awkward crop. The three featured studies
+// have no Index preview, so fall back to their 16:9 featured image, then the hero.
+// WeMatch is the exception: all its visuals are wide title cards that crop badly,
+// so it uses a purpose-built Matchy-on-gradient card (public/images/work/wematch/og.jpg).
+const ogImageOverride: Record<string, string> = {
+  wematch: '/images/work/wematch/og.jpg',
+}
+const ogImage
+  = ogImageOverride[slug]
+    ?? projects.find((p) => p.href === `/work/${slug}`)?.preview
+    ?? featured.find((f) => f.slug === slug)?.image
+    ?? study.value!.hero
+
+// Per-study OG card: overrides the site default in layouts/default.vue. Title +
+// description are passed explicitly (nuxt-og-image does not infer them under
+// zeroRuntime), so each case study gets a branded share card with its real title.
+defineOgImage('NuxtSeo', {
+  title: study.value!.title,
+  description: study.value!.summary,
+  image: ogImage,
 })
 
 useSchemaOrg([
@@ -123,6 +151,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         sizes="sm:100vw md:100vw lg:100vw xl:100vw 2xl:100vw"
         full-bleed
         eager
+        priority
         class="w-full"
       />
 
@@ -228,7 +257,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
     <template v-else>
       <!-- 01 Problem -->
       <section
-        v-if="study.problem"
+        v-if="study.problem?.length"
         id="problem"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
@@ -268,7 +297,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
 
       <!-- 03 Approach -->
       <section
-        v-if="study.approach"
+        v-if="study.approach?.length"
         id="approach"
         class="py-16 md:py-28 scroll-mt-32 border-t border-brand-hairline bg-brand-surface/40"
       >
@@ -278,7 +307,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         <div class="flex flex-col gap-24 md:gap-32">
           <!--
             w-full is required: this wrapper is a flex item (parent is flex-col). Without a
-            definite width, mx-auto makes a flex item shrink-to-fit its content and centre,
+            definite width, mx-auto makes a flex item shrink-to-fit its content and center,
             so each step sizes independently and the labels misalign between steps at wide
             viewports. w-full forces fill-then-cap, matching the block <section> wrappers.
           -->
@@ -330,7 +359,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
 
       <!-- 04 Outcome -->
       <section
-        v-if="study.outcome"
+        v-if="study.outcome?.length"
         id="outcome"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
@@ -368,7 +397,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
 
       <!-- 06 Gallery -->
       <section
-        v-if="study.gallery"
+        v-if="study.gallery?.length"
         id="gallery"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >

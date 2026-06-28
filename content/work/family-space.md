@@ -63,7 +63,7 @@ approach:
     title: "Making the 'nice to have' the point"
     prose:
       - >-
-        The brief put financial education at the centre and listed younger users and children only as a
+        The brief put financial education at the center and listed younger users and children only as a
         nice to have. The team's bet was to make that nice to have the heart of the concept: if
         education is the goal, the most natural place to start is where money habits are first formed,
         between parents and children.
@@ -130,7 +130,7 @@ approach:
         The flows carry the mechanics that make the idea concrete. A parent sets total, daily, weekly,
         and category limits once and then largely leaves it alone; chores convert into pocket money the
         child earns; saving "achievements" turn a goal like a bicycle into visible progress. My
-        favourite is a small one: when a child spends, the app translates the amount into something they
+        favorite is a small one: when a child spends, the app translates the amount into something they
         understand, "twenty francs is about two kebabs", making the value of money tangible rather than
         abstract. The teen gets their own flow because their relationship to money, autonomy, and
         privacy is genuinely different, and the flows are the part of this project I owned end to end.

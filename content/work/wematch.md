@@ -18,8 +18,8 @@ problem:
     The itinerary, the hotels, the tour leaders, the pacing: all planned. The group, the eleven
     strangers you will spend ten days with, is left to whoever happened to book the same dates.
   - >-
-    The reviews say it out loud. Across 1,660 recent WeRoad reviews on Trustpilot, 58% mention
-    the group or the people they travelled with, more than the destination, the food, the hotels,
+    The reviews say it out loud. Across 1'660 recent WeRoad reviews on Trustpilot, 58% mention
+    the group or the people they traveled with, more than the destination, the food, the hotels,
     or the tour leaders. And when a trip fails, the group is the most-cited cause: 18% of negative
     reviews trace back to it.
   - >-
@@ -30,7 +30,7 @@ problem:
 
 role:
   led:
-    - "Trustpilot data analysis, the 1,660-review study behind the 58% and 18% findings"
+    - "Trustpilot data analysis, the 1'660-review study behind the 58% and 18% findings"
     - "Agentic experience design, the six-phase agent and the behavioral-DNA matching model"
     - "Design, build, and storytelling of the scrollytelling experience (Nuxt + GSAP)"
     - "Storytelling of the final presentation, with a teammate"
@@ -47,7 +47,7 @@ approach:
       - >-
         The insight came from triangulation, not a hunch. We read the academic record on solo
         travel, group dynamics, and matchmaking. We ran eight in-depth interviews, 45 to 60 minutes
-        each, with solo and group travelers. And we analysed WeRoad's reviews at scale. Three
+        each, with solo and group travelers. And we analyzed WeRoad's reviews at scale. Three
         independent sources, one repeated finding.
       - >-
         They converged on a single sentence: the destination sets the expectation, but the group
@@ -61,18 +61,18 @@ approach:
     prose:
       - >-
         The reframe was a single move. We used to say travelers need help finding the right trip.
-        We now say the right trip needs the right group. The catalogue of destinations is really a
-        catalogue of groups, wearing itineraries.
+        We now say the right trip needs the right group. The catalog of destinations is really a
+        catalog of groups, wearing itineraries.
       - >-
         Crucially, nothing is taken away. A traveler still searches by destination, dates, and
         price exactly as before. What is added is a compatibility score on every trip, and the
         ability to sort by group fit instead of by date or price. The familiar search stays; one
-        new, readable signal changes what it optimises for.
+        new, readable signal changes what it optimizes for.
     artifacts:
       - src: "/images/work/wematch/approach-reframe.jpg"
         alt: "A presentation slide titled 'The most decisive variable in a WeRoad trip is the only one left to chance': a checklist of what WeRoad controls (itinerary, accommodations, tour leaders, experiences, pacing) beside a panel reading 'What's left to chance: the group', noting 18% of negative reviews trace back to it."
         caption: "WeRoad controls everything but the group — the one variable left to chance."
-        decision: "Naming the group as the single unmanaged variable turned a catalogue of destinations into a catalogue of groups, and gave the concept its anchor."
+        decision: "Naming the group as the single unmanaged variable turned a catalog of destinations into a catalog of groups, and gave the concept its anchor."
         width: "wide"
 
   - label: "The agent"
@@ -159,8 +159,8 @@ gallery:
     alt: "The live Matchy agent on the WeRoad site, profiling in conversation: it turns a traveler's trip story into a follow-up question with three answer options."
     caption: "The live agent — profiling through conversation."
   - src: "/images/work/wematch/gallery-4.jpg"
-    alt: "A scene from the scrollytelling one-pager, 'It reads her': the agent turning Sofia's travel behaviour into a live behavioral-DNA profile, with Sofia reading on her phone beside it."
-    caption: "The story — the scrollytelling one-pager, Sofia at its centre."
+    alt: "A scene from the scrollytelling one-pager, 'It reads her': the agent turning Sofia's travel behavior into a live behavioral-DNA profile, with Sofia reading on her phone beside it."
+    caption: "The story — the scrollytelling one-pager, Sofia at its center."
 
 resources:
   - type: pdf

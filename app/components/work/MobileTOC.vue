@@ -14,7 +14,7 @@ const current = computed(
 
 <template>
   <div
-    class="2xl:hidden sticky top-0 md:top-[60px] z-20 bg-brand-bg/95 backdrop-blur border-b border-brand-hairline"
+    class="2xl:hidden sticky top-[60px] max-md:pointer-coarse:top-0 z-20 bg-brand-bg/95 backdrop-blur border-b border-brand-hairline"
   >
     <button
       type="button"

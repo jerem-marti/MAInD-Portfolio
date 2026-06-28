@@ -24,7 +24,7 @@ function handle(redirect: string) {
 
 <template>
   <NuxtLayout>
-    <!-- Acknowledgement -->
+    <!-- Acknowledgment -->
     <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 pt-16 md:pt-28 pb-10 md:pb-16">
       <div class="flex items-baseline gap-6 mb-10 md:mb-14">
         <span class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted">

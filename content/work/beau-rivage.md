@@ -2,7 +2,7 @@
 title: "Beau-Rivage Eco-Redesign"
 summary: "A ground-up eco-redesign of the Beau-Rivage Palace website that cut its weight and carbon by roughly 95% while keeping the feel of a five-star hotel. An audit of the existing site, a fresh design, and a Nuxt 3 build tuned for sustainability."
 status: "live"
-heroAlt: "The redesigned Beau-Rivage Palace homepage at rest: a restrained top navigation and the centred 'Beau-Rivage Palace, Lausanne Switzerland' logo over a field of fine gold lines, far lighter than the original site."
+heroAlt: "The redesigned Beau-Rivage Palace homepage at rest: a restrained top navigation and the centerd 'Beau-Rivage Palace, Lausanne Switzerland' logo over a field of fine gold lines, far lighter than the original site."
 hero: "/images/work/beau-rivage/hero.jpg"
 
 brief:
@@ -24,7 +24,7 @@ problem:
 
 role:
   led:
-    - "The technical build: the move to Nuxt 3, server-side rendering, and the image-optimisation pipeline"
+    - "The technical build: the move to Nuxt 3, server-side rendering, and the image-optimization pipeline"
     - "The before-and-after measurement of weight, carbon, and performance"
   contributed:
     - "The audit of the existing site and the redesign, with the team"
@@ -38,7 +38,7 @@ approach:
     prose:
       - >-
         Before redesigning anything we measured what was there, because eco-conception only means
-        something against a baseline. The existing site leaned on autoplay video and unoptimised images
+        something against a baseline. The existing site leaned on autoplay video and unoptimized images
         across a deep structure of rooms, suites, restaurants, bars, and spas. A single page weighed
         more than thirteen megabytes and scored an F on EcoIndex, with an estimated 368 kg of CO2 a year
         at ten thousand visits a month.
@@ -68,7 +68,7 @@ approach:
         typography as the luxury signal instead of autoplay spectacle.
     artifacts:
       - src: "/images/work/beau-rivage/artifact-redesign.jpg"
-        alt: "A project slide titled 'Comment retranscrire le luxe de manière écoconçue?' pairing a four-point design approach (refined layout, revalued colours, lighter media via sober SVGs, less content) with mockups of the redesigned homepage, the La Plage page and the Suite Riviera."
+        alt: "A project slide titled 'Comment retranscrire le luxe de manière écoconçue?' pairing a four-point design approach (refined layout, revalued colors, lighter media via sober SVGs, less content) with mockups of the redesigned homepage, the La Plage page and the Suite Riviera."
         caption: "Redesign — keeping the luxury, dropping the weight."
         decision: "We treated restraint as the luxury signal, putting refined type and space and sober SVGs in place of autoplay spectacle."
         width: "wide"
@@ -104,7 +104,7 @@ approach:
     prose:
       - >-
         We also looked at where the site would live, checking hosts against the Green Web Foundation's
-        dataset. The honest finding was a grey area: our platform runs on AWS infrastructure in Europe,
+        dataset. The honest finding was a gray area: our platform runs on AWS infrastructure in Europe,
         which claims renewable energy but is not cleanly listed as green. Rather than overclaim, we noted
         it as a real limit, because an eco-conception project that fudges its own hosting is not being
         honest about its footprint.
@@ -132,10 +132,10 @@ outcome:
     A redesigned Beau-Rivage Palace site that is roughly 95% lighter in weight and carbon than the
     original, EcoIndex F to A, while keeping the feel of a five-star brand.
   - >-
-    A Nuxt 3 build using server-side rendering and automatic image optimisation as the main levers, with
+    A Nuxt 3 build using server-side rendering and automatic image optimization as the main levers, with
     a measured before-and-after rather than a claim.
   - >-
-    An honest account of the limits, including the grey area around green hosting, because an
+    An honest account of the limits, including the gray area around green hosting, because an
     eco-conception project has to measure its own footprint truthfully.
 
 reflection: >-
@@ -150,13 +150,13 @@ gallery:
   - alt: "Redesigned homepage editorial band: the Beau-Rivage Palace facade above its outdoor pool and Lake Geneva, under the heading Le Beau Rivage."
     caption: "Homepage — the hotel, set on the lake."
     src: "/images/work/beau-rivage/gallery-01.jpg"
-  - alt: "Redesigned Chambres et Suites page: four room cards (Supérieure vue ville, vue lac et alpes, Deluxe, Deluxe Riviera) in optimised interior photography."
+  - alt: "Redesigned Chambres et Suites page: four room cards (Supérieure vue ville, vue lac et alpes, Deluxe, Deluxe Riviera) in optimized interior photography."
     caption: "Rooms — the listing, rebuilt light."
     src: "/images/work/beau-rivage/gallery-02.jpg"
-  - alt: "The Suite Riviera page: a four-image grid of the suite's salon, bedroom and lake-view bathroom in optimised photography."
+  - alt: "The Suite Riviera page: a four-image grid of the suite's salon, bedroom and lake-view bathroom in optimized photography."
     caption: "Suite Riviera — luxury without the weight."
     src: "/images/work/beau-rivage/gallery-03.jpg"
-  - alt: "Redesigned Restaurants et Bars page: cards for PIC au Beau-Rivage Palace, Café Beau-Rivage and La Terrasse in optimised photography."
+  - alt: "Redesigned Restaurants et Bars page: cards for PIC au Beau-Rivage Palace, Café Beau-Rivage and La Terrasse in optimized photography."
     caption: "Restaurants and bars — the range, kept light."
     src: "/images/work/beau-rivage/gallery-04.jpg"
 
