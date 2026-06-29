@@ -30,7 +30,7 @@ const widthClass: Record<typeof props.width, string> = {
       <span
         class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted max-w-[64ch]"
       >
-        Decision · {{ decision }}
+        {{ $t('work.artifactDecision') }} · {{ decision }}
       </span>
     </figcaption>
   </figure>

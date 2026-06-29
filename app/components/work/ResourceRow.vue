@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import type { LinkResource } from '~/utils/resources'
-import { RESOURCE_TAG } from '~/utils/resources'
 
-const props = defineProps<{
+defineProps<{
   resource: LinkResource
 }>()
-
-const tag = computed(() => RESOURCE_TAG[props.resource.type])
 </script>
 
 <template>
@@ -19,7 +16,7 @@ const tag = computed(() => RESOURCE_TAG[props.resource.type])
     <span
       class="font-mono uppercase tracking-[0.08em] text-[10px] md:text-[11px] text-brand-ink-muted w-[52px] md:w-[72px] shrink-0 pt-[3px]"
     >
-      {{ tag }}
+      {{ $t(`work.resource.tags.${resource.type}`) }}
     </span>
     <span
       class="flex-1 text-[18px] md:text-[22px] leading-[1.3] tracking-[-0.01em] text-brand-ink"
@@ -28,7 +25,7 @@ const tag = computed(() => RESOURCE_TAG[props.resource.type])
         class="group-hover:[box-shadow:inset_0_-0.16em_0_var(--color-brand-accent)]"
       >{{ resource.title }}</span>
     </span>
-    <span class="sr-only"> (opens in new tab)</span>
+    <span class="sr-only">{{ $t('work.resource.newTab') }}</span>
     <!-- Lucide ArrowUpRight -->
     <svg
       xmlns="http://www.w3.org/2000/svg"

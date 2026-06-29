@@ -7,15 +7,18 @@ const props = defineProps<{
 
 const is404 = computed(() => props.error.statusCode === 404)
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 useHead({
-  title: () => (is404.value ? '404' : 'Error'),
+  title: () => (is404.value ? t('error.title404') : t('error.titleGeneric')),
 })
 
-const ways = [
-  { label: 'Home', to: '/' },
-  { label: 'See the work', to: '/#work' },
-  { label: 'Contact', to: '/contact' },
-] as const
+const ways = computed(() => [
+  { label: t('error.wayHome'), to: localePath('/') },
+  { label: t('error.waySeeWork'), to: `${localePath('/')}#work` },
+  { label: t('error.wayContact'), to: localePath('/contact') },
+])
 
 function handle(redirect: string) {
   return clearError({ redirect })
@@ -31,8 +34,8 @@ function handle(redirect: string) {
           00
         </span>
         <span class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink">
-          <template v-if="is404">404 — Not found</template>
-          <template v-else>{{ error.statusCode || 'Error' }} — Something broke</template>
+          <template v-if="is404">{{ t('error.status404') }}</template>
+          <template v-else>{{ error.statusCode || t('error.statusGenericFallback') }} {{ t('error.statusGenericSuffix') }}</template>
         </span>
         <span aria-hidden="true" class="flex-1 h-px bg-brand-hairline" />
       </div>
@@ -40,15 +43,15 @@ function handle(redirect: string) {
         class="text-[32px] md:text-[64px] leading-[1.05] tracking-[-0.025em] font-medium text-brand-ink max-w-[22ch]"
       >
         <template v-if="is404">
-          That page isn't here.
+          {{ t('error.heading404Lead') }}
           <span class="text-brand-ink-muted">
-            It may have moved, or it never existed.
+            {{ t('error.heading404Muted') }}
           </span>
         </template>
         <template v-else>
-          Something went sideways.
+          {{ t('error.headingGenericLead') }}
           <span class="text-brand-ink-muted">
-            Try reloading, or pick one of the routes below.
+            {{ t('error.headingGenericMuted') }}
           </span>
         </template>
       </h1>
@@ -56,7 +59,7 @@ function handle(redirect: string) {
 
     <!-- Three ways out -->
     <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-10 md:py-16">
-      <UiSectionHead num="01" label="Three ways out" class="mb-8 md:mb-10" />
+      <UiSectionHead num="01" :label="t('error.waysLabel')" class="mb-8 md:mb-10" />
       <div class="grid grid-cols-12 gap-x-6">
         <ul class="col-span-12 md:col-span-10 md:col-start-2 flex flex-col">
           <li

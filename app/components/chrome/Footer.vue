@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const { t, locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+</script>
+
 <template>
   <footer class="border-t border-brand-hairline mt-10 mb-0 max-md:pointer-coarse:mb-20">
     <div
@@ -5,7 +10,7 @@
     >
       <div class="col-span-12 md:col-span-4 flex flex-col gap-1">
         <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-          Contact
+          {{ t('footer.contact') }}
         </span>
         <a
           href="mailto:hi@jeremymartin.ch"
@@ -19,7 +24,7 @@
           target="_blank"
           class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink hover:text-brand-ink-muted transition-colors"
         >
-          LinkedIn — jermarti
+          {{ t('footer.linkedin') }}
         </a>
         <a
           href="https://github.com/jerem-marti"
@@ -27,32 +32,42 @@
           target="_blank"
           class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink hover:text-brand-ink-muted transition-colors"
         >
-          GitHub — jerem-marti
+          {{ t('footer.github') }}
         </a>
       </div>
       <div class="col-span-6 md:col-span-4 flex flex-col gap-1">
         <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-          Language
+          {{ t('footer.language') }}
         </span>
         <div class="flex items-center gap-3">
-          <span class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink relative">
+          <template v-for="l in locales" :key="l.code">
             <span
-              aria-hidden="true"
-              class="absolute -left-3 top-1/2 -translate-y-1/2 size-1 bg-brand-accent"
-            />
-            EN
-          </span>
-          <span class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted">
-            FR — soon
-          </span>
+              v-if="l.code === locale"
+              class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink relative"
+            >
+              <span
+                aria-hidden="true"
+                class="absolute -left-3 top-1/2 -translate-y-1/2 size-1 bg-brand-accent"
+              />
+              {{ l.code.toUpperCase() }}
+            </span>
+            <NuxtLink
+              v-else
+              :to="switchLocalePath(l.code)"
+              :hreflang="l.code"
+              class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted hover:text-brand-ink transition-colors"
+            >
+              {{ l.code.toUpperCase() }}
+            </NuxtLink>
+          </template>
         </div>
       </div>
       <div class="col-span-6 md:col-span-4 flex md:justify-end flex-col gap-1 md:items-end">
         <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-          © 2026
+          {{ t('footer.copyright') }}
         </span>
         <span class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink">
-          Jérémy Martin · jeremymartin.ch
+          {{ t('footer.line') }}
         </span>
       </div>
     </div>

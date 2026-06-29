@@ -1,12 +1,10 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 useHead({
-  title: 'Contact',
+  title: () => t('contact.metaTitle'),
   meta: [
-    {
-      name: 'description',
-      content:
-        'Write to Jérémy Martin at hi@jeremymartin.ch. Available for internships from August 2026, based in Mendrisio.',
-    },
+    { name: 'description', content: () => t('contact.metaDescription') },
   ],
 })
 
@@ -22,18 +20,18 @@ useSchemaOrg([defineWebPage({ '@type': 'ContactPage' })])
     <span
       class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted mb-6 md:mb-10 block"
     >
-      00 / Contact
+      {{ t('contact.heroMeta') }}
     </span>
     <h1
       class="text-[44px] md:text-[88px] leading-[0.95] tracking-[-0.03em] font-medium text-brand-ink"
     >
-      Write to me.
+      {{ t('contact.heroTitle') }}
     </h1>
   </section>
 
   <!-- Essentials -->
   <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-10 md:py-16">
-    <UiSectionHead num="01" label="The essentials" class="mb-8 md:mb-10" />
+    <UiSectionHead num="01" :label="t('contact.essentialsLabel')" class="mb-8 md:mb-10" />
     <div class="grid grid-cols-12 gap-x-6 gap-y-10">
       <div class="col-span-12 md:col-span-10 md:col-start-2 flex flex-col gap-10 md:gap-14">
         <a
@@ -44,16 +42,16 @@ useSchemaOrg([defineWebPage({ '@type': 'ContactPage' })])
         </a>
         <ul class="flex flex-col gap-3 max-w-[60ch]">
           <li class="text-[17px] md:text-[18px] leading-[1.55] text-brand-ink">
-            Available for internships from
+            {{ t('common.availableLead') }}
             <span class="[box-shadow:inset_0_-0.32em_0_var(--color-brand-accent)]">
-              August 2026
+              {{ t('common.availableDate') }}
             </span>.
           </li>
           <li class="text-[17px] md:text-[18px] leading-[1.55] text-brand-ink">
-            Replies in French or English, usually within a few working days.
+            {{ t('common.repliesFrEn') }}
           </li>
           <li class="text-[17px] md:text-[18px] leading-[1.55] text-brand-ink">
-            LinkedIn:
+            {{ t('contact.linkedinLabel') }}
             <a
               href="https://www.linkedin.com/in/jermarti"
               rel="me noopener"
@@ -64,7 +62,7 @@ useSchemaOrg([defineWebPage({ '@type': 'ContactPage' })])
             </a>
           </li>
           <li class="text-[17px] md:text-[18px] leading-[1.55] text-brand-ink">
-            Based in Mendrisio, Switzerland.
+            {{ t('contact.based') }}
           </li>
         </ul>
       </div>

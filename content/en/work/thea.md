@@ -41,8 +41,8 @@ role:
     - "Merging the reflective layer (the agent, its Python logic, and the VUI) into the device firmware"
     - "The demo that carried the final presentation"
   contributed:
-    - "The research and ideation phases with the team, including the expert interviews with allergists"
-    - "An early Visual Inquiry Tool, the concept flow, and pressing the team on whether a voice interface earned its place at all"
+    - "The research and ideation phases with the team, including the interview with a professional from the aha! Swiss Allergy Centre"
+    - "An early Visual Inquiry Tool, the concept flow, and questioning the voice interface until it made sense within the concept"
     - "The documentation photography, with the team"
     - "Peer review across the project"
   notTouched:
@@ -59,7 +59,7 @@ approach:
       - >-
         We started from chronic illness and narrowed to allergies, where the gap is sharp: the
         triggers are invisible, the load is cumulative, and the body's own warning tends to come too
-        late to act on. Expert interviews with allergists sharpened that into three pressures the
+        late to act on. An interview with a professional at the aha! Swiss Allergy Centre sharpened that into three pressures the
         field keeps circling, prevention, treatment, and the hardest of the three, sticking with a
         therapy over time.
       - >-
@@ -71,8 +71,7 @@ approach:
         To pin that down before we committed, I built a Visual Inquiry Tool that forced every
         assumption into the open: who Thea is for, what it can actually sense, and what the sense
         would unlock. It meant the team argued from one shared picture rather than from taste, and it
-        is where the cup, and the idea of body and world read as a single weather, first held
-        together.
+        is where we settled the choices left open: what the sense surfaces, its ambient or on-demand presence, and the action it had to make possible.
     artifacts:
       - src: "/images/work/thea/approach-1-vit.jpg"
         alt: "A whiteboard from the framing sessions, covered in sticky notes mapping who Thea is for and what the sense would unlock, with a large hand-drawn 'WHO?' circled at the bottom."
@@ -122,7 +121,7 @@ approach:
         acknowledge it, the voice. The system takes over only at the true edge, and only briefly.
     artifacts:
       - src: "/images/work/thea/approach-3-interacts.jpg"
-        alt: "A slide from the final presentation, 'How Thea interacts': a table mapping sight, touch, and voice to light, haptic, and sound, to window size, variability, and recalibration, and to the ring gauge, vibration patterns, and speaker, beside a photo of the device worn on a wrist."
+        alt: "A slide from the final presentation, 'How Thea interacts': a table mapping sight, touch, and voice to light, haptic, and sound, to window size, variability, and recalibration, and to the oblong gauge, vibration patterns, and speaker, beside a photo of the device worn on a wrist."
         caption: "How the three channels map, from the final presentation."
         decision: "Splitting the sense across light, touch, and voice so no single channel has to say everything. One channel trying to say it all is how ambient devices become noise."
         width: "wide"
@@ -132,23 +131,20 @@ approach:
     prose:
       - >-
         Thea's voice is an agent, and its defining behavior is restraint. It never speaks first. It
-        runs only when you open a conversation, or after you acknowledge a critical alert, and silence
-        is its default output, not a fallback.
+        runs only when you open a conversation, or after you acknowledge a critical alert. Outside those moments, its default behavior is silence, and that is a choice, not a fallback.
       - >-
         I wrote the personality and the system prompt so the voice can never betray the rest of the
         design. It receives the state as plain bands, never raw numbers, so it cannot leak a
         measurement. It offers, it does not command. It records what you tell it as raw, unvalidated
-        observations, and never writes your profile itself.
+        observations, but never decides itself what goes into your profile.
       - >-
         Most of the prompt is guardrails, because a health-adjacent voice fails in specific, serious
-        ways. Thea never diagnoses, never lowers its own sensitivity on request, never records a
-        person or a protected characteristic as an allergen, and never follows instructions smuggled
-        inside a reported exposure. It is a bounded companion, and it is honest about being one.
+        ways. Thea never diagnoses, never lowers its own sensitivity on request, never names a person, or a trait like origin or gender, as the cause of a reaction, and never follows an instruction hidden in what it is told. It is a bounded companion, and it is honest about being one.
     artifacts:
       - src: "/images/work/thea/approach-4-voice.jpg"
         alt: "A slide from the final presentation, 'Thea's voice: a confidant, not an alarm', showing the bare breathing loop of Thea's avatar and the line that she stays silent by default and speaks only when it means something."
         caption: "Thea's voice, a confidant not an alarm, from the final presentation."
-        decision: "Making silence the default, and bands rather than numbers the agent's only input, so the voice structurally cannot become the alarm we had just removed."
+        decision: "Making silence a choice, and giving the agent only bands, never numbers, so the voice cannot, by construction, become the alarm we had just removed."
         width: "wide"
 
   - label: "The build"
@@ -183,7 +179,7 @@ approach:
     prose:
       - >-
         The riskiest parts of Thea are exactly the ones a happy-path demo can never show: the critical
-        escalation, the unprompted voice, and what happens when the device is wrong. So I designed a
+        escalation, the voice that comes in at that point, and what happens when the device is wrong. So I designed a
         co-design and usability protocol to put pressure on the one bet the project rests on, that
         something this calm can still be trusted and acted on, without tipping into anxiety and
         without being missed.
@@ -207,8 +203,7 @@ outcome:
     light gauge, a haptic rhythm, and an acknowledge-gated voice that speaks only when pulled or at a
     true edge.
   - >-
-    The reflective layer (voice, reasoning, and learning) merged into the device firmware on the
-    UNO Q's dual brain, with the architecture laid out to bring the agent on-device.
+    The reflective layer (voice, reasoning, and learning) integrated on the UNO Q's Linux processor and reunited with the rest in a single device, with the architecture ready to host the model locally rather than through an external API.
   - >-
     A complete, ethics-reviewed co-design and usability protocol, ready to run, with the sessions left
     for a next pass.
@@ -231,31 +226,31 @@ reflection: >-
 gallery:
   - src: "/images/work/thea/gallery-1.jpg"
     alt: "The Thea band worn on a wrist, centered in the frame, against a cobalt sky scattered with wildflowers."
-    caption: "Worn, the band against the open sky."
+    caption: "The band worn on the wrist."
   - src: "/images/work/thea/gallery-2.jpg"
-    alt: "A finger pressing the device worn on the wrist, its ring gauge lit and fine colored wires visible, against a cobalt sky."
-    caption: "The single tap: ask where you stand, or acknowledge the edge."
+    alt: "A finger pressing the device worn on the wrist, its oblong gauge lit and fine colored wires visible, against a cobalt sky."
+    caption: "Reaching Thea: a short tap to see where you stand, a long press to tell it what it cannot measure."
   - src: "/images/work/thea/gallery-3.jpg"
-    alt: "The wearable suspended in a lattice of orange cords against a cobalt sky, its ring gauge glowing."
-    caption: "The ring gauge lit, held in the open."
+    alt: "The wearable suspended in a lattice of orange cords against a cobalt sky, its oblong gauge glowing."
+    caption: "The oblong gauge lit."
   - src: "/images/work/thea/gallery-4.jpg"
     alt: "Two hands meeting over a sprig of wildflower, the Thea band on one wrist, against a cobalt sky."
     caption: "Among the pollens it is built to sense."
   - src: "/images/work/thea/gallery-5.jpg"
     alt: "The demo's audience-facing screen on a dark stage: the Thea band with its loop glowing warm, orange rings rippling out from a haptic pulse, and an oscilloscope tracing the vibration along the bottom."
-    caption: "The live demo stage, mid-vibration."
+    caption: "The screen relaying the band's state to the whole room during the demo."
   - src: "/images/work/thea/gallery-6.jpg"
     alt: "Three phones showing the live companion app: a day log with exposure bars, the daily dashboard reading 'Wide open. Today is yours.', and a post-event reconstruction of a difficult hour."
-    caption: "The companion app, day to day (Nerea Asensio)."
+    caption: "The app that accompanies Thea (Nerea Asensio)."
   - src: "/images/work/thea/gallery-7.jpg"
     alt: "Three phones showing the app's onboarding: 'Meet Thea, the sense you were missing', an explanation of the action window, and a question about how well you know your triggers."
-    caption: "The onboarding, teaching the model (Nerea Asensio)."
+    caption: "The onboarding that explains Thea (Nerea Asensio)."
   - src: "/images/work/thea/gallery-8.jpg"
     alt: "A teammate standing at the project's whiteboard wall during the five-week module, sticky notes and sketches behind."
-    caption: "Five weeks, worked out at the wall."
+    caption: "The working wall, where the sense was argued out."
   - src: "/images/work/thea/gallery-9.jpg"
     alt: "A whiteboard sketch of the cup filling toward a threshold curve, with handwritten notes on load and headroom."
-    caption: "The working wall, where the sense was argued out."
+    caption: "Mind map, to think through the interaction between data and interface."
 
 resources:
   - type: video
@@ -284,5 +279,5 @@ resources:
 card:
   title: "Thea — a calm new sense for living with allergies"
   image: "/images/work/thea/adjacent.jpg"
-  alt: "The Thea wearable suspended in a lattice of orange cords against a cobalt sky, its ring gauge glowing, an editorial shot from the final presentation."
+  alt: "The Thea wearable suspended in a lattice of orange cords against a cobalt sky, its oblong gauge glowing, an editorial shot from the final presentation."
 ---

@@ -1,26 +1,30 @@
 <script setup lang="ts">
 const route = useRoute()
+const localePath = useLocalePath()
+const getRouteBaseName = useRouteBaseName()
+const { t } = useI18n()
 
-const items = [
-  { label: 'Work', to: '/', match: (p: string) => p === '/' || p.startsWith('/work'), icon: 'briefcase' },
-  { label: 'About', to: '/about', match: (p: string) => p.startsWith('/about'), icon: 'user' },
-  { label: 'Contact', to: '/contact', match: (p: string) => p.startsWith('/contact'), icon: 'mail' },
-] as const
+const base = computed(() => getRouteBaseName(route))
+const items = computed(() => [
+  { key: 'work', label: t('nav.work'), to: localePath('/'), active: base.value === 'index' || base.value === 'work-slug', icon: 'briefcase' },
+  { key: 'about', label: t('nav.about'), to: localePath('/about'), active: base.value === 'about', icon: 'user' },
+  { key: 'contact', label: t('nav.contact'), to: localePath('/contact'), active: base.value === 'contact', icon: 'mail' },
+])
 </script>
 
 <template>
   <nav
     class="hidden max-md:pointer-coarse:block fixed inset-x-0 bottom-0 z-30 bg-brand-bg/95 backdrop-blur border-t border-brand-hairline"
     style="padding-bottom: env(safe-area-inset-bottom)"
-    aria-label="Primary mobile"
+    :aria-label="t('nav.primaryMobileAria')"
   >
     <ul class="grid grid-cols-3 h-14">
-      <li v-for="item in items" :key="item.label" class="relative">
+      <li v-for="item in items" :key="item.key" class="relative">
         <NuxtLink
           :to="item.to"
           class="h-full flex flex-col items-center justify-center gap-1 transition-colors"
-          :class="item.match(route.path) ? 'text-brand-ink' : 'text-brand-ink-muted'"
-          :aria-current="item.match(route.path) ? 'page' : undefined"
+          :class="item.active ? 'text-brand-ink' : 'text-brand-ink-muted'"
+          :aria-current="item.active ? 'page' : undefined"
         >
           <!-- Inline Lucide icons (Briefcase/User/Mail), stroke 1.5, 18x18 -->
           <svg
@@ -73,7 +77,7 @@ const items = [
           </svg>
           <span class="font-mono uppercase tracking-[0.08em] text-[9px]">{{ item.label }}</span>
           <span
-            v-if="item.match(route.path)"
+            v-if="item.active"
             aria-hidden="true"
             class="absolute top-1 left-1/2 -translate-x-1/2 size-1 bg-brand-accent"
           />

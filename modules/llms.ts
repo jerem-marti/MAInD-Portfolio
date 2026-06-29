@@ -22,14 +22,15 @@ export default defineNuxtModule({
     // Live case-study slugs, read straight from the content files (the content DB
     // isn't available this early). Frontmatter-only files, so a cheap regex on the
     // `status:` line is enough to skip in-progress stubs.
-    const workDir = join(nuxt.options.rootDir, 'content', 'work')
+    const workDir = join(nuxt.options.rootDir, 'content', 'en', 'work')
     const slugs = readdirSync(workDir)
       .filter(f => f.endsWith('.md'))
       .filter(f => /status:\s*["']?live["']?/.test(readFileSync(join(workDir, f), 'utf8')))
       .map(f => f.slice(0, -3))
       .sort()
 
-    const routes = [
+    // English llms artifacts. The single handler dispatches by path.
+    const enArtifactRoutes = [
       '/llms.txt',
       '/llms-full.txt',
       '/index.md',
@@ -38,13 +39,36 @@ export default defineNuxtModule({
       ...slugs.map(s => `/work/${s}.md`),
     ]
 
-    for (const route of routes) {
+    // French llms artifacts, mirrored under the French URL segments (the handler
+    // strips /fr and resolves the French content, falling back to English twins).
+    const frArtifactRoutes = [
+      '/fr/llms.txt',
+      '/fr/llms-full.txt',
+      '/fr/index.md',
+      '/fr/a-propos.md',
+      '/fr/contact.md',
+      ...slugs.map(s => `/fr/projets/${s}.md`),
+    ]
+
+    const artifactRoutes = [...enArtifactRoutes, ...frArtifactRoutes]
+    for (const route of artifactRoutes) {
       addServerHandler({ route, handler })
     }
+
+    // French page routes. `prefix_except_default` + crawlLinks only discovers a
+    // locale's pages through localized links; enumerating them here guarantees
+    // the whole /fr tree prerenders even if a link is missed. Paths must match
+    // the i18n custom-route map in nuxt.config (a-propos, projets/<slug>).
+    const frPageRoutes = [
+      '/fr',
+      '/fr/a-propos',
+      '/fr/contact',
+      ...slugs.map(s => `/fr/projets/${s}`),
+    ]
 
     nuxt.options.nitro ||= {}
     nuxt.options.nitro.prerender ||= {}
     nuxt.options.nitro.prerender.routes ||= []
-    nuxt.options.nitro.prerender.routes.push(...routes)
+    nuxt.options.nitro.prerender.routes.push(...artifactRoutes, ...frPageRoutes)
   },
 })

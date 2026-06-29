@@ -8,16 +8,18 @@ defineProps<{
     alt: string
   }
 }>()
+
+const localePath = useLocalePath()
 </script>
 
 <template>
   <NuxtLink
-    :to="`/work/${item.slug}`"
+    :to="localePath(`/work/${item.slug}`)"
     class="group block border-t border-brand-ink pt-4"
   >
     <div class="flex items-baseline justify-between mb-4">
       <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-        {{ dir === 'prev' ? 'Previous' : 'Next' }}
+        {{ dir === 'prev' ? $t('work.adjacent.previous') : $t('work.adjacent.next') }}
       </span>
       <!-- Lucide ArrowLeft / ArrowRight, stroke 1.5, 14x14 -->
       <svg
@@ -71,7 +73,7 @@ defineProps<{
     </div>
     <div class="mt-3 inline-flex items-center gap-2 text-[14px]">
       <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-        Read case study
+        {{ $t('work.adjacent.read') }}
       </span>
       <!-- Lucide ArrowUpRight -->
       <svg

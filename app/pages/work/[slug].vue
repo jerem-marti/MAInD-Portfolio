@@ -4,20 +4,44 @@ import { projects } from '~/data/projects'
 import { featured } from '~/data/featured'
 
 const route = useRoute()
-const { data: study } = await useAsyncData(`work-${route.params.slug}`, () =>
-  queryCollection('work').path(route.path).first(),
+const { locale, t } = useI18n()
+const localePath = useLocalePath()
+const slug = String(route.params.slug)
+
+// Case study for the active locale, looked up by slug — both collections resolve
+// to the same internal /work/<slug> path, while the URL prefix (/work vs
+// /fr/projets) comes from i18n routing. French falls back to the English twin
+// until a French twin exists, so a /fr/projets/<slug> route always renders.
+const { data: study } = await useAsyncData(
+  `work-${locale.value}-${slug}`,
+  async () => {
+    const localized
+      = locale.value === 'fr'
+        ? await queryCollection('work_fr').path(`/work/${slug}`).first()
+        : null
+    return localized ?? (await queryCollection('work_en').path(`/work/${slug}`).first())
+  },
+  { watch: [locale] },
 )
 
 // Ring neighbours for the "More work" section, derived from the single ordered
 // chain in app/data/workChain.ts. Both null for off-chain pages → no section.
-const slug = String(route.params.slug)
 const { prev, next } = chainNeighbours(slug)
 
 // Only path + card are needed to render the prev/next "More work" cards, so
 // project just those fields — otherwise every study's full frontmatter is
-// serialized into each page's payload (~189KB/page).
-const { data: cards } = await useAsyncData('work-cards', () =>
-  queryCollection('work').select('path', 'card').all(),
+// serialized into each page's payload (~189KB/page). Prefer the French card
+// where present, falling back to the English one per study.
+const { data: cards } = await useAsyncData(
+  `work-cards-${locale.value}`,
+  async () => {
+    const en = await queryCollection('work_en').select('path', 'card').all()
+    if (locale.value !== 'fr') return en
+    const fr = await queryCollection('work_fr').select('path', 'card').all()
+    const frByPath = new Map(fr.map((d) => [d.path, d]))
+    return en.map((d) => frByPath.get(d.path) ?? d)
+  },
+  { watch: [locale] },
 )
 const cardFor = (s: string | null) => {
   if (!s) return null
@@ -32,7 +56,7 @@ const nextCard = cardFor(next)
 if (!study.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'Case study not found',
+    statusMessage: t('work.notFound'),
     fatal: true,
   })
 }
@@ -65,6 +89,7 @@ defineOgImage('NuxtSeo', {
   title: study.value!.title,
   description: study.value!.summary,
   image: ogImage,
+  footer: t('og.footer'),
 })
 
 useSchemaOrg([
@@ -86,14 +111,14 @@ const sections = computed(() => {
   const s = study.value
   if (!s) return []
   return [
-    { id: 'problem', label: 'Problem', present: !!s.problem?.length },
-    { id: 'role', label: 'Role', present: !!s.role },
-    { id: 'approach', label: 'Approach', present: !!s.approach?.length },
-    { id: 'outcome', label: 'Outcome', present: !!s.outcome?.length },
-    { id: 'reflection', label: 'Reflection', present: !!s.reflection },
-    { id: 'gallery', label: 'Gallery', present: !!s.gallery?.length },
-    { id: 'resources', label: 'Resources', present: !!s.resources?.length },
-    { id: 'next', label: 'More work', present: !!(prevCard || nextCard) },
+    { id: 'problem', label: t('work.sections.problem'), present: !!s.problem?.length },
+    { id: 'role', label: t('work.sections.role'), present: !!s.role },
+    { id: 'approach', label: t('work.sections.approach'), present: !!s.approach?.length },
+    { id: 'outcome', label: t('work.sections.outcome'), present: !!s.outcome?.length },
+    { id: 'reflection', label: t('work.sections.reflection'), present: !!s.reflection },
+    { id: 'gallery', label: t('work.sections.gallery'), present: !!s.gallery?.length },
+    { id: 'resources', label: t('work.sections.resources'), present: !!s.resources?.length },
+    { id: 'next', label: t('work.sections.next'), present: !!(prevCard || nextCard) },
   ]
     .filter((d) => d.present)
     .map(({ id, label }, i) => ({ id, label, num: String(i + 1).padStart(2, '0') }))
@@ -121,7 +146,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 mb-8 md:mb-12 flex items-baseline gap-4"
       >
         <NuxtLink
-          to="/"
+          :to="localePath('/')"
           class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink-muted hover:text-brand-ink inline-flex items-center gap-2"
         >
           <!-- Lucide ArrowLeft -->
@@ -140,7 +165,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
             <path d="m12 19-7-7 7-7" />
             <path d="M19 12H5" />
           </svg>
-          Index
+          {{ t('work.back') }}
         </NuxtLink>
       </div>
 
@@ -172,7 +197,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         >
           <div class="flex flex-col gap-1">
             <dt class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-              Role
+              {{ t('work.briefRole') }}
             </dt>
             <dd class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink leading-[1.5]">
               {{ study.brief.role }}
@@ -180,7 +205,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
           </div>
           <div class="flex flex-col gap-1">
             <dt class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-              Year
+              {{ t('work.briefYear') }}
             </dt>
             <dd class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink leading-[1.5]">
               {{ study.brief.year }}
@@ -188,7 +213,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
           </div>
           <div class="flex flex-col gap-1">
             <dt class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-              Host
+              {{ t('work.briefHost') }}
             </dt>
             <dd class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink leading-[1.5]">
               {{ study.brief.host }}
@@ -196,7 +221,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
           </div>
           <div class="flex flex-col gap-1">
             <dt class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-              Scope
+              {{ t('work.briefScope') }}
             </dt>
             <dd class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink leading-[1.5]">
               {{ study.brief.scope }}
@@ -204,7 +229,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
           </div>
           <div class="flex flex-col gap-1">
             <dt class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-              Shipped
+              {{ t('work.briefShipped') }}
             </dt>
             <dd class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink leading-[1.5]">
               {{ study.brief.shipped }}
@@ -219,20 +244,19 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
       v-if="!isLive"
       class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28"
     >
-      <UiSectionHead num="01" label="Case study in progress" class="mb-10 md:mb-16" />
+      <UiSectionHead num="01" :label="t('work.inProgressLabel')" class="mb-10 md:mb-16" />
       <div class="grid grid-cols-12 gap-x-6">
         <div class="col-span-12 md:col-span-8 md:col-start-3 flex flex-col gap-6">
           <p
             class="text-[20px] md:text-[24px] leading-[1.4] tracking-[-0.005em] text-brand-ink max-w-[58ch]"
           >
-            The write-up is in progress. Until it lands, the project sits in the Index list on
-            the home page and surfaces in the Selected work card you came from.
+            {{ t('work.inProgressBody') }}
           </p>
           <NuxtLink
-            to="/"
+            :to="localePath('/')"
             class="inline-flex items-center gap-2 text-[15px] self-start pb-[2px] border-b border-brand-ink hover:[box-shadow:inset_0_-0.4em_0_var(--color-brand-accent)]"
           >
-            Back to Index
+            {{ t('work.inProgressBack') }}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -261,7 +285,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="problem"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead :num="numFor('problem')" label="Problem" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('problem')" :label="t('work.sections.problem')" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-12 gap-x-6">
           <div class="col-span-12 md:col-span-8 md:col-start-3 flex flex-col gap-6">
             <p
@@ -286,7 +310,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="role"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead :num="numFor('role')" label="Role" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('role')" :label="t('work.sections.role')" class="mb-10 md:mb-16" />
         <WorkRoleColumns
           :led="study.role.led"
           :contributed="study.role.contributed"
@@ -302,7 +326,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         class="py-16 md:py-28 scroll-mt-32 border-t border-brand-hairline bg-brand-surface/40"
       >
         <div class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16">
-          <UiSectionHead :num="numFor('approach')" label="Approach" class="mb-10 md:mb-16" />
+          <UiSectionHead :num="numFor('approach')" :label="t('work.sections.approach')" class="mb-10 md:mb-16" />
         </div>
         <div class="flex flex-col gap-24 md:gap-32">
           <!--
@@ -363,7 +387,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="outcome"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead :num="numFor('outcome')" label="Outcome" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('outcome')" :label="t('work.sections.outcome')" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-12 gap-x-6">
           <div class="col-span-12 md:col-span-8 md:col-start-3 flex flex-col gap-6">
             <p
@@ -383,7 +407,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="reflection"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead :num="numFor('reflection')" label="Reflection" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('reflection')" :label="t('work.sections.reflection')" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-12 gap-x-6">
           <div class="col-span-12 md:col-span-8 md:col-start-3">
             <p
@@ -401,7 +425,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="gallery"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead :num="numFor('gallery')" label="Gallery" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('gallery')" :label="t('work.sections.gallery')" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           <figure
             v-for="(g, i) in study.gallery"
@@ -429,7 +453,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="resources"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead :num="numFor('resources')" label="Resources" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('resources')" :label="t('work.sections.resources')" class="mb-10 md:mb-16" />
         <WorkResources :resources="study.resources" />
       </section>
 
@@ -439,7 +463,7 @@ const active = useScrollSpy(sections.value.map((s) => s.id))
         id="next"
         class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28 scroll-mt-32"
       >
-        <UiSectionHead :num="numFor('next')" label="More work" class="mb-10 md:mb-16" />
+        <UiSectionHead :num="numFor('next')" :label="t('work.sections.next')" class="mb-10 md:mb-16" />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           <WorkAdjacentCard v-if="prevCard" dir="prev" :item="prevCard" />
           <WorkAdjacentCard v-if="nextCard" dir="next" :item="nextCard" />

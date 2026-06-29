@@ -15,6 +15,7 @@ const props = defineProps({
   title: { type: String, default: 'Jérémy Martin' },
   description: { type: String, default: 'Interaction and product designer' },
   image: { type: String, default: '' },
+  footer: { type: String, default: 'INTERACTION & PRODUCT DESIGN' },
 })
 
 const clamp = (s: string, max: number) => {
@@ -62,7 +63,7 @@ const desc = computed(() => clamp(props.description, 110))
         <div
           style="display: flex; margin-left: 16px; font-family: 'Geist Mono'; font-size: 20px; letter-spacing: 2px; color: #5b6168;"
         >
-          INTERACTION &amp; PRODUCT DESIGN
+          {{ footer }}
         </div>
       </div>
     </div>
