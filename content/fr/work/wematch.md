@@ -174,13 +174,13 @@ gallery:
 
 resources:
   - type: pdf
-    title: "Présentation finale"
+    title: "Final presentation"
     url: "/files/wematch-presentation.pdf"
   - type: demo
-    title: "Agent en direct"
+    title: "Live agent"
     url: "https://maind-wematch.vercel.app/"
   - type: web
-    title: "One-pager en scrollytelling"
+    title: "Scrollytelling one-pager"
     url: "https://jerem-marti.github.io/MAInD-Designing_Intelligent_Experiences-OnePager-2026/"
 
 card:

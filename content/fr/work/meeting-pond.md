@@ -132,10 +132,10 @@ gallery:
 
 resources:
   - type: github
-    title: "Code source — serveur, client web et firmware ESP32"
+    title: "Source code — server, web client, and ESP32 firmware"
     url: "https://github.com/jerem-marti/MAInD-ID151.01-2026-MissingDrop"
   - type: video
-    title: "Présentation"
+    title: "Walkthrough"
     poster: "/images/work/meeting-pond/video-poster.jpg"
     src: "/videos/meeting-pond/walkthrough.mp4"
 

@@ -162,7 +162,7 @@ gallery:
 
 resources:
   - type: github
-    title: "Code source"
+    title: "Source code"
     url: "https://github.com/jerem-marti/MAInD-Intelligence_As_A_Material-2026-Wama"
 
 card:

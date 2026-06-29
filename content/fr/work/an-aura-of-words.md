@@ -173,17 +173,17 @@ gallery:
 
 resources:
   - type: demo
-    title: "Visualisation en ligne"
+    title: "Live visualization"
     url: "https://jerem-marti.github.io/MAInD-Making_Use_of_Data-2026-Lugano_Parks/"
   - type: github
-    title: "Source, scraper et lexique"
+    title: "Source, scraper, and lexicon"
     url: "https://github.com/jerem-marti/MAInD-Making_Use_of_Data-2026-Lugano_Parks"
   - type: video
-    title: "Présentation du projet"
+    title: "Project walkthrough"
     poster: "/images/work/an-aura-of-words/video-poster.jpg"
     src: "/videos/an-aura-of-words/walkthrough.mp4"
   - type: pdf
-    title: "Affiche des parcs"
+    title: "Park poster"
     url: "/files/an-aura-of-words-poster.pdf"
 
 card:

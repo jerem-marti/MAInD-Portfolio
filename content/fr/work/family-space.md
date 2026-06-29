@@ -196,14 +196,14 @@ gallery:
 
 resources:
   - type: pdf
-    title: "Support de présentation"
+    title: "Presentation deck"
     url: "/files/family-space-presentation.pdf"
   - type: video
-    title: "Démonstration parent"
+    title: "Parent walkthrough"
     poster: "/images/work/family-space/parent-poster.jpg"
     src: "/videos/family-space/parent-walkthrough.mp4"
   - type: video
-    title: "Démonstration enfant"
+    title: "Kid walkthrough"
     poster: "/images/work/family-space/kid-poster.jpg"
     src: "/videos/family-space/kid-walkthrough.mp4"
 

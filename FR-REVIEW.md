@@ -15,6 +15,7 @@ This file is also the **shared glossary** every translation workstream follows, 
 - Only real numbers/claims. Never invent a metric; if a sentence can't be rendered truthfully, keep the source meaning.
 - Proper nouns and brand names are **not** translated: Jérémy Martin, DataBloom, WeMatch, Thea, SUPSI, HEIG-VD, EPFL, HEIA-FR, MEI, CarbonViz Home, Baleinev, UBS, WeRoad, Arduino UNO Q, jeremymartin.ch, hi@jeremymartin.ch, jermarti, jerem-marti.
 - Slugs, image paths, URLs, resource `url`/`provider`/`id`, and `status`/`type` enums are **never** changed.
+- **Resource titles are never translated** (owner rule). Every `resources[].title` in a French twin keeps the English source title verbatim — French source titles stay French, English source titles stay English.
 
 ## Keep verbatim (already French in the English source — do NOT re-translate or alter)
 
@@ -29,22 +30,22 @@ This file is also the **shared glossary** every translation workstream follows, 
 ### Controlled-vocabulary tags (`tags.*`)
 | English | French |
 |---|---|
-| UX research | Recherche UX |
+| UX research | UX research *(kept English)* |
 | Interaction design | Design d'interaction |
 | Prototyping | Prototypage |
 | Information architecture | Architecture de l'information |
-| UX writing | Rédaction UX |
-| Design systems | Systèmes de design |
+| UX writing | UX writing *(kept English)* |
+| Design systems | Design systems *(kept English)* |
 | Accessibility | Accessibilité |
 | Tangible interface | Interface tangible |
-| Front-end build | Développement front-end |
-| Back-end build | Développement back-end |
+| Front-end build | Front-end *(both EN + FR shortened to "Front-end")* |
+| Back-end build | Back-end *(both EN + FR shortened to "Back-end")* |
 | Brand / Editorial | Marque / Éditorial |
-| AI evaluation | Évaluation d'IA |
+| AI evaluation | Évaluation IA |
 | Machine learning | Machine learning |
 | Hardware | Hardware |
 | Sustainability | Durabilité |
-| Business strategy | Stratégie d'entreprise |
+| Business strategy | Stratégie Business |
 | Marketing strategy | Stratégie marketing |
 | Design thinking | Design thinking |
 | Scrollytelling | Scrollytelling |
@@ -81,10 +82,10 @@ This file is also the **shared glossary** every translation workstream follows, 
 | Year / Host / Scope / Shipped | Année / Cadre / Périmètre / Livré |
 
 ### Recurring sentences
-- Interaction and product designer → **Designer d'interaction et de produit**
+- Interaction and product designer → **kept in English** (the job title stays "Interaction and product designer" in French copy too; schema.org keeps a French value — `Designer d'interaction et de produit`)
 - Available for internships from August 2026 → **Disponible pour un stage dès août 2026**
-- Replies in French or English, usually within a few working days. → **Réponse en français ou en anglais, généralement sous quelques jours ouvrés.**
-- Process is the artifact. → **Le processus est l'artefact.**
+- Replies in French or English, usually within a few working days. → **Réponse en français ou en anglais, généralement sous quelques jours ouvrables.**
+- Process is the artifact. → **La méthode comme matière.**
 
 ## Drafted surfaces (review checklist)
 
@@ -105,20 +106,16 @@ This file is also the **shared glossary** every translation workstream follows, 
 - [ ] `content/fr/work/bereal.md`
 - [ ] `content/fr/work/cultural-trails.md`
 
-## Open questions for the owner (from the drafting pass)
+## Owner decisions (round 1 — applied)
 
-Register / global:
-- **"E-mail" vs "Courriel"** — used "E-mail" throughout. Confirm.
-- **OG card footer** — translated `INTERACTION & PRODUCT DESIGN` → `DESIGN D'INTERACTION & DE PRODUIT`. If it's a fixed brand lockup, you may prefer to keep it English (one value: `og.footer`).
-- **schema.org `jobTitle` / `websiteName`** — given French values on `/fr`. Confirm you want French in structured data vs the English canonical.
-- **Visitor-facing register** — uefa-female-coaches paraphrased landing-page lines use informal **tu**. Confirm tu vs vous for that audience.
+- **"E-mail"** — confirmed, kept.
+- **OG card footer** — kept English `INTERACTION & PRODUCT DESIGN` (both locales).
+- **schema.org `jobTitle` / `websiteName`** — keep the French values on `/fr` (`Designer d'interaction et de produit`). Note: this is the one place the job title stays French; everywhere else in copy it's the English "Interaction and product designer".
+- **Visitor-facing register** — `tu` confirmed (owner to recheck later).
+- **Index title** — `Beau-Rivage Éco-Refonte` → `Beau-Rivage éco-conception`. (`BeReal Like Web App` / `Cultural Trails Web App` descriptors stay English.)
+- **Resource titles** — not translated; reverted every FR twin's `resources[].title` to the English source (this also fixed the databloom duplicate-poster issue: `Project poster` restored).
+- **Tags** — `UX research` / `UX writing` / `Design systems` kept English; `Front-end build`→`Front-end`, `Back-end build`→`Back-end` (both locales); `AI evaluation`→`Évaluation IA`; `Business strategy`→`Stratégie Business`.
 
-Index titles (`data.projects.*.title`, shown on the home Index):
-- Translated descriptors: `Beau-Rivage Éco-Refonte`, `Campagne UEFA Female Coaches`. The `BeReal Like Web App` / `Cultural Trails Web App` descriptors were **kept English** (brand rule). Decide if you'd rather have e.g. "Application web …".
+Still open (owner to confirm during page review): terminology kept in English with no glossary entry — `Calm Technology`, `Action Window`, `How Might We`, `MoSCoW`, `Brand book`, `Deck`, `stateless`/`middleware`/`props`/`firmware`, `microtechnique`. And the in-sentence job-title occurrences (home lede, about hero) now read "Interaction and product designer" — confirm they read well in context.
 
-Terminology kept in English (confirm or localize): `Calm Technology`, `Action Window` (→ "Fenêtre d'Action"), `How Might We`, `MoSCoW`, `Brand book`, `Deck`, `stateless`/`middleware`/`props`/`firmware`, `microtechnique` (EPFL's official FR program name).
-
-Content fix to confirm:
-- **databloom resources** — the English had two posters: `Affiche du projet` (already French) and `Project poster`. The latter was translated to `Affiche du projet`, so two resource rows now share that title. Give the second a distinguishing label (e.g. `Affiche SwissViz`).
-
-Per-file translator notes (idiom/word-choice confirmations) were returned with each draft; the items above are the ones needing a decision. Everything else is a normal native-speaker polish pass.
+**Page-by-page review is next** — the per-file translator notes returned with each draft list idiom/word-choice calls for that pass.

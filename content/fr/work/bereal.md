@@ -164,10 +164,10 @@ gallery:
 
 resources:
   - type: github
-    title: "Front-end — PWA mobile Vue"
+    title: "Front-end — Vue mobile PWA"
     url: "https://github.com/HEIG-COMEM/HEIG-VD_DevMobil_REST"
   - type: github
-    title: "Back-end — API REST Express"
+    title: "Back-end — Express REST API"
     url: "https://github.com/HEIG-COMEM/HEIG-VD_ArchiOWeb_REST"
 
 card:

@@ -166,20 +166,20 @@ resources:
     title: "Digital Design Week, Milan Design Week"
     url: "https://www.ddweek.com/projects/6c1b9d00-31b4-41a4-8266-60bf49777fbf"
   - type: web
-    title: "Niwwrd : compte rendu de la Digital Design Week"
+    title: "Niwwrd: Digital Design Week report"
     url: "https://www.niwwrd.com/post/digital-design-week-2026-what-stood-out-as-it-closes"
   - type: web
-    title: "Niwwrd sur Instagram : sélection de la Digital Design Week"
+    title: "Niwwrd on Instagram: Digital Design Week picks"
     url: "https://www.instagram.com/p/DXeyH-NGswr/"
   - type: github
-    title: "Code source et documentation"
+    title: "Source code and documentation"
     url: "https://github.com/jerem-marti/MAInD-Prototyping_Spatial_Experiences-2026"
   - type: video
-    title: "Présentation du projet"
+    title: "Project walkthrough"
     poster: "/images/work/elen/video-poster.jpg"
     src: "/videos/elen/walkthrough.mp4"
   - type: video
-    title: "Film de l'exposition, Saceba"
+    title: "Exhibition film, Saceba"
     poster: "/images/work/elen/exhibition-poster.jpg"
     src: "/videos/elen/exhibition-saceba.mp4"
   - type: pdf

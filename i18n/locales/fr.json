@@ -8,7 +8,7 @@
     "primaryMobileAria": "Principal mobile"
   },
   "chrome": {
-    "tagline": "Designer d'interaction et de produit"
+    "tagline": "Interaction and product designer"
   },
   "footer": {
     "contact": "Contact",
@@ -21,14 +21,14 @@
   "common": {
     "availableLead": "Disponible pour un stage dès",
     "availableDate": "août 2026",
-    "repliesFrEn": "Réponse en français ou en anglais, généralement sous quelques jours ouvrés.",
+    "repliesFrEn": "Réponse en français ou en anglais, généralement sous quelques jours ouvrables.",
     "portraitAlt": "Portrait studio de Jérémy Martin, cheveux bouclés mi-longs et moustache, en t-shirt noir sur un fond gris."
   },
   "home": {
-    "lede": "Designer d'interaction et de produit, actuellement engagé dans les expériences agentiques (AX) conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI Mendrisio, disponible dès août 2026.",
+    "lede": "Interaction and product designer, actuellement engagé dans les expériences agentiques (AX) conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI Mendrisio, disponible dès août 2026.",
     "heroMeta": "00 / Portfolio · Jérémy Martin · 2026",
-    "heroTitleLine1": "Le processus est",
-    "heroTitleLine2": "l'artefact.",
+    "heroTitleLine1": "La méthode",
+    "heroTitleLine2": "comme matière.",
     "approachLabel": "Approche",
     "approachPov": "POV — 2026",
     "approachBody": "L'IA a rendu la génération de design bon marché. Juger de sa qualité, non. {emphasis}. Ces derniers temps, mon travail se concentre sur les expériences agentiques (AX) : conçues autour de l'intention humaine, les prompts ancrés comme des décisions de design, les résultats évalués face aux personnes qui les utilisent.",
@@ -61,7 +61,7 @@
     "metaTitle": "À propos",
     "metaDescription": "Étudiant en master de design d'interaction à la SUPSI Mendrisio, venu au design depuis l'électronique et l'ingénierie des médias. Disponible dès août 2026.",
     "heroLabel": "À propos",
-    "heroBody": "Je suis Jérémy Martin, designer d'interaction et de produit actuellement engagé dans des {emphasis} conçues autour de l'intention humaine et de ses conséquences. Je termine un master en design d'interaction à la SUPSI de Mendrisio, avec un parcours en électronique et en ingénierie des médias.",
+    "heroBody": "Je suis Jérémy Martin, interaction and product designer actuellement engagé dans des {emphasis} conçues autour de l'intention humaine et de ses conséquences. Je termine un master en design d'interaction à la SUPSI de Mendrisio, avec un parcours en électronique et en ingénierie des médias.",
     "heroEmphasis": "expériences agentiques (AX)",
     "storyLabel": "Comment j'en suis arrivé là",
     "storyP1": "Prenons les expériences agentiques : le plus difficile, ce n'est pas la génération. La génération est devenue bon marché ; {emphasis}, non. Le prompt lui-même n'est pas gratuit non plus : il mérite le même ancrage que n'importe quelle autre décision de design.",
@@ -177,22 +177,22 @@
     }
   },
   "tags": {
-    "UX research": "Recherche UX",
+    "UX research": "UX research",
     "Interaction design": "Design d'interaction",
     "Prototyping": "Prototypage",
     "Information architecture": "Architecture de l'information",
-    "UX writing": "Rédaction UX",
-    "Design systems": "Systèmes de design",
+    "UX writing": "UX writing",
+    "Design systems": "Design systems",
     "Accessibility": "Accessibilité",
     "Tangible interface": "Interface tangible",
-    "Front-end build": "Développement front-end",
-    "Back-end build": "Développement back-end",
+    "Front-end build": "Front-end",
+    "Back-end build": "Back-end",
     "Brand / Editorial": "Marque / Éditorial",
-    "AI evaluation": "Évaluation d'IA",
+    "AI evaluation": "Évaluation IA",
     "Machine learning": "Machine learning",
     "Hardware": "Hardware",
     "Sustainability": "Durabilité",
-    "Business strategy": "Stratégie d'entreprise",
+    "Business strategy": "Stratégie Business",
     "Marketing strategy": "Stratégie marketing",
     "Design thinking": "Design thinking",
     "Scrollytelling": "Scrollytelling",
@@ -254,7 +254,7 @@
         "alt": "La boîte d'écoute Human Loci : une boîte en acrylique transparent dotée d'un bras de lecture façon tourne-disque, vue de trois quarts sur un fond gris."
       },
       "beau-rivage": {
-        "title": "Beau-Rivage Éco-Refonte",
+        "title": "Beau-Rivage éco-conception",
         "alt": "La page d'accueil refondue du Beau-Rivage Palace sur mobile : le logo coquillage, un bouton Réserver et le wordmark centré au-dessus de fines lignes dorées, bien plus léger que l'original."
       },
       "uefa-female-coaches": {
@@ -277,8 +277,8 @@
   },
   "og": {
     "defaultTitle": "Jérémy Martin",
-    "defaultDescription": "Designer d'interaction et de produit. Mendrisio, Suisse.",
-    "footer": "DESIGN D'INTERACTION & DE PRODUIT"
+    "defaultDescription": "Interaction and product designer. Mendrisio, Suisse.",
+    "footer": "INTERACTION & PRODUCT DESIGN"
   },
   "schema": {
     "websiteName": "Jérémy Martin, designer d'interaction et de produit",
@@ -331,8 +331,8 @@
     "home": {
       "problemLabel": "Problème",
       "outcomeLabel": "Résultat",
-      "title": "Le processus est l'artefact.",
-      "blockquote": "Designer d'interaction et de produit, actuellement engagé dans les expériences agentiques (AX) conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI Mendrisio, disponible dès août 2026.",
+      "title": "La méthode comme matière.",
+      "blockquote": "Interaction and product designer, actuellement engagé dans les expériences agentiques (AX) conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI Mendrisio, disponible dès août 2026.",
       "hApproach": "Approche",
       "approach": "L'IA a rendu la génération de design bon marché. Juger de sa qualité, non. Ce qui a changé, c'est l'outil, pas la discipline. Le travail se concentre sur les expériences agentiques (AX) : conçues autour de l'intention humaine, les prompts ancrés comme des décisions de design, les résultats évalués face aux personnes qui les utilisent.",
       "hSelectedWork": "Travaux sélectionnés",
@@ -341,7 +341,7 @@
       "hAbout": "À propos",
       "about": "Jérémy se concentre aujourd'hui sur les expériences agentiques (AX), conçues autour de l'intention de l'utilisateur. Sa pratique couvre le prototypage hardware, le développement front-end, la recherche UX et le design de service. Basé à Mendrisio, Suisse.",
       "hContact": "Contact",
-      "contact": "Disponible pour un stage dès août 2026. E-mail hi{'@'}jeremymartin.ch. LinkedIn jermarti. Réponse en français ou en anglais, généralement sous quelques jours ouvrés."
+      "contact": "Disponible pour un stage dès août 2026. E-mail hi{'@'}jeremymartin.ch. LinkedIn jermarti. Réponse en français ou en anglais, généralement sous quelques jours ouvrables."
     },
     "about": {
       "fCurrentlyK": "Actuellement",

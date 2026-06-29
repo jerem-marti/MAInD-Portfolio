@@ -147,16 +147,16 @@ gallery:
 
 resources:
   - type: github
-    title: "Firmware du cube (ESP32)"
+    title: "Cube firmware (ESP32)"
     url: "https://github.com/jerem-marti/MAInD-Creating_Tangible_Interfaces-2026-BrushBuddy"
   - type: github
-    title: "Firmware du capteur de la brosse à dents (ESP32)"
+    title: "Toothbrush sensor firmware (ESP32)"
     url: "https://github.com/jerem-marti/MAInD-Creating_Tangible_Interfaces-2026-BrushBuddy-Toothbrush_Sensor"
   - type: pdf
-    title: "Schéma de câblage"
+    title: "Wiring diagram"
     url: "/files/brushbuddy-wiring-diagram.pdf"
   - type: video
-    title: "Film d'interaction"
+    title: "Interaction film"
     poster: "/images/work/brushbuddy/video-poster.jpg"
     src: "/videos/brushbuddy/interaction-film.mp4"
 

@@ -158,10 +158,10 @@ gallery:
 
 resources:
   - type: demo
-    title: "Landing page — prototype Figma"
+    title: "Landing page — Figma prototype"
     url: "https://www.figma.com/proto/tfH9gixulS4vFgBgyCYQWF/Landing-page?page-id=1%3A4&node-id=332-284&viewport=260%2C516%2C0.02&t=upDM0ZiI1FYv2VvU-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=332%3A645&hotspot-hints=0"
   - type: demo
-    title: "Photobooth Euro 2025"
+    title: "Euro 2025 photobooth"
     url: "https://photobooth-whynotyou.netlify.app/"
   - type: pdf
     title: "Pitch deck"
@@ -170,10 +170,10 @@ resources:
     title: "One-pager"
     url: "/files/uefa-female-coaches-one-pager.pdf"
   - type: pdf
-    title: "Affiche-miroir"
+    title: "Mirror poster"
     url: "/files/uefa-female-coaches-mirror-poster.pdf"
   - type: web
-    title: "Vitrine de projets HEIG-VD"
+    title: "HEIG-VD project showcase"
     url: "https://pi25.heig-vd.ch/en/"
   - type: web
     title: "Why Not You? : le concept présenté à la finale de l'UEFA Women's Euro 2025"

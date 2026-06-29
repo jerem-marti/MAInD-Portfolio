@@ -180,25 +180,25 @@ gallery:
 
 resources:
   - type: github
-    title: "Code source et guide d'installation"
+    title: "Source code and setup guide"
     url: "https://github.com/jerem-marti/MAInD-Digital_Fabrication-2025-Human_Loci"
   - type: video
-    title: "Démo fonctionnelle"
+    title: "Working demo"
     poster: "/images/work/human-loci/video-poster-demo.jpg"
     src: "/videos/human-loci/demo.mp4"
   - type: video
-    title: "Film d'interaction"
+    title: "Interaction film"
     poster: "/images/work/human-loci/video-poster.jpg"
     src: "/videos/human-loci/walkthrough.mp4"
   - type: video
-    title: "Animation d'assemblage"
+    title: "Assembly animation"
     poster: "/images/work/human-loci/video-poster-assembly.jpg"
     src: "/videos/human-loci/assembly.mp4"
   - type: pdf
-    title: "Schéma électronique"
+    title: "Electronic schematic"
     url: "/files/human-loci-electronic-schematic.pdf"
   - type: web
-    title: "Processus de prototypage"
+    title: "Prototyping process"
     url: "https://master-interaction-design.notion.site/HUMAN-LOCI-2cc89104ecf9806a921fd48164a01938"
 
 card:

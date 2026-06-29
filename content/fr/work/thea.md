@@ -273,23 +273,23 @@ gallery:
 
 resources:
   - type: video
-    title: "Présentation du projet"
+    title: "Project walkthrough"
     poster: "/images/work/thea/video-poster.jpg"
     src: "/videos/thea/walkthrough.mp4"
   - type: demo
-    title: "App compagnon, en direct"
+    title: "Companion app, live"
     url: "https://nereat2.github.io/MAInD-Multimodal-20252026-thea/"
   - type: github
-    title: "Démo : dépôt"
+    title: "Demo: repository"
     url: "https://github.com/jerem-marti/MAInD-Multimodal_Experience_Design-Demo-2026"
   - type: github
-    title: "App : dépôt"
+    title: "App: repository"
     url: "https://github.com/nereat2/MAInD-Multimodal-20252026-thea"
   - type: pdf
-    title: "Deck de la présentation finale"
+    title: "Final presentation deck"
     url: "/files/thea-final-presentation.pdf"
   - type: pdf
-    title: "Protocole de co-conception et d'utilisabilité"
+    title: "Co-design and usability protocol"
     url: "/files/thea-codesign-protocol.pdf"
   - type: web
     title: "Brand book"

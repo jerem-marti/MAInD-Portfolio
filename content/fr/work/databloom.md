@@ -244,7 +244,7 @@ resources:
     title: "Affiche du projet"
     url: "/files/databloom-poster.pdf"
   - type: pdf
-    title: "Affiche du projet"
+    title: "Project poster"
     url: "/files/databloom-swissviz-poster.pdf"
   - type: web
     title: "Article du blog de recherche du MEI"
