@@ -1,176 +1,175 @@
 ---
 title: "WeMatch"
-summary: "Un compagnon AX de compatibilité de voyage pour WeRoad, la plateforme de voyages en groupe. Il aide les voyageurs à trouver le bon groupe, pas seulement le bon voyage : il lit la façon dont quelqu'un voyage, construit un profil comportemental, évalue chaque groupe au regard de ce profil et explique chaque correspondance en langage clair."
+summary: "Un compagnon AX de compatibilité de voyage pour WeRoad, la plateforme de voyages en groupe. Il aide les voyageurs à trouver le bon groupe, pas seulement le bon voyage : il lit la façon dont une personne voyage, construit un profil comportemental, évalue chaque groupe au regard de ce profil et explique chaque correspondance en langage clair."
 status: "live"
 hero: "/images/work/wematch/hero.jpg"
-heroAlt: "Une diapositive de titre sur un dégradé doux blanc vers rose : « WeMatch trouve ton groupe avant que tu trouves ton voyage » écrit en grand, en corail et encre, avec le personnage rond de l'agent Matchy à droite."
+heroAlt: "Une diapositive-titre sur un dégradé doux du blanc au rose : « WeMatch finds your group before you find your trip » en grand, en corail et encre, avec le personnage rond de l'agent Matchy à droite."
 
 brief:
-  role: "Recherche · Design AX · récit"
+  role: "Recherche · design AX · récit"
   year: "2026"
   host: "SUPSI × Spark Reply"
   scope: "Équipe de cinq"
-  shipped: "Présentation, agent testable, récit en scrollytelling"
+  shipped: "Présentation, agent testable, récit scrollytelling"
 
 problem:
   - >-
-    WeRoad conçoit tout d'un voyage en groupe, sauf la seule chose qui en décide le déroulement.
-    L'itinéraire, les hôtels, les tour leaders, le rythme : tout est planifié. Le groupe,
-    les onze inconnus avec qui tu vas passer dix jours, est laissé à ceux qui ont, par hasard,
-    réservé les mêmes dates.
+    WeRoad conçoit tout d'un voyage en groupe, sauf la seule chose qui en décide l'issue.
+    L'itinéraire, les hôtels, les accompagnateurs, le rythme : tout est planifié. Le groupe, ces
+    onze inconnus avec qui vous passerez dix jours, est laissé à ceux qui ont, par hasard, réservé
+    les mêmes dates.
   - >-
-    Les avis le disent à voix haute. Sur 1'660 avis WeRoad récents publiés sur Trustpilot, 58%
-    mentionnent le groupe ou les personnes avec qui ils ont voyagé, plus que la destination, la
-    nourriture, les hôtels ou les tour leaders. Et quand un voyage rate, le groupe en est la cause
-    la plus citée : 18% des avis négatifs y renvoient.
+    Les avis le disent sans détour. Sur 1'660 avis récents de WeRoad publiés sur Trustpilot, 58%
+    mentionnent le groupe ou leurs compagnons de voyage, plus que la destination, la cuisine, les
+    hôtels ou les accompagnateurs. Et quand un voyage tourne mal, le groupe est la cause la plus
+    citée : 18% des avis négatifs lui sont imputables.
   - >-
-    Même marque, même itinéraire, voyage opposé. Une voyageuse rentre du Maroc avec des gens
-    qu'elle n'oubliera pas de sitôt. Une autre subit des dynamiques de groupe toxiques en Chine dès
-    le deuxième jour. La destination fixe l'attente ; le groupe façonne l'expérience. Pour l'instant,
-    le groupe est la seule variable que personne ne conçoit.
+    Même marque, même itinéraire, voyage opposé. L'un rentre du Maroc avec des gens qu'il
+    n'oubliera pas de sitôt. L'autre subit une dynamique de groupe toxique en Chine dès le deuxième
+    jour. La destination fixe l'attente ; le groupe façonne l'expérience. Aujourd'hui, le groupe
+    reste la seule variable que personne ne conçoit.
 
 role:
   led:
-    - "Analyse des données Trustpilot, l'étude de 1'660 avis derrière les chiffres de 58% et 18%"
-    - "Design de l'expérience agentique, l'agent en six phases et le modèle de correspondance par ADN comportemental"
-    - "Design, développement et narration de l'expérience en scrollytelling (Nuxt + GSAP)"
-    - "Narration de la présentation finale, avec une coéquipière"
+    - "Analyse des données Trustpilot : l'étude des 1'660 avis qui sous-tend les chiffres de 58% et 18%"
+    - "Design de l'expérience agentique (AX) : l'agent en six phases et le modèle de matching par ADN comportemental"
+    - "Design, développement et récit de l'expérience scrollytelling (Nuxt + GSAP)"
+    - "Storytelling de la présentation finale, avec un membre de l'équipe"
   contributed:
     - "Idéation et recherche UX (revue de littérature et entretiens), partagées au sein de l'équipe"
   notTouched:
-    - "WeRoad n'est pas un client. WeMatch est un concept spéculatif et non sollicité ; la marque est utilisée de manière adjacente."
+    - "WeRoad n'est pas un client. WeMatch est un concept spéculatif et non sollicité ; la marque n'est mobilisée qu'à titre contextuel, sans aucun partenariat."
   team: "Équipe de cinq pour Designing Intelligent Experiences (SUPSI × Spark Reply) : Oleksandra Drapushko, Jérémy Martin, Ceren Seçkin, Zeno Tamagni, Elia Miglio."
 
 approach:
   - label: "Recherche"
-    title: "Trois angles, une même conclusion"
+    title: "Trois angles, un même constat"
     prose:
       - >-
-        Le constat est né de la triangulation, pas d'un pressentiment. Nous avons lu la
-        littérature académique sur le voyage en solo, les dynamiques de groupe et le matchmaking.
-        Nous avons mené huit entretiens approfondis, de 45 à 60 minutes chacun, avec des voyageurs
-        solo et en groupe. Et nous avons analysé les avis de WeRoad à grande échelle. Trois sources
-        indépendantes, une même conclusion qui revient.
+        Le constat vient de la triangulation, pas d'une intuition. Nous avons lu la littérature
+        scientifique sur le voyage en solo, la dynamique de groupe et l'appariement (matchmaking).
+        Mené huit entretiens approfondis, de 45 à 60 minutes chacun, auprès de voyageurs en solo et
+        en groupe. Et analysé les avis WeRoad à grande échelle. Trois sources indépendantes, un même
+        constat qui revient.
       - >-
         Elles convergent vers une seule phrase : la destination fixe l'attente, mais le groupe
-        façonne l'expérience. Trois constats l'ont affinée. Les voyages sont évalués sur la
-        logistique mais vécus sur le social. Le profil d'un voyageur évolue selon le contexte et le
-        temps, donc un profilage statique ne peut pas le saisir. Et une bonne correspondance doit
-        sembler reconnaissable, parce que la compatibilité ne convainc que lorsque les gens peuvent
-        s'y reconnaître.
+        façonne l'expérience. Trois constats l'affinent. On évalue un voyage sur sa logistique, mais
+        on le vit dans le rapport aux autres. Le profil d'un voyageur évolue avec le contexte et le
+        temps ; un profilage figé ne peut pas le saisir. Et une bonne correspondance doit sonner
+        juste, car la compatibilité ne convainc que lorsqu'on s'y reconnaît.
 
   - label: "Recadrage"
     title: "Des groupes déguisés en voyages"
     prose:
       - >-
-        Le recadrage tient en un seul geste. On disait que les voyageurs ont besoin d'aide pour
-        trouver le bon voyage. On dit maintenant que le bon voyage a besoin du bon groupe. Le
-        catalogue de destinations est en réalité un catalogue de groupes, habillés d'itinéraires.
+        Le recadrage tient en un seul geste. Avant, nous disions que les voyageurs ont besoin
+        d'aide pour trouver le bon voyage. Désormais, nous disons que le bon voyage a besoin du bon
+        groupe. Le catalogue de destinations est en réalité un catalogue de groupes, habillés en
+        itinéraires.
       - >-
-        Surtout, rien n'est retiré. Un voyageur cherche toujours par destination, dates et prix,
+        Surtout, rien n'est retiré. On cherche toujours par destination, par dates et par prix,
         exactement comme avant. Ce qui s'ajoute, c'est un score de compatibilité sur chaque voyage,
-        et la possibilité de trier par affinité de groupe plutôt que par date ou par prix. La
-        recherche familière reste ; un seul signal nouveau et lisible change ce qu'elle optimise.
+        et la possibilité de trier par compatibilité du groupe plutôt que par date ou par prix. La
+        recherche habituelle reste en place ; un seul signal, nouveau et lisible, change ce qu'elle
+        optimise.
     artifacts:
       - src: "/images/work/wematch/approach-reframe.jpg"
-        alt: "Une diapositive de présentation intitulée « La variable la plus décisive d'un voyage WeRoad est la seule laissée au hasard » : une liste de ce que WeRoad contrôle (itinéraire, hébergements, tour leaders, expériences, rythme) à côté d'un panneau indiquant « Ce qui est laissé au hasard : le groupe », notant que 18% des avis négatifs y renvoient."
-        caption: "WeRoad contrôle tout sauf le groupe — la seule variable laissée au hasard."
-        decision: "Désigner le groupe comme la seule variable non gérée a transformé un catalogue de destinations en catalogue de groupes, et a donné au concept son point d'ancrage."
+        alt: "Une diapositive de présentation intitulée « La variable la plus décisive d'un voyage WeRoad est la seule laissée au hasard » : une liste de ce que WeRoad maîtrise (itinéraire, hébergements, accompagnateurs, expériences, rythme) à côté d'un encart « Ce qui est laissé au hasard : le groupe », avec la mention que 18% des avis négatifs lui sont imputables."
+        caption: "WeRoad maîtrise tout, sauf le groupe — la seule variable laissée au hasard."
+        decision: "Nommer le groupe comme la seule variable non gérée a transformé un catalogue de destinations en catalogue de groupes, et donné au concept son point d'ancrage."
         width: "wide"
 
   - label: "L'agent"
     title: "Un compagnon, six phases"
     prose:
       - >-
-        WeMatch est un agent (l'équipe l'a nommé Matchy) qui accompagne tout le parcours plutôt
-        qu'une conversation ponctuelle. Il fonctionne en six phases, chacune un rôle différent. Il
-        découvre, en captant les signaux liés au rythme, à l'énergie sociale et à l'intention. Il
-        profile, en construisant l'ADN comportemental du voyageur à partir de ces signaux. Il
-        sélectionne, en évaluant chaque groupe au regard de cet ADN.
+        WeMatch est un agent (l'équipe l'a baptisé Matchy) qui accompagne tout le parcours, plutôt
+        qu'une simple conversation ponctuelle. Il fonctionne en six phases, chacune dans un rôle
+        distinct. Il découvre, en captant des signaux liés au rythme, à l'énergie sociale et à
+        l'intention. Il profile, en bâtissant l'ADN comportemental du voyageur à partir de ces
+        signaux. Il sélectionne, en notant chaque groupe par rapport à cet ADN.
       - >-
-        Ensuite il explique, en rendant chaque correspondance compréhensible avant la réservation.
-        Il prend des nouvelles pendant le voyage, en lisant les dynamiques sociales en direct. Et il
-        évolue, en affinant la compatibilité future à partir de l'expérience vécue et des retours sur
-        le voyage. L'arc va de la première session jusque bien après le retour du voyageur.
+        Puis il explique, en rendant chaque correspondance compréhensible avant la réservation. Il
+        prend des nouvelles pendant le voyage, en lisant la dynamique sociale en temps réel. Et il
+        évolue, en affinant la compatibilité future à partir du vécu et des retours sur le voyage.
+        L'arc court de la première session jusqu'à bien après le retour du voyageur.
     artifacts:
       - src: "/images/work/wematch/approach-2-agent.jpg"
-        alt: "Diagramme de l'agent en six phases : découvrir, profiler, sélectionner, expliquer, prendre des nouvelles, évoluer, chacune avec un rôle en un mot."
-        caption: "Le rôle de l'agent — six phases, du premier signal à l'apprentissage post-voyage."
-        decision: "Concevoir l'agent comme un parcours, et non comme une fonctionnalité, a fait de la compatibilité un profil vivant plutôt que le résultat d'un questionnaire ponctuel."
+        alt: "Schéma de l'agent en six phases : découverte, profilage, sélection, explication, suivi, évolution, chacune résumée en un mot."
+        caption: "Le rôle de l'agent — six phases, du premier signal à l'apprentissage d'après-voyage."
+        decision: "Concevoir l'agent comme un parcours, et non comme une fonctionnalité, a gardé la compatibilité sous la forme d'un profil vivant, et non d'un résultat de questionnaire figé."
         width: "wide"
 
   - label: "Le modèle"
     title: "ADN comportemental, du signal à la correspondance"
     prose:
       - >-
-        Le profilage est le moteur. Toutes les autres plateformes classent les voyages par
-        destination ; WeMatch classe par compatibilité. Deux entrées alimentent un seul artefact :
-        ce qu'un voyageur dit en conversation, et la façon dont il navigue sur le site. Ensemble,
-        elles construisent un ADN comportemental sur huit dimensions comme le rythme, l'énergie
-        sociale, le style de planification et celui de gestion des conflits, mis à jour en continu
-        dès la première session.
+        Le profilage est le moteur. Les autres plateformes classent les voyages par destination ;
+        WeMatch les classe par compatibilité. Deux entrées convergent vers un même profil : ce qu'un
+        voyageur dit en conversation, et sa façon de naviguer sur le site. Ensemble, elles
+        construisent un ADN comportemental sur huit dimensions, comme le rythme, l'énergie sociale,
+        le style de planification et la gestion des conflits, mis à jour en continu dès la première
+        session.
       - >-
-        Chaque groupe disponible est ensuite évalué au regard de cet ADN, produisant un pourcentage
-        de compatibilité et une raison en langage clair pour chaque voyage. La recherche se reclasse
-        par affinité de groupe : « 87%, porté par la culture, rythme lent, mélange autour de la
-        trentaine » passe au-dessus de « 41%, porté par le social, tempo festif, groupe plus jeune ».
-        Et le profil est visible et modifiable, pour que le voyageur puisse voir ce que l'agent a
-        déduit et le corriger, ce qui rend la correspondance d'autant plus précise qu'il s'implique.
+        Chaque groupe disponible est ensuite noté à l'aune de cet ADN, ce qui produit un
+        pourcentage de compatibilité et une explication en langage clair pour chaque voyage. La
+        recherche se réordonne par compatibilité du groupe : « 87%, porté par la culture, rythme
+        lent, trentenaires » passe avant « 41%, porté par le social, tempo festif, groupe plus
+        jeune ». Et le profil reste visible et modifiable : le voyageur voit ce que l'agent a déduit
+        et peut le corriger ; plus il s'implique, plus la correspondance est juste.
     artifacts:
       - src: "/images/work/wematch/approach-3-model.jpg"
         alt: "Le modèle d'ADN comportemental : deux entrées (conversation, navigation) alimentant un profil à huit dimensions, puis des cartes de voyage classées par score de compatibilité."
-        caption: "Du signal à la correspondance — deux entrées, un profil à huit dimensions, une affinité de groupe classée."
-        decision: "Évaluer le groupe plutôt que le voyage, avec une raison visible et un profil modifiable, a rendu l'intelligence lisible au lieu de magique."
+        caption: "Du signal à la correspondance — deux entrées, un profil à huit dimensions, des groupes classés par compatibilité."
+        decision: "Noter le groupe plutôt que le voyage, avec une explication visible et un profil modifiable, a rendu l'intelligence lisible plutôt que magique."
         width: "wide"
 
   - label: "Le récit"
     title: "Communiquer une couche invisible"
     prose:
       - >-
-        Une couche de compatibilité est difficile à montrer, parce que la partie intéressante est
-        invisible. Mon travail côté communication était de la faire passer sans liste de
-        fonctionnalités, sous la forme d'une expérience en scrollytelling qui suit une voyageuse en
-        train de décider si elle réserve. La lectrice rencontre le service comme elle le ferait, en
-        mouvement, plutôt que de s'entendre dire ce qu'il fait.
+        Une couche de compatibilité est difficile à montrer, parce que ce qu'elle a d'intéressant
+        reste invisible. Côté communication, mon rôle était de la rendre tangible sans passer par une
+        liste de fonctionnalités : une expérience en scrollytelling qui suit une voyageuse au moment
+        où elle décide si elle réserve. Le lecteur découvre le service en situation, comme elle le
+        vivrait, au lieu qu'on lui explique ce qu'il fait.
       - >-
-        La même logique a façonné la présentation finale, dont j'ai construit la narration avec une
-        coéquipière. Dans les deux cas, la règle était la même : montrer l'agent à l'œuvre, ne jamais
-        l'annoncer comme « IA ». L'argument est porté par les données, le recadrage et l'expérience
-        de la voyageuse elle-même, pas par le mot.
+        La même logique a guidé la présentation finale, dont j'ai construit la narration avec une
+        coéquipière. Dans les deux cas, la règle était la même : montrer l'agent à l'œuvre, sans
+        jamais le désigner comme de l'IA.
 
 outcome:
   - >-
-    Un concept de service ancré dans la recherche : trois angles indépendants
-    convergeant vers une même conclusion, un agent en six phases et le modèle de correspondance par
-    ADN comportemental.
+    Un concept d'expérience agentique ancré dans la recherche : trois angles de recherche
+    indépendants qui convergent vers un même constat, un agent en six phases et le modèle de matching
+    par ADN comportemental.
   - >-
-    Trois livrables remis : la présentation de design de bout en bout, un agent testable en direct,
-    et le récit en scrollytelling qui porte l'argument.
+    Trois livrables produits : la présentation complète du projet, un agent fonctionnel et testable,
+    et le récit en scrollytelling qui tient lieu d'argumentaire.
   - >-
-    Bien reçu dans le cours, autant pour la narration que pour l'agent fonctionnel qui la sous-tend.
+    Bien reçu par le jury, autant pour le récit que pour l'agent fonctionnel qui le soutient.
 
 reflection: >-
-  La partie la plus précieuse n'était pas le concept. C'était d'apprendre la méthode auprès d'une
-  équipe qui construit des expériences agentiques pour de vrai. La pratique AX de Spark Reply a sa
-  propre grammaire : concevoir autour de l'intention de l'utilisateur plutôt que des
-  fonctionnalités, donner à l'agent une personnalité et la garder cohérente, et consacrer un temps
-  véritable aux cas limites, là où l'autonomie d'un agent est la plus susceptible de mal tourner. Ce
-  cadrage a transformé ma façon de concevoir avec l'IA, et c'est le prisme que j'apporte au reste de
-  mon travail aujourd'hui.
+  Le plus précieux n'était pas le concept. C'était d'apprendre la méthode auprès d'une équipe qui
+  construit de vraies expériences agentiques. La pratique AX de Spark Reply a sa propre grammaire :
+  concevoir autour de l'intention de l'utilisateur plutôt qu'autour des fonctionnalités, donner une
+  personnalité à l'agent et la maintenir cohérente, et consacrer un vrai temps aux cas limites, là
+  où l'autonomie d'un agent a le plus de chances de mal tourner. Ce cadrage a transformé ma manière
+  de concevoir avec l'IA, et c'est l'angle que j'apporte désormais au reste de mon travail.
 
 gallery:
   - src: "/images/work/wematch/gallery-1.jpg"
-    alt: "Le produit conçu : une recherche WeRoad reclassée par affinité de groupe, des voyages portant des badges de compatibilité verts sous un titre « Meilleures correspondances »."
-    caption: "Le produit — la recherche, reclassée par affinité de groupe."
+    alt: "Le produit conçu : une recherche WeRoad réordonnée par compatibilité du groupe, des voyages portant des badges de compatibilité verts sous un titre « Meilleurs matchs »."
+    caption: "Le produit — la recherche, réordonnée par compatibilité du groupe."
   - src: "/images/work/wematch/gallery-2.jpg"
-    alt: "Le radar d'ADN comportemental dans l'aperçu d'un groupe : les dimensions de compatibilité d'un voyageur tracées face à celles d'un groupe, avec une lecture en langage clair de la correspondance."
+    alt: "Le radar d'ADN comportemental dans un aperçu de groupe : les dimensions de compatibilité d'un voyageur superposées à celles d'un groupe, avec une lecture de la correspondance en langage clair."
     caption: "Le modèle, rendu concret — le radar d'ADN comportemental."
   - src: "/images/work/wematch/gallery-3.jpg"
-    alt: "L'agent Matchy en direct sur le site WeRoad, en train de profiler en conversation : il transforme le récit de voyage d'un voyageur en une question de relance avec trois options de réponse."
-    caption: "L'agent en direct — le profilage par la conversation."
+    alt: "L'agent Matchy en ligne sur le site WeRoad, en plein profilage par la conversation : il transforme le récit de voyage d'une personne en une question de relance accompagnée de trois réponses au choix."
+    caption: "L'agent en ligne — le profilage par la conversation."
   - src: "/images/work/wematch/gallery-4.jpg"
-    alt: "Une scène du one-pager en scrollytelling, « Il la lit » : l'agent transformant le comportement de voyage de Sofia en un profil d'ADN comportemental en direct, avec Sofia qui lit sur son téléphone à côté."
-    caption: "Le récit — le one-pager en scrollytelling, Sofia en son centre."
+    alt: "Une scène du one-pager scrollytelling où l'agent « lit » Sofia : il transforme son comportement de voyage en un profil d'ADN comportemental en direct, Sofia lisant sur son téléphone à côté."
+    caption: "Le récit — le one-pager scrollytelling, Sofia en son centre."
 
 resources:
   - type: pdf
@@ -184,7 +183,7 @@ resources:
     url: "https://jerem-marti.github.io/MAInD-Designing_Intelligent_Experiences-OnePager-2026/"
 
 card:
-  title: "WeMatch — un service de correspondance AX pour l'univers WeRoad"
+  title: "WeMatch — un service de matching AX pour l'univers WeRoad"
   image: "/images/work/wematch/adjacent.jpg"
-  alt: "Carte de titre WeMatch : « WeMatch trouve ton groupe avant que tu trouves ton voyage » en corail et encre sur un dégradé doux blanc vers rose, avec le personnage rond de l'agent Matchy."
+  alt: "Carte-titre WeMatch : « WeMatch finds your group before you find your trip » en corail et encre sur un dégradé doux du blanc au rose, avec le personnage rond de l'agent Matchy."
 ---

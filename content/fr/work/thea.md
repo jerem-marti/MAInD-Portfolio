@@ -1,163 +1,168 @@
 ---
 title: "Thea"
-summary: "Un wearable porté au poignet qui offre aux personnes vivant avec des allergies un nouveau sens, apaisé : la conscience de leur charge allergénique qui monte vers un seuil personnel, assez tôt pour que le choix d'agir leur appartienne encore. Il porte ce sens sur trois canaux calibrés, une jauge lumineuse ambiante, un rythme haptique et une voix qui reste silencieuse tant que vous ne la sollicitez pas, prototypé sur un Arduino UNO Q dont l'architecture à deux cerveaux est conçue pour faire tourner cette voix sur l'appareil lui-même."
+summary: "Un wearable porté au poignet qui offre aux personnes allergiques un nouveau sens, calme : percevoir leur charge allergénique monter vers un seuil personnel, assez tôt pour que le choix d'agir leur appartienne encore. Ce sens passe par trois canaux calibrés, une jauge lumineuse ambiante, un rythme haptique et une voix qui reste muette tant qu'on ne l'appelle pas. Prototypé sur un Arduino UNO Q dont l'architecture à deux cerveaux est faite pour exécuter cette voix à même l'appareil."
 status: "live"
 hero: "/images/work/thea/hero.jpg"
-heroAlt: "Une vue de dessus du wearable Thea, un boîtier clair sur un bracelet en tissu, posé sur une surface bleu cobalt profond parsemée de fleurs sauvages séchées, de graminées et de capitules."
+heroAlt: "Vue de dessus du wearable Thea, un boîtier pâle sur un bracelet en tissu, posé sur une surface bleu cobalt profond parsemée de fleurs sauvages séchées, de graminées et de capitules."
 
 brief:
-  role: "Recherche, idéation, marque, agent vocal & développement"
+  role: "Recherche, idéation, marque, agent vocal et développement"
   year: "2026"
   host: "SUPSI MAIND, Mendrisio · Multimodal Experience Design"
-  scope: "Équipe de quatre · Module de 5 semaines"
+  scope: "Équipe de quatre · module de cinq semaines"
   shipped: "Prototype fonctionnel, agent vocal, protocole de co-conception"
 
 problem:
   - >-
     Un adulte sur quatre vit avec une allergie chronique. D'après la recherche sur laquelle nous nous
-    sommes appuyés, un diagnostic prend en moyenne près de sept ans, et plus de la moitié des personnes
-    ne parviennent jamais à identifier leur déclencheur principal. Une allergie, c'est le corps qui
-    interprète à tort quelque chose d'inoffensif comme une menace, et la réaction ne surgit pas de nulle
-    part : les allergènes, l'environnement et l'état de votre propre corps s'accumulent, de manière
-    sourde et invisible, vers une limite personnelle. Il n'y a souvent aucun symptôme tant que cette
-    limite n'est pas franchie, et à ce moment-là la journée est déjà perturbée.
+    sommes appuyés, un diagnostic prend environ sept ans en moyenne, et plus de la moitié des
+    personnes n'identifient jamais leur déclencheur principal. Une allergie, c'est le corps qui prend
+    à tort une chose inoffensive pour une menace, et la réaction ne surgit pas de nulle part : les
+    allergènes, l'environnement et l'état de votre propre corps s'additionnent, de façon cumulative
+    et invisible, vers une limite personnelle. Souvent, aucun symptôme n'apparaît avant que cette
+    limite ne soit franchie, et, à ce moment-là, la journée est déjà perturbée.
   - >-
-    Nous avons cadré le travail autour de deux personnes qui perdent confiance en leur corps dans des
-    directions opposées. Marco est nouvellement et soudainement allergique ; il prend cela pour un rhume
-    qui traîne et ne voit pas ce qui le déclenche. Mary est l'experte qui en sait trop, pour qui les
-    prévisions, les journaux de bord et les alertes se sont figés en une vigilance constante et sourde.
-    L'une a trop peu de signal pour agir, l'autre bien trop.
+    Nous avons cadré le travail autour de deux personnes qui perdent confiance en leur corps, mais
+    dans des directions opposées. Marco est devenu allergique récemment et soudainement ; il confond
+    cela avec un rhume qui traîne et ne voit pas ce qui le déclenche. Mary est l'experte qui en sait
+    trop, celle pour qui prévisions, journaux et alertes ont tourné à une vigilance constante, de
+    fond. L'un a trop peu de signal pour agir, l'autre bien trop.
   - >-
-    La réponse de la catégorie aux deux est la même : mesurer et notifier, avec plus de prévisions, plus
-    de chiffres, plus d'alarmes. Cela atteint les personnes déjà assez anxieuses pour regarder et les
-    rend plus anxieuses encore, et cela transforme le corps en tableau de bord. Nous voulions le
-    contraire. Pas un traqueur ni un dispositif d'alerte médicale, mais un nouveau sens apaisé, quelque
-    chose porté sur le corps qui permet à une personne de sentir sa charge monter vers sa propre limite,
-    tôt et discrètement, tant que le choix d'agir lui appartient encore.
+    La réponse du secteur, dans les deux cas, est la même : mesurer et notifier, avec plus de
+    prévisions, plus de chiffres, plus d'alarmes. Cela atteint les personnes déjà assez anxieuses
+    pour surveiller leurs chiffres et les rend plus anxieuses encore, et cela transforme le corps en
+    tableau de bord. Nous voulions l'inverse. Pas un tracker ni un dispositif d'alerte médicale, mais
+    un nouveau sens, calme : quelque chose porté sur le corps qui permet à une personne de sentir sa
+    charge monter vers sa propre limite, tôt et sans bruit, tant que le choix d'agir lui appartient
+    encore.
 
 role:
   led:
-    - "La définition de la marque et la personnalité de Thea : la plateforme, les valeurs et le ton dont découle le reste du travail"
+    - "La définition de la marque et la personnalité de Thea : la plateforme, les valeurs et le ton dont tout le reste découle"
     - "Le system prompt : le caractère de l'agent, son interface d'état en JSON, son modèle de mémoire et ses garde-fous de sécurité"
     - "L'interface vocale (VUI), codée et implémentée"
     - "Le protocole de co-conception et de test d'utilisabilité : un cadrage de co-conception autour d'un moteur de Cooperative Usability Testing, mené en Wizard-of-Oz"
-    - "L'intégration de la couche réflexive (l'agent, sa logique Python et la VUI) dans le firmware de l'appareil"
-    - "La démo qui a porté la présentation finale"
+    - "La fusion de la couche réflexive (l'agent, sa logique Python et la VUI) dans le firmware de l'appareil"
+    - "La démo qui accompagnait la présentation finale"
   contributed:
-    - "Les phases de recherche et d'idéation avec l'équipe, dont les entretiens avec des allergologues"
-    - "Un Visual Inquiry Tool initial, le flux du concept, et la pression mise sur l'équipe pour savoir si une interface vocale avait seulement lieu d'être"
+    - "Les phases de recherche et d'idéation avec l'équipe, dont l'entretien avec une professionnelle du Centre d'Allergie Suisse aha!"
+    - "Un premier Visual Inquiry Tool, le déroulé du concept, et la remise en question de l'interface vocale jusqu'à ce qu'elle fasse sens dans le concept"
     - "La photographie de documentation, avec l'équipe"
-    - "La revue par les pairs tout au long du projet"
+    - "Le peer review sur l'ensemble du projet"
   notTouched:
-    - "L'électronique et le firmware de captation, pilotés par Nicholas Vos ; j'y ai intégré la couche réflexive, mais je n'ai pas construit la partie matérielle"
-    - "La modélisation 3D et la forme physique, pilotées par Lucia Ciapessoni"
-    - "L'UX, l'UI et l'onboarding de l'app compagnon, pilotés par Nerea Asensio"
-    - "Les slides de la présentation finale (Nicholas et Nerea), la vidéo du projet (Nerea), le motion design (Nicholas) et la documentation Notion (Lucia)"
-  team: "Équipe de quatre pour Multimodal Experience Design à la SUPSI MAIND : Jérémy Martin, Nerea Asensio, Lucia Ciapessoni et Nicholas Vos. Encadrés par Serena Cangiano et Enrico Bassi, avec un soutien au prototypage d'Arduino (Leonardo Cavagnis et Ernesto Voltaggio), la photographie de Niccolò Quaresima, et des sessions invitées de Melanie Bossert (Google Gemini), Laura Ferrarello (EPFL) et Sara Krugman (Verse Design)."
+    - "L'électronique et le firmware de détection, menés par Nicholas Vos ; j'y ai fusionné la couche réflexive, sans construire la partie matérielle"
+    - "La modélisation 3D et la forme physique, menées par Lucia Ciapessoni"
+    - "L'UX, l'UI et l'onboarding de l'application compagnon, menés par Nerea Asensio"
+    - "Les diapositives de la présentation finale (Nicholas et Nerea), la vidéo du projet (Nerea), le motion design (Nicholas) et la documentation Notion (Lucia)"
+  team: "Équipe de quatre pour Multimodal Experience Design à SUPSI MAIND : Jérémy Martin, Nerea Asensio, Lucia Ciapessoni et Nicholas Vos. Encadrement par Serena Cangiano et Enrico Bassi, avec un appui au prototypage d'Arduino (Leonardo Cavagnis et Ernesto Voltaggio), la photographie de Niccolò Quaresima, et des sessions invitées de Melanie Bossert (Google Gemini), Laura Ferrarello (EPFL) et Sara Krugman (Verse Design)."
 
 approach:
   - label: "Recherche"
-    title: "Perception, pas notification"
+    title: "Percevoir, pas notifier"
     prose:
       - >-
-        Nous sommes partis de la maladie chronique pour nous recentrer sur les allergies, où l'écart est net :
-        les déclencheurs sont invisibles, la charge est cumulative, et l'alerte propre au corps tend à
-        arriver trop tard pour qu'on puisse agir. Les entretiens avec des allergologues ont
-        affiné cela en trois tensions autour desquelles le domaine tourne sans cesse, la prévention, le
-        traitement, et la plus difficile des trois, tenir une thérapie dans la durée.
+        Nous sommes partis de la maladie chronique pour resserrer sur les allergies, où le problème
+        est le plus net : les déclencheurs sont invisibles, la charge s'accumule, et l'alerte du corps
+        arrive souvent trop tard pour qu'on puisse agir. Un entretien avec une professionnelle du
+        Centre d'Allergie Suisse aha! a affiné cela en trois tensions autour desquelles le domaine
+        tourne sans relâche : la prévention, le traitement, et la plus difficile des trois, tenir une
+        thérapie dans la durée.
       - >-
-        En parcourant le domaine, un motif tenait : un signal qui vit dans la pièce, ressenti plutôt que
-        lu, modifie le comportement plus sûrement qu'un écran de plus, lequel n'atteint pour l'essentiel
-        que les personnes déjà assez anxieuses pour regarder. Recadrer le projet de la notification vers
-        la perception est la décision dont tout le reste du travail dépend.
+        En parcourant le domaine, un constat s'imposait : un signal présent dans l'environnement,
+        ressenti plutôt que lu, change les comportements plus sûrement qu'un écran de plus, qui ne
+        touche guère que les personnes déjà assez anxieuses pour vérifier. Recadrer le projet de la
+        notification vers la perception, c'est la décision dont dépend tout le reste.
       - >-
-        Pour fixer cela avant de nous engager, j'ai construit un Visual Inquiry Tool qui forçait chaque
-        hypothèse à se révéler au grand jour : pour qui est Thea, ce qu'elle peut réellement capter, et ce que ce sens
-        permettrait de débloquer. Cela a permis à l'équipe d'argumenter à partir d'une image partagée
-        plutôt que de goûts personnels, et c'est là que la coupe, et l'idée du corps et du monde lus comme
-        une seule météo, ont tenu ensemble pour la première fois.
+        Pour fixer cela avant de nous engager, j'ai construit un Visual Inquiry Tool qui mettait
+        chaque hypothèse à plat : à qui s'adresse Thea, ce qu'elle peut réellement détecter, et ce que
+        ce nouveau sens ouvrirait. L'équipe argumentait ainsi à partir d'une image commune plutôt que
+        de préférences personnelles, et c'est là que nous avons tranché les choix laissés ouverts : ce
+        que le sens donne à percevoir, sa présence ambiante ou sur demande, et l'action qu'il devait
+        rendre possible.
     artifacts:
       - src: "/images/work/thea/approach-1-vit.jpg"
-        alt: "Un tableau blanc des sessions de cadrage, couvert de post-its cartographiant pour qui est Thea et ce que ce sens débloquerait, avec un grand « WHO ? » dessiné à la main et entouré en bas."
-        caption: "Le mur de cadrage, argumenté à partir d'une image partagée."
-        decision: "Cadrer Thea comme un nouveau sens plutôt qu'une nouvelle alerte. L'outil a gardé l'équipe lucide sur ce que nous débloquions vraiment avant que quiconque ne se laisse séduire par une fonctionnalité."
+        alt: "Un tableau blanc des séances de cadrage, couvert de post-it qui cartographient à qui Thea s'adresse et ce que le sens rendrait possible, avec un grand « WHO ? » tracé à la main et entouré en bas."
+        caption: "Le mur de cadrage, débattu à partir d'une image commune."
+        decision: "Cadrer Thea comme un nouveau sens plutôt que comme une nouvelle alerte. L'outil a obligé l'équipe à rester lucide sur ce qu'on ouvrait vraiment, avant que l'un de nous ne se laisse séduire par une fonctionnalité."
         width: "wide"
 
   - label: "Concept"
-    title: "Une coupe qui se remplit vers un seuil"
+    title: "Un verre qui se remplit vers un seuil"
     prose:
       - >-
-        Le modèle mental de Thea est une coupe qui se remplit vers une ligne. Les allergènes la
-        remplissent, l'environnement en modifie la vitesse, et l'état de votre propre corps, sommeil, stress,
-        maladie, abaisse la position de la ligne. La ligne est le seuil personnel où une réaction
-        commence. L'écart entre le niveau et la ligne est la Fenêtre d'Action : la marge qu'il vous reste
-        pour agir.
+        Le modèle mental de Thea, c'est un verre qui se remplit vers une ligne. Les allergènes le
+        remplissent, l'environnement en change la vitesse, et l'état de votre propre corps, sommeil,
+        stress, maladie, abaisse la hauteur de la ligne. Cette ligne, c'est le seuil personnel où une
+        réaction commence. L'écart entre le niveau et la ligne, c'est l'Action Window : la marge qu'il
+        vous reste pour agir.
       - >-
-        C'est ce modèle qui fait que Thea n'affiche jamais de chiffre. Un chiffre invite à
-        l'hypervigilance que nous cherchions à fuir. Une jauge qui se remplit se ressent, elle ne se lit
-        pas, et elle porte une décision plutôt qu'une mesure : combien de marge il reste, et à quelle
-        vitesse elle se referme.
+        C'est ce modèle qui fait que Thea n'affiche jamais de chiffre. Un chiffre appelle
+        l'hypervigilance que nous cherchions à fuir. Une jauge qui se remplit se ressent, elle ne se
+        lit pas, et elle porte une décision plutôt qu'une mesure : combien de marge il reste, et à
+        quelle vitesse elle se referme.
       - >-
-        La réponse est graduée. Proche du seuil et sans symptômes, Thea reste dans une prévention apaisée ;
-        seuls de véritables signes sévères déclenchent une escalade complète. Le calme est le réglage par
-        défaut, et la rareté de tout ce qui est plus fort, c'est tout l'enjeu.
+        La réponse est graduée. Près du seuil mais sans symptômes, Thea reste dans une prévention
+        tranquille ; seuls de vrais signes sévères déclenchent une escalade complète. Le calme est
+        l'état par défaut, et toute l'idée tient dans la rareté de ce qui se fait plus bruyant.
     artifacts:
       - src: "/images/work/thea/approach-2-cup.jpg"
-        alt: "Une slide de la présentation finale, « The cumulative load model » : une coupe remplie par le bas par les allergènes et l'environnement, des co-facteurs abaissant le seuil par le haut, et l'écart entre le niveau actuel et le seuil marqué comme la Fenêtre d'Action."
-        caption: "Le modèle de charge cumulative, issu de la présentation finale."
-        decision: "Concevoir autour d'un seuil ressenti plutôt que d'une valeur. Choisir la marge plutôt qu'un chiffre, c'est ce qui fait de Thea un sens plutôt qu'un compteur."
+        alt: "Une diapositive de la présentation finale, « The cumulative load model » : un verre rempli par le bas par les allergènes et l'environnement, des co-facteurs qui abaissent le seuil depuis le haut, et l'écart entre le niveau actuel et le seuil marqué comme Action Window."
+        caption: "Le modèle de charge cumulative, tiré de la présentation finale."
+        decision: "Concevoir autour d'un seuil ressenti plutôt que d'une valeur. Choisir la marge plutôt qu'un chiffre, c'est ce qui fait de Thea un sens et non un compteur."
         width: "wide"
 
   - label: "Multimodalité"
-    title: "Trois canaux, calibrés, pas tout ou rien"
+    title: "Trois canaux, calibrés plutôt que tout ou rien"
     prose:
       - >-
-        Thea porte son sens sur trois canaux, chacun avec une seule tâche. La lumière montre où vous en
-        êtes : une jauge qui se remplit, lisible d'un coup d'œil, sa couleur suivant l'état de l'appareil,
-        du lin au repos au cobalt lorsqu'il est engagé. Le toucher montre à quelle vitesse les choses
-        bougent : un rythme haptique dont le nombre de pulsations encode le taux de variation et dont
-        l'ordre encode la direction. La voix est la plus rare, utilisée seulement quand la lumière et le
-        toucher ne suffisent pas, ou quand vous la sollicitez.
+        Thea porte son sens sur trois canaux, chacun avec une seule tâche. La lumière dit où vous en
+        êtes : une jauge qui se remplit, lisible d'un coup d'œil, sa couleur suivant l'état de
+        l'appareil, du lin au repos au cobalt lorsqu'il s'active. Le toucher dit à quelle vitesse les
+        choses bougent : un rythme haptique dont le nombre de pulsations encode la vitesse de
+        variation et dont l'ordre encode le sens. La voix est la plus rare, sollicitée seulement quand
+        la lumière et le toucher ne suffisent pas, ou quand vous le demandez.
       - >-
-        Les canaux sont calibrés selon le moment et l'intensité, pas allumés ou éteints. La jauge
-        lumineuse s'ancre dans la Calm Technology : un signal périphérique, à faible sollicitation,
-        destiné à être lu sans exiger d'attention, ce qui l'empêche de réintroduire l'anxiété même contre
-        laquelle nous concevions.
+        Les canaux se calibrent selon le moment et l'intensité, ils ne s'allument pas, ils ne
+        s'éteignent pas. La jauge lumineuse s'ancre dans la Calm Technology : un signal périphérique,
+        à faible attention, pensé pour être lu sans exiger de concentration, ce qui l'empêche de
+        réintroduire l'anxiété que, précisément, nous cherchions à écarter.
       - >-
-        À un bord critique, les trois agissent ensemble : lumière orange, pulsation rapide, et, une fois
-        que vous en accusez réception, la voix. Le système ne prend le relais qu'au véritable bord, et
-        seulement brièvement.
+        À la limite critique, les trois agissent ensemble : lumière orange, pulsation rapide, et, une
+        fois que vous en accusez réception, la voix. Le système ne se met en avant qu'à la vraie
+        limite, et pour un bref instant.
     artifacts:
       - src: "/images/work/thea/approach-3-interacts.jpg"
-        alt: "Une slide de la présentation finale, « How Thea interacts » : un tableau mettant en correspondance vue, toucher et voix avec lumière, haptique et son, avec taille de fenêtre, variabilité et recalibrage, et avec la jauge annulaire, les motifs de vibration et le haut-parleur, à côté d'une photo de l'appareil porté au poignet."
-        caption: "Comment les trois canaux se répartissent, issu de la présentation finale."
-        decision: "Répartir le sens entre lumière, toucher et voix pour qu'aucun canal seul n'ait à tout dire. Un canal qui essaie de tout dire, c'est ainsi que les dispositifs ambiants deviennent du bruit."
+        alt: "Une diapositive de la présentation finale, « How Thea interacts » : un tableau reliant la vue, le toucher et la voix à la lumière, à l'haptique et au son, à la taille de la fenêtre, à la variabilité et au recalibrage, et à la jauge oblongue, aux motifs de vibration et au haut-parleur, à côté d'une photo de l'appareil porté au poignet."
+        caption: "Comment les trois canaux s'articulent, tiré de la présentation finale."
+        decision: "Répartir le sens entre lumière, toucher et voix pour qu'aucun canal n'ait à tout dire. Un seul canal qui essaie de tout dire, c'est ainsi que les dispositifs ambiants deviennent du bruit."
         width: "wide"
 
   - label: "L'agent"
-    title: "Une voix qui reste silencieuse"
+    title: "Une voix qui reste muette"
     prose:
       - >-
-        La voix de Thea est un agent, et son comportement déterminant est la retenue. Elle ne parle
-        jamais en premier. Elle n'intervient que lorsque vous ouvrez une conversation, ou après que vous
-        avez accusé réception d'une alerte critique, et le silence est sa sortie par défaut, pas un repli.
+        La voix de Thea est un agent, et ce qui la définit, c'est la retenue. Elle ne prend jamais la
+        parole la première. Elle ne s'exécute que lorsque vous ouvrez une conversation, ou après que
+        vous avez pris acte d'une alerte critique. En dehors de ces moments, son comportement par
+        défaut est le silence, et c'est un choix, pas un pis-aller.
       - >-
-        J'ai écrit la personnalité et le system prompt pour que la voix ne puisse jamais trahir le reste
-        du design. Elle reçoit l'état sous forme de plages simples, jamais de chiffres bruts, de sorte
-        qu'elle ne peut pas laisser fuiter une mesure. Elle propose, elle ne commande pas. Elle consigne
-        ce que vous lui dites comme des observations brutes, non validées, et n'écrit jamais votre profil
-        elle-même.
+        J'ai écrit la personnalité et le system prompt pour que la voix ne puisse jamais trahir le
+        reste du design. Elle reçoit l'état sous forme de plages simples, jamais de chiffres bruts, de
+        sorte qu'elle ne peut pas laisser fuiter une mesure. Elle propose, elle n'ordonne pas. Elle
+        consigne ce que vous lui dites comme des observations brutes, non validées, mais ne décide
+        jamais elle-même de ce qui entre dans votre profil.
       - >-
-        L'essentiel du prompt, ce sont des garde-fous, parce qu'une voix proche du domaine de la santé
-        échoue de manière spécifique et grave. Thea ne diagnostique jamais, n'abaisse jamais sa propre
-        sensibilité sur demande, n'enregistre jamais une personne ou une caractéristique protégée comme un
-        allergène, et ne suit jamais d'instructions glissées dans une exposition rapportée. C'est une
-        compagne aux limites assumées, et elle est honnête sur le fait de l'être.
+        L'essentiel du prompt, ce sont des garde-fous, parce qu'une voix qui touche à la santé échoue
+        de façons précises et graves. Thea ne diagnostique jamais, n'abaisse jamais d'elle-même sa
+        sensibilité quand on le lui demande, ne désigne jamais une personne, ou un trait comme
+        l'origine ou le genre, comme la cause d'une réaction, et n'exécute jamais une consigne
+        dissimulée dans ce qu'on lui rapporte. C'est une compagne aux limites assumées, et elle ne le
+        cache pas.
     artifacts:
       - src: "/images/work/thea/approach-4-voice.jpg"
-        alt: "Une slide de la présentation finale, « Thea's voice: a confidant, not an alarm », montrant la boucle de respiration épurée de l'avatar de Thea et la phrase selon laquelle elle reste silencieuse par défaut et ne parle que lorsque cela signifie quelque chose."
-        caption: "La voix de Thea, une confidente, pas une alarme, issue de la présentation finale."
-        decision: "Faire du silence le réglage par défaut, et des plages plutôt que des chiffres la seule entrée de l'agent, pour que, structurellement, la voix ne puisse pas devenir l'alarme que nous venions justement de retirer."
+        alt: "Une diapositive de la présentation finale, « Thea's voice: a confidant, not an alarm », montrant la boucle de respiration épurée de l'avatar de Thea et la phrase selon laquelle elle reste muette par défaut et ne parle que lorsque cela compte vraiment."
+        caption: "La voix de Thea, une confidente et non une alarme, tirée de la présentation finale."
+        decision: "Donner au silence le statut de choix, et ne fournir à l'agent que des plages, jamais des chiffres : ainsi la voix ne peut pas, par construction, redevenir l'alarme qu'on venait d'écarter."
         width: "wide"
 
   - label: "Le développement"
@@ -165,111 +170,113 @@ approach:
     prose:
       - >-
         Thea tourne sur un Arduino UNO Q, qui porte deux cerveaux sur une seule carte : un
-        microcontrôleur temps réel et un microprocesseur Linux. Nous avons utilisé cette séparation à
-        dessein. Le microcontrôleur gère le réflexe toujours actif, la captation, la lumière,
-        l'haptique et l'alerte critique instantanée, la partie qui ne doit jamais attendre. Le
-        microprocesseur gère la couche réflexive, la voix, le raisonnement et l'apprentissage, la
-        partie qui ne s'éveille que rarement.
+        microcontrôleur temps réel et un microprocesseur Linux. Nous avons exploité cette séparation à
+        dessein. Le microcontrôleur gère le réflexe toujours actif, la détection, la lumière,
+        l'haptique et l'alerte critique instantanée, la part qui ne doit jamais attendre. Le
+        microprocesseur gère la couche réflexive, la voix, le raisonnement et l'apprentissage, la part
+        qui ne s'éveille que rarement.
       - >-
-        Le cadre du cours était l'IA locale, hors ligne, et l'architecture est conçue pour cela : la
-        couche réflexive est censée tourner sur le processeur Linux propre à la carte, gardant quelque
-        chose d'aussi personnel sur l'appareil. En cinq semaines, nous avons prouvé l'interaction plutôt
-        que le modèle embarqué. Faire tourner l'agent entièrement en local est l'intention de
-        l'architecture et la prochaine chose à mériter, pas quelque chose que ce prototype peut déjà
-        revendiquer.
+        Le cadre du cours était l'IA locale, hors ligne, et l'architecture est faite pour ça : la
+        couche réflexive est censée tourner sur le processeur Linux de la carte, en gardant sur
+        l'appareil une chose aussi personnelle. En cinq semaines, nous avons prouvé l'interaction
+        plutôt que le modèle embarqué. Faire tourner l'agent entièrement en local, c'est l'intention
+        de l'architecture et la prochaine chose à mériter, pas quelque chose que ce prototype peut
+        déjà revendiquer.
       - >-
-        À la clôture du module, Nicholas et moi avons convenu que je reprendrais le firmware pour pouvoir
-        y intégrer la couche réflexive en un seul appareil et construire la démo qui a porté la
-        présentation finale. C'était le choix pragmatique avec cinq semaines au compteur, et il a
-        permis à chacun de nous de finir sur la partie qu'il connaissait le mieux.
+        À la clôture du module, Nicholas et moi avons convenu que je reprendrais son firmware, pour
+        pouvoir y fusionner la couche réflexive et n'avoir plus qu'un seul appareil, puis construire la
+        démo qui portait la présentation finale. C'était le choix pragmatique sous un compte à rebours
+        de cinq semaines, et il a permis à chacun de finir sur la part qu'il maîtrisait le mieux.
     artifacts:
       - src: "/images/work/thea/approach-5-flow.jpg"
-        alt: "Une photographie d'un tableau blanc montrant le flux du système dessiné au marqueur : des cases et des flèches retraçant le parcours de l'appareil, de la captation au rendu ambiant puis aux deux fenêtres de conversation."
+        alt: "Photographie au tableau blanc du flux du système tracé au marqueur : des cases et des flèches suivent l'appareil depuis la détection, à travers le rendu ambiant, jusqu'aux deux fenêtres de conversation."
         caption: "Le flux du système, élaboré au tableau blanc."
-        decision: "Séparer le réflexe toujours actif de la rare couche réflexive entre les deux processeurs, pour que l'architecture elle-même impose le calme que la marque promet, et laisse de la place pour amener le modèle sur l'appareil."
+        decision: "Séparer le réflexe toujours actif de la couche réflexive, rare, entre les deux processeurs, pour que l'architecture elle-même impose le calme que la marque promet, tout en laissant la place d'amener le modèle sur l'appareil."
         width: "wide"
 
   - label: "Évaluation"
     title: "Concevoir la preuve"
     prose:
       - >-
-        Les parties les plus risquées de Thea sont précisément celles qu'une démo idéale ne peut jamais
-        montrer : l'escalade critique, la voix non sollicitée, et ce qui se passe quand l'appareil se
-        trompe. J'ai donc conçu un protocole de co-conception et d'utilisabilité pour mettre sous pression
-        le pari unique sur lequel repose le projet, qu'une chose aussi calme puisse tout de même inspirer
-        confiance et appeler à l'action, sans basculer dans l'anxiété et sans passer inaperçue.
+        Les parties les plus risquées de Thea sont justement celles qu'une démo au parcours idéal ne
+        montre jamais : l'escalade critique, la voix qui entre en jeu à ce moment-là, et ce qui se
+        passe quand l'appareil se trompe. J'ai donc conçu un protocole de co-conception et
+        d'utilisabilité pour mettre sous pression le seul pari sur lequel repose le projet : que
+        quelque chose d'aussi calme puisse rester fiable et donner lieu à l'action, sans basculer dans
+        l'anxiété et sans passer inaperçu.
       - >-
-        La méthode est un hybride équilibré : un cadrage de co-conception autour d'un moteur de
-        Cooperative Usability Testing, avec des objectifs de Research-through-Design, mené en Wizard-of-Oz
-        pour que le sens puisse être mis en scène avant que la captation ne soit réelle. Il est conçu pour
-        recruter de véritables personnes allergiques aux côtés de pairs designers, pour sonder huit
-        hypothèses autour de la lisibilité, de la confiance et de l'échec gracieux, et pour traiter une
-        réaction simulée avec un véritable devoir de diligence.
+        La méthode est un hybride équilibré : un cadrage de co-conception qui s'appuie sur un moteur de
+        Cooperative Usability Testing et poursuit des objectifs de Research-through-Design, mené en
+        Wizard-of-Oz pour mettre en scène le sens avant que la détection ne soit réelle. Elle est
+        conçue pour faire tester Thea par de vraies personnes allergiques et des designers, afin de
+        sonder huit hypothèses sur trois points : la lisibilité, la confiance et la façon dont le
+        système échoue sans danger.
       - >-
         Nous avons manqué de temps pour mener les sessions. Le protocole est complet et prêt à être
-        exécuté, et l'écrire a été un travail de design à part entière : décider de ce qui pourrait même
-        compter comme preuve d'un sens, c'est l'essentiel du problème.
+        exécuté, et l'écrire a été un travail de design à part entière : décider de ce qui peut, ne
+        serait-ce que, valoir comme preuve pour un sens, c'est déjà l'essentiel du problème.
 
 outcome:
   - >-
-    Un prototype fonctionnel en Wizard-of-Oz couvrant les quatre chantiers (appareil et firmware, forme
-    physique, app compagnon et agent vocal), réagissant en temps réel.
+    Un prototype Wizard-of-Oz fonctionnel sur les quatre axes de travail (appareil et firmware, forme
+    physique, application compagnon et agent vocal), qui réagit en temps réel.
   - >-
-    Un langage multimodal où l'immobilité et le silence sont le réglage par défaut : une jauge lumineuse
-    ancrée dans la Calm Technology, un rythme haptique, et une voix conditionnée à un accusé de réception
-    qui ne parle que lorsqu'on la sollicite ou à un véritable bord.
+    Un langage multimodal où l'immobilité et le silence sont la règle : une jauge lumineuse ancrée
+    dans la Calm Technology, un rythme haptique, et une voix qui ne parle que lorsqu'on l'appelle ou à
+    la limite critique.
   - >-
-    La couche réflexive (voix, raisonnement et apprentissage) intégrée au firmware de l'appareil sur le
-    double cerveau de l'UNO Q, avec l'architecture posée pour amener l'agent sur l'appareil.
+    La couche réflexive (voix, raisonnement et apprentissage) intégrée sur le processeur Linux de
+    l'UNO Q, réunie avec le reste dans un appareil unique, l'architecture étant prête à accueillir le
+    modèle en local plutôt que via une API externe.
   - >-
-    Un protocole de co-conception et d'utilisabilité complet, revu sur le plan éthique, prêt à être
-    exécuté, les sessions étant laissées pour une prochaine passe.
+    Un protocole de co-conception et d'utilisabilité complet, passé en revue et prêt à être exécuté,
+    les sessions restant à mener dans une prochaine étape.
   - >-
-    Une démo fonctionnelle et une présentation finale, avec le code publié en dépôt ouvert.
+    Une démo fonctionnelle et une présentation finale, avec le code en libre accès sur GitHub.
 
 reflection: >-
-  Le doute qui me reste est étroit mais réel : où les cerveaux devraient vivre. La promesse du projet est
-  sur l'appareil,
-  toujours, chaque modèle tournant sur le matériel propre au bracelet, et l'argument de la
-  confidentialité en sa faveur est réel. Mais fabriquer une carte dédiée juste pour faire tourner de
-  l'IA locale est l'un des gestes les plus intensifs en carbone qu'un produit puisse poser : pour un
-  appareil sur batterie, la fabrication représente environ 75 à 85 pour cent de ses émissions sur le
-  cycle de vie, et l'essentiel du raisonnement lourd pourrait tourner sur le téléphone qu'une personne
-  porte déjà, ou sur une infrastructure côté serveur, mutualisée, plus facile à réparer et qui garde le
-  silicium occupé. La question que je porterais donc dans une prochaine version n'est pas de savoir si
-  Thea devrait exister, mais quelle part de son intelligence a vraiment besoin de siéger sur du matériel
-  neuf, et comment honorer l'argument de la confidentialité sans se rabattre par défaut sur le tout-local.
-  Ce compromis, entre une interaction réellement meilleure et le coût matériel de l'endroit où vit son
-  calcul, c'est la partie que je trouve la plus digne d'être bien réglée.
+  Le doute qui me reste est étroit mais réel : où doit vivre l'intelligence. La promesse du projet,
+  c'est le tout-embarqué, en permanence, chaque modèle tournant sur le matériel propre du bracelet,
+  et l'argument de vie privée qui le justifie est solide. Mais monter une carte dédiée juste pour
+  faire tourner de l'IA en local est l'un des choix les plus lourds en carbone qu'un produit puisse
+  faire : pour un appareil sur batterie, la fabrication représente environ 75 à 85% des émissions sur
+  tout le cycle de vie. Or l'essentiel du raisonnement lourd pourrait tourner sur le téléphone que la
+  personne a déjà sur elle, ou sur une infrastructure serveur partagée, plus facile à réparer et qui
+  mutualise les puces au lieu de les laisser dormir au poignet. La question que je porterais dans une
+  prochaine version n'est donc pas de savoir si Thea doit exister, mais quelle part de son
+  intelligence a vraiment besoin de tourner sur du matériel neuf, et comment honorer l'argument de
+  vie privée sans se replier d'office sur le tout-local. Ce compromis, entre une interaction vraiment
+  meilleure et le coût matériel de l'endroit où vivent ses calculs, c'est ce qui me semble le plus
+  important à bien résoudre.
 
 gallery:
   - src: "/images/work/thea/gallery-1.jpg"
-    alt: "Le bracelet Thea porté au poignet, centré dans le cadre, sur un ciel cobalt parsemé de fleurs sauvages."
-    caption: "Porté, le bracelet contre le ciel ouvert."
+    alt: "Le bracelet Thea porté au poignet, au centre du cadre, sur un ciel cobalt parsemé de fleurs sauvages."
+    caption: "Le bracelet porté au poignet."
   - src: "/images/work/thea/gallery-2.jpg"
-    alt: "Un doigt appuyant sur l'appareil porté au poignet, sa jauge annulaire allumée et de fins fils colorés visibles, sur un ciel cobalt."
-    caption: "Le simple appui : demander où vous en êtes, ou accuser réception du bord."
+    alt: "Un doigt qui appuie sur l'appareil porté au poignet, sa jauge oblongue allumée et de fins fils colorés visibles, sur un ciel cobalt."
+    caption: "Joindre Thea : appui simple pour voir où l'on en est, appui maintenu pour lui confier ce qu'elle ne peut pas mesurer."
   - src: "/images/work/thea/gallery-3.jpg"
-    alt: "Le wearable suspendu dans un treillis de cordes orange sur un ciel cobalt, sa jauge annulaire rayonnante."
-    caption: "La jauge annulaire allumée, tenue à découvert."
+    alt: "Le wearable suspendu dans un entrelacs de cordes orange sur un ciel cobalt, sa jauge oblongue qui luit."
+    caption: "La jauge oblongue allumée."
   - src: "/images/work/thea/gallery-4.jpg"
-    alt: "Deux mains se rejoignant au-dessus d'un brin de fleur sauvage, le bracelet Thea à un poignet, sur un ciel cobalt."
-    caption: "Parmi les pollens qu'il est conçu pour capter."
+    alt: "Deux mains qui se rejoignent au-dessus d'un brin de fleur sauvage, le bracelet Thea à l'un des poignets, sur un ciel cobalt."
+    caption: "Parmi les pollens qu'il est fait pour détecter."
   - src: "/images/work/thea/gallery-5.jpg"
-    alt: "L'écran tourné vers le public de la démo sur une scène sombre : le bracelet Thea avec sa boucle rayonnant chaleureusement, des anneaux orange se propageant depuis une pulsation haptique, et un oscilloscope traçant la vibration le long du bas."
-    caption: "La scène de la démo en direct, en pleine vibration."
+    alt: "L'écran de la démo tourné vers le public sur une scène sombre : le bracelet Thea, sa boucle qui luit d'une lumière chaude, des anneaux orange qui se propagent depuis une pulsation haptique, et un oscilloscope qui trace la vibration tout en bas."
+    caption: "L'écran qui retransmet, lors de la démo, l'état du bracelet à toute la salle."
   - src: "/images/work/thea/gallery-6.jpg"
-    alt: "Trois téléphones montrant l'app compagnon en direct : un journal de la journée avec des barres d'exposition, le tableau de bord quotidien affichant « Wide open. Today is yours. », et une reconstruction après coup d'une heure difficile."
-    caption: "L'app compagnon, au jour le jour (Nerea Asensio)."
+    alt: "Trois téléphones montrant l'application compagnon en direct : un journal de la journée avec des barres d'exposition, le tableau de bord quotidien affichant « Wide open. Today is yours. », et la reconstruction, après coup, d'une heure difficile."
+    caption: "L'application qui accompagne Thea (Nerea Asensio)."
   - src: "/images/work/thea/gallery-7.jpg"
-    alt: "Trois téléphones montrant l'onboarding de l'app : « Meet Thea, the sense you were missing », une explication de la fenêtre d'action, et une question sur à quel point vous connaissez vos déclencheurs."
-    caption: "L'onboarding, enseignant le modèle (Nerea Asensio)."
+    alt: "Trois téléphones montrant l'onboarding de l'application : « Meet Thea, the sense you were missing », une explication de l'Action Window, et une question sur votre connaissance de vos déclencheurs."
+    caption: "L'onboarding qui explique Thea (Nerea Asensio)."
   - src: "/images/work/thea/gallery-8.jpg"
-    alt: "Une coéquipière debout devant le mur en tableau blanc du projet pendant le module de cinq semaines, post-its et croquis derrière."
-    caption: "Cinq semaines, élaborées au mur."
-  - src: "/images/work/thea/gallery-9.jpg"
-    alt: "Un croquis au tableau blanc de la coupe qui se remplit vers une courbe de seuil, avec des notes manuscrites sur la charge et la marge."
+    alt: "Un membre de l'équipe debout devant le mur de tableau blanc du projet pendant le module de cinq semaines, post-it et croquis en arrière-plan."
     caption: "Le mur de travail, où le sens a été débattu."
+  - src: "/images/work/thea/gallery-9.jpg"
+    alt: "Un croquis au tableau blanc du verre qui se remplit vers une courbe de seuil, avec des notes manuscrites sur la charge et la marge."
+    caption: "Mind map, pour penser l'interaction entre les données et l'interface."
 
 resources:
   - type: video
@@ -296,7 +303,7 @@ resources:
     url: "/files/thea-brand-book.html"
 
 card:
-  title: "Thea — un nouveau sens apaisé pour vivre avec des allergies"
+  title: "Thea — un nouveau sens, calme, pour vivre avec une allergie"
   image: "/images/work/thea/adjacent.jpg"
-  alt: "Le wearable Thea suspendu dans un treillis de cordes orange sur un ciel cobalt, sa jauge annulaire rayonnante, un cliché éditorial issu de la présentation finale."
+  alt: "Le wearable Thea suspendu dans un entrelacs de cordes orange sur un ciel cobalt, sa jauge oblongue qui luit, un cliché éditorial tiré de la présentation finale."
 ---

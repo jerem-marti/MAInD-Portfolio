@@ -3,7 +3,7 @@ title: "DataBloom"
 summary: "A tangible interface that makes the energy impact of digital usage perceptible at home. The flower's stem wilts as the household's weekly data consumption grows, and a light at the center signals the live data rate."
 status: "live"
 hero: "/images/work/databloom/hero.jpg"
-heroAlt: "The finished DataBloom flower in a small terracotta pot — cobalt-blue felt petals, a pale wooden center, a segmented green stem — on a white studio backdrop, surrounded by the 3D-printed parts and electronics it is built from."
+heroAlt: "The finished DataBloom flower in a small terracotta pot — cobalt-blue felt petals, a pale 3D-printed center, a segmented green stem — on a white studio backdrop, surrounded by the 3D-printed parts and electronics it is built from."
 
 brief:
   role: "Bachelor thesis, solo"
@@ -96,14 +96,14 @@ approach:
       - >-
         The flower's prototype did double duty. It tested whether people understood the wilting
         as a warning, and whether the motion was even feasible: a cable run through the stem,
-        pulled to bend it, as a simple proof of concept of the movement.
+        pulled to straighten it and released to let it bend, as a simple proof of concept of the movement.
       - >-
         A comparative user test put the two side by side. The flower won clearly. Its metaphor was
         understood without a word of explanation, where the character needed to be read and
         interpreted first. The flower became the object to build for real.
     artifacts:
       - src: "/images/work/databloom/approach-3-lowfi.jpg"
-        alt: "Two low-fidelity 3D-printed prototypes side by side: a white character with a screen-face slot, and a white daisy whose segmented stem has a cable run through it to bend the flower."
+        alt: "Two low-fidelity 3D-printed prototypes side by side: a white character with a screen-face slot, and a white daisy whose segmented stem has a cable run through it to actuate the flower."
         caption: "Low-fidelity prototypes — both 3D-printed for the comparative test."
         decision: "The flower's metaphor read instantly; the character had to be decoded. Comparative testing made the choice evidence-based, not personal taste."
         width: "wide"
@@ -133,12 +133,12 @@ approach:
       - src: "/images/work/databloom/approach-4-stem.jpg"
         alt: "Two close-ups of the 3D-printed stem: an early one-piece joint held with masking tape, and the final segmented version articulated with small M2 screws."
         caption: "Stem iterations — one-piece (broke) → segmented with screws (final)."
-        decision: "Segmented assembly cost more parts and longer build time, and bought cable routing plus field repair. For an object meant to live in a home, durability won."
+        decision: "Segmented assembly cost more parts and longer build time, and bought greater sturdiness plus cable routing. For an object meant to live in a home, durability won."
         width: "half"
       - src: "/images/work/databloom/approach-5-flowerhead.jpg"
-        alt: "Close-up of the flower head: cobalt felt petals around the pale wooden center that houses the light."
-        caption: "Flower head — light diffused through felt petals."
-        decision: "Diffusing the light through the felt rather than exposing it kept the object calm. A dimming curve was added once it proved too bright at night."
+        alt: "Close-up of the flower head: cobalt felt petals around the pale 3D-printed center that houses the light."
+        caption: "Flower head — light diffused through the 3D-printed center."
+        decision: "Diffusing the light through the printed center rather than exposing it kept the object calm; the felt petals are there for a warmer, more natural feel. A dimming curve was added once it proved too bright at night."
         width: "half"
       - src: "/images/work/databloom/approach-circuit.jpg"
         alt: "KiCad electrical schematic of the digital flower: an ESP32 Feather, a 74HCT08 logic buffer on veroboard, an MT3608 boost converter, an MG90S servo, a WS2812B LED, and a Lipo battery."
@@ -209,7 +209,7 @@ gallery:
     alt: "DataBloom on a desk beside an open laptop and a small live plant, its stem gently bent."
     caption: "On a desk — beside the screen time it reflects."
   - src: "/images/work/databloom/gallery-3.jpg"
-    alt: "Looking down into the flower: cobalt felt petals around a pale wooden center, the green stem entering the pot."
+    alt: "Looking down into the flower: cobalt felt petals around a pale 3D-printed center, the green stem entering the pot."
     caption: "From above — felt petals and center."
   - src: "/images/work/databloom/gallery-4.jpg"
     alt: "Printed parts from across the project laid out on foam beside a shipping box: the white low-fidelity daisy alongside the final green stem links, servo arm and electronics."
