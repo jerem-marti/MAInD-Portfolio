@@ -200,8 +200,8 @@ const intro = (locale: Locale): string => L(locale, 'intro',
   'Jérémy is finishing a Master of Arts in Interaction Design at SUPSI in Mendrisio, '
   + 'Switzerland, graduating 2027 and available from August 2026. His path runs from a four-year '
   + 'electronics apprenticeship (CFC) through a BSc in Media Engineering at HEIG-VD to interaction '
-  + 'design, and his practice spans hardware prototyping, front-end build, UX research, and service '
-  + 'design. He works in French (native) and English (B2). Contact: hi@jeremymartin.ch.')
+  + 'design, and his practice spans hardware prototyping, front-end build, and UX research. '
+  + 'He works in French (native) and English (B2). Contact: hi@jeremymartin.ch.')
 
 const corePages = (locale: Locale): string[] => [
   `- [${L(locale, 'pages.home', 'Home')}](${SITE_URL}${pageMdPath(locale, 'home')}): ${L(locale, 'pages.homeDesc', 'Point of view and the three featured case studies.')}`,
@@ -294,7 +294,7 @@ export function homeMarkdown(locale: Locale = 'en'): string {
     L(locale, 'home.indexNote', 'More work from the Master and Bachelor studies, beyond the three featured above.'),
     index,
     `## ${L(locale, 'home.hAbout', 'About')}`,
-    L(locale, 'home.about', `Jérémy's current focus is agentic experiences (AX), designed around user intent. His practice spans hardware prototyping, front-end build, UX research, and service design. Based in Mendrisio and Noréaz, Switzerland.`),
+    L(locale, 'home.about', `Jérémy's current focus is agentic experiences (AX), designed around user intent. His practice spans hardware prototyping, front-end build, and UX research. Based in Mendrisio and Noréaz, Switzerland.`),
     `## ${L(locale, 'home.hContact', 'Contact')}`,
     L(locale, 'home.contact', 'Available for internships from August 2026. Email hi@jeremymartin.ch. LinkedIn jermarti. Replies in French or English, usually within a few working days.'),
   ].join('\n\n')}\n`

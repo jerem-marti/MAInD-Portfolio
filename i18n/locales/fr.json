@@ -49,7 +49,7 @@
     "hoverRow": "Survolez une ligne.",
     "aboutLabel": "À propos",
     "aboutMeta": "Mendrisio · CH",
-    "aboutBody": "Jérémy se concentre aujourd'hui sur les expériences agentiques (AX), conçues autour de l'intention de l'utilisateur. Sa pratique couvre le prototypage, le développement front-end, l'UX design et le service design.",
+    "aboutBody": "Jérémy se concentre aujourd'hui sur les expériences agentiques (AX), conçues autour de l'intention de l'utilisateur. Sa pratique couvre le prototypage, le développement front-end et l'UX design.",
     "aboutMore": "En savoir plus sur Jérémy",
     "contactLabel": "Contact",
     "contactEmail": "E-mail",
@@ -313,7 +313,7 @@
     },
     "header": "Jérémy Martin — Designer d'interaction",
     "blockquote": "Portfolio de Jérémy Martin, designer d'interaction et de produit travaillant sur les expériences agentiques (AX) conçues autour de l'intention de l'utilisateur. Le site montre comment il pense : le processus est l'artefact, les résultats en sont la preuve. Ce fichier indexe le portfolio pour les modèles de langage.",
-    "intro": "Jérémy termine un master of arts en design d'interaction à la SUPSI de Mendrisio, en Suisse, diplômé en 2027 et disponible dès août 2026. Son parcours va d'un apprentissage d'électronique de quatre ans (CFC) à un BSc en ingénierie des médias à la HEIG-VD, puis au design d'interaction, et sa pratique couvre le prototypage hardware, le développement front-end, la recherche UX et le design de service. Il travaille en français (langue maternelle) et en anglais (B2). Contact : hi{'@'}jeremymartin.ch.",
+    "intro": "Jérémy termine un master of arts en design d'interaction à la SUPSI de Mendrisio, en Suisse, diplômé en 2027 et disponible dès août 2026. Son parcours va d'un apprentissage d'électronique de quatre ans (CFC) à un BSc en ingénierie des médias à la HEIG-VD, puis au design d'interaction, et sa pratique couvre le prototypage hardware, le développement front-end et la recherche UX. Il travaille en français (langue maternelle) et en anglais (B2). Contact : hi{'@'}jeremymartin.ch.",
     "pages": {
       "home": "Accueil",
       "homeDesc": "Point de vue et les trois études de cas mises en avant.",
@@ -339,7 +339,7 @@
       "hIndex": "Index",
       "indexNote": "D'autres projets issus du master et du bachelor, au-delà des trois mis en avant ci-dessus.",
       "hAbout": "À propos",
-      "about": "Jérémy se concentre aujourd'hui sur les expériences agentiques (AX), conçues autour de l'intention de l'utilisateur. Sa pratique couvre le prototypage, le développement front-end, l'UX design et le service design. Basé à Mendrisio et Noréaz, Suisse.",
+      "about": "Jérémy se concentre aujourd'hui sur les expériences agentiques (AX), conçues autour de l'intention de l'utilisateur. Sa pratique couvre le prototypage, le développement front-end et l'UX design. Basé à Mendrisio et Noréaz, Suisse.",
       "hContact": "Contact",
       "contact": "Disponible pour un stage dès août 2026. E-mail hi{'@'}jeremymartin.ch. LinkedIn jermarti. Réponse en français ou en anglais, généralement sous quelques jours ouvrables."
     },
