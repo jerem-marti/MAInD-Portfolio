@@ -25,7 +25,7 @@
     "portraitAlt": "Portrait studio de Jérémy Martin, cheveux bouclés mi-longs et moustache, en t-shirt noir sur un fond gris."
   },
   "home": {
-    "lede": "Interaction and product designer, actuellement engagé dans les expériences agentiques (AX) conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI Mendrisio, disponible dès août 2026.",
+    "lede": "Interaction and product designer, actuellement engagé dans les expériences agentiques (AX) conçues autour de l'humaine et de ses conséquences. Étudiant en master à la SUPSI Mendrisio, disponible dès août 2026.",
     "heroMeta": "00 / Portfolio · Jérémy Martin · 2026",
     "heroTitleLine1": "La méthode",
     "heroTitleLine2": "comme matière.",
@@ -61,7 +61,7 @@
     "metaTitle": "À propos",
     "metaDescription": "Étudiant en master de design d'interaction à la SUPSI Mendrisio, venu au design depuis l'électronique et l'ingénierie des médias. Disponible dès août 2026.",
     "heroLabel": "À propos",
-    "heroBody": "Je suis Jérémy Martin, interaction and product designer actuellement engagé dans des {emphasis} conçues autour de l'intention humaine et de ses conséquences. Je termine un master en design d'interaction à la SUPSI de Mendrisio, avec un parcours en électronique et en ingénierie des médias.",
+    "heroBody": "Je suis Jérémy Martin, interaction and product designer actuellement engagé dans des {emphasis} conçues autour de l'humaine et de ses conséquences. Je termine un master en design d'interaction à la SUPSI de Mendrisio, avec un parcours en électronique et en ingénierie des médias.",
     "heroEmphasis": "expériences agentiques (AX)",
     "storyLabel": "Comment j'en suis arrivé là",
     "storyP1": "Prenons les expériences agentiques : le plus difficile, ce n'est pas la génération. La génération est devenue bon marché ; {emphasis}, non. Le prompt lui-même n'est pas gratuit non plus : il mérite le même ancrage que n'importe quelle autre décision de design.",
@@ -90,7 +90,7 @@
       "languagesKey": "Langues",
       "languagesValue": "Français (langue maternelle) · Anglais (B2)",
       "basedKey": "Basé à",
-      "basedValue": "Mendrisio, Suisse",
+      "basedValue": "Mendrisio et Noréaz, Suisse",
       "availableKey": "Disponible",
       "availableValue": "Dès août 2026",
       "festivalKey": "Festival",
@@ -103,12 +103,12 @@
   },
   "contact": {
     "metaTitle": "Contact",
-    "metaDescription": "Écrivez à Jérémy Martin à hi{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio.",
+    "metaDescription": "Écrivez à Jérémy Martin à hi{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio et Noréaz.",
     "heroMeta": "00 / Contact",
     "heroTitle": "Écrivez-moi.",
     "essentialsLabel": "L'essentiel",
     "linkedinLabel": "LinkedIn :",
-    "based": "Basé à Mendrisio, Suisse."
+    "based": "Basé à Mendrisio et Noréaz, Suisse."
   },
   "error": {
     "title404": "404",
@@ -277,7 +277,7 @@
   },
   "og": {
     "defaultTitle": "Jérémy Martin",
-    "defaultDescription": "Interaction and product designer. Mendrisio, Suisse.",
+    "defaultDescription": "Interaction and product designer. Mendrisio et Noréaz, Suisse.",
     "footer": "INTERACTION & PRODUCT DESIGN"
   },
   "schema": {
@@ -332,14 +332,14 @@
       "problemLabel": "Problème",
       "outcomeLabel": "Résultat",
       "title": "La méthode comme matière.",
-      "blockquote": "Interaction and product designer, actuellement engagé dans les expériences agentiques (AX) conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI Mendrisio, disponible dès août 2026.",
+      "blockquote": "Interaction and product designer, actuellement engagé dans les expériences agentiques (AX) conçues autour de l'humaine et de ses conséquences. Étudiant en master à la SUPSI Mendrisio, disponible dès août 2026.",
       "hApproach": "Approche",
       "approach": "L'IA a rendu la génération de design bon marché. Juger de sa qualité, non. Ce qui a changé, c'est l'outil, pas la discipline. Le travail se concentre sur les expériences agentiques (AX) : conçues autour de l'intention humaine, les prompts ancrés comme des décisions de design, les résultats évalués face aux personnes qui les utilisent.",
       "hSelectedWork": "Travaux sélectionnés",
       "hIndex": "Index",
       "indexNote": "D'autres travaux issus des études de master et de bachelor, au-delà des trois mis en avant ci-dessus.",
       "hAbout": "À propos",
-      "about": "Jérémy se concentre aujourd'hui sur les expériences agentiques (AX), conçues autour de l'intention de l'utilisateur. Sa pratique couvre le prototypage hardware, le développement front-end, la recherche UX et le design de service. Basé à Mendrisio, Suisse.",
+      "about": "Jérémy se concentre aujourd'hui sur les expériences agentiques (AX), conçues autour de l'intention de l'utilisateur. Sa pratique couvre le prototypage hardware, le développement front-end, la recherche UX et le design de service. Basé à Mendrisio et Noréaz, Suisse.",
       "hContact": "Contact",
       "contact": "Disponible pour un stage dès août 2026. E-mail hi{'@'}jeremymartin.ch. LinkedIn jermarti. Réponse en français ou en anglais, généralement sous quelques jours ouvrables."
     },
@@ -351,13 +351,13 @@
       "fLanguagesK": "Langues",
       "fLanguagesV": "Français (langue maternelle) · Anglais (B2)",
       "fBasedK": "Basé à",
-      "fBasedV": "Mendrisio, Suisse",
+      "fBasedV": "Mendrisio et Noréaz, Suisse",
       "fAvailableK": "Disponible",
       "fAvailableV": "Dès août 2026",
       "fFestivalK": "Festival",
       "fFestivalV": "Baleinev : programmateur (2023), responsable communication (2024), président (2025). Comité d'environ 25 personnes, environ 1'000 participants.",
       "title": "À propos",
-      "blockquote": "Je suis Jérémy Martin, designer d'interaction et de produit actuellement engagé dans les expériences agentiques (AX) conçues autour de l'intention humaine et de ses conséquences. Je termine un master en design d'interaction à la SUPSI de Mendrisio, avec un parcours en électronique et en ingénierie des médias.",
+      "blockquote": "Je suis Jérémy Martin, interaction and product designer actuellement engagé dans les expériences agentiques (AX) conçues autour de l'humaine et de ses conséquences. Je termine un master en design d'interaction à la SUPSI de Mendrisio, avec un parcours en électronique et en ingénierie des médias.",
       "hStory": "Comment j'en suis arrivé là",
       "story1": "Prenons les expériences agentiques : le plus difficile, ce n'est pas la génération. La génération est devenue bon marché ; savoir si ce qu'on a généré vaut quelque chose, non. Le prompt lui-même n'est pas gratuit non plus : il mérite le même ancrage que n'importe quelle autre décision de design.",
       "story2": "Je termine un master of arts en design d'interaction à la SUPSI de Mendrisio. C'est un programme orienté pratique : chaque cours est un projet réel, enseigné par des personnes qui travaillent dans leur domaine. Il a élargi ma façon de penser et m'a donné deux terrains autour desquels je construis désormais : le prototypage physique et le design pour les expériences agentiques.",
@@ -382,9 +382,9 @@
       "available": "Disponible pour un stage dès août 2026.",
       "replies": "Réponse en français ou en anglais, généralement sous quelques jours ouvrés.",
       "linkedin": "LinkedIn",
-      "based": "Basé à Mendrisio, Suisse.",
+      "based": "Basé à Mendrisio et Noréaz, Suisse.",
       "title": "Écrivez-moi.",
-      "blockquote": "Contactez Jérémy Martin à hi{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio.",
+      "blockquote": "Contactez Jérémy Martin à hi{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio et Noréaz.",
       "hEssentials": "L'essentiel"
     }
   }

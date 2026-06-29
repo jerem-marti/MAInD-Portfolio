@@ -90,7 +90,7 @@
       "languagesKey": "Languages",
       "languagesValue": "French (native) · English (B2)",
       "basedKey": "Based",
-      "basedValue": "Mendrisio, Switzerland",
+      "basedValue": "Mendrisio and Noréaz, Switzerland",
       "availableKey": "Available",
       "availableValue": "From August 2026",
       "festivalKey": "Festival",
@@ -103,12 +103,12 @@
   },
   "contact": {
     "metaTitle": "Contact",
-    "metaDescription": "Write to Jérémy Martin at hi{'@'}jeremymartin.ch. Available for internships from August 2026, based in Mendrisio.",
+    "metaDescription": "Write to Jérémy Martin at hi{'@'}jeremymartin.ch. Available for internships from August 2026, based in Mendrisio and Noréaz.",
     "heroMeta": "00 / Contact",
     "heroTitle": "Write to me.",
     "essentialsLabel": "The essentials",
     "linkedinLabel": "LinkedIn:",
-    "based": "Based in Mendrisio, Switzerland."
+    "based": "Based in Mendrisio and Noréaz, Switzerland."
   },
   "error": {
     "title404": "404",
@@ -277,7 +277,7 @@
   },
   "og": {
     "defaultTitle": "Jérémy Martin",
-    "defaultDescription": "Interaction and product designer. Mendrisio, Switzerland.",
+    "defaultDescription": "Interaction and product designer. Mendrisio and Noréaz, Switzerland.",
     "footer": "INTERACTION & PRODUCT DESIGN"
   },
   "schema": {

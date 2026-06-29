@@ -86,6 +86,9 @@ This file is also the **shared glossary** every translation workstream follows, 
 - Available for internships from August 2026 → **Disponible pour un stage dès août 2026**
 - Replies in French or English, usually within a few working days. → **Réponse en français ou en anglais, généralement sous quelques jours ouvrables.**
 - Process is the artifact. → **La méthode comme matière.**
+- Based location (second location added everywhere) → EN **Mendrisio and Noréaz, Switzerland** · FR **Mendrisio et Noréaz, Suisse**
+- Positioning phrase (FR, shortened per owner) → **conçues autour de l'humaine et de ses conséquences** (was "de l'intention humaine"). EN keeps "human intent and its consequences".
+- Contact page — owner-reviewed and **DONE**; do not re-touch `contact.*`.
 
 ## Drafted surfaces (review checklist)
 

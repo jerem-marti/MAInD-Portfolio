@@ -294,7 +294,7 @@ export function homeMarkdown(locale: Locale = 'en'): string {
     L(locale, 'home.indexNote', 'More work from the Master and Bachelor studies, beyond the three featured above.'),
     index,
     `## ${L(locale, 'home.hAbout', 'About')}`,
-    L(locale, 'home.about', `Jérémy's current focus is agentic experiences (AX), designed around user intent. His practice spans hardware prototyping, front-end build, UX research, and service design. Based in Mendrisio, Switzerland.`),
+    L(locale, 'home.about', `Jérémy's current focus is agentic experiences (AX), designed around user intent. His practice spans hardware prototyping, front-end build, UX research, and service design. Based in Mendrisio and Noréaz, Switzerland.`),
     `## ${L(locale, 'home.hContact', 'Contact')}`,
     L(locale, 'home.contact', 'Available for internships from August 2026. Email hi@jeremymartin.ch. LinkedIn jermarti. Replies in French or English, usually within a few working days.'),
   ].join('\n\n')}\n`
@@ -305,7 +305,7 @@ export function aboutMarkdown(locale: Locale = 'en'): string {
     [L(locale, 'about.fCurrentlyK', 'Currently'), L(locale, 'about.fCurrentlyV', 'Master in Interaction Design, SUPSI Mendrisio · graduating 2027')],
     [L(locale, 'about.fPreviouslyK', 'Previously'), L(locale, 'about.fPreviouslyV', 'BSc Media Engineering, HEIG-VD · one semester Microengineering, EPFL · CMS preparatory bridge year, EPFL · CFC Electronics, HEIA-FR')],
     [L(locale, 'about.fLanguagesK', 'Languages'), L(locale, 'about.fLanguagesV', 'French (native) · English (B2)')],
-    [L(locale, 'about.fBasedK', 'Based'), L(locale, 'about.fBasedV', 'Mendrisio, Switzerland')],
+    [L(locale, 'about.fBasedK', 'Based'), L(locale, 'about.fBasedV', 'Mendrisio and Noréaz, Switzerland')],
     [L(locale, 'about.fAvailableK', 'Available'), L(locale, 'about.fAvailableV', 'From August 2026')],
     [L(locale, 'about.fFestivalK', 'Festival'), L(locale, 'about.fFestivalV', `Baleinev: programmer (2023), head of comms (2024), president (2025). Committee ~25, ~1'000 attendees.`)],
   ]
@@ -338,12 +338,12 @@ export function contactMarkdown(locale: Locale = 'en'): string {
     `- ${L(locale, 'contact.available', 'Available for internships from August 2026.')}`,
     `- ${L(locale, 'contact.replies', 'Replies in French or English, usually within a few working days.')}`,
     `- ${L(locale, 'contact.linkedin', 'LinkedIn')}: [jermarti](https://www.linkedin.com/in/jermarti)`,
-    `- ${L(locale, 'contact.based', 'Based in Mendrisio, Switzerland.')}`,
+    `- ${L(locale, 'contact.based', 'Based in Mendrisio and Noréaz, Switzerland.')}`,
   ].join('\n')
 
   return `${[
     `# ${L(locale, 'contact.title', 'Write to me.')}`,
-    `> ${L(locale, 'contact.blockquote', 'Reach Jérémy Martin at hi@jeremymartin.ch. Available for internships from August 2026, based in Mendrisio.')}`,
+    `> ${L(locale, 'contact.blockquote', 'Reach Jérémy Martin at hi@jeremymartin.ch. Available for internships from August 2026, based in Mendrisio and Noréaz.')}`,
     `## ${L(locale, 'contact.hEssentials', 'The essentials')}`,
     essentials,
   ].join('\n\n')}\n`
