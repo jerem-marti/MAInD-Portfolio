@@ -301,7 +301,7 @@ To **add** a fourth case study (drops the locked F·01–F·03 constraint — co
 {
   num: '01',                                  // mono index number
   title: 'An Aura of Words',                  // row title
-  tags: ['Scrollytelling', 'Data visualization', 'Front-end build', 'Small data'], // 2-4 from the vocabulary
+  tags: ['Scrollytelling', 'Data visualization', 'Front-end', 'Small data'], // 2-4 from the vocabulary
   year: '2026',                               // string, four digits
   href: '/work/an-aura-of-words',             // optional — omit for non-linked rows
   // preview: '/images/index/an-aura-of-words.jpg',  // optional — hover preview
@@ -320,8 +320,8 @@ UX writing
 Design systems
 Accessibility
 Tangible interface
-Front-end build
-Back-end build
+Front-end
+Back-end
 Brand / Editorial
 AI evaluation
 Machine learning

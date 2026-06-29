@@ -38,8 +38,8 @@ This file is also the **shared glossary** every translation workstream follows, 
 | Design systems | Design systems *(kept English)* |
 | Accessibility | Accessibilité |
 | Tangible interface | Interface tangible |
-| Front-end build | Front-end *(both EN + FR shortened to "Front-end")* |
-| Back-end build | Back-end *(both EN + FR shortened to "Back-end")* |
+| Front-end | Front-end *(tag renamed from "Front-end build")* |
+| Back-end | Back-end *(tag renamed from "Back-end build")* |
 | Brand / Editorial | Marque / Éditorial |
 | AI evaluation | Évaluation IA |
 | Machine learning | Machine learning |
@@ -114,7 +114,7 @@ This file is also the **shared glossary** every translation workstream follows, 
 - **Visitor-facing register** — `tu` confirmed (owner to recheck later).
 - **Index title** — `Beau-Rivage Éco-Refonte` → `Beau-Rivage éco-conception`. (`BeReal Like Web App` / `Cultural Trails Web App` descriptors stay English.)
 - **Resource titles** — not translated; reverted every FR twin's `resources[].title` to the English source (this also fixed the databloom duplicate-poster issue: `Project poster` restored).
-- **Tags** — `UX research` / `UX writing` / `Design systems` kept English; `Front-end build`→`Front-end`, `Back-end build`→`Back-end` (both locales); `AI evaluation`→`Évaluation IA`; `Business strategy`→`Stratégie Business`.
+- **Tags** — `UX research` / `UX writing` / `Design systems` kept English; the `Front-end build` / `Back-end build` tags renamed to `Front-end` / `Back-end` (key + label, both locales); `AI evaluation`→`Évaluation IA`; `Business strategy` kept `Stratégie d'entreprise`.
 
 Still open (owner to confirm during page review): terminology kept in English with no glossary entry — `Calm Technology`, `Action Window`, `How Might We`, `MoSCoW`, `Brand book`, `Deck`, `stateless`/`middleware`/`props`/`firmware`, `microtechnique`. And the in-sentence job-title occurrences (home lede, about hero) now read "Interaction and product designer" — confirm they read well in context.
 
