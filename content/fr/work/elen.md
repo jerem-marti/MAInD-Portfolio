@@ -1,6 +1,6 @@
 ---
 title: "ELEN"
-summary: "Une caméra spéculative qui photographie l'invisible. ELEN détecte les signaux Wi-Fi et Bluetooth qui saturent une pièce et restitue chacun d'eux comme une entité spectrale qui dérive sur un flux vidéo en direct, requalifiant l'infrastructure sans fil comme une forme contemporaine de hantise."
+summary: "Une caméra spéculative qui photographie l'invisible. ELEN détecte les signaux Wi-Fi et Bluetooth qui saturent une pièce et restitue chacun d'eux comme une entité spectrale qui dérive sur un flux vidéo en direct, faisant de l'infrastructure sans fil une forme contemporaine de hantise."
 status: "live"
 heroAlt: "ELEN, une caméra portable au corps imprimé en 3D, orange et translucide, avec deux poignées blanches, éclairée sur un fond de studio gris. Son écran bleu profond et son câblage interne se devinent à travers le plexiglas."
 hero: "/images/work/elen/hero.jpg"
@@ -15,11 +15,11 @@ brief:
 problem:
   - >-
     Nous traversons toute la journée d'épais nuages de signaux sans fil. Le Wi-Fi, le Bluetooth, le
-    bavardage constant des appareils connectés. L'infrastructure de la vie connectée nous entoure de
-    partout, et nous n'en percevons rien.
+    bavardage constant des appareils connectés. L'infrastructure de la vie connectée nous entoure de toutes
+    parts, et nous n'en percevons rien.
   - >-
     Le cours demandait une « caméra magique » : un dispositif spéculatif qui étend la perception
-    humaine au-delà de ses limites naturelles. Notre question a suivi directement. Et si une caméra
+    humaine au-delà de ses limites naturelles. Notre question en a découlé directement. Et si une caméra
     pouvait photographier les présences sans fil qui emplissent une pièce ?
   - >-
     Le cadrage venait de Shadow Creatures, l'axe de recherche de Marco De Mutiis, curateur numérique
@@ -47,10 +47,10 @@ approach:
     title: "Les fantômes sont infrastructurels"
     prose:
       - >-
-        Le design spéculatif justifie son étrangeté en étant précis sur la chose qu'il rend étrange.
+        Le design spéculatif justifie son étrangeté en étant précis sur ce qu'il rend étrange.
         Shadow Creatures nous a donné la filiation : les technologies d'imagerie ont toujours servi à
         percevoir ce que l'œil ne peut pas, de la photographie spirite aux caméras thermiques et
-        computationnelles. Nous avons pris l'idée au pied de la lettre et l'avons pointée vers la
+        computationnelles. Nous avons pris l'idée au pied de la lettre et l'avons braquée sur la
         couche sans fil.
       - >-
         Cela a décidé du registre du projet. ELEN n'est pas une visualisation de données avec un
@@ -74,7 +74,7 @@ approach:
         traçage.
     artifacts:
       - src: "/images/work/elen/artifact-measurement.jpg"
-        alt: "Le schéma du système d'ELEN : un monitoring passif du Wi-Fi et du Bluetooth capte la force du signal et les identifiants d'appareils, qui sont anonymisés, normalisés et mappés sur le rendu visuel en direct."
+        alt: "Le schéma du système d'ELEN : un monitoring passif du Wi-Fi et du Bluetooth capte la force du signal et les identifiants d'appareils, qui sont anonymisés, normalisés et traduits dans le rendu visuel en direct."
         caption: "Détection — monitoring passif, identifiants hachés à l'arrivée."
         decision: "Anonymiser chaque identifiant à la source était une éthique de design, pas un ajout après coup. La caméra montre que quelque chose est présent, jamais qui."
         width: "wide"
@@ -97,7 +97,7 @@ approach:
       - src: "/images/work/elen/artifact-translation.jpg"
         alt: "Une capture d'ELEN sur une terrasse surplombant Lugano : des apparitions colorées translucides de tailles différentes dérivent sur la scène, chacune étiquetée d'un identifiant hexadécimal anonymisé."
         caption: "Traduction — force vers échelle, nombre vers densité, activité vers mouvement."
-        decision: "Mapper directement les caractéristiques radio sur le comportement du fluide a donné aux entités l'impression d'être dérivées du signal plutôt que conçues pour ressembler à des fantômes."
+        decision: "Relier directement les caractéristiques radio au comportement du fluide a donné aux entités l'impression d'être dérivées du signal plutôt que conçues pour ressembler à des fantômes."
         width: "wide"
 
   - label: "L'objet"
@@ -111,12 +111,12 @@ approach:
         parcourir un écran.
       - >-
         Nicholas a conçu le boîtier rétro-futuriste, un châssis imprimé en 3D avec du plexiglas découpé
-        au laser et des accents orange qui se lit comme une pièce d'équipement de terrain spéculatif.
+        au laser et des accents orange qui évoque un équipement de terrain spéculatif.
         Nerea a façonné l'identité visuelle et l'allure du fluide. Mon rôle était de faire tenir
         ensemble la détection, la traduction et le matériel en temps réel sans perdre une image.
     artifacts:
       - src: "/images/work/elen/artifact-object.jpg"
-        alt: "Un visiteur tient ELEN à deux mains dans un espace public intérieur, cadrant la pièce à travers son écran, le corps orange luisant devant la lumière du jour à l'arrière-plan."
+        alt: "Un visiteur tient ELEN à deux mains dans un espace public intérieur, cadrant la pièce à travers son écran, le corps orange luisant sur fond de lumière du jour."
         caption: "En main — balayer l'espace en pivotant à travers lui."
         decision: "La détection de mouvement permet aux apparitions de garder leur place dans la pièce à mesure que l'on bouge, si bien que le balayage donne l'impression de regarder plutôt que de parcourir un écran."
         width: "wide"
@@ -136,9 +136,9 @@ outcome:
 reflection: >-
   Le retour le plus utile a été le refus. « Trop design produit, pas assez artistique », c'est juste,
   et cela mérite réflexion : nous avons fabriqué un objet net et abouti pour un brief qui récompensait
-  l'ambiguïté et les bords rugueux. L'instinct même qui fait de moi un bon constructeur de systèmes a
-  fait lire la pièce comme finie là où l'art la voulait ouverte. Que le projet ait ensuite trouvé sa
-  place à la Milan Design Week dit qu'il a fini par trouver la bonne salle. La leçon que je garde,
+  l'ambiguïté et les aspérités. L'instinct même qui fait de moi un bon constructeur de systèmes a
+  fait paraître la pièce achevée là où l'art la voulait ouverte. Que le projet ait ensuite trouvé sa
+  place à la Milan Design Week montre qu'il a fini par trouver la bonne salle. La leçon que je garde,
   c'est de savoir pour quelle salle je conçois avant de commencer à tout résoudre.
 
 gallery:
@@ -149,7 +149,7 @@ gallery:
     alt: "ELEN vu de trois quarts sur un fond gris : corps orange translucide, cadre blanc et deux poignées, antenne, et l'écran bleu profond."
     caption: "L'objet — équipement de terrain spéculatif."
   - src: "/images/work/elen/gallery-03.jpg"
-    alt: "Une capture d'ELEN d'une promenade au bord du lac : de pâles masses spectrales de tailles différentes dérivent sur la scène, chacune étiquetée d'un identifiant anonymisé."
+    alt: "Une capture d'ELEN sur une promenade au bord du lac : de pâles masses spectrales de tailles différentes dérivent sur la scène, chacune étiquetée d'un identifiant anonymisé."
     caption: "Apparitions — dimensionnées par la force du signal."
   - src: "/images/work/elen/gallery-04.jpg"
     alt: "L'arrière d'ELEN vu à travers le plexiglas orange : le Raspberry Pi, le module caméra, le câblage et la batterie, avec la gravure de l'équipe."

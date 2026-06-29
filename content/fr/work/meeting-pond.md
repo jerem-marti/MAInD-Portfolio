@@ -1,6 +1,6 @@
 ---
 title: "Meeting Pond"
-summary: "Une paire d'objets lumineux connectés qui permet à deux personnes éloignées de sentir la présence l'une de l'autre sans mots, sans notifications, sans écrans. Une tape laisse tomber une goutte dans un étang de lumière qui se propage en ondes, apparaissant en temps réel sur l'autre appareil, transformant la présence en une perturbation qui voyage et s'estompe."
+summary: "Une paire d'objets lumineux connectés qui permet à deux personnes éloignées de sentir la présence l'une de l'autre sans mots, sans notifications, sans écrans. Une tape laisse tomber une goutte dans un étang de lumière qui se propage en ondes et apparaît en temps réel sur l'autre appareil, transformant la présence en une perturbation qui voyage et s'estompe."
 status: "live"
 hero: "/images/work/meeting-pond/hero.jpg"
 heroAlt: "Deux unités Meeting Pond posées côte à côte sur une surface réfléchissante dans une pièce sombre, l'une luisant en bleu et l'autre en rose, chacune montrant une onde circulaire sur sa grille de LED 32×32, leur lumière se déversant en dessous."
@@ -47,7 +47,7 @@ approach:
       - >-
         Une goutte n'est pas neutre. Elle porte la couleur active de l'étang de l'expéditeur, et quand
         elle atteint l'autre appareil elle se mêle brièvement à la couleur locale, un mélange
-        temporaire qui figure un moment partagé. L'interaction est relationnelle par conception : le
+        temporaire qui figure un moment partagé. L'interaction est conçue pour être relationnelle : le
         geste est à la fois une action et une empreinte visuelle de la personne qui l'a fait.
 
   - label: "Contrainte"
@@ -57,7 +57,7 @@ approach:
         L'affichage est une matrice de LED en basse résolution, et cette limite est devenue
         l'opportunité de design. À trente-deux par trente-deux pixels, il n'y a pas de place pour le
         détail, alors le langage doit être l'abstraction, la lumière et le mouvement. Une onde se lit
-        parfaitement en basse résolution parce qu'elle est pure dynamique : une perturbation qui se
+        parfaitement en basse résolution parce qu'elle n'est que dynamique : une perturbation qui se
         propage et s'atténue.
       - >-
         Chaque unité est un objet autonome, la matrice et son électronique dissimulées dans un cadre
@@ -81,7 +81,7 @@ approach:
         de la main.
       - >-
         Trois gestes portent tout. Une tape libère une goutte. Déplacer une main horizontalement change
-        la couleur de l'étang ; la déplacer verticalement change l'intensité du champ. Pas de boutons,
+        la couleur de l'étang ; la déplacer verticalement règle l'intensité du champ. Pas de boutons,
         pas de menus. Ce basculement, d'un panneau de paramètres au geste corporel, est ce qui a
         transformé un montage technique en un objet cohérent où l'interaction, la forme et le sens
         tiennent ensemble.
@@ -99,17 +99,17 @@ outcome:
     destinataire.
   - >-
     Une interaction autonome et sans écran : geste en entrée, lumière en sortie, tout le système (la
-    détection, la simulation et la mise en réseau) étant embarqué dans l'objet plutôt que dans un
+    détection, la simulation et la mise en réseau) embarqué dans l'objet plutôt que dans un
     contrôleur séparé.
   - >-
     Une interaction délibérément éphémère. Les ondes s'estompent et la surface revient au calme, de
-    sorte qu'il n'y a pas d'archive, pas de pression de répondre, et aucune trace des moments manqués,
+    sorte qu'il n'y a pas d'archive, pas de pression à répondre, et aucune trace des moments manqués,
     rien que de la présence.
 
 reflection: >-
   Meeting Pond m'a appris tout ce qu'une contrainte forte peut offrir. Une grille de trente-deux
-  pixels semble limitante jusqu'à ce qu'elle réduise chaque idée au mouvement et à la lumière, qui est
-  exactement là où le projet a trouvé sa voix. La discipline la plus dure a été de résister à l'envie
+  pixels semble limitante jusqu'à ce qu'elle réduise chaque idée au mouvement et à la lumière, et c'est
+  précisément là que le projet a trouvé sa voix. La discipline la plus dure a été de résister à l'envie
   d'ajouter des fonctionnalités : au moment où nous avons retiré le panneau de commande et fait
   confiance à quelques gestes, l'objet a enfin signifié ce que nous voulions qu'il signifie.
 
@@ -123,7 +123,7 @@ gallery:
   - alt: "Les deux unités connectées côte à côte, l'une luisant en vert et l'autre en magenta, chacune montrant son propre étang de lumière en ondes."
     caption: "Deux étangs — un geste ici, une onde là-bas."
     src: "/images/work/meeting-pond/gallery-twoponds.jpg"
-  - alt: "Un seul étang où des lumières verte, bleue et magenta se mêlent sur la grille, une goutte reçue mêlant brièvement sa couleur à l'étang local."
+  - alt: "Un seul étang où des lumières verte, bleue et magenta se mélangent sur la grille, une goutte reçue mêlant brièvement sa couleur à l'étang local."
     caption: "Mélange — la couleur de l'expéditeur, se mêlant à la vôtre."
     src: "/images/work/meeting-pond/gallery-blend.jpg"
   - alt: "Le montage disposé sur une surface claire : le panneau à matrice de LED 32×32, une batterie externe, un câble USB, un smartphone, et la petite carte ESP32 avec son antenne et son faisceau de batterie."

@@ -1,6 +1,6 @@
 ---
 title: "Recoder BeReal"
-summary: "Un recodage partiel de BeReal à travers deux cours : une PWA Vue pensée d'abord pour le mobile et une API REST Express. J'ai pris en charge le pipeline de traitement des images de bout en bout, du déclenchement simultané des deux caméras côté front jusqu'à l'envoi, au recadrage et au stockage de la photo côté back."
+summary: "Un recodage partiel de BeReal mené sur deux cours : une PWA Vue pensée d'abord pour le mobile et une API REST Express. J'ai pris en charge le pipeline de traitement des images de bout en bout, du déclenchement simultané des deux caméras côté front jusqu'à l'envoi, au recadrage et au stockage de la photo côté back."
 status: "live"
 hero: "/images/work/bereal/hero.jpg"
 heroAlt: "Trois écrans du recodage de BeReal sur une interface mobile sombre : la capture en direct à double caméra, la publication composée avec la photo arrière en plein cadre et le selfie de la caméra avant en incrustation, et le fil d'un ami."
@@ -30,7 +30,7 @@ role:
   contributed:
     - "La revue de code et la qualité du code sur l'ensemble de l'API REST"
   notTouched:
-    - "Le reste des vues front-end ainsi que les systèmes d'amis et de notifications, construits par les coéquipiers"
+    - "Le reste des vues front-end ainsi que les systèmes d'amis et de notifications, construits par mes coéquipiers"
   team: "Équipe de quatre pour les cours DévMobil et ArchiOWeb à la HEIG-VD : Jérémie Zurflüh, Jérémy Martin et Antoine Uldry (développeurs front-end et back-end), et Steve Pasche (design UX/UI)."
 
 approach:
@@ -64,15 +64,15 @@ approach:
     title: "De la mémoire au CDN, jamais sur le disque"
     prose:
       - >-
-        Côté back-end, la photo arrive sous forme d'envoi et doit être stockée quelque part de rapide et
-        d'économique. J'ai construit le pipeline autour du stockage en mémoire de Multer, de sorte qu'une
-        image envoyée est conservée comme un buffer plutôt qu'écrite sur le disque du serveur, et diffusée
-        directement vers Cloudinary via un flux d'envoi.
+        Côté back-end, la photo arrive sous forme de fichier envoyé et doit finir dans un stockage rapide
+        et économique. J'ai construit le pipeline autour du stockage en mémoire de Multer, de sorte qu'une
+        image envoyée est conservée sous forme de buffer plutôt qu'écrite sur le disque du serveur, et
+        diffusée directement vers Cloudinary via un flux d'envoi.
       - >-
-        Garder le fichier en mémoire et le diffuser en sortie signifie aucun fichier temporaire à
-        nettoyer, aucun disque à remplir, et un serveur qui reste stateless. Le endpoint accepte les deux
-        images caméra ensemble (avant et arrière), si bien que la double photo est une forme de première
-        classe dans l'API, et non deux envois sans rapport.
+        Garder le fichier en mémoire et le diffuser en sortie, c'est aucun fichier temporaire à nettoyer,
+        aucun disque à remplir, et un serveur qui reste stateless. Le endpoint accepte les deux images
+        caméra ensemble (avant et arrière), si bien que la double photo est un objet de première classe
+        dans l'API, et non deux envois sans rapport.
     artifacts:
       - src: "/images/work/bereal/artifact-pipeline.jpg"
         alt: "Un schéma de pipeline en quatre étapes : un envoi multipart de frontCamera et backCamera, conservé en mémoire par Multer sous forme de buffer (marqué sans fichier temporaire, sans disque), diffusé vers Cloudinary avec upload_stream, puis stocké comme URLs sur la publication dans MongoDB."
@@ -85,8 +85,8 @@ approach:
     prose:
       - >-
         Le stockage est aussi l'endroit où les images prennent forme, et j'ai laissé le CDN faire le gros
-        du travail. La photo principale est recadrée automatiquement avec une gravité tenant compte du
-        contenu vers une hauteur constante, et les photos de profil utilisent un recadrage tenant compte
+        du travail. La photo principale est recadrée automatiquement à une hauteur constante, avec une gravité tenant
+        compte du contenu, et les photos de profil utilisent un recadrage tenant compte
         du visage (la gravité par visage de Cloudinary) en vignettes carrées, pour qu'un portrait reste
         centré sur le visage au lieu du coin d'une pièce.
       - >-
@@ -106,7 +106,7 @@ approach:
     prose:
       - >-
         Parce que le pipeline est le produit, je l'ai couvert par des tests d'intégration plutôt que de
-        lui faire confiance à la main. Une suite Jest et Supertest frappe les vrais endpoints
+        le vérifier à la main. Une suite Jest et Supertest interroge les vrais endpoints
         (authentification, publications, et le reste) et fait des assertions sur les réponses, de sorte
         qu'un changement qui casse l'envoi ou la visibilité du fil échoue bruyamment plutôt que
         silencieusement.
@@ -132,10 +132,10 @@ outcome:
     tourne.
   - >-
     La règle du fil honnête intacte : vous ne voyez les publications de vos amis qu'un jour où vous avez
-    vous-même publié, ce qui est le mécanisme social qui fait de BeReal ce qu'il est.
+    vous-même publié, le mécanisme social qui fait de BeReal ce qu'il est.
 
 reflection: >-
-  Ce qui m'a le plus marqué, c'est la discipline de couvrir la partie qui compte le plus par des tests
+  Ce qui m'a le plus marqué, c'est la discipline de couvrir la partie la plus critique par des tests
   d'intégration, pour que le reste de l'équipe puisse avancer sans craindre de la casser. Au-delà de ça,
   c'était la première fois que je construisais une application web complète de bout en bout, du front au
   back, avec Vue, Express et Mongoose. Suivre tout le processus de développement, tests compris, c'est ce

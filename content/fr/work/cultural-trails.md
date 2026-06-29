@@ -20,7 +20,7 @@ problem:
     publier et d'éditer les leurs.
   - >-
     Sous le brief produit se trouvait un vrai problème d'ingénierie : une application riche en contenu et
-    basée sur la carte, avec deux types d'utilisateurs très différents (des gens qui explorent les sentiers
+    centrée sur la carte, avec deux types d'utilisateurs très différents (des gens qui explorent les sentiers
     et des gens qui les créent), portant du multimédia, des quiz et une couche de gamification, conçue et
     développée full-stack dans le temps imparti d'un projet étudiant. J'ai pris en charge la moitié
     back-end.
@@ -47,7 +47,7 @@ approach:
         fluides tout en écrivant le back-end comme une application Laravel normale, sans API REST séparée à
         concevoir, versionner et maintenir synchronisée.
       - >-
-        Ce choix est la raison pour laquelle une équipe de cinq personnes a pu avancer vite. Inertia fait le
+        C'est ce choix qui a permis à une équipe de cinq personnes d'avancer vite. Inertia fait le
         pont entre le back et le front, si bien qu'un contrôleur renvoie les données directement à une page
         Vue, et la frontière dont j'avais la charge (les modèles, les requêtes, les règles d'accès) est
         restée propre et côté serveur tandis que le front-end restait réactif.
@@ -75,11 +75,11 @@ approach:
       - >-
         Le cœur du back-end est le schéma. Un sentier (parcours) est relié à de nombreux points d'intérêt
         et un point d'intérêt peut appartenir à de nombreux sentiers, donc la table de jonction entre eux
-        porte l'ordre de la marche. Chaque point d'intérêt détient ses propres guides audio, photos et
+        porte l'ordre de la marche. Chaque point d'intérêt possède ses propres guides audio, photos et
         faits ; chaque sentier appartient à un thème. Au-dessus du contenu se trouve un modèle de quiz
         (quiz, questions, réponses) pour les arrêts gamifiés.
       - >-
-        Vient ensuite la couche d'engagement, qui est ce qui fait ressentir un produit plutôt qu'un
+        Vient ensuite la couche d'engagement, celle qui donne le sentiment d'un produit plutôt que d'un
         catalogue : favoris et historiques de complétion pour les sentiers comme pour les points d'intérêt,
         accomplissements avec une table pivot utilisateur, avis, et un système de rôles sous l'ensemble.
         Bien établir ces relations dès le départ, c'est ça l'architecture ; tout le reste se construit
@@ -121,9 +121,9 @@ approach:
     title: "Explorateurs et éditeurs, un seul schéma"
     prose:
       - >-
-        L'application sert deux publics depuis le même code. Un explorateur parcourt la carte, marche un
+        L'application sert deux publics depuis le même code. Un explorateur parcourt la carte, arpente un
         sentier, marque des points d'intérêt comme faits, et gagne des accomplissements. Un éditeur (un
-        acteur culturel local) crée et édite des sentiers et des points d'intérêt à travers des formulaires
+        acteur culturel local) crée et édite des sentiers et des points d'intérêt à l'aide de formulaires
         guidés, avec ses propres flux de création et de suppression.
       - >-
         Cette séparation est imposée par l'accès basé sur les rôles. Les routes des favoris, du tableau de
@@ -156,8 +156,8 @@ approach:
         ce qui implique une planification d'itinéraire entre les points d'intérêt. Nous avons utilisé
         OpenRouteService pour cela via son API publique, en l'appelant depuis le flux d'édition pour
         planifier un itinéraire au fur et à mesure qu'un sentier était construit. Auto-héberger le moteur
-        était l'étape suivante évidente que nous avons signalée pour un vrai déploiement, afin d'échapper
-        aux limites de débit publiques et de garder cette planification sans contrainte.
+        était la suite logique, que nous avons signalée pour un vrai déploiement, afin d'échapper aux
+        limites de débit publiques et de lever toute contrainte sur cette planification.
     artifacts:
       - alt: >-
           Une diapositive produit, "Onglet Sentiers", montrant l'onglet des sentiers sur mobile : une carte
@@ -171,7 +171,7 @@ approach:
           sur mobile : la liste des étapes, l'itinéraire sur la carte, le prochain arrêt avec la distance et
           le temps restant, et une boîte de dialogue pour quitter la navigation.
         caption: "Navigation guidée : le prochain arrêt, la distance et le temps restant."
-        decision: 'Suivre un sentier parcourt l''itinéraire OpenRouteService planifié arrêt par arrêt, avec la possibilité de sauter un arrêt ou de quitter à tout moment.'
+        decision: 'Suivre un sentier déroule l''itinéraire OpenRouteService planifié arrêt par arrêt, avec la possibilité de sauter un arrêt ou de quitter à tout moment.'
         width: "half"
         src: "/images/work/cultural-trails/artifact-navigation.jpg"
 
@@ -190,9 +190,9 @@ outcome:
 
 reflection: >-
   C'est le projet qui m'a appris que le back-end, c'est surtout de la modélisation de données. Les
-  semaines que j'ai passées à bien établir les relations (sentiers vers points d'intérêt, la couche
-  d'engagement, le système de rôles) sont ce qui a permis au reste de la construction d'aller vite, et les
-  parties brouillonnes plus tard étaient presque toujours des endroits où le modèle avait été trop lâche.
+  semaines passées à bien établir les relations (sentiers vers points d'intérêt, la couche
+  d'engagement, le système de rôles) sont ce qui a permis au reste de la construction d'avancer vite, et les
+  parties brouillonnes, plus tard, se trouvaient presque toujours là où le modèle avait été trop lâche.
   Choisir Inertia plutôt qu'une API séparée était le choix pragmatique que je referais : il a échangé un
   peu de mise en place contre beaucoup moins de friction par la suite.
 

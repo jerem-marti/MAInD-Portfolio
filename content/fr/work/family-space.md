@@ -16,14 +16,14 @@ problem:
   - >-
     Le cahier des charges d'UBS était précis et n'avait rien à voir avec les familles : simplifier
     l'application mobile UBS, avec un accent sur l'éducation financière, pour les clients particuliers
-    de tous les jours âgés d'environ trente à soixante ans. Les utilisateurs plus jeunes et les
+    ordinaires, âgés d'environ trente à soixante ans. Les utilisateurs plus jeunes et les
     enfants n'étaient mentionnés que comme un « nice to have ».
   - >-
-    Le raisonnement derrière cela était concret. Une architecture de l'information confuse rend les
-    produits difficiles à trouver et éloigne les gens. Le jargon bancaire crée de la confusion, de
-    l'insécurité et du stress, ce qui diminue l'engagement et les inscriptions. Et des tests passés
-    avaient montré que l'éducation au sein de l'application était perçue comme un véritable avantage,
-    quelque chose qui vaut la peine d'être investi pour la fidélité et la rétention.
+    Le raisonnement était concret. Une architecture de l'information confuse rend les
+    produits difficiles à trouver et éloigne les gens. Le jargon bancaire crée de la confusion, un
+    sentiment d'insécurité et du stress, ce qui diminue l'engagement et les inscriptions. Et des tests
+    passés avaient montré que l'éducation au sein de l'application était perçue comme un véritable
+    avantage, un investissement justifié pour la fidélité et la rétention.
   - >-
     Le vrai problème n'était donc pas « concevoir une application familiale ». C'était : comment rendre
     une application bancaire dense plus facile à comprendre, et transformer l'éducation financière
@@ -50,14 +50,14 @@ approach:
         sondage sur la banque au quotidien et les habitudes d'argent ; et une série d'entretiens
         utilisateurs, chacun menant les siens. Nous avons aussi retourné l'application contre
         elle-même, en analysant les avis d'UBS sur les stores pour entendre les frustrations dans les
-        propres mots des utilisateurs.
+        mots mêmes des utilisateurs.
       - >-
-        Nous avons synthétisé tout cela à travers des cartes d'expérience (le parcours d'un parent, les
+        Nous avons tout synthétisé à l'aide de cartes d'expérience (le parcours d'un parent, les
         dépenses, la budgétisation, et même le fait de se faire arnaquer) et un brainstorming
         d'opportunités et d'enseignements. Le constat était cohérent : les gens peinent avec le jargon
         bancaire et une interface encombrée, et ils apprécient qu'on les aide à comprendre l'argent
-        plutôt qu'on leur montre simplement plus de produits. Rassembler ces fils en une seule image
-        regroupée a été le pont vers le travail de définition que j'ai ensuite mené.
+        plutôt que de leur montrer simplement plus de produits. Réunir ces fils en une seule vue
+        d'ensemble a fait le pont vers le travail de définition que j'ai ensuite mené.
     artifacts:
       - src: "/images/work/family-space/artifact-research-quote.jpg"
         alt: "Une grande citation tirée d'un entretien avec un parent : un enfant dépense trop et se retrouve sans argent, reçoit un petit dépannage, et doit apprendre à faire attention car l'argent ne tombe pas du ciel."
@@ -71,10 +71,10 @@ approach:
       - >-
         Le cahier des charges plaçait l'éducation financière au centre et ne listait les utilisateurs
         plus jeunes et les enfants que comme un nice to have. Le pari de l'équipe a été de faire de ce
-        nice to have le cœur du concept : si l'éducation est l'objectif, l'endroit le plus naturel pour
-        commencer est là où les habitudes d'argent se forment en premier, entre parents et enfants.
+        nice to have le cœur du concept : si l'éducation est l'objectif, le point de départ le plus
+        naturel est là où les habitudes d'argent se forment en premier, entre parents et enfants.
       - >-
-        Nous avons étalonné le domaine de la finance familiale (le type de produit goHenry et
+        Nous avons passé en revue le paysage de la finance familiale (les produits du type goHenry et
         Greenlight, les portefeuilles familiaux, les recommandations de design pour les adolescents) et
         recadré le travail autour d'un espace familial partagé au sein de l'application UBS, où un
         parent et un enfant gèrent ensemble l'argent, les limites et l'apprentissage.
@@ -84,8 +84,8 @@ approach:
     prose:
       - >-
         La direction posée, j'ai mené la phase de définition moi-même. J'ai regroupé la recherche en un
-        diagramme d'affinités, puis construit deux personas pour garder le travail honnête : Sophie, une
-        mère active de quarante et un ans et cliente UBS qui veut élever des enfants responsables sans
+        diagramme d'affinités, puis construit deux personas pour ancrer le travail dans le réel : Sophie,
+        une mère active de quarante et un ans et cliente UBS qui veut élever des enfants responsables sans
         rendre l'argent tabou ni perdre son sentiment de contrôle, et Leo, treize ans, avec sa première
         carte bancaire, qui veut surtout savoir ce qu'il peut dépenser et épargner pour quelque chose de
         plus grand.
@@ -107,11 +107,11 @@ approach:
     title: "Des manques à une grande idée"
     prose:
       - >-
-        Avant de concevoir le moindre flow, j'ai étalonné le domaine, y compris l'offre d'UBS elle-même
-        pour les plus jeunes, et nommé les manques. L'éducation financière était reléguée sur le côté
-        dans des articles, il n'y avait pas de parcours d'apprentissage, pas de vraie interface enfant
-        ni d'analyses, les récompenses n'étaient pas liées aux bonnes habitudes, et presque rien ne
-        soutenait les conversations continues sur l'argent entre parent et enfant.
+        Avant de concevoir le moindre flow, j'ai passé le terrain en revue, y compris l'offre d'UBS
+        elle-même pour les plus jeunes, et nommé les manques. L'éducation financière était reléguée sur
+        le côté dans des articles, il n'y avait pas de parcours d'apprentissage, pas de vraie interface
+        enfant ni d'analyses, les récompenses n'étaient pas liées aux bonnes habitudes, et presque rien
+        ne soutenait les échanges réguliers sur l'argent entre parent et enfant.
       - >-
         J'ai mené une idéation par la méthode Lotus sur les questions How Might We, regroupé les
         résultats et convergé vers une grande idée à trois piliers : pratiquer avec des garde-fous
@@ -120,7 +120,7 @@ approach:
         d'apprentissage, et un Family Space conçu pour la conversation plutôt que pour la surveillance.
         Ce dernier pilier venait directement de la recherche : les parents nous ont dit qu'ils ne
         voulaient pas vraiment le détail fin des dépenses de leur enfant, parce que trop de supervision
-        se lit comme du contrôle et érode la confiance. La phrase qui nous gardait honnêtes était
+        se lit comme du contrôle et érode la confiance. La phrase qui nous gardait sur les rails était
         « moins une application de contrôle parental, plus du coaching et du soutien ».
     artifacts:
       - src: "/images/work/family-space/artifact-ideate-pillars.jpg"
@@ -136,14 +136,14 @@ approach:
         À partir de la grande idée, j'ai cartographié quatre user flows de bout en bout : l'activation
         du Family Space, l'espace du parent, l'espace de l'enfant, et un récapitulatif mensuel conçu
         pour une conversation sur l'argent entre parent et enfant. Le flow d'activation à lui seul gère
-        les cas réels désordonnés (pas encore de profil familial, lier un compte existant, ouvrir un
-        compte jeunesse, un enfant de moins de douze ans) avec des étapes système et des limites
+        les vrais cas, dans tout leur désordre (pas encore de profil familial, lier un compte existant,
+        ouvrir un compte jeunesse, un enfant de moins de douze ans) avec des étapes système et des limites
         recommandées préremplies, de sorte qu'un parent ne configure jamais à partir d'une page
         blanche.
       - >-
         Les flows portent les mécaniques qui rendent l'idée concrète. Un parent fixe une fois les
         limites totale, journalière, hebdomadaire et par catégorie, puis n'y touche presque plus ; les
-        tâches ménagères se convertissent en argent de poche que l'enfant gagne ; les « réussites »
+        tâches ménagères se transforment en argent de poche que l'enfant gagne ; les « réussites »
         d'épargne transforment un objectif comme un vélo en progression visible. Mon préféré est un
         petit détail : quand un enfant dépense, l'application traduit le montant en quelque chose qu'il
         comprend, « vingt francs, c'est environ deux kebabs », rendant la valeur de l'argent tangible
@@ -159,8 +159,8 @@ approach:
 
 outcome:
   - >-
-    Une base de recherche bâtie à partir d'un sondage, d'une recherche documentaire et des propres
-    avis utilisateurs de l'application, pointant clairement vers la simplification et l'éducation comme
+    Une base de recherche bâtie à partir d'un sondage, d'une recherche documentaire et des avis mêmes
+    des utilisateurs de l'application, pointant clairement vers la simplification et l'éducation comme
     les vraies opportunités.
   - >-
     Quatre user flows de bout en bout (activation, espace parent, espace enfant et récapitulatif
@@ -174,7 +174,7 @@ reflection: >-
   de simuler : la recherche et les user flows. Les flows surtout sont l'endroit où un beau concept
   devient cohérent ou s'effondre discrètement, et cartographier de bout en bout à la fois le parcours
   du parent et celui de l'adolescent est le travail dont je suis le plus fier, même là où le
-  prototype final a pris une autre forme. Concevoir à l'intérieur d'une vraie contrainte client, pour
+  prototype final a pris une autre forme. Concevoir sous une vraie contrainte client, pour
   une application aussi dense que celle d'UBS, a rendu cette rigueur plus importante, et non moins.
 
 gallery:
@@ -182,7 +182,7 @@ gallery:
     alt: "Deux fiches persona côte à côte : Sophie, 41 ans, mère active et cliente UBS, et Leo, 13 ans, avec sa première carte bancaire, chacun avec une courte citation et son besoin principal."
     caption: "Définition — les personas Sophie et Leo."
   - src: "/images/work/family-space/gallery-limits.jpg"
-    alt: "L'écran de limites de dépenses d'un parent avec une limite mensuelle et une limite journalière et des limites par catégorie pour les achats en ligne, les loisirs, l'alimentation et le sport, chacune montrant un montant et le pourcentage dépensé."
+    alt: "L'écran de limites de dépenses d'un parent : une limite mensuelle, une limite journalière et des limites par catégorie pour les achats en ligne, les loisirs, l'alimentation et le sport, chacune affichant un montant et le pourcentage dépensé."
     caption: "Parent — limites de dépenses par catégorie."
   - src: "/images/work/family-space/gallery-analytics.jpg"
     alt: "L'écran d'analyses d'un enfant avec un graphique à barres des dépenses mensuelles, les totaux d'argent entrant et sortant, et le solde du compte."

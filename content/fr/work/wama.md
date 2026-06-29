@@ -1,6 +1,6 @@
 ---
 title: "Wama"
-summary: "Un compagnon discret en machine learning qui vit au bord de l'évier. Wama détecte votre présence et l'eau qui coule grâce à un modèle de vision entraîné, lit un simple geste de la main et répond à travers un personnage animé, en traitant le ML comme un témoin plutôt que comme un optimiseur."
+summary: "Un discret compagnon en machine learning, posté au bord de l'évier. Wama détecte votre présence et l'eau qui coule grâce à un modèle de vision entraîné, lit un simple geste de la main et répond par un personnage animé. Le ML y est un témoin, pas un optimiseur."
 status: "live"
 heroAlt: "Wama tournant sur un téléphone dans un support en bois découpé au laser, sur un montage d'évier construit pour l'occasion : un robinet verse dans un bac transparent tandis que l'écran affiche un petit personnage en forme de nuage bleu."
 hero: "/images/work/wama/hero.jpg"
@@ -14,14 +14,14 @@ brief:
 
 problem:
   - >-
-    Faire la vaisselle se situe à un seuil étrange. C'est assez physique pour vous garder dans la
-    pièce, mais assez automatique pour laisser votre esprit ailleurs entièrement. Cet écart, entre
-    présence corporelle et absence mentale, est le territoire pour lequel Wama a été conçu.
+    Faire la vaisselle occupe un seuil étrange. C'est assez physique pour vous garder dans la
+    pièce, mais assez automatique pour laisser l'esprit filer complètement ailleurs. Cet écart, entre
+    présence du corps et absence de l'esprit, est le territoire pour lequel Wama a été conçu.
   - >-
-    La question n'était délibérément pas comment rendre la tâche plus efficace. C'était de savoir si
-    cette dérive pouvait être reconnue, voire accompagnée, par quelque chose dans l'environnement.
-    Wama est plus proche d'un objet rituel qui se trouve utiliser une caméra que d'un outil de
-    productivité.
+    La question n'était délibérément pas de rendre la tâche plus efficace. C'était de savoir si
+    cette dérive pouvait être remarquée, voire accompagnée, par quelque chose dans l'environnement.
+    Wama tient davantage de l'objet rituel, équipé d'une caméra presque par accident, que de l'outil
+    de productivité.
   - >-
     Le cours, Intelligence as a Material, posait la véritable provocation : un système de ML peut
     agir comme un témoin plutôt que comme un optimiseur. Il peut remarquer sans exiger de résolution.
@@ -30,7 +30,7 @@ problem:
 
 role:
   led:
-    - "Intégrer les parties de l'équipe en une seule application fonctionnelle : l'interface et le personnage d'une coéquipière, la détection ML locale d'une autre"
+    - "Intégrer les contributions de l'équipe en une seule application fonctionnelle : l'interface et le personnage d'une coéquipière, la détection ML locale d'une autre"
     - "Restructurer et nettoyer le code largement généré par IA pour en faire une base professionnelle et maintenable"
     - "Construire le montage d'évier physique utilisé pour les tests et la démonstration finale"
   contributed:
@@ -48,34 +48,34 @@ approach:
         La plupart des usages du ML à la maison sont vendus comme de l'optimisation : faire la tâche
         plus vite, suivre la métrique, boucler la boucle. Wama refuse ce registre. En s'appuyant sur
         la théorie de la perte ambiguë, l'idée que l'attention peut exister sans résolution claire, le
-        personnage a reçu une disposition qui remarque mais n'instruit jamais. Il tient un registre
-        plutôt qu'il n'émet une correction.
+        personnage a été doté d'un tempérament qui remarque mais n'instruit jamais. Il accompagne
+        plutôt qu'il ne corrige.
       - >-
         Cette seule décision a tout façonné. Il n'y a pas de compteur d'eau, pas de décompte, pas de
-        gamification. La préoccupation environnementale s'exprime à travers l'affect inquiet du
-        personnage lorsque le robinet coule sans surveillance, ce qui maintient toute l'expérience dans
-        le registre du ressenti plutôt que de la comptabilité.
+        gamification. La préoccupation environnementale passe par l'affect inquiet du
+        personnage lorsque le robinet coule sans surveillance, ce qui garde toute l'expérience du côté
+        du ressenti, pas de la comptabilité.
 
   - label: "Détection"
     title: "Lire l'évier, sur l'appareil"
     prose:
       - >-
         Wama lit la scène à partir d'un petit modèle de vision entraîné sur quatre situations :
-        personne, une personne arrive, l'eau coule avec quelqu'un de présent, et l'eau coule sans
-        personne. Un modèle de suivi de la main ajoute un geste, pouce levé ou baissé maintenu une
-        demi-seconde, parce que les mains à un évier sont mouillées et occupées. C'est toute l'entrée.
+        personne dans la pièce, une personne arrive, l'eau coule avec quelqu'un de présent, l'eau coule
+        sans personne. Un modèle de suivi de la main ajoute un geste, pouce levé ou baissé maintenu une
+        demi-seconde, parce qu'à l'évier les mains sont mouillées et occupées. C'est là toute l'entrée.
       - >-
         Ce qui compte autant que la détection, c'est l'endroit où elle se produit. Tout tourne
         localement, dans le navigateur du téléphone, sans serveur et sans rien téléverser. Ce seul
         choix d'architecture concrétise la position éthique du projet. Un appareil peut surveiller
         votre évier uniquement parce que ce qu'il voit ne quitte jamais la pièce. La détection de
-        présence à domicile n'est qu'à un pas de la surveillance, et garder le modèle sur l'appareil
-        est la manière dont Wama refuse de faire ce pas.
+        présence à domicile n'est qu'à un pas de la surveillance ; garder le modèle sur l'appareil,
+        c'est la façon qu'a Wama de ne pas le franchir.
     artifacts:
       - src: "/images/work/wama/artifact-sensing.jpg"
         alt: "Une matrice deux par deux croisant la présence et l'eau qui coule en quatre classes du modèle, chacune liée à une réponse du personnage : il dort, il salue, il accompagne, et un état inquiet mis en évidence quand le robinet coule sans personne."
         caption: "Le modèle de vision à quatre classes : présence × eau."
-        decision: "Cadrer la scène comme présence multipliée par l'eau, et non en litres, est ce qui permet au personnage de porter de la préoccupation plutôt qu'un compteur."
+        decision: "Cadrer la scène en présence × eau, et non en litres, permet au personnage de porter une inquiétude plutôt qu'un compteur."
         width: "wide"
 
   - label: "Réponse"
@@ -88,15 +88,14 @@ approach:
         musique. Quand le robinet coule sans personne, il a simplement l'air inquiet.
       - >-
         Cette inquiétude est le message environnemental. Il n'y a pas de compteur d'eau, pas de
-        décompte, pas de gamification : la préoccupation s'exprime comme un affect, ce qui maintient
-        l'ensemble dans le registre du ressenti plutôt que de la comptabilité. Le travail sur le
-        personnage qui fait que cela fonctionne était celui d'une coéquipière ; mon rôle était de le
-        faire tourner.
+        décompte, pas de gamification : la préoccupation passe par l'affect, ce qui garde
+        l'ensemble du côté du ressenti, pas de la comptabilité. Tout le travail de personnage qui
+        fait mouche revenait à une coéquipière ; mon rôle, c'était de le faire tourner.
     artifacts:
       - src: "/images/work/wama/screen-askmusic.jpg"
         alt: "L'application Wama demandant « Want Some Music? » avec un pouce levé pour oui et un pouce baissé pour non, le personnage nuage tenant un petit juke-box."
         caption: "Demande une fois si vous voulez de la musique."
-        decision: "Un pouce levé ou baissé maintenu brièvement, jamais un tap, est la seule entrée qui fonctionne avec des mains mouillées et occupées."
+        decision: "Un pouce levé ou baissé, tenu brièvement, jamais un tap : la seule entrée qui marche avec des mains mouillées et occupées."
         width: "half"
       - src: "/images/work/wama/screen-musicplaying.jpg"
         alt: "L'application Wama jouant de la musique : le personnage nuage les yeux fermés, se balançant, de petites notes de musique s'élevant à côté de lui."
@@ -113,17 +112,17 @@ approach:
     title: "Réunir trois parties en un seul produit"
     prose:
       - >-
-        Ma véritable contribution a été de transformer trois pièces séparées en une chose cohérente :
+        Ma véritable contribution a été de fondre trois morceaux distincts en un tout cohérent :
         l'interface et l'animation du personnage d'une coéquipière, la détection ML locale d'une autre
         avec MediaPipe et Teachable Machine, et la logique d'interaction qui relie les états aux
-        réponses. Une grande partie est partie de code généré par IA : rapide à produire, fragile à
-        accorder de la confiance.
+        réponses. Une bonne partie venait de code généré par IA : rapide à produire, difficile à
+        fiabiliser.
       - >-
         Le travail a donc été un travail de développeur. Restructurer ce code en quelque chose de
         propre et maintenable, faire dialoguer les parties entre elles de manière fiable, et utiliser
-        l'IA comme un outil à l'intérieur d'une structure professionnelle plutôt que de la laisser
-        fixer la structure. J'ai aussi construit le montage d'évier physique sur lequel l'ensemble a
-        été testé et présenté, car une interaction au sujet d'un évier doit être éprouvée à un évier.
+        l'IA comme un outil au sein d'une structure professionnelle, plutôt que de la laisser imposer
+        la sienne. J'ai aussi construit le montage d'évier physique sur lequel l'ensemble a été testé
+        et présenté, car une interaction qui parle d'évier doit s'éprouver à un évier.
 
 outcome:
   - >-
@@ -141,10 +140,10 @@ outcome:
 reflection: >-
   Wama a été ma première expérience pratique du machine learning, et le cours a vraiment été une
   découverte : l'occasion de voir comment ces nouveaux modes de détection et d'interaction pouvaient
-  faire partie d'un projet de design tout court. Ce qui est resté, c'est moins le modèle que le cadre
-  autour de lui. Un agent qui remarque sans optimiser, et la prise de conscience que garder le
-  traitement sur l'appareil est ce qui permet à un compagnon d'évier de rester du bon côté de la
-  surveillance plutôt que d'y glisser.
+  s'intégrer à un projet de design, tout simplement. Ce qui est resté, c'est moins le modèle que le
+  cadre autour de lui. Un agent qui remarque sans optimiser, et la prise de conscience que garder le
+  traitement sur l'appareil, c'est ce qui maintient un compagnon d'évier du bon côté de la
+  surveillance au lieu d'y glisser.
 
 gallery:
   - src: "/images/work/wama/gallery-01-hello.jpg"
@@ -152,7 +151,7 @@ gallery:
     caption: "Détecté — Wama se réveille et salue."
   - src: "/images/work/wama/gallery-02-working.jpg"
     alt: "Le montage d'évier avec le robinet coulant dans le bac transparent, le personnage installé à l'écran tandis que l'eau s'écoule."
-    caption: "Tâche en cours — il accompagne la tâche."
+    caption: "Tâche en cours — il accompagne le geste."
   - src: "/images/work/wama/gallery-03-arm.jpg"
     alt: "Une main qui s'avance pour ouvrir la poignée bleue du robinet au-dessus du bac, le téléphone affichant Wama en pleine tâche."
     caption: "Testé à un vrai évier — une main au robinet."

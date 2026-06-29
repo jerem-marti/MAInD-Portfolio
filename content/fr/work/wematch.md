@@ -14,10 +14,10 @@ brief:
 
 problem:
   - >-
-    WeRoad conçoit tout d'un voyage en groupe, sauf la seule chose qui décide de la façon dont il
-    se passe. L'itinéraire, les hôtels, les tour leaders, le rythme : tout est planifié. Le groupe,
-    les onze inconnus avec qui tu vas passer dix jours, est laissé à qui s'est trouvé réserver les
-    mêmes dates.
+    WeRoad conçoit tout d'un voyage en groupe, sauf la seule chose qui en décide le déroulement.
+    L'itinéraire, les hôtels, les tour leaders, le rythme : tout est planifié. Le groupe,
+    les onze inconnus avec qui tu vas passer dix jours, est laissé à ceux qui ont, par hasard,
+    réservé les mêmes dates.
   - >-
     Les avis le disent à voix haute. Sur 1'660 avis WeRoad récents publiés sur Trustpilot, 58%
     mentionnent le groupe ou les personnes avec qui ils ont voyagé, plus que la destination, la
@@ -46,7 +46,7 @@ approach:
     title: "Trois angles, une même conclusion"
     prose:
       - >-
-        L'intuition est venue de la triangulation, pas d'un pressentiment. Nous avons lu la
+        Le constat est né de la triangulation, pas d'un pressentiment. Nous avons lu la
         littérature académique sur le voyage en solo, les dynamiques de groupe et le matchmaking.
         Nous avons mené huit entretiens approfondis, de 45 à 60 minutes chacun, avec des voyageurs
         solo et en groupe. Et nous avons analysé les avis de WeRoad à grande échelle. Trois sources
@@ -75,7 +75,7 @@ approach:
       - src: "/images/work/wematch/approach-reframe.jpg"
         alt: "Une diapositive de présentation intitulée « La variable la plus décisive d'un voyage WeRoad est la seule laissée au hasard » : une liste de ce que WeRoad contrôle (itinéraire, hébergements, tour leaders, expériences, rythme) à côté d'un panneau indiquant « Ce qui est laissé au hasard : le groupe », notant que 18% des avis négatifs y renvoient."
         caption: "WeRoad contrôle tout sauf le groupe — la seule variable laissée au hasard."
-        decision: "Nommer le groupe comme la seule variable non gérée a transformé un catalogue de destinations en catalogue de groupes, et a donné au concept son point d'ancrage."
+        decision: "Désigner le groupe comme la seule variable non gérée a transformé un catalogue de destinations en catalogue de groupes, et a donné au concept son point d'ancrage."
         width: "wide"
 
   - label: "L'agent"
@@ -85,8 +85,8 @@ approach:
         WeMatch est un agent (l'équipe l'a nommé Matchy) qui accompagne tout le parcours plutôt
         qu'une conversation ponctuelle. Il fonctionne en six phases, chacune un rôle différent. Il
         découvre, en captant les signaux liés au rythme, à l'énergie sociale et à l'intention. Il
-        profile, en construisant l'ADN comportemental du voyageur à partir de ces signaux. Il cure,
-        en évaluant chaque groupe au regard de cet ADN.
+        profile, en construisant l'ADN comportemental du voyageur à partir de ces signaux. Il
+        sélectionne, en évaluant chaque groupe au regard de cet ADN.
       - >-
         Ensuite il explique, en rendant chaque correspondance compréhensible avant la réservation.
         Il prend des nouvelles pendant le voyage, en lisant les dynamiques sociales en direct. Et il
@@ -94,9 +94,9 @@ approach:
         le voyage. L'arc va de la première session jusque bien après le retour du voyageur.
     artifacts:
       - src: "/images/work/wematch/approach-2-agent.jpg"
-        alt: "Diagramme de l'agent en six phases : découvrir, profiler, curer, expliquer, prise de nouvelles, évoluer, chacune avec un rôle en un mot."
+        alt: "Diagramme de l'agent en six phases : découvrir, profiler, sélectionner, expliquer, prendre des nouvelles, évoluer, chacune avec un rôle en un mot."
         caption: "Le rôle de l'agent — six phases, du premier signal à l'apprentissage post-voyage."
-        decision: "Concevoir l'agent comme un parcours, et non comme une fonctionnalité, a gardé la compatibilité comme un profil vivant plutôt que comme le résultat d'un questionnaire ponctuel."
+        decision: "Concevoir l'agent comme un parcours, et non comme une fonctionnalité, a fait de la compatibilité un profil vivant plutôt que le résultat d'un questionnaire ponctuel."
         width: "wide"
 
   - label: "Le modèle"
@@ -107,7 +107,7 @@ approach:
         destination ; WeMatch classe par compatibilité. Deux entrées alimentent un seul artefact :
         ce qu'un voyageur dit en conversation, et la façon dont il navigue sur le site. Ensemble,
         elles construisent un ADN comportemental sur huit dimensions comme le rythme, l'énergie
-        sociale, le style de planification et le style de gestion des conflits, mis à jour en continu
+        sociale, le style de planification et celui de gestion des conflits, mis à jour en continu
         dès la première session.
       - >-
         Chaque groupe disponible est ensuite évalué au regard de cet ADN, produisant un pourcentage
@@ -131,7 +131,7 @@ approach:
         invisible. Mon travail côté communication était de la faire passer sans liste de
         fonctionnalités, sous la forme d'une expérience en scrollytelling qui suit une voyageuse en
         train de décider si elle réserve. La lectrice rencontre le service comme elle le ferait, en
-        mouvement, plutôt qu'on lui dise ce qu'il fait.
+        mouvement, plutôt que de s'entendre dire ce qu'il fait.
       - >-
         La même logique a façonné la présentation finale, dont j'ai construit la narration avec une
         coéquipière. Dans les deux cas, la règle était la même : montrer l'agent à l'œuvre, ne jamais
@@ -140,7 +140,7 @@ approach:
 
 outcome:
   - >-
-    Un concept de service ancré dans la recherche : trois angles de recherche indépendants
+    Un concept de service ancré dans la recherche : trois angles indépendants
     convergeant vers une même conclusion, un agent en six phases et le modèle de correspondance par
     ADN comportemental.
   - >-
@@ -154,7 +154,7 @@ reflection: >-
   équipe qui construit des expériences agentiques pour de vrai. La pratique AX de Spark Reply a sa
   propre grammaire : concevoir autour de l'intention de l'utilisateur plutôt que des
   fonctionnalités, donner à l'agent une personnalité et la garder cohérente, et consacrer un temps
-  réel aux cas limites, là où l'autonomie d'un agent est la plus susceptible de mal tourner. Ce
+  véritable aux cas limites, là où l'autonomie d'un agent est la plus susceptible de mal tourner. Ce
   cadrage a transformé ma façon de concevoir avec l'IA, et c'est le prisme que j'apporte au reste de
   mon travail aujourd'hui.
 

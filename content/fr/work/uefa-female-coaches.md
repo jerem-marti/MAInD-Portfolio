@@ -2,7 +2,7 @@
 title: "Why Not You?"
 summary: "Une campagne pour amener plus de femmes vers l'entraînement de football, réalisée pour un brief de l'UEFA et d'Amazon. Le concept de l'équipe, Why Not You?, déploie un entonnoir complet d'une affiche-miroir à un photobooth de l'Euro 2025 jusqu'à la landing page que j'ai conçue, qui transforme l'inspiration en un premier pas concret vers l'entraînement."
 status: "live"
-heroAlt: "La campagne Why Not You? : une typographie d'affichage marquée sur une entraîneuse, avec la ligne Lead Your Passion, Shape the Game, dans la palette vive de la campagne en orange, violet, vert et jaune."
+heroAlt: "La campagne Why Not You? : une typographie d'affichage percutante sur une entraîneuse, avec la ligne Lead Your Passion, Shape the Game, dans la palette vive de la campagne en orange, violet, vert et jaune."
 hero: "/images/work/uefa-female-coaches/hero.jpg"
 
 brief:
@@ -17,11 +17,11 @@ problem:
     Le football est plein de femmes qui ont vécu chaque facette du jeu comme joueuses, et presque aucune
     ne se voit comme entraîneuse. La barrière n'est pas le désir, c'est la visibilité. Comme l'a dit l'une
     de nos interviewées, « je n'ai jamais envisagé d'être entraîneuse, c'est dur d'être une femme dans ce
-    milieu ». Quand on n'a jamais vu quelqu'un comme soi le faire, le rôle est difficile à s'imaginer pour
-    soi-même.
+    milieu ». Quand on n'a jamais vu quelqu'un comme soi le faire, on a du mal à se projeter dans ce
+    rôle.
   - >-
     Le brief, de l'UEFA et d'Amazon autour de l'EURO féminin 2025, était de changer cela. Les entretiens
-    avec des joueuses ont fait remonter la même croyance des deux côtés : que les entraîneuses manquent de
+    avec des joueuses ont fait remonter la même conviction des deux côtés : que les entraîneuses n'ont pas
     la crédibilité des hommes, et pourtant que la passion de transmettre le jeu est clairement là. Le
     désir existe. Le rôle de la campagne était de l'aider à se muer en action.
 
@@ -31,7 +31,7 @@ role:
   contributed:
     - "La recherche et le concept de campagne avec l'équipe (entretiens, personas, stratégie d'entonnoir)"
   notTouched:
-    - "La réalisation du photobooth et de la mosaïque, l'affiche imprimée, et le stand physique de la remorque, portés par d'autres membres de l'équipe"
+    - "La réalisation du photobooth et de la mosaïque, l'affiche imprimée, et le stand-remorque physique, portés par d'autres membres de l'équipe"
   team: "Équipe de huit (Groupe Loomi) pour le Projet d'intégration de la HEIG-VD, sur un brief fixé par l'UEFA et Amazon : Hanae Ibrahim, François Cuennet, Jérémy Martin, Antony Neyret, Odin Wermeille, Ariadne Melissargos, Leïla Fidalgo et Yonatan Teklezgi. Encadrés par Marie Kuter (UX/UI et design), Nicolas Chabloz (innovation technique, XR et mobile) et Laurent Berthelot (chef de projet), avec le soutien d'enseignants et d'experts de l'Institut d'ingénierie des médias de la HEIG-VD."
 
 approach:
@@ -57,7 +57,7 @@ approach:
       - src: "/images/work/uefa-female-coaches/artifact-insight-passion.jpg"
         alt: "Une slide jumelle titrée 'But if they weren't discouraged from coaching, their passion would naturally lead them to it', avec deux bulles : 'passing on my passion is what drives me' et 'coaching keeps me connected to the field'."
         caption: "Et la passion, juste à côté."
-        decision: "Tenir le doute face au désir a fait passer le brief de convaincre les femmes de devenir entraîneuses à leur montrer qu'elles y ont leur place."
+        decision: "Tenir le doute face au désir a déplacé le brief : non plus convaincre les femmes de devenir entraîneuses, mais leur montrer qu'elles y ont leur place."
         width: "half"
 
   - label: "Campagne"
@@ -65,7 +65,7 @@ approach:
     prose:
       - >-
         En équipe, nous avons construit un seul concept (Why Not You? / Lead Your Passion, Shape the Game)
-        à travers un entonnoir marketing complet. La notoriété, c'était une impression frappante
+        sur un entonnoir marketing complet. La notoriété, c'était une affiche frappante
         d'entraîneuses autour d'un miroir, pour qu'une spectatrice se voie dans l'image. L'activation,
         c'était un stand remorque à l'Euro 2025 avec un photobooth, où chaque portrait, relié par QR code à
         notre landing page, rejoignait une mosaïque géante « Why not you? ». La fidélisation, c'était un
@@ -86,8 +86,8 @@ approach:
       - >-
         J'ai conçu et réalisé la landing page comme un parcours scrollytelling linéaire qui mène une
         visiteuse de « l'entraînement n'est peut-être pas pour moi » à un premier pas concret. Elle s'ouvre
-        sur un recadrage (« Et si tu devenais celle qui inspire ? »), puis redéfinit ce qu'est même
-        l'entraînement, non seulement se tenir sur la touche mais crier son cœur et se soucier plus que
+        sur un recadrage (« Et si tu devenais celle qui inspire ? »), puis redéfinit l'entraînement
+        lui-même, non seulement se tenir sur la touche mais crier à s'en époumoner et se soucier plus que
         quiconque, avant de céder le récit à de vraies entraîneuses qui s'expriment dans de courts
         témoignages vidéo.
       - >-
@@ -126,12 +126,12 @@ outcome:
     autre équipe, et développé par l'Institut d'ingénierie des médias de la HEIG-VD en une vraie campagne
     pour l'UEFA, qui a gardé notre nom et est désormais en ligne sur whynotyou.ch. Le travail étudiant
     d'origine est documenté dans la vitrine de la HEIG-VD, pi25.heig-vd.ch. Un brief étudiant est devenu
-    une vraie œuvre dans le monde.
+    une réalisation bien réelle.
 
 reflection: >-
   La leçon qui est restée, c'est à quel point tout cela vivait dans les mots. Une landing page sur
   quelque chose d'aussi personnel que « est-ce que je pourrais le faire ? » réussit ou échoue sur le ton,
-  le rythme et la taille du pas qu'elle demande, bien plus que sur le soin visuel. Écrire mon chemin du
+  le rythme et la taille du pas qu'elle demande, bien plus que sur le soin visuel. Écrire le passage du
   doute d'une inconnue à un premier clic confiant m'a appris à traiter la rédaction UX comme la structure
   d'une expérience, pas comme sa décoration. Voir le concept devenir ensuite une vraie campagne de l'UEFA
   a été la preuve que le récit avait porté.
@@ -181,6 +181,6 @@ resources:
 
 card:
   title: "Why Not You? — la campagne UEFA pour les entraîneuses"
-  alt: "La campagne Why Not You? : une typographie d'affichage marquée sur une entraîneuse, avec la ligne Lead Your Passion, Shape the Game."
+  alt: "La campagne Why Not You? : une typographie d'affichage percutante sur une entraîneuse, avec la ligne Lead Your Passion, Shape the Game."
   image: "/images/work/uefa-female-coaches/adjacent.jpg"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Human Loci"
-summary: "Un objet d'écoute synesthésique qui joue des lieux plutôt que de la musique. Trois disques de plâtre, chacun lié à un espace public, vous permettent de diffuser son enregistrement de terrain dans la pièce et de vous immerger dans l'atmosphère d'ailleurs, choisie au toucher avant qu'un son ne commence."
+summary: "Un objet d'écoute synesthésique qui joue des lieux plutôt que de la musique. Trois disques de plâtre, chacun lié à un espace public, vous permettent d'en diffuser l'enregistrement de terrain dans la pièce et de vous immerger dans l'ambiance d'un autre lieu, choisi au toucher avant le moindre son."
 status: "live"
 hero: "/images/work/human-loci/hero.jpg"
 heroAlt: "La boîte d'écoute Human Loci : un boîtier transparent en acrylique avec des haut-parleurs internes et un bras de lecture blanc, un disque de plâtre bleu texturé posé sur sa platine, sur un fond gris uni."
@@ -14,28 +14,28 @@ brief:
 
 problem:
   - >-
-    Le son enregistré désigne presque toujours quelque chose conçu pour être écouté : de la musique, un
-    podcast, une voix. La texture acoustique ordinaire d'un lieu public, un parc à midi, un port de
-    plaisance, une gare, est tout aussi riche, et nous choisissons presque jamais de nous y attarder.
-    C'est la couche qui reste d'habitude à l'arrière-plan, inaperçue.
+    Un son enregistré, c'est presque toujours quelque chose conçu pour être écouté : de la musique, un
+    podcast, une voix. La texture sonore ordinaire d'un lieu public, un parc à midi, un port de
+    plaisance, une gare, est tout aussi riche, et nous ne choisissons presque jamais de nous y attarder.
+    C'est la strate qui reste d'ordinaire à l'arrière-plan, inaperçue.
   - >-
     Human Loci est une petite machine pour écouter exactement cela. Elle ne joue pas de musique ; elle
     joue des lieux. Chacun est reconstitué non comme une image mais comme une présence : ses rythmes, sa
-    densité, le mouvement humain qui lui donne une forme dans le temps. L'objet tient davantage de
+    densité, le mouvement humain qui lui donne forme au fil du temps. L'objet tient davantage de
     l'archive de moments publics que du haut-parleur.
   - >-
-    Le brief était un cours de prototypage rapide construit autour de la fabrication d'un objet physique,
-    si bien que le vrai défi consistait à transformer ce concept en une chose que l'on peut tenir en
+    Le brief venait d'un cours de prototypage rapide centré sur la fabrication d'un objet physique,
+    si bien que le vrai défi était de transformer ce concept en une chose que l'on tient en
     main. Un rituel sans écran où le choix du lieu se fait au toucher et à la couleur, et où la
-    technologie disparaît pour que le lieu puisse passer au premier plan.
+    technologie s'efface pour laisser le lieu passer au premier plan.
 
 role:
   led:
     - "L'électronique de bout en bout : le lecteur RFID des disques, la chaîne de lecture audio, l'alimentation et la recharge, et le firmware"
     - "L'intégration du boîtier des haut-parleurs et de l'électronique dans le corps transparent"
-    - "Les contraintes d'assemblage du système et le plan technique général"
+    - "Les contraintes d'assemblage du système et le plan technique d'ensemble"
   contributed:
-    - "Copilotage de l'idéation et du concept général avec l'équipe"
+    - "Copilotage de l'idéation et du concept d'ensemble avec l'équipe"
   notTouched:
     - "Le mécanisme du bras de lecture et la molette de volume (Nerea Asensio)"
     - "Les disques de plâtre et le motif de la ceinture à charnière vive (Nicholas Vos)"
@@ -49,7 +49,7 @@ approach:
         Le point de départ était le Musipple, un lecteur conceptuel primé qui réinterprète le rituel du
         vinyle. Nous en avons emprunté le rituel et changé le sens. Au lieu de choisir une chanson, vous
         choisissez un environnement. Au lieu de montrer l'image d'un lieu, l'objet en reconstruit la
-        présence à travers un enregistrement de terrain en boucle et une surface que l'on peut sentir.
+        présence à travers un enregistrement de terrain en boucle et une surface que l'on peut toucher.
       - >-
         Ce recadrage a tout déterminé en aval. L'interaction est réduite à trois gestes larges et
         lisibles : poser un disque, déplacer le bras pour démarrer, tourner une molette pour le volume.
@@ -71,7 +71,7 @@ approach:
         disque devait déclencher automatiquement le bon paysage sonore. Un lecteur RFID identifie chaque
         disque par une étiquette, un Raspberry Pi Pico 2 fait tourner la machine à états, et un module
         audio stocke les enregistrements et pilote les haut-parleurs. Disque détecté : ça joue. Disque
-        retiré : après un court seuil, ça s'arrête.
+        retiré : après un bref délai, ça s'arrête.
       - >-
         J'ai validé toute la chaîne sur le banc avant de m'engager dans la fabrication : lecture RFID
         fiable, association de l'étiquette de chaque disque à une piste, contrôle audio par liaison série,
@@ -82,8 +82,8 @@ approach:
         l'électronique qui me fascine encore tranquillement.
     artifacts:
       - alt: "Schéma de l'architecture électronique : un lecteur RFID et un contrôleur Pico alimentant un module audio avec sorties stéréo vers les haut-parleurs et recharge LiPo."
-        caption: "Électronique — du RFID au contrôleur à l'audio, tout le flux du signal."
-        decision: "Construit sur des modules de développement plutôt que sur des composants discrets. Une correction documentée d'une seule ligne dans une librairie a fait fonctionner la carte audio sur la chaîne d'outils du Pico."
+        caption: "Électronique — du RFID au contrôleur puis à l'audio, tout le flux du signal."
+        decision: "Construit sur des modules de développement plutôt que sur des composants discrets. Une correction documentée d'une seule ligne dans une bibliothèque a fait fonctionner la carte audio sur la chaîne d'outils du Pico."
         width: "wide"
         src: "/images/work/human-loci/artifact-electronics.jpg"
 
@@ -91,22 +91,22 @@ approach:
     title: "Du son dans une coque transparente"
     prose:
       - >-
-        L'objet est transparent à dessein ; sa construction fait partie de l'expérience. Cela ne laissait
-        nulle part où cacher un haut-parleur ou un câble, ce qui a fait du boîtier audio le problème
+        L'objet est transparent à dessein ; sa construction fait partie de l'expérience. Plus moyen, dès
+        lors, de cacher un haut-parleur ou un câble, ce qui a fait du boîtier audio le problème
         d'intégration le plus difficile. Nous avons conçu un module de haut-parleurs interne compact,
-        divisé en deux chambres scellées, deux petits transducteurs chacune, en privilégiant l'étanchéité
+        divisé en deux chambres scellées, deux petits transducteurs par chambre, en privilégiant l'étanchéité
         à l'air, la rigidité, et un assemblage qui se démonte sans colle.
       - >-
         Nous y sommes parvenus par étapes : une maquette en acrylique à un seul haut-parleur pour
         vérifier les vibrations et la fixation imprimée, un prototype en bois de la disposition à deux
         chambres pour valider l'alignement et l'ordre d'assemblage, puis l'acrylique final découpé au
-        laser. Les cartes se montent à l'intérieur sur des supports imprimés vissés dans des inserts à
-        chaud dans l'acrylique, si bien que les surfaces extérieures restent nettes. L'ingénierie ne
+        laser. Les cartes se montent à l'intérieur sur des supports imprimés, vissés dans des inserts à
+        chaud noyés dans l'acrylique, si bien que les surfaces extérieures restent nettes. L'ingénierie ne
         compte que lorsqu'elle ne se voit pas.
     artifacts:
       - alt: "Un prototype en bois du boîtier de haut-parleurs à deux chambres assemblé par tenons, utilisé pour valider la disposition avant de découper l'acrylique."
         caption: "Boîtier de haut-parleurs — prototype en bois avant l'acrylique final."
-        decision: "L'acrylique semble idéal mais se fissure sous contrainte aux trous de vis, alors un prototype en bois a d'abord dérisqué la géométrie et l'ordre d'assemblage."
+        decision: "L'acrylique semble idéal mais se fissure sous contrainte aux trous de vis, alors un prototype en bois a d'abord permis de fiabiliser la géométrie et l'ordre d'assemblage."
         width: "half"
         src: "/images/work/human-loci/artifact-enclosure-wood.jpg"
       - alt: "Une vue de dessus en biais à travers la coque transparente : les cartes et la platine reposent sur des supports internes imprimés en 3D fixés par des inserts à chaud, gardant les surfaces extérieures nettes."
@@ -125,12 +125,12 @@ approach:
         identité que l'on reconnaît au toucher et à la couleur avant qu'aucun son ne commence. Le toucher
         devient une vraie dimension de l'œuvre, pas une finition.
       - >-
-        Les fabriquer a été son propre petit problème d'ingénierie, résolu par l'équipe avec un positif
-        découpé au laser, un moule négatif thermoformé, et du plâtre pigmenté coulé puis démoulé. Le même
-        goût pour les matériaux peu familiers a façonné la ceinture du corps, une bande continue à
+        Les fabriquer fut un petit problème d'ingénierie à part entière, que l'équipe a résolu avec un positif
+        découpé au laser, un moule négatif thermoformé et du plâtre pigmenté coulé puis démoulé. Le même
+        goût pour les matériaux peu familiers a façonné la ceinture de l'objet, une bande continue à
         charnière vive qui laisse l'acrylique rigide se plier autour de tout l'objet tout en restant
-        acoustiquement ouverte. La majeure partie du temps du projet est passée dans des essais comme
-        ceux-là, et l'objet n'en est que meilleur.
+        acoustiquement ouverte. L'essentiel du temps du projet est passé dans des essais de ce genre,
+        et l'objet n'en est que meilleur.
     artifacts:
       - alt: "Deux photos de processus : des motifs de disque en couches découpés au laser empilés en positif, et un moule négatif gris thermoformé utilisé pour couler les disques de plâtre."
         caption: "Fabrication des disques — couches découpées au laser et moule thermoformé."
@@ -141,20 +141,20 @@ approach:
 outcome:
   - >-
     Un objet synesthésique fonctionnel. Posez un disque, déplacez le bras, et un lieu public remplit la
-    pièce comme une atmosphère continue ; soulevez le disque et il retombe dans le silence.
+    pièce comme une atmosphère continue ; soulevez le disque et le silence revient.
   - >-
-    Trois lieux réalisés (un parc, un port de plaisance, une gare) à partir d'enregistrements de terrain
-    réalisés et montés sur place pour le projet, chacun porté par un disque de plâtre que l'on choisit au
+    Trois lieux recréés (un parc, un port de plaisance, une gare) à partir d'enregistrements de terrain
+    captés et montés sur place pour le projet, chacun porté par un disque de plâtre que l'on choisit au
     toucher plutôt que dans une liste.
   - >-
-    Un prototype physique entièrement abouti à travers l'électronique, l'audio et la fabrication,
-    documenté ouvertement avec le code et les fichiers matériels publiés sous licences libres.
+    Un prototype physique entièrement abouti sur tous les plans, électronique, audio et fabrication,
+    documenté en libre accès avec le code et les fichiers matériels publiés sous licences libres.
 
 reflection: >-
-  La leçon que je retiens de Human Loci, c'est qu'un concept sans intention a à peu près autant de
-  valeur que cuisiner avec des ingrédients qui n'ont aucun goût. L'idéation profonde que nous avons
-  refusé de précipiter, et l'incitation de Marco à réinterpréter plutôt qu'à reproduire, sont ce qui a
-  donné un sens à l'objet. Le côté technique a récompensé la même patience : travailler le plâtre, le
+  La leçon que je retiens de Human Loci, c'est qu'un concept sans intention ne vaut guère plus que
+  cuisiner avec des ingrédients sans goût. L'idéation en profondeur que nous avons
+  refusé de précipiter, et l'invitation de Marco à réinterpréter plutôt qu'à reproduire, voilà ce qui a
+  donné tout son sens à l'objet. Le volet technique a récompensé la même patience : travailler le plâtre, le
   plexiglas et le thermoformage pour la première fois n'a porté ses fruits que parce que nous avons
   laissé la créativité guider d'abord et le pragmatisme suivre ensuite.
 

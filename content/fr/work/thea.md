@@ -1,6 +1,6 @@
 ---
 title: "Thea"
-summary: "Un wearable porté au poignet qui offre aux personnes vivant avec des allergies un nouveau sens, apaisé : la conscience de leur charge allergénique qui monte vers un seuil personnel, assez tôt pour que le choix d'agir leur appartienne encore. Il porte ce sens à travers trois canaux calibrés, une jauge lumineuse ambiante, un rythme haptique et une voix qui reste silencieuse tant que vous ne la sollicitez pas, prototypé sur un Arduino UNO Q dont l'architecture à deux cerveaux est conçue pour faire tourner cette voix sur l'appareil lui-même."
+summary: "Un wearable porté au poignet qui offre aux personnes vivant avec des allergies un nouveau sens, apaisé : la conscience de leur charge allergénique qui monte vers un seuil personnel, assez tôt pour que le choix d'agir leur appartienne encore. Il porte ce sens sur trois canaux calibrés, une jauge lumineuse ambiante, un rythme haptique et une voix qui reste silencieuse tant que vous ne la sollicitez pas, prototypé sur un Arduino UNO Q dont l'architecture à deux cerveaux est conçue pour faire tourner cette voix sur l'appareil lui-même."
 status: "live"
 hero: "/images/work/thea/hero.jpg"
 heroAlt: "Une vue de dessus du wearable Thea, un boîtier clair sur un bracelet en tissu, posé sur une surface bleu cobalt profond parsemée de fleurs sauvages séchées, de graminées et de capitules."
@@ -15,11 +15,11 @@ brief:
 problem:
   - >-
     Un adulte sur quatre vit avec une allergie chronique. D'après la recherche sur laquelle nous nous
-    sommes appuyés, un diagnostic prend en moyenne environ sept ans, et plus de la moitié des personnes
+    sommes appuyés, un diagnostic prend en moyenne près de sept ans, et plus de la moitié des personnes
     ne parviennent jamais à identifier leur déclencheur principal. Une allergie, c'est le corps qui
     interprète à tort quelque chose d'inoffensif comme une menace, et la réaction ne surgit pas de nulle
     part : les allergènes, l'environnement et l'état de votre propre corps s'accumulent, de manière
-    cumulative et invisible, vers une limite personnelle. Il n'y a souvent aucun symptôme tant que cette
+    sourde et invisible, vers une limite personnelle. Il n'y a souvent aucun symptôme tant que cette
     limite n'est pas franchie, et à ce moment-là la journée est déjà perturbée.
   - >-
     Nous avons cadré le travail autour de deux personnes qui perdent confiance en leur corps dans des
@@ -44,8 +44,8 @@ role:
     - "L'intégration de la couche réflexive (l'agent, sa logique Python et la VUI) dans le firmware de l'appareil"
     - "La démo qui a porté la présentation finale"
   contributed:
-    - "Les phases de recherche et d'idéation avec l'équipe, dont les entretiens experts avec des allergologues"
-    - "Un Visual Inquiry Tool initial, le flux du concept, et la pression mise sur l'équipe pour savoir si une interface vocale méritait seulement sa place"
+    - "Les phases de recherche et d'idéation avec l'équipe, dont les entretiens avec des allergologues"
+    - "Un Visual Inquiry Tool initial, le flux du concept, et la pression mise sur l'équipe pour savoir si une interface vocale avait seulement lieu d'être"
     - "La photographie de documentation, avec l'équipe"
     - "La revue par les pairs tout au long du projet"
   notTouched:
@@ -60,9 +60,9 @@ approach:
     title: "Perception, pas notification"
     prose:
       - >-
-        Nous sommes partis de la maladie chronique pour resserrer sur les allergies, où l'écart est net :
+        Nous sommes partis de la maladie chronique pour nous recentrer sur les allergies, où l'écart est net :
         les déclencheurs sont invisibles, la charge est cumulative, et l'alerte propre au corps tend à
-        arriver trop tard pour qu'on puisse agir. Les entretiens experts avec des allergologues ont
+        arriver trop tard pour qu'on puisse agir. Les entretiens avec des allergologues ont
         affiné cela en trois tensions autour desquelles le domaine tourne sans cesse, la prévention, le
         traitement, et la plus difficile des trois, tenir une thérapie dans la durée.
       - >-
@@ -72,15 +72,15 @@ approach:
         la perception est la décision dont tout le reste du travail dépend.
       - >-
         Pour fixer cela avant de nous engager, j'ai construit un Visual Inquiry Tool qui forçait chaque
-        hypothèse à se découvrir : pour qui est Thea, ce qu'elle peut réellement capter, et ce que ce sens
+        hypothèse à se révéler au grand jour : pour qui est Thea, ce qu'elle peut réellement capter, et ce que ce sens
         permettrait de débloquer. Cela a permis à l'équipe d'argumenter à partir d'une image partagée
         plutôt que de goûts personnels, et c'est là que la coupe, et l'idée du corps et du monde lus comme
         une seule météo, ont tenu ensemble pour la première fois.
     artifacts:
       - src: "/images/work/thea/approach-1-vit.jpg"
-        alt: "Un tableau blanc des sessions de cadrage, couvert de post-its cartographiant pour qui est Thea et ce que ce sens débloquerait, avec un grand « WHO ? » dessiné à la main et entouré au bas."
-        caption: "Le mur de cadrage, argumenté depuis une image partagée."
-        decision: "Cadrer Thea comme un nouveau sens plutôt qu'une nouvelle alerte. L'outil a gardé l'équipe honnête sur ce que nous débloquions vraiment avant que quiconque ne se laisse séduire par une fonctionnalité."
+        alt: "Un tableau blanc des sessions de cadrage, couvert de post-its cartographiant pour qui est Thea et ce que ce sens débloquerait, avec un grand « WHO ? » dessiné à la main et entouré en bas."
+        caption: "Le mur de cadrage, argumenté à partir d'une image partagée."
+        decision: "Cadrer Thea comme un nouveau sens plutôt qu'une nouvelle alerte. L'outil a gardé l'équipe lucide sur ce que nous débloquions vraiment avant que quiconque ne se laisse séduire par une fonctionnalité."
         width: "wide"
 
   - label: "Concept"
@@ -88,8 +88,8 @@ approach:
     prose:
       - >-
         Le modèle mental de Thea est une coupe qui se remplit vers une ligne. Les allergènes la
-        remplissent, l'environnement change la vitesse, et l'état de votre propre corps, sommeil, stress,
-        maladie, abaisse l'endroit où se situe la ligne. La ligne est le seuil personnel où une réaction
+        remplissent, l'environnement en modifie la vitesse, et l'état de votre propre corps, sommeil, stress,
+        maladie, abaisse la position de la ligne. La ligne est le seuil personnel où une réaction
         commence. L'écart entre le niveau et la ligne est la Fenêtre d'Action : la marge qu'il vous reste
         pour agir.
       - >-
@@ -105,7 +105,7 @@ approach:
       - src: "/images/work/thea/approach-2-cup.jpg"
         alt: "Une slide de la présentation finale, « The cumulative load model » : une coupe remplie par le bas par les allergènes et l'environnement, des co-facteurs abaissant le seuil par le haut, et l'écart entre le niveau actuel et le seuil marqué comme la Fenêtre d'Action."
         caption: "Le modèle de charge cumulative, issu de la présentation finale."
-        decision: "Concevoir autour d'un seuil ressenti plutôt que d'une valeur. Choisir la marge plutôt qu'un chiffre, c'est ce qui maintient Thea comme un sens plutôt qu'un compteur."
+        decision: "Concevoir autour d'un seuil ressenti plutôt que d'une valeur. Choisir la marge plutôt qu'un chiffre, c'est ce qui fait de Thea un sens plutôt qu'un compteur."
         width: "wide"
 
   - label: "Multimodalité"
@@ -139,8 +139,8 @@ approach:
     prose:
       - >-
         La voix de Thea est un agent, et son comportement déterminant est la retenue. Elle ne parle
-        jamais en premier. Elle ne s'exécute que lorsque vous ouvrez une conversation, ou après que vous
-        ayez accusé réception d'une alerte critique, et le silence est sa sortie par défaut, pas un repli.
+        jamais en premier. Elle n'intervient que lorsque vous ouvrez une conversation, ou après que vous
+        avez accusé réception d'une alerte critique, et le silence est sa sortie par défaut, pas un repli.
       - >-
         J'ai écrit la personnalité et le system prompt pour que la voix ne puisse jamais trahir le reste
         du design. Elle reçoit l'état sous forme de plages simples, jamais de chiffres bruts, de sorte
@@ -149,15 +149,15 @@ approach:
         elle-même.
       - >-
         L'essentiel du prompt, ce sont des garde-fous, parce qu'une voix proche du domaine de la santé
-        échoue de manières spécifiques et graves. Thea ne diagnostique jamais, n'abaisse jamais sa propre
+        échoue de manière spécifique et grave. Thea ne diagnostique jamais, n'abaisse jamais sa propre
         sensibilité sur demande, n'enregistre jamais une personne ou une caractéristique protégée comme un
-        allergène, et ne suit jamais d'instructions glissées au sein d'une exposition rapportée. C'est une
-        compagne bornée, et elle est honnête sur le fait de l'être.
+        allergène, et ne suit jamais d'instructions glissées dans une exposition rapportée. C'est une
+        compagne aux limites assumées, et elle est honnête sur le fait de l'être.
     artifacts:
       - src: "/images/work/thea/approach-4-voice.jpg"
         alt: "Une slide de la présentation finale, « Thea's voice: a confidant, not an alarm », montrant la boucle de respiration épurée de l'avatar de Thea et la phrase selon laquelle elle reste silencieuse par défaut et ne parle que lorsque cela signifie quelque chose."
-        caption: "La voix de Thea, une confidente pas une alarme, issue de la présentation finale."
-        decision: "Faire du silence le réglage par défaut, et des plages plutôt que des chiffres la seule entrée de l'agent, pour que la voix ne puisse structurellement pas devenir l'alarme que nous venions justement de retirer."
+        caption: "La voix de Thea, une confidente, pas une alarme, issue de la présentation finale."
+        decision: "Faire du silence le réglage par défaut, et des plages plutôt que des chiffres la seule entrée de l'agent, pour que, structurellement, la voix ne puisse pas devenir l'alarme que nous venions justement de retirer."
         width: "wide"
 
   - label: "Le développement"
@@ -166,13 +166,13 @@ approach:
       - >-
         Thea tourne sur un Arduino UNO Q, qui porte deux cerveaux sur une seule carte : un
         microcontrôleur temps réel et un microprocesseur Linux. Nous avons utilisé cette séparation à
-        dessein. Le microcontrôleur possède le réflexe toujours actif, la captation, la lumière,
+        dessein. Le microcontrôleur gère le réflexe toujours actif, la captation, la lumière,
         l'haptique et l'alerte critique instantanée, la partie qui ne doit jamais attendre. Le
-        microprocesseur possède la couche réflexive, la voix, le raisonnement et l'apprentissage, la
+        microprocesseur gère la couche réflexive, la voix, le raisonnement et l'apprentissage, la
         partie qui ne s'éveille que rarement.
       - >-
         Le cadre du cours était l'IA locale, hors ligne, et l'architecture est conçue pour cela : la
-        couche réflexive est censée tourner sur le propre processeur Linux de la carte, gardant quelque
+        couche réflexive est censée tourner sur le processeur Linux propre à la carte, gardant quelque
         chose d'aussi personnel sur l'appareil. En cinq semaines, nous avons prouvé l'interaction plutôt
         que le modèle embarqué. Faire tourner l'agent entièrement en local est l'intention de
         l'architecture et la prochaine chose à mériter, pas quelque chose que ce prototype peut déjà
@@ -180,11 +180,11 @@ approach:
       - >-
         À la clôture du module, Nicholas et moi avons convenu que je reprendrais le firmware pour pouvoir
         y intégrer la couche réflexive en un seul appareil et construire la démo qui a porté la
-        présentation finale. C'était le choix pragmatique sous une horloge de cinq semaines, et il a
+        présentation finale. C'était le choix pragmatique avec cinq semaines au compteur, et il a
         permis à chacun de nous de finir sur la partie qu'il connaissait le mieux.
     artifacts:
       - src: "/images/work/thea/approach-5-flow.jpg"
-        alt: "Une photographie d'un tableau blanc montrant le flux du système dessiné au marqueur : des cases et des flèches retraçant l'appareil de la captation jusqu'au rendu ambiant et aux deux fenêtres de conversation."
+        alt: "Une photographie d'un tableau blanc montrant le flux du système dessiné au marqueur : des cases et des flèches retraçant le parcours de l'appareil, de la captation au rendu ambiant puis aux deux fenêtres de conversation."
         caption: "Le flux du système, élaboré au tableau blanc."
         decision: "Séparer le réflexe toujours actif de la rare couche réflexive entre les deux processeurs, pour que l'architecture elle-même impose le calme que la marque promet, et laisse de la place pour amener le modèle sur l'appareil."
         width: "wide"
@@ -231,7 +231,7 @@ reflection: >-
   Le doute qui me reste est étroit mais réel : où les cerveaux devraient vivre. La promesse du projet est
   sur l'appareil,
   toujours, chaque modèle tournant sur le matériel propre au bracelet, et l'argument de la
-  confidentialité pour cela est réel. Mais mettre sur pied une carte dédiée juste pour faire tourner de
+  confidentialité en sa faveur est réel. Mais fabriquer une carte dédiée juste pour faire tourner de
   l'IA locale est l'un des gestes les plus intensifs en carbone qu'un produit puisse poser : pour un
   appareil sur batterie, la fabrication représente environ 75 à 85 pour cent de ses émissions sur le
   cycle de vie, et l'essentiel du raisonnement lourd pourrait tourner sur le téléphone qu'une personne

@@ -1,6 +1,6 @@
 ---
 title: "BrushBuddy"
-summary: "Un cube monstre compagnon qui guide deux minutes de brossage des dents pour les enfants de 4 à 8 ans. Sortez la brosse à dents et le visage du cube réagit par la lumière, le mouvement et le son, allumant douze dents en séquence et n'avançant que tant que l'enfant se brosse réellement les dents."
+summary: "Un cube-monstre compagnon qui guide les enfants de 4 à 8 ans pendant deux minutes de brossage des dents. Sortez la brosse à dents et le visage du cube réagit par la lumière, le mouvement et le son : douze dents s'allument l'une après l'autre, et la séquence n'avance que tant que l'enfant se brosse vraiment les dents."
 status: "live"
 hero: "/images/work/brushbuddy/hero.jpg"
 heroAlt: "Une main soulève la brosse à dents jaune de son socle au sommet du cube BrushBuddy, dont le visage de monstre inquiet — sourcils relevés, yeux mobiles, une bouche de douze dents grises — attend en dessous sur un large fond gris."
@@ -14,9 +14,9 @@ brief:
 
 problem:
   - >-
-    Les enfants de 4 à 8 ans résistent souvent au brossage des dents, perdent l'attention avant deux
+    Les enfants de 4 à 8 ans résistent souvent au brossage des dents, décrochent avant les deux
     minutes, ou s'arrêtent quand la routine devient répétitive. La solution habituelle, un minuteur,
-    mesure la tâche mais ne fait rien pour donner à l'enfant l'envie de la terminer.
+    mesure la tâche mais ne fait rien pour donner à l'enfant l'envie d'aller au bout.
   - >-
     BrushBuddy recadre le brossage comme une courte interaction avec un personnage plutôt que comme
     un décompte. Un monstre compagnon réagit à ce que fait l'enfant par la lumière, le mouvement des
@@ -40,11 +40,10 @@ approach:
       - >-
         Un minuteur indique à l'enfant combien de temps il reste ; il ne fait rien pour lui donner
         l'envie de rester. BrushBuddy remplace le décompte par un personnage qui réagit. La routine de
-        deux minutes devient une séquence visible de douze dents qui s'allument une à une, de sorte que
-        l'enfant voit toujours ce qui est fait et ce qui reste, ainsi que l'ordre dans lequel se
-        brosser.
+        deux minutes devient une séquence visible de douze dents qui s'allument une à une : l'enfant
+        voit toujours ce qui est fait, ce qui reste, et dans quel ordre se brosser.
       - >-
-        Le geste clé est que la séquence n'avance que tant qu'un mouvement de brossage est réellement
+        L'idée maîtresse : la séquence n'avance que tant qu'un vrai mouvement de brossage est
         détecté. Arrêtez-vous, et le compagnon s'arrête avec vous. Cela transforme directement
         l'effort en progression. La motivation s'étend ensuite au-delà d'une seule séance : les
         routines terminées s'accumulent, et après douze le cube distribue un autocollant, donnant une
@@ -60,38 +59,38 @@ approach:
         et si le brossage s'arrête, les yeux s'arrêtent et l'éclairage se met en pause jusqu'à la
         reprise.
       - >-
-        Un signal de fin clôt la routine et invite à remettre la brosse en place. Une fois revenue, le
-        cube montre à quel point l'enfant est proche du prochain autocollant, et après douze séances
-        terminées il en distribue un et remet le compteur à zéro. Chaque état reste explicite et
-        observable, de sorte qu'un enfant de quatre ans peut lire toute la boucle sans qu'on la lui
-        explique.
+        Un signal de fin clôt la routine et invite à remettre la brosse en place. Une fois la brosse
+        remise, le cube montre à quel point l'enfant est proche du prochain autocollant, et après
+        douze séances terminées il en distribue un et remet le compteur à zéro. Chaque état reste
+        explicite et observable, de sorte qu'un enfant de quatre ans peut lire toute la boucle sans
+        qu'on la lui explique.
     artifacts:
       - src: "/images/work/brushbuddy/artifact-interaction-storyboard.jpg"
         alt: "Un storyboard dessiné à la main en six étapes d'une séance : sortir la brosse, les dents qui pulsent pour inviter au dentifrice, un jingle de départ, les dents qui s'allument dans l'ordre pendant le brossage et se mettent en pause à l'arrêt, un signal de fin, et un compteur de séances qui débouche sur un autocollant."
         caption: "Storyboard d'interaction — une séance, du début à la fin."
-        decision: "Cartographier la boucle à la main d'abord a figé chaque état et chaque signal avant la moindre ligne de firmware, de sorte que la construction en cinq jours avait une seule cible à atteindre."
+        decision: "Cartographier d'abord la boucle à la main a figé chaque état et chaque signal avant la moindre ligne de firmware, si bien que la construction en cinq jours n'avait qu'une cible à viser."
         width: "wide"
 
   - label: "Système"
     title: "Deux microcontrôleurs, une routine"
     prose:
       - >-
-        Ma partie de la construction était l'électronique répartie sur deux appareils. Le cube
+        Dans la construction, ma part était l'électronique, répartie sur deux appareils. Le cube
         contient le cerveau : le visage animé, les douze dents adressables, les signaux sonores et le
-        servomoteur qui distribue les autocollants. Le second microcontrôleur vit dans la brosse à
+        servomoteur qui distribue les autocollants. Le second microcontrôleur loge dans la brosse à
         dents, où un capteur de mouvement détecte si l'enfant se brosse vraiment les dents et l'envoie
-        au cube par une liaison sans fil. Diviser le système en deux est ce qui permet à la routine de
-        distinguer le brossage d'une brosse à dents posée immobile.
+        au cube par une liaison sans fil. Diviser le système en deux, c'est ce qui permet à la routine
+        de distinguer un vrai brossage d'une brosse posée immobile.
       - >-
-        Les dents éclairées ont été leur propre petit problème, résolu avec des dents en plexiglas
-        poncées pour diffuser la lumière de façon uniforme plutôt qu'éblouissante. Chaque sous-système
+        Les dents éclairées ont posé leur propre petit problème, résolu avec du plexiglas poncé
+        pour diffuser la lumière de façon uniforme plutôt qu'éblouissante. Chaque sous-système
         a été mis au point sur l'établi avant d'entrer dans le cube, car dans une construction en cinq
-        jours il n'y a pas le temps de déboguer tout en même temps.
+        jours il n'y a pas le temps de tout déboguer en même temps.
     artifacts:
       - src: "/images/work/brushbuddy/artifact-system-internals.jpg"
         alt: "Le cube ouvert en deux moitiés : l'une contient le contrôleur ESP32, trois servomoteurs, le capteur du socle, un buzzer et le câblage ; l'autre est la coque en contreplaqué gravée au laser du nom BrushBuddy et du crédit du cours."
         caption: "À l'intérieur du cube — l'un des deux microcontrôleurs."
-        decision: "Répartir le cerveau et la brosse sur deux cartes est ce qui permet à la routine de distinguer un vrai brossage d'une brosse à dents posée immobile."
+        decision: "Répartir le cerveau et la brosse sur deux cartes, c'est ce qui permet à la routine de distinguer un vrai brossage d'une brosse posée immobile."
         width: "wide"
 
   - label: "Sprint"
@@ -102,7 +101,7 @@ approach:
         premier jour a réduit un cahier des charges large à une seule routine stable et bien définie :
         le brossage des dents pour les enfants de quatre à huit ans. Le deuxième jour a choisi et testé
         l'électronique sur l'établi pendant que la forme du cube prenait corps en CAO. Le troisième
-        jour a mis au point le programme embarqué et l'éclairage des dents et a entamé la fabrication.
+        jour a mis au point le programme embarqué et l'éclairage des dents, puis entamé la fabrication.
       - >-
         Le quatrième jour a assemblé le cube et ajouté le second microcontrôleur dans la brosse à
         dents, envoyant le mouvement sans fil. Le cinquième jour a été le réglage et la fiabilité, le

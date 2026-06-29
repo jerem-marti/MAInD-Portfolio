@@ -2,7 +2,7 @@
 title: "Beau-Rivage Eco-Redesign"
 summary: "Une refonte écoconçue de fond en comble du site du Beau-Rivage Palace qui a réduit son poids et son empreinte carbone d'environ 95 % tout en gardant l'allure d'un hôtel cinq étoiles. Un audit du site existant, un nouveau design, et un build Nuxt 3 réglé pour la durabilité."
 status: "live"
-heroAlt: "La page d'accueil refondue du Beau-Rivage Palace au repos : une navigation supérieure sobre et le logo centré 'Beau-Rivage Palace, Lausanne Switzerland' sur un champ de fines lignes dorées, bien plus léger que le site d'origine."
+heroAlt: "La page d'accueil refondue du Beau-Rivage Palace au repos : une barre de navigation sobre en haut et le logo centré 'Beau-Rivage Palace, Lausanne Switzerland' sur une trame de fines lignes dorées, bien plus léger que le site d'origine."
 hero: "/images/work/beau-rivage/hero.jpg"
 
 brief:
@@ -19,9 +19,9 @@ problem:
     gratuit. C'est de la bande passante, de l'énergie et du carbone à chaque visite.
   - >-
     Le brief consistait à refondre le site du Beau-Rivage Palace selon les principes de l'éco-conception
-    (le design numérique responsable), et le vrai défi tenait à la tension à l'intérieur : réduire
-    drastiquement le coût environnemental du site sans perdre le sentiment de luxe qui fait tout l'enjeu
-    de la marque.
+    (le design numérique responsable), et le vrai défi tenait à une tension interne : réduire
+    drastiquement le coût environnemental du site sans perdre le sentiment de luxe sur lequel repose
+    toute la marque.
 
 role:
   led:
@@ -40,8 +40,8 @@ approach:
       - >-
         Avant de refondre quoi que ce soit, nous avons mesuré ce qui existait, car l'éco-conception ne
         prend sens que face à une référence. Le site existant s'appuyait sur de la vidéo en lecture
-        automatique et des images non optimisées à travers une structure profonde de chambres, suites,
-        restaurants, bars et spas. Une seule page pesait plus de treize mégaoctets et obtenait un F sur
+        automatique et des images non optimisées, réparties dans une arborescence profonde de chambres,
+        suites, restaurants, bars et spas. Une seule page pesait plus de treize mégaoctets et obtenait un F sur
         EcoIndex, avec une estimation de 368 kg de CO2 par an pour dix mille visites par mois.
       - >-
         Nous avons aussi cartographié les vrais parcours utilisateurs (un prospect qui s'informe, un
@@ -51,12 +51,12 @@ approach:
       - src: "/images/work/beau-rivage/artifact-audit-1.jpg"
         alt: "Une slide de projet titrée 'Revue des éléments du site non écoconçus' avec trois colonnes, Vidéos, Images et Animations, listant les médias du site d'origine comme étant de haute qualité, surdimensionnés, non compressés et en lecture automatique."
         caption: "Audit — les médias du site d'origine, passés en revue."
-        decision: "Nommer chaque ingrédient lourd d'abord a montré que la vidéo et les images représentaient l'essentiel du poids, et c'est donc là que la refonte se jouerait."
+        decision: "Nommer d'abord chaque ingrédient lourd a montré que la vidéo et les images représentaient l'essentiel du poids, et c'est donc là que la refonte se jouerait."
         width: "half"
       - src: "/images/work/beau-rivage/artifact-audit-2.jpg"
         alt: "Une slide de projet titrée 'Revue des éléments du site non écoconçus' relevant des illustrations sans valeur informative, de très grandes quantités de médias de haute qualité, et des pages qui répètent le contenu d'une autre page."
         caption: "Audit — quelle part n'apportait aucune information."
-        decision: "L'essentiel des médias était décoratif, nous pouvions donc retirer du poids sans retirer rien de ce qu'un client venait vraiment chercher."
+        decision: "L'essentiel des médias était décoratif, nous pouvions donc retirer du poids sans rien retirer de ce qu'un client venait vraiment chercher."
         width: "half"
 
   - label: "Refonte"
@@ -66,13 +66,13 @@ approach:
         La question de design était la plus intéressante : comment garder une image de prestige tout en
         retirant les ingrédients lourds qui la signalent d'habitude ? Nous avons reconstruit les pages
         clés (la page d'accueil, les chambres et suites, une suite comme la Riviera) autour de la
-        sobriété, en traitant l'espace généreux et la typographie soignée comme le signal de luxe plutôt
-        que le spectacle en lecture automatique.
+        sobriété, en traitant l'espace généreux et la typographie soignée comme le signal du luxe, à la
+        place du spectacle en lecture automatique.
     artifacts:
       - src: "/images/work/beau-rivage/artifact-redesign.jpg"
         alt: "Une slide de projet titrée 'Comment retranscrire le luxe de manière écoconçue?' associant une approche de design en quatre points (mise en page épurée, couleurs revalorisées, médias allégés via des SVG sobres, moins de contenu) à des maquettes de la page d'accueil refondue, de la page La Plage et de la Suite Riviera."
         caption: "Refonte — garder le luxe, retirer le poids."
-        decision: "Nous avons traité la sobriété comme le signal de luxe, en mettant une typographie et un espace soignés et des SVG sobres à la place du spectacle en lecture automatique."
+        decision: "Nous avons traité la sobriété comme le signal du luxe, en substituant au spectacle en lecture automatique une typographie et un espace soignés et des SVG sobres."
         width: "wide"
 
   - label: "Build"
@@ -80,27 +80,27 @@ approach:
     prose:
       - >-
         Nous sommes partis de Vue, le framework que nous connaissions, et nous sommes passés à Nuxt 3
-        précisément pour les outils de durabilité qu'il apporte. Le rendu côté serveur fait que la page
+        précisément pour les outils de durabilité qu'il apporte. Grâce au rendu côté serveur, la page
         arrive prête à s'afficher avec un travail minimal sur l'appareil du visiteur, et Nuxt Image gère
         automatiquement la plus grosse source de poids : convertir les images vers des formats modernes
         comme WebP et AVIF, les charger en différé, et les redimensionner à l'écran réel plutôt que
         d'envoyer un seul énorme fichier à tout le monde.
       - >-
-        Cette combinaison constitue l'essentiel du gain. Une architecture SSR sur Node.js maintient le
-        travail côté client, et donc l'énergie de l'appareil, à un niveau bas, et une gestion disciplinée
-        des images transforme les pages les plus lourdes en les plus légères. L'idée tout du long était
+        Cette combinaison constitue l'essentiel du gain. Une architecture SSR sur Node.js réduit le
+        travail côté client, et donc l'énergie de l'appareil, au minimum, et une gestion disciplinée
+        des images fait des pages les plus lourdes les plus légères. L'idée tout du long était
         que la durabilité ici n'est pas une ambiance, ce sont des choix techniques précis avec des effets
         mesurables.
     artifacts:
       - src: "/images/work/beau-rivage/artifact-build-1.jpg"
         alt: "Une slide de projet titrée 'Nuxt Image' montrant un intérieur du Beau-Rivage converti en AVIF et redimensionné, passant de 51.5 kB à 22.5 kB, soit 56 % d'économie, à côté du code NuxtImg qui le fait."
         caption: "Build — Nuxt Image fait le gros du travail."
-        decision: "La conversion automatique en WebP et AVIF, plus le redimensionnement au viewport, ont transformé la source de poids la plus lourde en la plus légère."
+        decision: "La conversion automatique en WebP et AVIF, plus le redimensionnement au viewport, ont fait de la source de poids la plus lourde la plus légère."
         width: "half"
       - src: "/images/work/beau-rivage/artifact-build-2.jpg"
         alt: "Une slide de projet titrée 'Server-Side Rendering (SSR)' avec un schéma du flux de requête où le serveur envoie du HTML prêt à l'emploi pour que la page s'affiche avec un travail minimal sur l'appareil du visiteur."
         caption: "Build — le rendu côté serveur sur Nuxt 3."
-        decision: "Rendre côté serveur signifie que la page arrive prête à s'afficher, gardant bas le travail côté client et l'énergie de l'appareil."
+        decision: "Le rendu côté serveur fait arriver la page prête à s'afficher, ce qui réduit le travail côté client et l'énergie de l'appareil."
         width: "half"
 
   - label: "Hébergement"
@@ -110,7 +110,7 @@ approach:
         Nous avons aussi regardé où le site vivrait, en confrontant les hébergeurs au jeu de données de la
         Green Web Foundation. Le constat honnête était une zone grise : notre plateforme tourne sur une
         infrastructure AWS en Europe, qui revendique de l'énergie renouvelable mais n'est pas clairement
-        répertoriée comme verte. Plutôt que de surévaluer, nous l'avons noté comme une limite réelle, car
+        répertoriée comme verte. Plutôt que d'enjoliver les choses, nous l'avons noté comme une limite réelle, car
         un projet d'éco-conception qui maquille son propre hébergement n'est pas honnête sur son empreinte.
 
   - label: "Résultats"
@@ -120,16 +120,16 @@ approach:
         L'avant-après est la part dont je suis le plus fier, car elle est mesurée, pas affirmée. Le poids
         de la page est passé de 13.11 MB à 504 KB. Le carbone annuel estimé est tombé de 368 kg à 15.35 kg
         de CO2. La note EcoIndex est passée de F à A, et le score de qualité global est monté de 36 à 73,
-        avec les performances grimpant de 66 à 98.
+        les performances grimpant de 66 à 98.
       - >-
-        Cela représente environ 95 % de réduction du poids et du carbone, un site à peu près vingt fois
-        plus léger, avec une utilisabilité et des performances qui montent plutôt que de baisser. Le luxe
+        Soit environ 95 % de poids et de carbone en moins, un site à peu près vingt fois
+        plus léger, avec une utilisabilité et des performances qui montent au lieu de baisser. Le luxe
         a survécu au régime.
     artifacts:
       - src: "/images/work/beau-rivage/artifact-results.jpg"
         alt: "Quatre outils de mesure comparant le site d'origine et le site refondu : Website Carbon (de F à A, de 368 à 15.35 kg de CO2 par an), Beacon (de 13.11 MB à 504 KB), Ecograder (de 36 à 73) et Lighthouse (performance de 66 à 98)."
         caption: "Résultats — mesurés sur quatre outils, avant et après."
-        decision: "Chaque chiffre de cette étude est l'une de ces quatre lectures, avant et après, pas une affirmation."
+        decision: "Chaque chiffre de cette étude est l'un de ces quatre relevés, avant et après, pas une affirmation."
         width: "full"
 
 outcome:
@@ -141,13 +141,13 @@ outcome:
     leviers principaux, avec un avant-après mesuré plutôt qu'une affirmation.
   - >-
     Un compte rendu honnête des limites, y compris la zone grise autour de l'hébergement vert, car un
-    projet d'éco-conception doit mesurer sa propre empreinte avec vérité.
+    projet d'éco-conception doit mesurer honnêtement sa propre empreinte.
 
 reflection: >-
   Ce projet a rendu la durabilité numérique concrète pour moi. Il est facile de parler de design
-  responsable dans l'abstrait ; il est bien plus utile de réduire le carbone d'un vrai site de 95 % et de
+  responsable dans l'abstrait ; il est bien plus utile de réduire de 95 % le carbone d'un vrai site et de
   pouvoir montrer les chiffres. La leçon qui est restée, c'est que les parties les plus lourdes et les
-  plus gaspilleuses d'un site sont en général les plus automatisables à corriger, les images avant tout,
+  plus gaspilleuses d'un site sont en général les plus faciles à corriger automatiquement, les images avant tout,
   et que l'on peut être plus léger et plus rapide tout en restant haut de gamme. Cela touche de près à la
   question derrière mon mémoire : rendre visible le coût énergétique invisible du numérique, puis y faire
   quelque chose.
