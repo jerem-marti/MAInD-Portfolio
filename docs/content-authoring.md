@@ -271,45 +271,56 @@ Open `content/en/work/<slug>.md` and:
 
 `app/data/featured.ts` defines the three big case-study cards on the home page. Locked to three slots (DataBloom / WeMatch / Thea); see `docs/brand-voice.md` › Constraints. (UBS Family Space was a featured study and is now in the Index.)
 
+**Structure only.** Each entry is `{ num, slug, image? }`. The display strings (title, problem, outcome, meta, alt) live in the i18n catalog under `data.featured.<slug>.*` in `i18n/locales/{en,fr}.json` — the single source of truth, so EN and FR stay in lockstep. `index.vue` renders them as `t('data.featured.<slug>.title')` etc.
+
 ```ts
+// app/data/featured.ts — structure + order only
+{ num: 'F·01', slug: 'databloom', image: '/images/featured/databloom.jpg' }
+```
+
+```jsonc
+// i18n/locales/en.json → data.featured.databloom (and the same keys in fr.json)
 {
-  num: 'F·01',                                // display number, mono
-  slug: 'databloom',                          // must match content/en/work/<slug>.md
-  title: 'DataBloom',                         // h3 on the card
-  problem:                                    // one-liner under "Problem"
-    'Domestic digital usage carries a large invisible energy cost. Another app is the wrong place to put it.',
-  outcome:                                    // one-liner under "Outcome"
-    "A tangible flower whose stem wilts with the household's weekly digital footprint. Validated in user testing and published by the MEI research lab.",
-  meta: 'Tangible interface / Bachelor thesis / 2025',
-  alt: "DataBloom prototype: an artificial flower with a green stem and ultramarine petals in a terracotta pot, on a kitchen counter, an LED at the flower's centre.",
-  // image: '/images/featured/databloom.jpg',  // uncomment when uploaded
+  "title": "DataBloom",
+  "problem": "Domestic digital usage carries a large invisible energy cost. Another app is the wrong place to put it.",
+  "outcome": "A tangible flower whose stem wilts with the household's weekly digital footprint. Validated in user testing and published by the MEI research lab.",
+  "meta": "Tangible interface / Bachelor thesis / 2025",
+  "alt": "DataBloom prototype: an artificial flower with a green stem and ultramarine petals in a terracotta pot, on a kitchen counter, an LED at the flower's centre."
 }
 ```
 
 To change a card:
 
-- Edit the entry in the array — every field is rendered live.
-- `slug` must point at a real `content/en/work/<slug>.md`. If it's a stub (status `in-progress`), the card still renders; clicking through shows the in-progress stub page.
-- `problem` and `outcome` are one-liners (sub-50-word). They're the elevator pitch of the case study.
-- `meta` is a slash-separated chrome label — pattern is `<discipline> / <method> / <year>`. Keep it short.
+- **Display text** (title / problem / outcome / meta / alt): edit `data.featured.<slug>.*` in `i18n/locales/en.json` (and `fr.json` for the French version). See `docs/i18n.md`.
+- **Structure** (order, slug, image): edit `app/data/featured.ts`. `slug` must point at a real `content/en/work/<slug>.md`; a stub (`status: in-progress`) still renders the card but links to the in-progress page. Omit `image` to render a placeholder.
+- `problem` / `outcome` are one-liners (sub-50-word) — the elevator pitch. `meta` is a slash-separated chrome label, pattern `<discipline> / <method> / <year>`.
 
-To **add** a fourth case study (drops the locked F·01–F·03 constraint — confirm with stakeholder before doing this), append to the array and add the matching markdown file in `content/`. To **remove**, comment out the entry and remove the matching markdown.
+To **add** a fourth case study (drops the locked F·01–F·03 constraint — confirm with stakeholder first), append to the array, add the `data.featured.<slug>.*` catalog keys in both locale files, and add the matching markdown in `content/en/work/`. To **remove**, delete the entry and its catalog keys.
 
 ---
 
 ## Index list rows (home, section 03)
 
-`app/data/projects.ts` powers the typed table at the bottom of the home page. Ten rows currently, in reverse-chronological order; can grow without limit. The Index section header reads "Index — all other work" — there's no hard-coded count to keep in sync.
+`app/data/projects.ts` powers the typed table at the bottom of the home page. **Twelve rows** currently, in reverse-chronological order; can grow without limit. The Index section header reads "Index — all other work" — there's no hard-coded count to keep in sync.
+
+**Structure only.** Each row is `{ num, tags, year, href?, preview? }`. The display strings (title, alt) live under `data.projects.<key>.*` in `i18n/locales/{en,fr}.json`. The `<key>` is the slug from `href` (e.g. `an-aura-of-words`), or the row's `num` for a non-linked row (`index.vue`: `href.match(/\/work\/([^/]+)/)?.[1] ?? num`). Tag labels come from `tags.*`.
 
 ```ts
+// app/data/projects.ts — structure only
 {
-  num: '01',                                  // mono index number
-  title: 'An Aura of Words',                  // row title
+  num: '01',                                     // mono index number
   tags: ['Scrollytelling', 'Data visualization', 'Front-end', 'Small data'], // 2-4 from the vocabulary
-  year: '2026',                               // string, four digits
-  href: '/work/an-aura-of-words',             // optional — omit for non-linked rows
-  // preview: '/images/index/an-aura-of-words.jpg',  // optional — hover preview
-  alt: "Scrollytelling data story: Google Reviews of Lugano's parks encoded into colour-weighted organic 'aura' shapes.",
+  year: '2026',                                  // string, four digits
+  href: '/work/an-aura-of-words',                // optional — omit for a non-linked row
+  preview: '/images/index/an-aura-of-words.jpg', // optional — hover preview
+}
+```
+
+```jsonc
+// i18n/locales/en.json → data.projects.an-aura-of-words (same keys in fr.json)
+{
+  "title": "An Aura of Words",
+  "alt": "Scrollytelling data story: Google Reviews of Lugano's parks encoded into colour-weighted organic 'aura' shapes."
 }
 ```
 
@@ -402,8 +413,8 @@ Each image position has a specific field to set. After dropping the file into `p
 | Artifact figure | `content/en/work/<slug>.md` | `approach[N].artifacts[M].src: '/images/work/<slug>/...'` |
 | Gallery tile | `content/en/work/<slug>.md` | `gallery[N].src: '/images/work/<slug>/gallery-XX.jpg'` |
 | Adjacent (More-work) | `content/en/work/<slug>.md` | `card.image:` |
-| About hero portrait | `app/pages/about.vue` | Change `:src="null"` to `:src="'/images/about/portrait.jpg'"` |
-| Home About-preview portrait | `app/pages/index.vue` | Change `:src="null"` to the same path |
+| About hero portrait | `app/pages/about.vue` | Already wired to `/images/about/portrait.jpg`; replace that file or edit the `src` |
+| Home About-preview portrait | `app/pages/index.vue` | Same portrait; edit its `src` there if the path changes |
 
 ### Writing alt text (mandatory)
 
@@ -502,15 +513,16 @@ Pages that currently set descriptions: `/`, `/about`, `/contact`, `/work/[slug]`
 Every page gets a unique 1200×630 PNG, generated by Satori at build time. Setup is global:
 
 ```ts
-// app/layouts/default.vue
+// app/layouts/default.vue — site-default OG card (fallback for pages that don't override)
+const { t, locale } = useI18n()
 defineOgImage('NuxtSeo', {
-  theme: '#f5d547',                     // brand-accent yellow
-  colorMode: 'light',
-  siteName: 'jeremymartin.ch',
+  title: t('og.defaultTitle'),
+  description: t('og.defaultDescription'),
+  footer: t('og.footer'),
 })
 ```
 
-The `NuxtSeo` template auto-pulls **title** and **description** from each page's `useHead`. You don't write per-page OG calls.
+Title / description / footer are passed **explicitly and localized** via `t(...)` — under `zeroRuntime`, nuxt-og-image does **not** infer them into the prerendered image. The `og.*` strings live in `i18n/locales/{en,fr}.json`. This layout call is the fallback; content pages override it (see [Per-page override](#per-page-override) below).
 
 #### Customising the template
 
@@ -527,19 +539,18 @@ The ejected component lives at `app/components/OgImage/NuxtSeo.satori.vue`. To m
 
 #### How many OG images are emitted
 
-One per route, into `.output/public/_og/s/`. Currently 16 (home, about, contact, and 13 case-study pages). Adding a new case study automatically gets one. Filenames encode the route as base64 (e.g. `…p_Ii9hYm91dCI.png` is the OG image for `/about`).
+One per route, under `.output/public/_og/`. The count tracks the live routes: home, about, contact, plus one per live case study, all mirrored under `/fr`. Adding a new case study automatically gets one in both locales. Filenames encode the route as base64.
 
 #### Per-page override
 
 If a specific page needs a different OG image (e.g., a case study with a custom hero), call `defineOgImage` in that page's `<script setup>`:
 
 ```ts
+// app/pages/work/[slug].vue already does this — the study's own title + summary
 defineOgImage('NuxtSeo', {
-  theme: '#f5d547',
-  colorMode: 'light',
-  siteName: 'jeremymartin.ch',
-  title: 'A different title for this page',
-  description: 'A different subtitle.',
+  title: study.value.title,
+  description: study.value.summary,
+  footer: t('og.footer'),
 })
 ```
 
@@ -550,18 +561,19 @@ It overrides the layout-level call for that page only.
 Site-wide WebSite + Person graph is registered once in `app/layouts/default.vue`:
 
 ```ts
+// app/layouts/default.vue — const { t, locale } = useI18n()
 useSchemaOrg([
   defineWebSite({
-    name: 'Jérémy Martin — Interaction Designer',
+    name: t('schema.websiteName'),
     url: 'https://jeremymartin.ch',
-    inLanguage: 'en',
+    inLanguage: locale.value,          // tracks the active locale (/fr advertises French)
   }),
   definePerson({
     name: 'Jérémy Martin',
-    jobTitle: 'Interaction Designer',
+    jobTitle: t('schema.jobTitle'),
     email: 'mailto:hello@jeremymartin.ch',
     url: 'https://jeremymartin.ch',
-    sameAs: ['https://www.linkedin.com/in/jermarti'],
+    sameAs: ['https://www.linkedin.com/in/jermarti', 'https://github.com/jerem-marti'],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Mendrisio',
@@ -571,7 +583,7 @@ useSchemaOrg([
 ])
 ```
 
-To add a profile (GitHub, Bluesky, Mastodon, etc.), append to `sameAs`.
+`name` / `jobTitle` come from the `schema.*` i18n keys. To add a profile (Bluesky, Mastodon, etc.), append to `sameAs` — it already lists LinkedIn and GitHub.
 
 Per-page schema types are added on top:
 
@@ -661,7 +673,7 @@ npx nuxi typecheck                  # full TypeScript check
 - Compiles every `@nuxt/image` source into AVIF + WebP variants
 - Self-hosts Geist + Geist Mono (`@nuxt/fonts` downloads at build time)
 
-Expected output: **16 HTML pages** (home, about, contact, and 13 case-study pages), plus one OG image per page. Adding a case study adds its page + OG image. (Nitro's prerender log reports a much larger total — 275 in the last run — because it also counts every generated AVIF/WebP image variant, not just pages.)
+Expected output: the EN pages (home, about, contact, plus one per live case study) and the full `/fr` mirror, with one OG image per route. Adding a case study adds its page + OG image in both locales. (Nitro's prerender log reports a much larger total because it also counts every generated AVIF/WebP image variant and the llms `.txt`/`.md` artifacts, not just pages.)
 
 ### TLS gotcha on this machine
 

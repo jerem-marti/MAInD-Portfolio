@@ -42,7 +42,7 @@ Start with **[AGENTS.md](./AGENTS.md)** — the entry point for humans and AI ag
 
 ```bash
 npm run generate     # builds; fails on broken internal links
-npx nuxi typecheck   # strict TypeScript
+npx nuxi typecheck   # strict TypeScript (a few known module type-def errors are the baseline; see docs/troubleshooting.md)
 npm run check:i18n   # no English leaks into /fr; EN↔FR route parity (run after generate)
 ```
 

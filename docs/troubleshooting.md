@@ -86,6 +86,12 @@ Preview a single OG card in dev at `http://localhost:3000/__og-image__/image/<ro
 **Fix:** Build on Node 22. On Cloudflare/Netlify/Vercel set the env var `NODE_VERSION=22` (some host defaults are older).
 **Tag: Universal.**
 
+### `nuxi typecheck` reports type-def errors (known baseline, non-blocking)
+**Symptom** (Universal): `npx nuxi typecheck` exits non-zero with errors like `"NuxtSeo" is not assignable to keyof OgImageComponents` (`app/layouts/default.vue`, `app/pages/work/[slug].vue`), `'lazy' does not exist in NuxtI18nOptions`, and `'component' does not exist in OgImageOptions` (`nuxt.config.ts`).
+**Cause:** type-definition lag in `@nuxtjs/og-image` / `@nuxtjs/i18n` versus the config those modules accept at runtime. The errors are type-only; they do **not** affect `npm run generate` (the static build does not run `vue-tsc`).
+**Fix:** none needed for these four — treat them as the current baseline. When you run `typecheck`, confirm you didn't add a *new* error beyond these. (To clear them, pin/upgrade the module type packages — out of scope for content work.)
+**Tag: Universal** (current repo state).
+
 ---
 
 ## Images

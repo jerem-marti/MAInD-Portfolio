@@ -68,7 +68,7 @@ Brand thesis: **process is the artifact; outputs are evidence the process works.
 
 ```bash
 npm run generate     # static build → .output/public; fails on broken links
-npx nuxi typecheck   # strict TypeScript
+npx nuxi typecheck   # strict TypeScript (4 known type-def errors are the baseline — see docs/troubleshooting.md)
 npm run check:i18n   # no English leaks into /fr, EN↔FR route parity, lang/canonical (run after generate)
 ```
 

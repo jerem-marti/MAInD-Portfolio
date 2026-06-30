@@ -159,7 +159,7 @@ npx nuxi typecheck
 npm run check:i18n
 ```
 
-Expected: `generate` finishes with a prerendered-routes list and no errors; `.output/public/index.html`, `.output/public/work/<slug>/index.html`, `.output/public/_og/*.png`, and the sitemaps exist. `typecheck` prints no errors. `check:i18n` exits 0.
+Expected: `generate` finishes with a prerendered-routes list and no errors; `.output/public/index.html`, `.output/public/work/<slug>/index.html`, `.output/public/_og/*.png`, and the sitemaps exist. `typecheck` prints only the 4 known type-def errors (see `docs/troubleshooting.md`), no new ones. `check:i18n` exits 0.
 
 > **Local environment.** On this machine npm/Nuxt network steps fail TLS verification; prefix the build with the system-CA flag:
 > ```bash

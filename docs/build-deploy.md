@@ -125,7 +125,7 @@ npx nuxi typecheck          # TypeScript, must be clean
 Expected:
 - `generate` exits 0 with no link-check failures; `.output/public/index.html`, `.output/public/fr/index.html`, and `.output/public/work/<slug>/index.html` for each study exist, plus `.output/public/_og/`, `/_nuxt/`, `/_fonts/`, `/_ipx/`.
 - `check:i18n` prints a success line and exits 0; any `✗` line + non-zero exit means a leak or a missing counterpart.
-- `typecheck` reports no errors.
+- `typecheck` reports no *new* errors beyond the 4 known type-def ones (see `docs/troubleshooting.md`).
 
 ## Related
 
