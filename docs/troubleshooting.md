@@ -162,7 +162,7 @@ npm run generate
 
 1. **Missing FR key** — the key exists in `i18n/locales/en.json` but not `fr.json`; `fallbackLocale: 'en'` silently shows English. Add it at the same key path in `fr.json`.
 2. **Hardcoded string** — a component renders a literal instead of `t(...)`, or a display string was put in `app/data/*.ts`. Move it into the catalog (`data.*` / `tags.*`); `app/data/*.ts` holds structure only.
-3. **Deliberate verbatim-keep** — some French copy keeps English on purpose (e.g. `chrome.tagline`). Confirm with the owner (French is owner-reviewed) before "fixing."
+3. **Deliberate verbatim-keep** — some French copy keeps English on purpose (e.g. `chrome.tagline`). Confirm against `docs/wip/FR-REVIEW.md` (French is owner-reviewed) before "fixing."
 4. **Missing FR content twin** — a case study shows English because `content/fr/work/<slug>.md` doesn't exist (EN fallback). Add the twin.
 
 ```powershell

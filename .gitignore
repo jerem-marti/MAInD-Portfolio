@@ -30,8 +30,10 @@ docs/superpowers/*
 !docs/superpowers/specs/
 !docs/superpowers/plans/
 
-# Owner-only local working docs (e.g. French-translation journals) — kept out of the repo
-docs/_local/
+# Owner-only local scratch: the folder persists in the repo (via its README), but
+# its contents stay local — drop anything here that should never be committed.
+docs/_local/*
+!docs/_local/README.md
 
 # Local env files
 .env
