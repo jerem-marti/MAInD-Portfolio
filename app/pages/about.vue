@@ -1,5 +1,19 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+// CV downloads. The current locale's CV leads as the filled primary; the other
+// language follows as an active outline button. Order + styling bake per-locale
+// at prerender (/about vs /fr/a-propos). Both PDFs may not exist yet — the EN
+// one is already wired the same way; the static link checker ignores them.
+const cvs = computed(() => {
+  const items = [
+    { code: 'en', href: '/jeremy-martin-cv-en.pdf', label: t('about.cvEn') },
+    { code: 'fr', href: '/jeremy-martin-cv-fr.pdf', label: t('about.cvFr') },
+  ]
+  return items.sort((a, b) =>
+    a.code === locale.value ? -1 : b.code === locale.value ? 1 : 0,
+  )
+})
 
 useHead({
   title: () => t('about.metaTitle'),
@@ -178,11 +192,18 @@ const facts = computed(() => [
     <div class="grid grid-cols-12 gap-x-6">
       <div class="col-span-12 md:col-span-8 md:col-start-3 flex flex-col md:flex-row gap-4">
         <a
-          href="/jeremy-martin-cv-en.pdf"
+          v-for="cv in cvs"
+          :key="cv.code"
+          :href="cv.href"
           download
-          class="inline-flex items-center justify-between gap-3 px-5 py-3.5 bg-brand-ink text-brand-bg hover:bg-brand-ink-hover min-w-[240px] transition-colors"
+          :class="[
+            'inline-flex items-center justify-between gap-3 px-5 py-3.5 min-w-[240px] transition-colors',
+            cv.code === locale
+              ? 'bg-brand-ink text-brand-bg hover:bg-brand-ink-hover'
+              : 'border border-brand-hairline text-brand-ink hover:bg-brand-accent/15',
+          ]"
         >
-          <span class="text-[14px]">{{ t('about.cvEn') }}</span>
+          <span class="text-[14px]">{{ cv.label }}</span>
           <!-- Lucide Download, stroke 1.5, 16x16 -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -201,13 +222,6 @@ const facts = computed(() => [
             <line x1="12" x2="12" y1="15" y2="3" />
           </svg>
         </a>
-        <span
-          class="inline-flex items-center justify-between gap-3 px-5 py-3.5 border border-brand-hairline text-brand-ink-muted min-w-[240px]"
-          aria-disabled="true"
-        >
-          <span class="text-[14px]">{{ t('about.cvFr') }}</span>
-          <span class="font-mono uppercase tracking-[0.08em] text-[10px]">{{ t('about.cvFrSoon') }}</span>
-        </span>
       </div>
     </div>
   </section>
