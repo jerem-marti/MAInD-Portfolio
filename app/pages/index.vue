@@ -12,6 +12,16 @@ const projTitle = (r: IndexRow) => t(`data.projects.${projKey(r)}.title`)
 const projAlt = (r: IndexRow) => t(`data.projects.${projKey(r)}.alt`)
 const tagList = (r: IndexRow) => r.tags.map((x) => t(`tags.${x}`)).join(' / ')
 
+// Mobile reveal uses the case-study hero (a wide ~2.62 banner) instead of the
+// portrait `preview` (built for the desktop rail's 3:4 frame): a portrait image
+// in a landscape mobile frame got cropped to a center band. Derived from the
+// slug in `href` so no per-row data field is needed; falls back for any
+// non-/work/ link (none today).
+const projHero = (r: IndexRow) => {
+  const slug = r.href?.match(/\/work\/([^/]+)/)?.[1]
+  return slug ? `/images/work/${slug}/hero.jpg` : undefined
+}
+
 useHead({
   meta: [
     { name: 'description', content: () => t('home.lede') },
@@ -349,14 +359,16 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
                     aria-hidden="true"
                   >
 <!-- Raw <img> (see the hover rail): this reveal renders only after a tap,
-                         so the static IPX pass never sees it. Mirrors MediaPlaceholder's
-                         frame, but serves the source file so it works on a static host. -->
+                         so the static IPX pass never sees it — a <NuxtImg> would 404 on a
+                         static host. Serves the hero source file directly. The 21/8 frame
+                         (~2.62) matches the hero's native ratio, so object-cover shows the
+                         full banner uncropped. -->
                     <div
-                      class="aspect-[4/3] border border-brand-hairline bg-brand-surface overflow-hidden"
+                      class="aspect-[21/8] border border-brand-hairline bg-brand-surface overflow-hidden"
                     >
                       <img
-                        v-if="r.preview"
-                        :src="r.preview"
+                        v-if="projHero(r) || r.preview"
+                        :src="projHero(r) || r.preview"
                         :alt="projAlt(r)"
                         loading="lazy"
                         class="w-full h-full object-cover"
