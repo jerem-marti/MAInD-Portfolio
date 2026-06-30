@@ -1,0 +1,49 @@
+# Auto-deploy MAInD-Portfolio (Nuxt 4, static) to the VPS.
+# Place this in the PORTFOLIO repo at: .github/workflows/deploy.yml
+# Required repo secrets (Settings -> Secrets and variables -> Actions):
+#   VPS_HOST    = your VPS IP or domain name
+#   VPS_USER    = your VPS username (e.g., root)
+#   VPS_SSH_KEY = your private SSH key (e.g., ~/.ssh/id_ed25519) for the VPS user
+name: Deploy to VPS
+on:
+  push:
+    branches: [main]          # change if your default branch differs
+  workflow_dispatch:          # lets you trigger a deploy manually from the Actions tab
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false   # never interrupt an in-flight deploy
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'   # Nuxt 4 needs Node 20.19+ / 22.12+
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci            # if you have no package-lock.json, use: npm install
+
+      - name: Build static site
+        run: npm run generate  # Nuxt static prerender -> .output/public/
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "${{ secrets.VPS_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Deploy to /srv/www/jeremymartin.ch/public
+        run: |
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/id_ed25519" \
+            .output/public/ \
+            "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/srv/www/jeremymartin.ch/public/"
+
+      - name: Reload nginx
+        run: |
+          ssh -i ~/.ssh/id_ed25519 "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" \
+            "sudo systemctl reload nginx"
