@@ -119,6 +119,16 @@ The only bio facts copy may draw on. These **override any stale text** elsewhere
 - **Process is the artifact** — every design and copy decision serves "how he thinks", not a deliverables inventory.
 - **WCAG AA on every color choice.** Text/background pairings meet AA; the focus ring's ink keyline exists specifically to clear non-text 3:1 (yellow alone fails). Never remove focus states.
 
+## Scope (excluded by design, v1)
+
+Deliberate omissions, not gaps. Don't add them without a decision:
+
+- **No contact form** — mailto only (avoids a privacy-notice trigger).
+- **No analytics at v1** — Matomo is deferred to v2.
+- **No legal pages at v1** — mailto-only contact.
+- **No dark mode at v1.**
+- **Deferred to v2:** Matomo (analytics) and `nuxt-ai-ready` (an llms.txt helper). The French locale was originally deferred but is now shipped — see `docs/i18n.md`.
+
 ## Related
 
 - `docs/architecture.md` — where these tokens are consumed (`## Where code lives`, `## Constraints`).

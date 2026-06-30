@@ -35,6 +35,8 @@ Module list — `nuxt.config.ts:8-15`, order is load-bearing (comments in-file):
 
 Tailwind CSS v4 is **CSS-first**, wired via the official Vite plugin (`@tailwindcss/vite`, `nuxt.config.ts:1,20-22`) — **not** the `@nuxtjs/tailwindcss` module. There is no `tailwind.config.js`; tokens and theme live in `@theme` inside `app/assets/css/main.css` (registered at `nuxt.config.ts:17`).
 
+**No UI or icon library, by design.** Components are custom Tailwind (no Radix, shadcn-vue, or Nuxt UI); the handful of icons are inline SVG (custom-drawn or copied from Lucide as SVG). Don't add a component or icon dependency without revisiting this — it underwrites the performance budget below.
+
 ## Rendering model
 
 100% static site generation. There is **no runtime server** — the output is plain files served by nginx (`deploy/nginx-i18n.conf`).
@@ -97,12 +99,28 @@ The full content schema (fields, optionality, the `resources` link-vs-video unio
 
 ## Interaction principles & locked behaviors
 
-Full text in `docs/brand-voice.md` and the original `CLAUDE.md`. The load-bearing ones a change must preserve:
+The twelve principles a change must honor:
+
+1. Motion serves meaning, never decoration.
+2. Information is visible at rest (hover/tap is enrichment, never gating).
+3. The page is complete in its HTML (SSG; JS only enhances).
+4. JavaScript earns its place.
+5. Scroll is the primary navigation (no scroll-jacking).
+6. Hover is enrichment, touch is parity.
+7. The page tells you where you are (persistent nav, section numbers, sticky TOC on case studies).
+8. Loading states are honest (no fake skeletons on a fast static site).
+9. Forms are absent or trivial (no contact form at v1; mailto only).
+10. Accessibility AA, non-negotiable.
+11. Performance is a design decision.
+12. All motion respects `prefers-reduced-motion`.
+
+**Locked behaviors** (concrete realizations a change must preserve):
 
 - **Scroll is primary navigation** — no scroll-jacking.
-- **Information visible at rest** — hover/tap is enrichment, never gating (e.g. Index rows stay real `<a href>`; the mobile preview reveal in `index.vue:43-52` only enriches a tap).
+- **Information visible at rest** — e.g. Index rows stay real `<a href>`; the mobile preview reveal in `index.vue:43-52` only enriches a tap.
 - **Desktop nav** persists top, every width; **mobile bottom bar** shows only on `(max-width: md) AND (pointer: coarse)` — switch is by **input type, not width** (so a narrow desktop window keeps the top bar).
 - **Case-study TOC**: sticky rail desktop / sticky top mobile, scroll-spy active (`useScrollSpy.ts`, `ScrollProgress.vue`).
+- **Scroll progress indicator**: a thin yellow line at the top, **case-study pages only** (`ScrollProgress.vue`).
 - **Page transitions**: fade ~200ms, `out-in` (`nuxt.config.ts:95-96`; CSS `main.css:56-65`).
 - **Color discipline**: signal yellow (`--color-brand-accent`) only as active/focus/hover accents, never as a large fill. Tokens + rules: `docs/brand-voice.md`.
 
