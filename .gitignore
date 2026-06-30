@@ -30,6 +30,9 @@ docs/superpowers/*
 !docs/superpowers/specs/
 !docs/superpowers/plans/
 
+# Owner-only local working docs (e.g. French-translation journals) — kept out of the repo
+docs/_local/
+
 # Local env files
 .env
 .env.*
