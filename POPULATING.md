@@ -576,7 +576,7 @@ useSchemaOrg([
   definePerson({
     name: 'Jérémy Martin',
     jobTitle: 'Interaction Designer',
-    email: 'mailto:hi@jeremymartin.ch',
+    email: 'mailto:hello@jeremymartin.ch',
     url: 'https://jeremymartin.ch',
     sameAs: ['https://www.linkedin.com/in/jermarti'],
     address: {

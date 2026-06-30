@@ -16,6 +16,7 @@
     "github": "GitHub — jerem-marti",
     "language": "Langue",
     "copyright": "© 2026",
+    "license": "Licence",
     "line": "Jérémy Martin · jeremymartin.ch"
   },
   "common": {
@@ -102,7 +103,7 @@
   },
   "contact": {
     "metaTitle": "Contact",
-    "metaDescription": "Écrivez à Jérémy Martin à hi{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio et Noréaz.",
+    "metaDescription": "Écrivez à Jérémy Martin à hello{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio et Noréaz.",
     "heroMeta": "00 / Contact",
     "heroTitle": "Écrivez-moi.",
     "essentialsLabel": "L'essentiel",
@@ -312,7 +313,7 @@
     },
     "header": "Jérémy Martin — Designer d'interaction",
     "blockquote": "Portfolio de Jérémy Martin, designer d'interaction et de produit travaillant sur les expériences agentiques (AX) conçues autour de l'intention de l'utilisateur. Le site montre comment il pense : le processus est l'artefact, les résultats en sont la preuve. Ce fichier indexe le portfolio pour les modèles de langage.",
-    "intro": "Jérémy termine un master of arts en design d'interaction à la SUPSI de Mendrisio, en Suisse, diplômé en 2027 et disponible dès août 2026. Son parcours va d'un apprentissage d'électronique de quatre ans (CFC) à un BSc en ingénierie des médias à la HEIG-VD, puis au design d'interaction, et sa pratique couvre le prototypage hardware, le développement front-end et la recherche UX. Il travaille en français (langue maternelle) et en anglais (B2). Contact : hi{'@'}jeremymartin.ch.",
+    "intro": "Jérémy termine un master of arts en design d'interaction à la SUPSI de Mendrisio, en Suisse, diplômé en 2027 et disponible dès août 2026. Son parcours va d'un apprentissage d'électronique de quatre ans (CFC) à un BSc en ingénierie des médias à la HEIG-VD, puis au design d'interaction, et sa pratique couvre le prototypage hardware, le développement front-end et la recherche UX. Il travaille en français (langue maternelle) et en anglais (B2). Contact : hello{'@'}jeremymartin.ch.",
     "pages": {
       "home": "Accueil",
       "homeDesc": "Point de vue et les trois études de cas mises en avant.",
@@ -340,7 +341,7 @@
       "hAbout": "À propos",
       "about": "Jérémy se concentre aujourd'hui sur les expériences agentiques (AX), conçues autour de l'intention de l'utilisateur. Sa pratique couvre le prototypage, le développement front-end et l'UX design. Basé à Mendrisio et Noréaz, Suisse.",
       "hContact": "Contact",
-      "contact": "Disponible pour un stage dès août 2026. E-mail hi{'@'}jeremymartin.ch. LinkedIn jermarti. Réponse en français ou en anglais, généralement sous quelques jours ouvrables."
+      "contact": "Disponible pour un stage dès août 2026. E-mail hello{'@'}jeremymartin.ch. LinkedIn jermarti. Réponse en français ou en anglais, généralement sous quelques jours ouvrables."
     },
     "about": {
       "fCurrentlyK": "Actuellement",
@@ -383,7 +384,7 @@
       "linkedin": "LinkedIn",
       "based": "Basé à Mendrisio et Noréaz, Suisse.",
       "title": "Écrivez-moi.",
-      "blockquote": "Contactez Jérémy Martin à hi{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio et Noréaz.",
+      "blockquote": "Contactez Jérémy Martin à hello{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio et Noréaz.",
       "hEssentials": "L'essentiel"
     }
   }

@@ -16,6 +16,7 @@
     "github": "GitHub — jerem-marti",
     "language": "Language",
     "copyright": "© 2026",
+    "license": "License",
     "line": "Jérémy Martin · jeremymartin.ch"
   },
   "common": {
@@ -102,7 +103,7 @@
   },
   "contact": {
     "metaTitle": "Contact",
-    "metaDescription": "Write to Jérémy Martin at hi{'@'}jeremymartin.ch. Available for internships from August 2026, based in Mendrisio and Noréaz.",
+    "metaDescription": "Write to Jérémy Martin at hello{'@'}jeremymartin.ch. Available for internships from August 2026, based in Mendrisio and Noréaz.",
     "heroMeta": "00 / Contact",
     "heroTitle": "Write to me.",
     "essentialsLabel": "The essentials",

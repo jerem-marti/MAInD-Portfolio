@@ -545,10 +545,10 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
             {{ t('home.contactEmail') }}
           </span>
           <a
-            href="mailto:hi@jeremymartin.ch"
+            href="mailto:hello@jeremymartin.ch"
             class="text-[18px] text-brand-ink pb-[2px] border-b border-brand-ink self-start hover:[box-shadow:inset_0_-0.4em_0_var(--color-brand-accent)]"
           >
-            hi@jeremymartin.ch
+            hello@jeremymartin.ch
           </a>
         </div>
         <div class="flex flex-col gap-2">

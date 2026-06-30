@@ -13,7 +13,7 @@ useSchemaOrg([
   definePerson({
     name: 'Jérémy Martin',
     jobTitle: t('schema.jobTitle'),
-    email: 'mailto:hi@jeremymartin.ch',
+    email: 'mailto:hello@jeremymartin.ch',
     url: 'https://jeremymartin.ch',
     sameAs: ['https://www.linkedin.com/in/jermarti', 'https://github.com/jerem-marti'],
     address: {

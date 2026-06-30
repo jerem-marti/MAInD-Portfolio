@@ -35,11 +35,17 @@ const FR = frMessages as Record<string, unknown>
 const pathGet = (obj: unknown, key: string): unknown =>
   key.split('.').reduce<unknown>((o, k) => (o == null ? o : (o as Record<string, unknown>)[k]), obj)
 
+/** vue-i18n escapes literal special characters as {'X'} (e.g. {'@'} for @, which
+ * would otherwise begin linked-message syntax). These builders read catalog
+ * strings raw — not through the i18n renderer — so decode those sequences back
+ * to their literal text, matching what t() would emit. */
+const decodeI18nLiterals = (s: string): string => s.replace(/\{'([^']*)'\}/g, '$1')
+
 /** Localized llms prose: English `def` is the source of truth; fr.json `llms.<key>` overrides it. */
 function L(locale: Locale, key: string, def: string): string {
   if (locale === 'fr') {
     const v = pathGet(FR, `llms.${key}`)
-    if (typeof v === 'string' && v) return v
+    if (typeof v === 'string' && v) return decodeI18nLiterals(v)
   }
   return def
 }
@@ -49,10 +55,10 @@ function L(locale: Locale, key: string, def: string): string {
 function D(locale: Locale, key: string): string {
   if (locale === 'fr') {
     const v = pathGet(FR, key)
-    if (typeof v === 'string' && v) return v
+    if (typeof v === 'string' && v) return decodeI18nLiterals(v)
   }
   const e = pathGet(EN, key)
-  return typeof e === 'string' ? e : ''
+  return typeof e === 'string' ? decodeI18nLiterals(e) : ''
 }
 
 /** The subset of the `work` collection frontmatter these builders consume. */
@@ -201,7 +207,7 @@ const intro = (locale: Locale): string => L(locale, 'intro',
   + 'Switzerland, graduating 2027 and available from August 2026. His path runs from a four-year '
   + 'electronics apprenticeship (CFC) through a BSc in Media Engineering at HEIG-VD to interaction '
   + 'design, and his practice spans hardware prototyping, front-end build, and UX research. '
-  + 'He works in French (native) and English (B2). Contact: hi@jeremymartin.ch.')
+  + 'He works in French (native) and English (B2). Contact: hello@jeremymartin.ch.')
 
 const corePages = (locale: Locale): string[] => [
   `- [${L(locale, 'pages.home', 'Home')}](${SITE_URL}${pageMdPath(locale, 'home')}): ${L(locale, 'pages.homeDesc', 'Point of view and the three featured case studies.')}`,
@@ -296,7 +302,7 @@ export function homeMarkdown(locale: Locale = 'en'): string {
     `## ${L(locale, 'home.hAbout', 'About')}`,
     L(locale, 'home.about', `Jérémy's current focus is agentic experiences (AX), designed around user intent. His practice spans hardware prototyping, front-end build, and UX research. Based in Mendrisio and Noréaz, Switzerland.`),
     `## ${L(locale, 'home.hContact', 'Contact')}`,
-    L(locale, 'home.contact', 'Available for internships from August 2026. Email hi@jeremymartin.ch. LinkedIn jermarti. Replies in French or English, usually within a few working days.'),
+    L(locale, 'home.contact', 'Available for internships from August 2026. Email hello@jeremymartin.ch. LinkedIn jermarti. Replies in French or English, usually within a few working days.'),
   ].join('\n\n')}\n`
 }
 
@@ -334,7 +340,7 @@ export function aboutMarkdown(locale: Locale = 'en'): string {
 
 export function contactMarkdown(locale: Locale = 'en'): string {
   const essentials = [
-    `- ${L(locale, 'contact.email', 'Email')}: [hi@jeremymartin.ch](mailto:hi@jeremymartin.ch)`,
+    `- ${L(locale, 'contact.email', 'Email')}: [hello@jeremymartin.ch](mailto:hello@jeremymartin.ch)`,
     `- ${L(locale, 'contact.available', 'Available for internships from August 2026.')}`,
     `- ${L(locale, 'contact.replies', 'Replies in French or English, usually within a few working days.')}`,
     `- ${L(locale, 'contact.linkedin', 'LinkedIn')}: [jermarti](https://www.linkedin.com/in/jermarti)`,
@@ -343,7 +349,7 @@ export function contactMarkdown(locale: Locale = 'en'): string {
 
   return `${[
     `# ${L(locale, 'contact.title', 'Write to me.')}`,
-    `> ${L(locale, 'contact.blockquote', 'Reach Jérémy Martin at hi@jeremymartin.ch. Available for internships from August 2026, based in Mendrisio and Noréaz.')}`,
+    `> ${L(locale, 'contact.blockquote', 'Reach Jérémy Martin at hello@jeremymartin.ch. Available for internships from August 2026, based in Mendrisio and Noréaz.')}`,
     `## ${L(locale, 'contact.hEssentials', 'The essentials')}`,
     essentials,
   ].join('\n\n')}\n`

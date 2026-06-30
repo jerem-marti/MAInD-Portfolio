@@ -13,10 +13,10 @@ const switchLocalePath = useSwitchLocalePath()
           {{ t('footer.contact') }}
         </span>
         <a
-          href="mailto:hi@jeremymartin.ch"
+          href="mailto:hello@jeremymartin.ch"
           class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink hover:text-brand-ink-muted transition-colors"
         >
-          hi@jeremymartin.ch
+          hello@jeremymartin.ch
         </a>
         <a
           href="https://www.linkedin.com/in/jermarti"
@@ -45,9 +45,11 @@ const switchLocalePath = useSwitchLocalePath()
               v-if="l.code === locale"
               class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink relative"
             >
+              <!-- Active-language dot: -left-2 (not -3) so it sits ~centered in the
+                   gap-3 and clears the previous code (e.g. EN when FR is active). -->
               <span
                 aria-hidden="true"
-                class="absolute -left-3 top-1/2 -translate-y-1/2 size-1 bg-brand-accent"
+                class="absolute -left-2 top-1/2 -translate-y-1/2 size-1 bg-brand-accent"
               />
               {{ l.code.toUpperCase() }}
             </span>
@@ -64,7 +66,14 @@ const switchLocalePath = useSwitchLocalePath()
       </div>
       <div class="col-span-6 md:col-span-4 flex md:justify-end flex-col gap-1 md:items-end">
         <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
-          {{ t('footer.copyright') }}
+          {{ t('footer.copyright') }} ·
+          <!-- "License" opens the locally-served LICENSE (MIT for code; content reserved). -->
+          <a
+            href="/license.txt"
+            rel="license"
+            target="_blank"
+            class="text-brand-ink hover:text-brand-ink-muted transition-colors"
+          >{{ t('footer.license') }}</a>
         </span>
         <span class="font-mono uppercase tracking-[0.08em] text-[11px] text-brand-ink">
           {{ t('footer.line') }}
