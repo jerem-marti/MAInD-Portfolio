@@ -1,9 +1,11 @@
-# Case-study population handoff
+# Images & resources
+
+> How to produce and wire case-study imagery and resources: image roles and aspect ratios, the production pipeline, and the per-study tracker.
 
 The operational handoff for adding **images and resources** to a case study. Every remaining study is already written and `status: live`; what they lack is imagery and the resources block. This file bootstraps a fresh conversation so we don't re-derive the workflow each time.
 
-- **Schema reference** (every frontmatter field, widths, types): `POPULATING.md`
-- **Brand, voice, locked decisions**: `CLAUDE.md`
+- **Schema reference** (every frontmatter field, widths, types): `docs/content-authoring.md`
+- **Brand, voice, locked decisions**: `docs/brand-voice.md`
 - **This file**: how we actually run a population pass, the learnings, and the tracker.
 
 Work **one study per conversation** — populating a study is context-heavy, and a fresh start keeps the context clean.
@@ -18,8 +20,8 @@ Fill the slots and paste this to start a study's conversation:
 You're a senior content specialist populating IMAGES + RESOURCES for the `[slug]`
 case study. The content is already written and live — do not rewrite prose.
 
-Read CASE_STUDY_HANDOFF.md, POPULATING.md, and CLAUDE.md first, then follow the
-workflow in the handoff.
+Read docs/images.md, docs/content-authoring.md, and docs/brand-voice.md first,
+then follow the workflow in this file.
 
 PROCESS (hard rule): confirm each step with me before applying it. Propose a plan,
 wait for my OK, then do it. Never batch-apply unconfirmed work.
@@ -55,16 +57,16 @@ If material is missing, ask for it before producing anything. Some studies (NDA,
 
 ## 3. Workflow
 
-1. **Read the existing content.** Open `content/work/[slug].md`. Note which `approach[]` steps make a claim that an artifact could *prove*, what the `gallery` captions imply, and the hero concept.
+1. **Read the existing content.** Open `content/en/work/[slug].md`. Note which `approach[]` steps make a claim that an artifact could *prove*, what the `gallery` captions imply, and the hero concept.
 2. **Audit material.** Map each available source to a slot. Flag gaps and ask the user. Access Figma via MCP, Notion via MCP.
 3. **Propose the image plan → CONFIRM.** Hero concept; one artifact per approach step (each proving a specific claim); a small gallery showing range. State what each image is and why it earns its place. Wait for OK.
-4. **Produce images.** See the pipeline in §5. Targets: hero 21:8, artifacts 16:10, gallery 4:3 (floors in `POPULATING.md`). Write to `public/images/work/[slug]/`.
+4. **Produce images.** See the pipeline in §5. Targets: hero 21:8, artifacts 16:10, gallery 4:3 (floors in `docs/content-authoring.md`). Write to `public/images/work/[slug]/`.
 5. **Wire frontmatter.** Set `hero`, `approach[].artifacts[].src`, `gallery[].src`. Write real `alt` (what's in it + what it shows) and `caption`. **Alts/captions in the document's language where the artwork is language-specific.**
 6. **Derived card images — same pass, from the hero.** Reuse the hero so the card matches the page:
    - **Featured study** → featured card (16:9) → `public/images/featured/[slug].jpg`, wire `app/data/featured.ts` `image:`; plus an adjacent card (16:10) → `public/images/work/[slug]/adjacent.jpg`, wire this study's own `card.image` (it is what neighbours show in More-work).
    - **Index study** → Index hover preview (3:4) → `public/images/index/[slug].jpg`, wire `app/data/projects.ts` `preview:`; plus an adjacent card (16:10).
    - **How:** centre-crop a photographic hero; **re-render** a composed (HTML) hero at the target aspect — cropping a wide composition cuts the edges. The 3:4 Index preview rarely crops cleanly from a wide hero; use a portrait-friendly gallery shot if needed. Update each card `alt` to match its derived image.
-7. **Resources.** PDFs → `public/files/[slug]-*.pdf`, referenced as `/files/...`. External URLs as-is. `type` ∈ `pdf | github | demo | web | video`. **Title each row in the resource's own language.** Drop any stub rows. (Full schema: `POPULATING.md` §resources.)
+7. **Resources.** PDFs → `public/files/[slug]-*.pdf`, referenced as `/files/...`. External URLs as-is. `type` ∈ `pdf | github | demo | web | video`. **Title each row in the resource's own language.** Drop any stub rows. (Full schema: `docs/content-authoring.md` §resources.)
 8. **Regenerate + verify.** `NODE_OPTIONS=--use-system-ca npm run generate`. Confirm: link-check passes, the page references the new images, srcset is real (not `_ipx/w_1`/`w_2`), files land in `.output/public/images/...` and `.output/public/files/`. An OG-image `createImage timeout` is flaky (Satori) — just re-run.
 9. **Present for review.** Show what changed, flag any compromises, wait for sign-off before the next study.
 
@@ -82,6 +84,8 @@ Then update the **tracker** (§7).
 ---
 
 ## 5. Production pipeline
+
+> **Local environment.** This section is machine-specific: it assumes this Windows box (the `NODE_OPTIONS=--use-system-ca` TLS workaround, the installed Chrome path, transient `sharp`/`mupdf`/`puppeteer-core` deps). Paths and commands will differ on another machine; the *roles and aspect ratios* above are universal.
 
 All image production runs in the **main thread** — background subagents get code-execution denied.
 
@@ -112,6 +116,8 @@ Keep scratch in `scripts/_prev/` and **delete it before committing**.
 ---
 
 ## 6. Learnings / gotchas (append as we hit new ones)
+
+> Image-specific learnings live here (this is their source of record). Cross-cutting build failures (TLS, OG `createImage` timeout, IPX preview 404, link-check) are also collected in `docs/troubleshooting.md`.
 
 - **`@nuxt/image` v2 `sizes` is breakpoint-format, not HTML.** Use `sizes="sm:50vw md:33vw lg:33vw xl:33vw 2xl:33vw"`, NOT `(min-width: 768px) 33vw`. The HTML form is parsed as a `1px` breakpoint → srcset of `w_1`/`w_2` → every image renders at 2px. The components are already fixed — copy their existing `sizes` strings.
 - **The hairline frame and the indented content column are intentional.** The "thin line at the bottom" of an image is the card border every image gets; the approach layout puts the `03.0N / LABEL` number in a narrow left column with the heading/prose in the column beside it. Don't "fix" either.
