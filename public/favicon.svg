@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Brand mark: a solid signal-yellow square (the OG-card mark) with the
+       thinnest ink outline. Yellow on white is near-invisible (~1.3:1); the ink
+       hairline gives the shape an AA-perceivable edge (3:1+) on #ffffff. Raster
+       sizes (favicon.ico, apple-touch) bake a per-size ~1px stroke. -->
+  <rect width="64" height="64" fill="#f5d547"/>
+  <rect x="1" y="1" width="62" height="62" fill="none" stroke="#0a0a0a" stroke-width="2"/>
+</svg>

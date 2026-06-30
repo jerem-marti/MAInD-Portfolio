@@ -94,6 +94,26 @@ export default defineNuxtConfig({
   // duplication.
   app: {
     pageTransition: { name: 'fade', mode: 'out-in' },
+    // Favicon set (assets in public/). The brand mark: signal-yellow square on
+    // the ink tile (see public/favicon.svg). SVG is the modern primary; the .ico
+    // covers legacy browsers + the bare /favicon.ico request; apple-touch-icon
+    // (180, full-bleed — iOS rounds it) is for the iOS home screen.
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+      ],
+      meta: [
+        // Mobile browsers tint their UI (e.g. Chrome's address bar) to this color.
+        // #f4f5f7 = --brand-bg, matching the body + MobileTop header, so the bar
+        // blends into the page. No prefers-color-scheme variant — the site is light-only.
+        { name: 'theme-color', content: '#f4f5f7' },
+        // The site is light-only: declare it so form controls, scrollbars, and
+        // default backgrounds stay light on dark-mode devices (no auto-darkening).
+        { name: 'color-scheme', content: 'light' },
+      ],
+    },
   },
 
   // Self-hosted Geist Sans + Geist Mono. @nuxt/fonts downloads at build time and
