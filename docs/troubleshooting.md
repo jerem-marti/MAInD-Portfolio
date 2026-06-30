@@ -234,6 +234,12 @@ $env:NODE_OPTIONS="--use-system-ca"; npm i sharp mupdf puppeteer-core --no-save
 ```
 **Tag: Local environment.** (Full pipeline: `docs/images.md` › Production pipeline.)
 
+### `EBUSY: resource busy or locked, rmdir '.output'` during generate
+**Symptom** (Local environment): `npm run generate` builds the client and server fine, then fails at the finalize step with `EBUSY: resource busy or locked, rmdir '...\.output'`.
+**Cause:** a stale process holds a handle on `.output` on Windows (a previous `generate`/`preview`/`nuxi` run, an Explorer/IDE window inside `.output`, or antivirus), so Nuxt can't clear the directory.
+**Fix:** stop anything serving or watching `.output` (e.g. `npm run preview`, an open Explorer window), then re-run. If a specific stray `node` process is the culprit, end that one — do **not** blanket-kill `node` while other tooling (or this session) is running. `Remove-Item -Recurse -Force .output` works once the holder is gone.
+**Tag: Local environment.**
+
 ---
 
 ## Related
