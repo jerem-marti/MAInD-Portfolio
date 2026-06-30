@@ -28,9 +28,6 @@ Thumbs.db
 docs/superpowers/
 docs/superpowers/*
 
-# Project memory — kept local, not shared
-CLAUDE.md
-
 # Local env files
 .env
 .env.*
