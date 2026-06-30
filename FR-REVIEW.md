@@ -13,7 +13,7 @@ This file is also the **shared glossary** every translation workstream follows, 
 - Keep the positioning **"expériences agentiques (AX)"** — always keep the `(AX)` tag.
 - Banned phrases stay banned (no "passionné par", "leader d'opinion", "axé résultats", "synergie", etc.).
 - Only real numbers/claims. Never invent a metric; if a sentence can't be rendered truthfully, keep the source meaning.
-- Proper nouns and brand names are **not** translated: Jérémy Martin, DataBloom, WeMatch, Thea, SUPSI, HEIG-VD, EPFL, HEIA-FR, MEI, CarbonViz Home, Baleinev, UBS, WeRoad, Arduino UNO Q, jeremymartin.ch, hi@jeremymartin.ch, jermarti, jerem-marti.
+- Proper nouns and brand names are **not** translated: Jérémy Martin, DataBloom, WeMatch, Thea, SUPSI, HEIG-VD, EPFL, HEIA-FR, MEI, CarbonViz Home, Baleinev, UBS, WeRoad, Arduino UNO Q, jeremymartin.ch, hello@jeremymartin.ch, jermarti, jerem-marti.
 - Slugs, image paths, URLs, resource `url`/`provider`/`id`, and `status`/`type` enums are **never** changed.
 - **Resource titles are never translated** (owner rule). Every `resources[].title` in a French twin keeps the English source title verbatim — French source titles stay French, English source titles stay English.
 

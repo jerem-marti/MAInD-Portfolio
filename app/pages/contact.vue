@@ -35,10 +35,10 @@ useSchemaOrg([defineWebPage({ '@type': 'ContactPage' })])
     <div class="grid grid-cols-12 gap-x-6 gap-y-10">
       <div class="col-span-12 md:col-span-10 md:col-start-2 flex flex-col gap-10 md:gap-14">
         <a
-          href="mailto:hi@jeremymartin.ch"
+          href="mailto:hello@jeremymartin.ch"
           class="self-start text-[clamp(34px,7vw,84px)] leading-[1] tracking-[-0.025em] font-medium text-brand-ink hover:[box-shadow:inset_0_-0.18em_0_var(--color-brand-accent)] break-all"
         >
-          hi@jeremymartin.ch
+          hello@jeremymartin.ch
         </a>
         <ul class="flex flex-col gap-3 max-w-[60ch]">
           <li class="text-[17px] md:text-[18px] leading-[1.55] text-brand-ink">
