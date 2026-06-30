@@ -1,6 +1,8 @@
-# Populating the site
+# Content authoring
 
-This guide is the canonical reference for adding content, images, PDFs, and metadata to **jeremymartin.ch**. The architecture and locked decisions live in `CLAUDE.md`; this file covers the *how* — every step, every field, every file to edit, in the order you'll actually do them.
+> The operational reference for adding and editing content on jeremymartin.ch: case studies, Index rows, featured cards, images, resources, and per-page SEO.
+
+This guide is the canonical reference for adding content, images, PDFs, and metadata to **jeremymartin.ch**. Architecture lives in `docs/architecture.md`; brand, voice, and the controlled vocabulary in `docs/brand-voice.md`; build and deploy in `docs/build-deploy.md`; the French locale (and how to add a French twin for each study) in `docs/i18n.md`. This file covers the *how* — every step, every field, every file to edit, in the order you'll actually do them.
 
 It assumes the migration is complete (all six phases merged to `main`). If you're starting fresh, run `npm install` and then `npm run dev` to confirm the site renders before changing anything.
 
@@ -12,9 +14,9 @@ It assumes the migration is complete (all six phases merged to `main`). If you'r
 |---|---|---|
 | Add an Index-list row on the home page | `app/data/projects.ts` | [Index list](#index-list-rows-home-section-03) |
 | Activate a Featured card on the home page | `app/data/featured.ts` | [Featured cards](#featured-cards-home-section-02) |
-| Write a full case study | `content/work/<slug>.md` (set `status: "live"`) | [Case studies](#case-studies) |
+| Write a full case study | `content/en/work/<slug>.md` (set `status: "live"`) | [Case studies](#case-studies) |
 | Activate an in-progress case study | Same as above — flip `status` + add the blocks | [Case studies](#case-studies) |
-| Add resources (links, video) to a case study | `content/work/<slug>.md` (`resources` block) | [Case studies](#case-studies) |
+| Add resources (links, video) to a case study | `content/en/work/<slug>.md` (`resources` block) | [Case studies](#case-studies) |
 | Replace a placeholder with an image | Drop file into `public/images/...`, then set the matching `src` / `hero` / `preview` / `image` field | [Images](#images) |
 | Wire the CV PDFs | Drop into `public/jeremy-martin-cv-*.pdf`, remove from `linkChecker.excludeLinks` in `nuxt.config.ts` | [CVs](#cvs) |
 | Change page titles, descriptions, OG content | Per-page `useHead({ title, meta })` in `app/pages/...` | [SEO](#seo) |
@@ -27,7 +29,9 @@ It assumes the migration is complete (all six phases merged to `main`). If you'r
 
 ## Case studies
 
-Case studies live in `content/work/<slug>.md`, are validated by the Zod schema in `content.config.ts`, and render via `app/pages/work/[slug].vue`. The slug in the filename **must** match the slug used in `app/data/featured.ts` / `app/data/projects.ts` and in `app/data/workChain.ts` (the More-work navigation order).
+Case studies live in `content/en/work/<slug>.md`, are validated by the Zod schema in `content.config.ts`, and render via `app/pages/work/[slug].vue`. The slug in the filename **must** match the slug used in `app/data/featured.ts` / `app/data/projects.ts` and in `app/data/workChain.ts` (the More-work navigation order).
+
+**French twin:** each study can have a French version at `content/fr/work/<slug>.md` (same structure and paths, translated prose). A missing FR twin falls back to English. See `docs/i18n.md` › How to add a French twin.
 
 The three Featured case studies are live:
 
@@ -35,9 +39,9 @@ The three Featured case studies are live:
 |---|---|---|
 | `databloom` | `live` | Edit prose only |
 | `wematch` | `live` | Edit prose only |
-| `family-space` | `live` | Edit prose only |
+| `thea` | `live` | Edit prose only |
 
-Beyond the three Featured studies, the Index-linked case studies (`an-aura-of-words`, `elen`, `wama`, `brushbuddy`, `human-loci`, `beau-rivage`, `uefa-female-coaches`, `a-ta-dispo`, `bereal`, `cultural-trails`) also live in `content/work/`. To add another case study, create the markdown file and either add an entry to `app/data/featured.ts` (to make it one of the three Featured cards) or an Index-list row in `app/data/projects.ts`.
+Beyond the three Featured studies, all other published studies live in `content/en/work/` and surface through the Index — see `app/data/projects.ts` for the live Index list (it includes `family-space`, which moved from Featured to the Index). To add another case study, create the markdown file and either add an entry to `app/data/featured.ts` (to make it one of the three Featured cards) or an Index-list row in `app/data/projects.ts`; either way, add the slug to `app/data/workChain.ts` for the More-work ring.
 
 ### Frontmatter — every field
 
@@ -247,7 +251,7 @@ The card renders in a 16:10 placeholder until `image` is set. `slug` matching is
 
 ### From in-progress to live — the checklist
 
-Open `content/work/<slug>.md` and:
+Open `content/en/work/<slug>.md` and:
 
 1. Change `status: "in-progress"` to `status: "live"`.
 2. Add a `problem:` block (2-4 paragraphs).
@@ -265,84 +269,72 @@ Open `content/work/<slug>.md` and:
 
 ## Featured cards (home, section 02)
 
-`app/data/featured.ts` defines the three big case-study cards on the home page. Locked to three slots by `CLAUDE.md` (DataBloom / WeMatch / UBS Family Space).
+`app/data/featured.ts` defines the three big case-study cards on the home page. Locked to three slots (DataBloom / WeMatch / Thea); see `docs/brand-voice.md` › Constraints. (UBS Family Space was a featured study and is now in the Index.)
+
+**Structure only.** Each entry is `{ num, slug, image? }`. The display strings (title, problem, outcome, meta, alt) live in the i18n catalog under `data.featured.<slug>.*` in `i18n/locales/{en,fr}.json` — the single source of truth, so EN and FR stay in lockstep. `index.vue` renders them as `t('data.featured.<slug>.title')` etc.
 
 ```ts
+// app/data/featured.ts — structure + order only
+{ num: 'F·01', slug: 'databloom', image: '/images/featured/databloom.jpg' }
+```
+
+```jsonc
+// i18n/locales/en.json → data.featured.databloom (and the same keys in fr.json)
 {
-  num: 'F·01',                                // display number, mono
-  slug: 'databloom',                          // must match content/work/<slug>.md
-  title: 'DataBloom',                         // h3 on the card
-  problem:                                    // one-liner under "Problem"
-    'Domestic digital usage carries a large invisible energy cost. Another app is the wrong place to put it.',
-  outcome:                                    // one-liner under "Outcome"
-    "A tangible flower whose stem wilts with the household's weekly digital footprint. Validated in user testing and published by the MEI research lab.",
-  meta: 'Tangible interface / Bachelor thesis / 2025',
-  alt: "DataBloom prototype: an artificial flower with a green stem and ultramarine petals in a terracotta pot, on a kitchen counter, an LED at the flower's centre.",
-  // image: '/images/featured/databloom.jpg',  // uncomment when uploaded
+  "title": "DataBloom",
+  "problem": "Domestic digital usage carries a large invisible energy cost. Another app is the wrong place to put it.",
+  "outcome": "A tangible flower whose stem wilts with the household's weekly digital footprint. Validated in user testing and published by the MEI research lab.",
+  "meta": "Tangible interface / Bachelor thesis / 2025",
+  "alt": "DataBloom prototype: an artificial flower with a green stem and ultramarine petals in a terracotta pot, on a kitchen counter, an LED at the flower's centre."
 }
 ```
 
 To change a card:
 
-- Edit the entry in the array — every field is rendered live.
-- `slug` must point at a real `content/work/<slug>.md`. If it's a stub (status `in-progress`), the card still renders; clicking through shows the in-progress stub page.
-- `problem` and `outcome` are one-liners (sub-50-word). They're the elevator pitch of the case study.
-- `meta` is a slash-separated chrome label — pattern is `<discipline> / <method> / <year>`. Keep it short.
+- **Display text** (title / problem / outcome / meta / alt): edit `data.featured.<slug>.*` in `i18n/locales/en.json` (and `fr.json` for the French version). See `docs/i18n.md`.
+- **Structure** (order, slug, image): edit `app/data/featured.ts`. `slug` must point at a real `content/en/work/<slug>.md`; a stub (`status: in-progress`) still renders the card but links to the in-progress page. Omit `image` to render a placeholder.
+- `problem` / `outcome` are one-liners (sub-50-word) — the elevator pitch. `meta` is a slash-separated chrome label, pattern `<discipline> / <method> / <year>`.
 
-To **add** a fourth case study (drops the locked F·01–F·03 constraint — confirm with stakeholder before doing this), append to the array and add the matching markdown file in `content/`. To **remove**, comment out the entry and remove the matching markdown.
+To **add** a fourth case study (drops the locked F·01–F·03 constraint — confirm with stakeholder first), append to the array, add the `data.featured.<slug>.*` catalog keys in both locale files, and add the matching markdown in `content/en/work/`. To **remove**, delete the entry and its catalog keys.
 
 ---
 
 ## Index list rows (home, section 03)
 
-`app/data/projects.ts` powers the typed table at the bottom of the home page. Ten rows currently, in reverse-chronological order; can grow without limit. The Index section header reads "Index — all other work" — there's no hard-coded count to keep in sync.
+`app/data/projects.ts` powers the typed table at the bottom of the home page. **Twelve rows** currently, in reverse-chronological order; can grow without limit. The Index section header reads "Index — all other work" — there's no hard-coded count to keep in sync.
+
+**Structure only.** Each row is `{ num, tags, year, href?, preview? }`. The display strings (title, alt) live under `data.projects.<key>.*` in `i18n/locales/{en,fr}.json`. The `<key>` is the slug from `href` (e.g. `an-aura-of-words`), or the row's `num` for a non-linked row (`index.vue`: `href.match(/\/work\/([^/]+)/)?.[1] ?? num`). Tag labels come from `tags.*`.
 
 ```ts
+// app/data/projects.ts — structure only
 {
-  num: '01',                                  // mono index number
-  title: 'An Aura of Words',                  // row title
+  num: '01',                                     // mono index number
   tags: ['Scrollytelling', 'Data visualization', 'Front-end', 'Small data'], // 2-4 from the vocabulary
-  year: '2026',                               // string, four digits
-  href: '/work/an-aura-of-words',             // optional — omit for non-linked rows
-  // preview: '/images/index/an-aura-of-words.jpg',  // optional — hover preview
-  alt: "Scrollytelling data story: Google Reviews of Lugano's parks encoded into colour-weighted organic 'aura' shapes.",
+  year: '2026',                                  // string, four digits
+  href: '/work/an-aura-of-words',                // optional — omit for a non-linked row
+  preview: '/images/index/an-aura-of-words.jpg', // optional — hover preview
+}
+```
+
+```jsonc
+// i18n/locales/en.json → data.projects.an-aura-of-words (same keys in fr.json)
+{
+  "title": "An Aura of Words",
+  "alt": "Scrollytelling data story: Google Reviews of Lugano's parks encoded into colour-weighted organic 'aura' shapes."
 }
 ```
 
 ### Controlled vocabulary (enforced by TypeScript)
 
-```
-UX research
-Interaction design
-Prototyping
-Information architecture
-UX writing
-Design systems
-Accessibility
-Tangible interface
-Front-end
-Back-end
-Brand / Editorial
-AI evaluation
-Machine learning
-Hardware
-Sustainability
-Business strategy
-Marketing strategy
-Design thinking
-Scrollytelling
-Data visualization
-Small data
-DevOps
-```
+The Index `tags` come from a fixed vocabulary: the `indexTags` array in `app/data/projects.ts`. `IndexRow.tags` is typed to it, so TypeScript rejects any tag outside the list at build time. Each row gets **2–4 tags**.
 
-TypeScript will catch a typo or any tag not in this list at build time. To add a new tag to the vocabulary, edit the `indexTags` array in `app/data/projects.ts` — but do this sparingly; the vocabulary is part of the brand voice (see CLAUDE.md).
+The full list and the rules (including how to add a tag, and why to do so sparingly) live in **`docs/brand-voice.md` › Controlled vocabulary** — the single source of truth. Don't restate the list here; it would drift.
 
 ### Linked vs unlinked rows
 
 A row with `href:` is rendered as an `<a>`, hover-highlights with a faint yellow tint, and shows the up-right arrow at the end of the row. A row without `href:` is a plain `<div>`, non-interactive, with an em-dash where the arrow would be.
 
-Use unlinked rows for work you want to surface but can't fully publish (NDA, in-progress, lost-the-files). The presence-without-link is intentional — CLAUDE.md explicitly says "some link, some don't, both are honest".
+Use unlinked rows for work you want to surface but can't fully publish (NDA, in-progress, lost-the-files). The presence-without-link is intentional: some link, some don't, both are honest.
 
 ### Hover preview rail (desktop only, `lg+`)
 
@@ -356,6 +348,8 @@ The rail is `aria-hidden="true"` (it's a decorative enrichment of the table; all
 ---
 
 ## Images
+
+> This section covers **wiring** a produced image into the site. For how to **produce** images (roles, aspect ratios, the sharp/mupdf/puppeteer pipeline, and the per-study tracker), see `docs/images.md`.
 
 All site imagery flows through `app/components/ui/MediaPlaceholder.vue`. When a `src` is provided, it renders `<NuxtImg>` with responsive AVIF/WebP variants. When `src` is empty or `null`, it renders a bordered placeholder div with the alt text exposed via `aria-label`.
 
@@ -415,12 +409,12 @@ Each image position has a specific field to set. After dropping the file into `p
 |---|---|---|
 | Featured card hero | `app/data/featured.ts` | `image: '/images/featured/<slug>.jpg'` |
 | Index hover preview | `app/data/projects.ts` | `preview: '/images/index/<filename>.jpg'` |
-| Case-study hero | `content/work/<slug>.md` | `hero: '/images/work/<slug>/hero.jpg'` |
-| Artifact figure | `content/work/<slug>.md` | `approach[N].artifacts[M].src: '/images/work/<slug>/...'` |
-| Gallery tile | `content/work/<slug>.md` | `gallery[N].src: '/images/work/<slug>/gallery-XX.jpg'` |
-| Adjacent (More-work) | `content/work/<slug>.md` | `card.image:` |
-| About hero portrait | `app/pages/about.vue` | Change `:src="null"` to `:src="'/images/about/portrait.jpg'"` |
-| Home About-preview portrait | `app/pages/index.vue` | Change `:src="null"` to the same path |
+| Case-study hero | `content/en/work/<slug>.md` | `hero: '/images/work/<slug>/hero.jpg'` |
+| Artifact figure | `content/en/work/<slug>.md` | `approach[N].artifacts[M].src: '/images/work/<slug>/...'` |
+| Gallery tile | `content/en/work/<slug>.md` | `gallery[N].src: '/images/work/<slug>/gallery-XX.jpg'` |
+| Adjacent (More-work) | `content/en/work/<slug>.md` | `card.image:` |
+| About hero portrait | `app/pages/about.vue` | Already wired to `/images/about/portrait.jpg`; replace that file or edit the `src` |
+| Home About-preview portrait | `app/pages/index.vue` | Same portrait; edit its `src` there if the path changes |
 
 ### Writing alt text (mandatory)
 
@@ -432,7 +426,7 @@ Every image position has an `alt` field. It's required even before the image is 
 - ❌ "Energy device"
 - ❌ "" (empty — only allowed for purely decorative imagery, which the portfolio doesn't have)
 
-CLAUDE.md: "Real alt text (not 'image' or 'hero' — describe what's in the image and what it shows in context)."
+Rule (see `docs/brand-voice.md`): real alt text, not "image" or "hero" — describe what's in the image and what it shows in context.
 
 ---
 
@@ -519,15 +513,16 @@ Pages that currently set descriptions: `/`, `/about`, `/contact`, `/work/[slug]`
 Every page gets a unique 1200×630 PNG, generated by Satori at build time. Setup is global:
 
 ```ts
-// app/layouts/default.vue
+// app/layouts/default.vue — site-default OG card (fallback for pages that don't override)
+const { t, locale } = useI18n()
 defineOgImage('NuxtSeo', {
-  theme: '#f5d547',                     // brand-accent yellow
-  colorMode: 'light',
-  siteName: 'jeremymartin.ch',
+  title: t('og.defaultTitle'),
+  description: t('og.defaultDescription'),
+  footer: t('og.footer'),
 })
 ```
 
-The `NuxtSeo` template auto-pulls **title** and **description** from each page's `useHead`. You don't write per-page OG calls.
+Title / description / footer are passed **explicitly and localized** via `t(...)` — under `zeroRuntime`, nuxt-og-image does **not** infer them into the prerendered image. The `og.*` strings live in `i18n/locales/{en,fr}.json`. This layout call is the fallback; content pages override it (see [Per-page override](#per-page-override) below).
 
 #### Customising the template
 
@@ -544,19 +539,18 @@ The ejected component lives at `app/components/OgImage/NuxtSeo.satori.vue`. To m
 
 #### How many OG images are emitted
 
-One per route, into `.output/public/_og/s/`. Currently 16 (home, about, contact, and 13 case-study pages). Adding a new case study automatically gets one. Filenames encode the route as base64 (e.g. `…p_Ii9hYm91dCI.png` is the OG image for `/about`).
+One per route, under `.output/public/_og/`. The count tracks the live routes: home, about, contact, plus one per live case study, all mirrored under `/fr`. Adding a new case study automatically gets one in both locales. Filenames encode the route as base64.
 
 #### Per-page override
 
 If a specific page needs a different OG image (e.g., a case study with a custom hero), call `defineOgImage` in that page's `<script setup>`:
 
 ```ts
+// app/pages/work/[slug].vue already does this — the study's own title + summary
 defineOgImage('NuxtSeo', {
-  theme: '#f5d547',
-  colorMode: 'light',
-  siteName: 'jeremymartin.ch',
-  title: 'A different title for this page',
-  description: 'A different subtitle.',
+  title: study.value.title,
+  description: study.value.summary,
+  footer: t('og.footer'),
 })
 ```
 
@@ -567,18 +561,19 @@ It overrides the layout-level call for that page only.
 Site-wide WebSite + Person graph is registered once in `app/layouts/default.vue`:
 
 ```ts
+// app/layouts/default.vue — const { t, locale } = useI18n()
 useSchemaOrg([
   defineWebSite({
-    name: 'Jérémy Martin — Interaction Designer',
+    name: t('schema.websiteName'),
     url: 'https://jeremymartin.ch',
-    inLanguage: 'en',
+    inLanguage: locale.value,          // tracks the active locale (/fr advertises French)
   }),
   definePerson({
     name: 'Jérémy Martin',
-    jobTitle: 'Interaction Designer',
+    jobTitle: t('schema.jobTitle'),
     email: 'mailto:hello@jeremymartin.ch',
     url: 'https://jeremymartin.ch',
-    sameAs: ['https://www.linkedin.com/in/jermarti'],
+    sameAs: ['https://www.linkedin.com/in/jermarti', 'https://github.com/jerem-marti'],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Mendrisio',
@@ -588,7 +583,7 @@ useSchemaOrg([
 ])
 ```
 
-To add a profile (GitHub, Bluesky, Mastodon, etc.), append to `sameAs`.
+`name` / `jobTitle` come from the `schema.*` i18n keys. To add a profile (Bluesky, Mastodon, etc.), append to `sameAs` — it already lists LinkedIn and GitHub.
 
 Per-page schema types are added on top:
 
@@ -643,7 +638,7 @@ To exclude an external link from validation (e.g., a third-party site that 503s 
 
 ## Voice rules (quick reference)
 
-Lifted from CLAUDE.md. Apply to all body copy on the site (case-study prose, page descriptions, button labels).
+Quick reference only; the canonical rules live in `docs/brand-voice.md` › Voice rules. Apply to all body copy on the site (case-study prose, page descriptions, button labels).
 
 **Banned**:
 - Em-dashes (`—`) in body copy. Allowed on chrome / meta labels: section heads ("Index — all other work"), date ranges ("2024 — 2025"), figcaptions, footer ("FR — soon").
@@ -678,7 +673,7 @@ npx nuxi typecheck                  # full TypeScript check
 - Compiles every `@nuxt/image` source into AVIF + WebP variants
 - Self-hosts Geist + Geist Mono (`@nuxt/fonts` downloads at build time)
 
-Expected output: **16 HTML pages** (home, about, contact, and 13 case-study pages), plus one OG image per page. Adding a case study adds its page + OG image. (Nitro's prerender log reports a much larger total — 275 in the last run — because it also counts every generated AVIF/WebP image variant, not just pages.)
+Expected output: the EN pages (home, about, contact, plus one per live case study) and the full `/fr` mirror, with one OG image per route. Adding a case study adds its page + OG image in both locales. (Nitro's prerender log reports a much larger total because it also counts every generated AVIF/WebP image variant and the llms `.txt`/`.md` artifacts, not just pages.)
 
 ### TLS gotcha on this machine
 
@@ -853,4 +848,4 @@ The validator caches results — refetch the URL or use the "Test URL" feature i
 - **Customising the brand on the OG image** — [OG images](#og-images) → "Customising the template".
 - **Anything failing the build that wasn't failing yesterday** — [Common issues](#common-issues), then check `git log` for the change that broke it.
 
-Architecture, brand thesis, voice locks, and what's *not* shipping at v1 stay in **`CLAUDE.md`**. This file (`POPULATING.md`) is the operational playbook; `CLAUDE.md` is the spec.
+This file is the content-authoring playbook. The rest of the map: architecture in `docs/architecture.md`; brand thesis, voice locks, and the controlled vocabulary in `docs/brand-voice.md`; image production in `docs/images.md`; the French locale and FR twins in `docs/i18n.md`; the llms.txt pipeline in `docs/llms.md`; build and deploy in `docs/build-deploy.md`; failure modes in `docs/troubleshooting.md`. Start from `AGENTS.md` for the full index.

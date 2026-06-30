@@ -24,12 +24,16 @@ Thumbs.db
 .claude
 *.local
 
-# Local working docs (specs, drafts) — not for the public repo
-docs/superpowers/
+# Working docs under docs/superpowers/: scratch (notes, drafts) stays local;
+# design specs and implementation plans are tracked, so they never need force-adding.
 docs/superpowers/*
+!docs/superpowers/specs/
+!docs/superpowers/plans/
 
-# Project memory — kept local, not shared
-CLAUDE.md
+# Owner-only local scratch: the folder persists in the repo (via its README), but
+# its contents stay local — drop anything here that should never be committed.
+docs/_local/*
+!docs/_local/README.md
 
 # Local env files
 .env
