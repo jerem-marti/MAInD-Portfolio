@@ -24,7 +24,9 @@ const current = computed(
       :aria-label="$t('work.toc.aria')"
       @click="open = !open"
     >
-      <span class="flex items-baseline gap-3">
+      <!-- gap-5 (not gap-3): the active-section square hangs into this gap at
+           -left-3, so a 12px gap left it touching the "Section" label. -->
+      <span class="flex items-baseline gap-5">
         <span
           class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted"
         >
