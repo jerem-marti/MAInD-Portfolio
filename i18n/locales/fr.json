@@ -19,6 +19,7 @@
     "license": "Licence",
     "line": "Jérémy Martin · jeremymartin.ch",
     "carbon": {
+      "measuring": "mesure du CO₂…",
       "line": "{co2} g de CO₂/vue · plus propre que {percent} des pages testées",
       "report": "Voir le rapport carbone complet sur Website Carbon"
     }
