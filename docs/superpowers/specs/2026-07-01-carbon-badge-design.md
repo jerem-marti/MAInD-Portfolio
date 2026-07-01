@@ -55,8 +55,8 @@ Render our **own** badge markup — localized and brand-styled — and drive it 
 stages:
 
 1. **SSR / no-JS / first paint:** show the baked homepage snapshot from
-   `app/data/carbon.ts` (real: `0.05 g`, `cleaner than 90%`, `measured Jun 2026`).
-   Works without JavaScript.
+   `app/data/carbon.ts` (real: `0.05 g`, `cleaner than 90%`). Works without
+   JavaScript.
 2. **After hydration (client only):** a tiny first-party fetch reads the live
    figure for the **current page** from `https://api.websitecarbon.com/b?url=…`
    and reactively updates the CO₂ and cleaner-than numbers. Cached 24h in
@@ -72,10 +72,11 @@ Rejected alternatives: the raw official script (i18n leak, above); a static
 single site-wide value (not per-page); static per-route baking (≈15+ manual
 measurements across EN/FR, all drifting stale).
 
-**Displayed content:** CO₂ g/view + cleaner-than-% + measured date + attribution.
-The **rating letter and green-hosting are intentionally omitted** — the live `/b`
-API returns only `c` and `p`, so a per-page rating would have to be derived and
-could be shown wrong; we keep only what the API actually returns.
+**Displayed content:** CO₂ g/view + cleaner-than-% + attribution, and **no date**
+— matching the real Website Carbon badge. The **rating letter and green-hosting
+are also intentionally omitted** — the live `/b` API returns only `c` and `p`, so
+a per-page rating would have to be derived and could be shown wrong; we keep only
+what the API actually returns.
 
 ## Rendered output
 
@@ -90,13 +91,13 @@ hairline top divider separating it from the columns above.
 **EN:**
 
 ```
-🌿  0.05 G CO₂/VIEW · CLEANER THAN 90% OF PAGES TESTED · MEASURED JUN 2026 BY WEBSITE CARBON →
+🌿  0.05 G CO₂/VIEW · CLEANER THAN 90% OF PAGES TESTED · WEBSITE CARBON →
 ```
 
 **FR:**
 
 ```
-🌿  0,05 G DE CO₂/VUE · PLUS PROPRE QUE 90 % DES PAGES TESTÉES · MESURÉ JUIN 2026 PAR WEBSITE CARBON →
+🌿  0,05 G DE CO₂/VUE · PLUS PROPRE QUE 90 % DES PAGES TESTÉES · WEBSITE CARBON →
 ```
 
 (The 🌿 is an illustration marker; the real mark is a monochrome inline SVG leaf,
@@ -108,16 +109,6 @@ not an emoji.)
   `--color-brand-accent` (accent only on hover/focus, never a fill).
 - The leading mark is a 12px inline SVG **leaf** (`currentColor`, `aria-hidden`),
   a simple minimal single-path leaf. Inherits `text-brand-ink-muted`.
-
-## Open detail for review — the "measured {date}"
-
-`measured {date}` is **pinned to `measuredOn` in `carbon.ts`** (currently
-Jun 2026) and stays fixed in both the fallback and after the live update; only the
-two numbers refresh. Rationale: the date documents when the site's carbon was last
-formally recorded via the report, which is honest and stable; the live figures are
-the current per-page reading. (Alternative, if you prefer: advance the date to the
-fetch month on live update — a one-line change. Flagging so you can pick at spec
-review.)
 
 ## Architecture
 
@@ -132,31 +123,31 @@ The baked fallback snapshot + link. Re-recording later is a one-line edit.
 export interface CarbonMeasurement {
   co2Grams: number       // fallback grams CO₂ per view (homepage snapshot)
   cleanerThanPct: number // fallback "cleaner than N%"
-  measuredOn: string     // ISO date of the recorded snapshot → drives {date}
   reportUrl: string      // live Website Carbon report for the domain
 }
 
+// Fallback snapshot from the 2026-06-30 report (see spec "Captured measurement").
 export const carbon: CarbonMeasurement = {
   co2Grams: 0.05,
   cleanerThanPct: 90,
-  measuredOn: '2026-06-30',
   reportUrl: 'https://www.websitecarbon.com/website/jeremymartin-ch/',
 }
 ```
 
 ### 2. `i18n/locales/{en,fr}.json` — display strings
 
-New keys under `footer.carbon`. The connector word (`by`/`par`) is localized; the
-brand name `Website Carbon` and the report link are shared across locales.
+New keys under `footer.carbon`. The brand name `Website Carbon` and the report
+link are shared across locales, appended after a `·` separator, so they stay out
+of the interpolation.
 
-- `footer.carbon.line` (EN): `"{co2} g CO₂/view · cleaner than {percent} of pages tested · measured {date} by"`
-- `footer.carbon.line` (FR): `"{co2} g de CO₂/vue · plus propre que {percent} des pages testées · mesuré {date} par"`
+- `footer.carbon.line` (EN): `"{co2} g CO₂/view · cleaner than {percent} of pages tested"`
+- `footer.carbon.line` (FR): `"{co2} g de CO₂/vue · plus propre que {percent} des pages testées"`
 - `footer.carbon.report` (EN): `"View the full carbon report on Website Carbon"` — accessible label for the link
 - `footer.carbon.report` (FR): `"Voir le rapport carbone complet sur Website Carbon"`
 
-`{co2}`, `{percent}`, `{date}` are interpolated with locale-formatted values (see
+`{co2}` and `{percent}` are interpolated with locale-formatted values (see
 Formatting). The visible link text is the literal `Website Carbon` (shared),
-rendered after the localized connector, followed by the `→` glyph.
+rendered after a `·` separator, followed by the `→` glyph.
 
 ### 3. `app/components/chrome/CarbonBadge.vue` — presentation + live upgrade
 
@@ -187,7 +178,6 @@ Locale-aware, via `Intl` (or vue-i18n `n`/`d`):
 |---------|------------|-------------|--------|
 | co2     | `0.05`     | `0,05`      | `Intl.NumberFormat(locale, { maximumFractionDigits: 2 })` |
 | percent | `90%`      | `90 %`      | `Intl.NumberFormat(locale, { style: 'percent' })` on `pct/100` (FR yields the NBSP before `%`) |
-| date    | `Jun 2026` | `juin 2026` | `Intl.DateTimeFormat(locale, { month: 'short', year: 'numeric' })` on `measuredOn` |
 
 CSS `uppercase` matches the footer, so source strings stay normal-case.
 
