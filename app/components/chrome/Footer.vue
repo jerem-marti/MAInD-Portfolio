@@ -79,6 +79,7 @@ const switchLocalePath = useSwitchLocalePath()
           {{ t('footer.line') }}
         </span>
       </div>
+      <ChromeCarbonBadge />
     </div>
   </footer>
 </template>

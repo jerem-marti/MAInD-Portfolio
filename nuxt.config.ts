@@ -156,6 +156,9 @@ export default defineNuxtConfig({
       // Instagram serves a login/bot wall to crawlers (non-200), so the checker
       // can't validate it. Verified manually instead.
       'https://www.instagram.com/p/DXeyH-NGswr/',
+      // Website Carbon's report page blocks automated crawlers (WAF → 403), so
+      // the checker can't validate it. Verified manually instead.
+      'https://www.websitecarbon.com/website/jeremymartin-ch/',
     ],
   },
 
