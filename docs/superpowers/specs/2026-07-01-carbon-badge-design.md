@@ -105,8 +105,10 @@ not an emoji.)
 
 - `Website Carbon →` is the only linked span; it opens the live report
   (`https://www.websitecarbon.com/website/jeremymartin-ch/`) in a new tab
-  (`target="_blank"`, `rel="noopener"`). Hover/focus tints it with
-  `--color-brand-accent` (accent only on hover/focus, never a fill).
+  (`target="_blank"`, `rel="noopener"`). It uses the site's standard link
+  affordance — `text-brand-ink-muted hover:text-brand-ink` — and inherits the
+  global `:focus-visible` accent ring. Signal yellow is **never** applied as text
+  (it is only ~1.33:1 on the light bg — illegible; see `main.css`).
 - The leading mark is a 12px inline SVG **leaf** (`currentColor`, `aria-hidden`),
   a simple minimal single-path leaf. Inherits `text-brand-ink-muted`.
 
@@ -199,7 +201,9 @@ CSS `uppercase` matches the footer, so source strings stay normal-case.
 - **i18n catalog:** every display word lives in `en.json`/`fr.json`; FR twin
   included, so `check:i18n` parity/leak checks hold (our own markup, no English
   injected by a third party).
-- **Color discipline:** signal yellow only on link hover/focus.
+- **Color discipline:** signal yellow never as text (fails contrast on the light
+  bg); it appears only via the global `:focus-visible` ring when the link is
+  tabbed to. Link hover darkens muted→ink, matching the site's other links.
 - **No em-dashes** in copy; US spelling in EN.
 - **Accepted cost (privacy/eco):** each fresh page view triggers one client-side
   call to `api.websitecarbon.com` (cached 24h per URL), a third-party request from
