@@ -18,6 +18,70 @@ const percentDisplay = computed(() =>
     cleanerThanPct.value / 100,
   ),
 )
+
+// --- Live per-page upgrade (client only) ------------------------------------
+// Mirror the official badge: one call per URL per day, cached in localStorage.
+// The /b endpoint returns { c: grams, p: percentile } on success, or an error
+// object otherwise. Any failure leaves the baked fallback in place.
+const CACHE_TTL = 864e5 // 24h, matching the official badge
+
+interface CarbonApiResult {
+  c: number
+  p: number
+}
+
+function applyResult(r: CarbonApiResult) {
+  co2.value = r.c
+  cleanerThanPct.value = r.p
+}
+
+function readCache(key: string): CarbonApiResult | null {
+  try {
+    const raw = localStorage.getItem(key)
+    if (!raw) return null
+    const v = JSON.parse(raw)
+    if (
+      typeof v?.c === 'number' &&
+      typeof v?.p === 'number' &&
+      typeof v?.t === 'number' &&
+      Date.now() - v.t < CACHE_TTL
+    ) {
+      return { c: v.c, p: v.p }
+    }
+  } catch {
+    // corrupt/blocked storage → ignore, fall through to fetch
+  }
+  return null
+}
+
+onMounted(async () => {
+  const href = window.location.href
+  const key = `wcb_${encodeURIComponent(href)}`
+
+  const cached = readCache(key)
+  if (cached) {
+    applyResult(cached)
+    return
+  }
+
+  try {
+    const res = await fetch(`https://api.websitecarbon.com/b?url=${encodeURIComponent(href)}`)
+    if (!res.ok) return
+    const data = await res.json()
+    if (typeof data?.c === 'number' && typeof data?.p === 'number') {
+      applyResult({ c: data.c, p: data.p })
+      try {
+        localStorage.setItem(key, JSON.stringify({ c: data.c, p: data.p, t: Date.now() }))
+      } catch {
+        // storage full/blocked → the value still shows this session
+      }
+    }
+    // else: error payload (e.g. un-indexed page "Service temporarily
+    // unavailable") → keep the baked fallback silently.
+  } catch {
+    // network/CORS/offline → keep the baked fallback silently.
+  }
+})
 </script>
 
 <template>
