@@ -4,6 +4,18 @@
 - **Status:** Approved (design); ready for implementation plan
 - **Topic:** A per-page, live-but-graceful Website Carbon badge in the footer
 
+> **Revision (2026-07-01, post-implementation):** the baked homepage-snapshot
+> fallback described below was dropped. It caused every page to show the
+> homepage's `0.05g / 90%` until each URL was individually indexed by Website
+> Carbon — i.e. a page's number could be misattributed. The shipped badge instead
+> mirrors the official Website Carbon badge: it shows a localized **"measuring
+> CO₂…"** placeholder and fetches **each page's own** live figure client-side, so
+> no page ever displays another page's number. `app/data/carbon.ts` now holds only
+> `reportUrl`; `co2Grams`/`cleanerThanPct` and the "Captured measurement" /
+> "Formatting → date" specifics below are superseded. Everything else
+> (i18n-owned text, leaf mark, Lucide ArrowUpRight, link a11y, 24h cache,
+> link-checker exclusion) stands.
+
 ## Goal
 
 Show visitors that jeremymartin.ch is built with eco-conception in mind by
