@@ -64,21 +64,27 @@ hairline top divider separating it from the columns above.
 **EN:**
 
 ```
-◐  0.04 G CO₂/VIEW · CLEANER THAN 92% OF PAGES TESTED · MEASURED JUL 2026 BY WEBSITE CARBON →
+🌿  0.04 G CO₂/VIEW · CLEANER THAN 92% OF PAGES TESTED · MEASURED JUL 2026 BY WEBSITE CARBON →
 ```
 
 **FR:**
 
 ```
-◐  0,04 G DE CO₂/VUE · PLUS PROPRE QUE 92 % DES PAGES TESTÉES · MESURÉ JUIL. 2026 PAR WEBSITE CARBON →
+🌿  0,04 G DE CO₂/VUE · PLUS PROPRE QUE 92 % DES PAGES TESTÉES · MESURÉ JUIL. 2026 PAR WEBSITE CARBON →
 ```
+
+(The 🌿 above is an illustration marker; the real mark is a monochrome inline SVG
+leaf, not an emoji.)
 
 - `Website Carbon →` is the only linked span; it opens the live report in a new
   tab (`target="_blank"`, `rel="noopener"`). Hover/focus tints it with
   `--color-brand-accent` (accent only on hover/focus, never a fill — color
   discipline honored).
-- `◐` is a leading 12px inline SVG mark (`currentColor`, `aria-hidden`), a simple
-  half-filled circle suggesting efficiency. **Resolved:** keep the SVG mark.
+- The leading mark is a 12px inline SVG **leaf** (`currentColor`, `aria-hidden`),
+  a simple minimal single-path leaf suggesting sustainability. It inherits
+  `text-brand-ink-muted` from the line. **Resolved:** use a leaf SVG (not an
+  emoji, for consistent cross-platform rendering and to match the mono
+  aesthetic).
 - **Resolved:** the link is scoped to `Website Carbon →` only, not the whole line.
 
 ## Architecture
@@ -156,7 +162,7 @@ strings stay normal-case.
   use — no new contrast risk.
 - The link keeps its focus state (never removed) and carries an accessible name
   via `footer.carbon.report`.
-- The `◐` SVG mark is `aria-hidden="true"`.
+- The leaf SVG mark is `aria-hidden="true"`.
 - The line is plain informative text; no ARIA gymnastics needed.
 
 ## Constraints honored
