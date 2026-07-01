@@ -4,7 +4,7 @@ const switchLocalePath = useSwitchLocalePath()
 </script>
 
 <template>
-  <footer class="border-t border-brand-hairline mt-10 mb-0 max-md:pointer-coarse:mb-20">
+  <footer class="border-t border-brand-hairline mt-10 mb-0">
     <div
       class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 pt-10 pb-10 max-md:pointer-coarse:pb-24 grid grid-cols-12 gap-x-6 gap-y-6"
     >
@@ -35,7 +35,7 @@ const switchLocalePath = useSwitchLocalePath()
           {{ t('footer.github') }}
         </a>
       </div>
-      <div class="col-span-6 md:col-span-4 flex flex-col gap-1">
+      <div class="col-span-12 md:col-span-4 flex flex-col gap-1">
         <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
           {{ t('footer.language') }}
         </span>
@@ -64,7 +64,7 @@ const switchLocalePath = useSwitchLocalePath()
           </template>
         </div>
       </div>
-      <div class="col-span-6 md:col-span-4 flex md:justify-end flex-col gap-1 md:items-end">
+      <div class="col-span-12 md:col-span-4 flex md:justify-end flex-col gap-1 md:items-end md:text-right">
         <span class="font-mono uppercase tracking-[0.08em] text-[10px] text-brand-ink-muted">
           {{ t('footer.copyright') }} ·
           <!-- "License" opens the locally-served LICENSE (MIT for code; content reserved). -->
