@@ -17,12 +17,7 @@
     "language": "Language",
     "copyright": "© 2026",
     "license": "License",
-    "line": "Jérémy Martin · jeremymartin.ch",
-    "carbon": {
-      "measuring": "measuring CO₂…",
-      "line": "{co2} g CO₂/view · cleaner than {percent} of pages tested",
-      "report": "View the full carbon report on Website Carbon"
-    }
+    "line": "Jérémy Martin · jeremymartin.ch"
   },
   "common": {
     "availableLead": "Available for internships from",

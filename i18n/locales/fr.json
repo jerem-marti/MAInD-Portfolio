@@ -17,12 +17,7 @@
     "language": "Langue",
     "copyright": "© 2026",
     "license": "Licence",
-    "line": "Jérémy Martin · jeremymartin.ch",
-    "carbon": {
-      "measuring": "mesure du CO₂…",
-      "line": "{co2} g de CO₂/vue · plus propre que {percent} des pages testées",
-      "report": "Voir le rapport carbone complet sur Website Carbon"
-    }
+    "line": "Jérémy Martin · jeremymartin.ch"
   },
   "common": {
     "availableLead": "Disponible pour un stage dès",
