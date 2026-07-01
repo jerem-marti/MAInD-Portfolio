@@ -2,6 +2,7 @@
 import { carbon } from '~/data/carbon'
 
 const { t, locale } = useI18n()
+const route = useRoute()
 
 // Live per-page figures. Null until Website Carbon returns data for THIS page's
 // URL (fetched client-side). There is no baked fallback: an un-measured page
@@ -57,7 +58,7 @@ function readCache(key: string): CarbonApiResult | null {
   return null
 }
 
-onMounted(async () => {
+async function load() {
   const href = window.location.href
   const key = `wcb_${encodeURIComponent(href)}`
 
@@ -67,10 +68,16 @@ onMounted(async () => {
     return
   }
 
+  // No cached figure for this page yet → show "measuring…" while we fetch.
+  co2.value = null
+  cleanerThanPct.value = null
+
   try {
     const res = await fetch(`https://api.websitecarbon.com/b?url=${encodeURIComponent(href)}`)
     if (!res.ok) return
     const data = await res.json()
+    // Ignore a slow response if the visitor has navigated on since.
+    if (window.location.href !== href) return
     if (typeof data?.c === 'number' && typeof data?.p === 'number') {
       applyResult({ c: data.c, p: data.p })
       try {
@@ -83,7 +90,13 @@ onMounted(async () => {
   } catch {
     // network/CORS/offline → stay in "measuring" state.
   }
-})
+}
+
+onMounted(load)
+// SPA navigation is client-side (no reload, no extra JS to load), so re-run on
+// each page change. Reuses the 24h per-URL cache — revisiting a page makes no
+// new request; each page is still fetched at most once per day.
+watch(() => route.path, load)
 </script>
 
 <template>
