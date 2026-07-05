@@ -394,7 +394,7 @@ function onRowActivate(r: IndexRow, e: MouseEvent) {
                         stroke-width="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="text-brand-accent"
+                        class="text-brand-ink"
                         aria-hidden="true"
                       >
                         <path d="M5 12h14" />
