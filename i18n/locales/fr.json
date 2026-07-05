@@ -97,9 +97,9 @@
       "festivalKey": "Festival",
       "festivalValue": "Baleinev : programmateur (2023), responsable communication (2024), président (2025). Comité d'environ 25 personnes, environ 1'000 participants."
     },
-    "downloadsLabel": "Téléchargements",
-    "cvEn": "Télécharger le CV (anglais)",
-    "cvFr": "Télécharger le CV (français)"
+    "resourcesLabel": "Ressources",
+    "cvEn": "CV (anglais)",
+    "cvFr": "CV (français)"
   },
   "contact": {
     "metaTitle": "Contact",
@@ -373,9 +373,9 @@
       "hThinking": "Ce à quoi je réfléchis",
       "thinking": "Comment continuer à concevoir pour l'utilisateur quand les possibilités techniques ne cessent de changer. L'IA ne change pas la discipline, mais elle rend tentant de partir de l'outil plutôt que de l'intention de l'utilisateur. Ma question du moment est donc l'inverse : comment ancrer le design d'abord sur l'intention, et ne faire intervenir l'IA qu'ensuite ?",
       "hFacts": "Repères",
-      "hDownloads": "Téléchargements",
-      "cvEnLabel": "Télécharger le CV (anglais)",
-      "cvFrLabel": "Télécharger le CV (français)"
+      "hResources": "Ressources",
+      "cvEnLabel": "CV (anglais)",
+      "cvFrLabel": "CV (français)"
     },
     "contact": {
       "email": "E-mail",

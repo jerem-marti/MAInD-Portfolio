@@ -97,9 +97,9 @@
       "festivalKey": "Festival",
       "festivalValue": "Baleinev: programmer (2023), head of comms (2024), president (2025). Committee ~25, ~1'000 attendees."
     },
-    "downloadsLabel": "Downloads",
-    "cvEn": "Download CV (English)",
-    "cvFr": "Download CV (French)"
+    "resourcesLabel": "Resources",
+    "cvEn": "CV (English)",
+    "cvFr": "CV (French)"
   },
   "contact": {
     "metaTitle": "Contact",

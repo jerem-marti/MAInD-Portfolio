@@ -1,18 +1,15 @@
 <script setup lang="ts">
+import type { LinkResource } from '~/utils/resources'
+
 const { t, locale } = useI18n()
 
-// CV downloads. The current locale's CV leads as the filled primary; the other
-// language follows as an active outline button. Order + styling bake per-locale
-// at prerender (/about vs /fr/a-propos). Both PDFs may not exist yet — the EN
-// one is already wired the same way; the static link checker ignores them.
-const cvs = computed(() => {
-  const items = [
-    { code: 'en', href: '/jeremy-martin-cv-en.pdf', label: t('about.cvEn') },
-    { code: 'fr', href: '/jeremy-martin-cv-fr.pdf', label: t('about.cvFr') },
-  ]
-  return items.sort((a, b) =>
-    a.code === locale.value ? -1 : b.code === locale.value ? 1 : 0,
-  )
+// The two CVs render as case-study-style resource rows (WorkResources): a ruled
+// list that opens each PDF in a new tab. The visitor's current-locale CV leads;
+// order bakes per-locale at prerender (/about vs /fr/a-propos).
+const cvResources = computed<LinkResource[]>(() => {
+  const en: LinkResource = { type: 'pdf', title: t('about.cvEn'), url: '/jeremy-martin-cv-en.pdf' }
+  const fr: LinkResource = { type: 'pdf', title: t('about.cvFr'), url: '/jeremy-martin-cv-fr.pdf' }
+  return locale.value === 'fr' ? [fr, en] : [en, fr]
 })
 
 useHead({
@@ -186,44 +183,10 @@ const facts = computed(() => [
     </dl>
   </section>
 
-  <!-- Downloads -->
+  <!-- Resources -->
   <section class="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-16 py-16 md:py-28">
-    <UiSectionHead num="05" :label="t('about.downloadsLabel')" class="mb-10 md:mb-16" />
-    <div class="grid grid-cols-12 gap-x-6">
-      <div class="col-span-12 md:col-span-8 md:col-start-3 flex flex-col md:flex-row gap-4">
-        <a
-          v-for="cv in cvs"
-          :key="cv.code"
-          :href="cv.href"
-          download
-          :class="[
-            'inline-flex items-center justify-between gap-3 px-5 py-3.5 min-w-[240px] transition-colors',
-            cv.code === locale
-              ? 'bg-brand-ink text-brand-bg hover:bg-brand-ink-hover'
-              : 'border border-brand-hairline text-brand-ink hover:bg-brand-accent/15',
-          ]"
-        >
-          <span class="text-[14px]">{{ cv.label }}</span>
-          <!-- Lucide Download, stroke 1.5, 16x16 -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" x2="12" y1="15" y2="3" />
-          </svg>
-        </a>
-      </div>
-    </div>
+    <UiSectionHead num="05" :label="t('about.resourcesLabel')" class="mb-10 md:mb-16" />
+    <WorkResources :resources="cvResources" />
   </section>
   </div>
 </template>
