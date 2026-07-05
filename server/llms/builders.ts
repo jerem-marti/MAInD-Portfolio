@@ -334,7 +334,10 @@ export function aboutMarkdown(locale: Locale = 'en'): string {
     `## ${L(locale, 'about.hFacts', 'Facts')}`,
     facts.map(([k, v]) => `- **${k}:** ${v}`).join('\n'),
     `## ${L(locale, 'about.hDownloads', 'Downloads')}`,
-    `- [${L(locale, 'about.cvLabel', 'Download CV (English)')}](${SITE_URL}/jeremy-martin-cv-en.pdf): ${L(locale, 'about.cvNote', 'PDF. A French CV ships later.')}`,
+    [
+      `- [${L(locale, 'about.cvEnLabel', 'Download CV (English)')}](${SITE_URL}/jeremy-martin-cv-en.pdf)`,
+      `- [${L(locale, 'about.cvFrLabel', 'Download CV (French)')}](${SITE_URL}/jeremy-martin-cv-fr.pdf)`,
+    ].join('\n'),
   ].join('\n\n')}\n`
 }
 

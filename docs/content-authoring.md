@@ -18,7 +18,7 @@ It assumes the migration is complete (all six phases merged to `main`). If you'r
 | Activate an in-progress case study | Same as above — flip `status` + add the blocks | [Case studies](#case-studies) |
 | Add resources (links, video) to a case study | `content/en/work/<slug>.md` (`resources` block) | [Case studies](#case-studies) |
 | Replace a placeholder with an image | Drop file into `public/images/...`, then set the matching `src` / `hero` / `preview` / `image` field | [Images](#images) |
-| Wire the CV PDFs | Drop into `public/jeremy-martin-cv-*.pdf`, remove from `linkChecker.excludeLinks` in `nuxt.config.ts` | [CVs](#cvs) |
+| Update a CV PDF | Overwrite `public/jeremy-martin-cv-{en,fr}.pdf` (same filename) | [CVs](#cvs) |
 | Change page titles, descriptions, OG content | Per-page `useHead({ title, meta })` in `app/pages/...` | [SEO](#seo) |
 | Customise the OG image template | `app/components/OgImage/NuxtSeo.satori.vue` | [OG images](#og-images) |
 | Add or change schema.org data | `useSchemaOrg([...])` in `app/layouts/default.vue` (global) or per page | [Schema.org](#schemaorg-structured-data) |
@@ -432,22 +432,14 @@ Rule (see `docs/brand-voice.md`): real alt text, not "image" or "hero" — descr
 
 ## CVs
 
-Two PDFs are wired and excluded from link-checking until they exist:
+Both CV PDFs are shipped and link-checked:
 
-- `public/jeremy-martin-cv-en.pdf` — English CV, v1 deliverable
-- `public/jeremy-martin-cv-fr.pdf` — French CV, v2 (rendered as a "soon" pill until then)
+- `public/jeremy-martin-cv-en.pdf` — English CV
+- `public/jeremy-martin-cv-fr.pdf` — French CV
 
-To wire the English CV:
+The `/about` page (and its `/fr/a-propos` twin) renders both as `<a download>` buttons — the current locale's CV as the filled primary, the other language as an active outline button (`app/pages/about.vue`). The llms.txt "Downloads" section links both (`server/llms/builders.ts`). Labels live in the i18n catalog: `about.cvEn` / `about.cvFr` for the page, `llms.about.cvEnLabel` / `cvFrLabel` for the French llms twin.
 
-1. Drop the PDF into `public/` as `jeremy-martin-cv-en.pdf`.
-2. Open `nuxt.config.ts` and remove `'/jeremy-martin-cv-en.pdf'` from `linkChecker.excludeLinks`.
-3. Run `npm run generate` — the link-checker will now verify the file actually exists. If you got the path wrong, the build fails fast.
-4. The Download CV (English) button on `/about` already points at this path; no template change needed.
-
-To wire the French CV:
-
-1. Drop the PDF into `public/` as `jeremy-martin-cv-fr.pdf`.
-2. Edit `app/pages/about.vue`, find the FR "soon" pill, replace it with the same `<a download>` pattern the EN button uses. The exclusion entry in `nuxt.config.ts` should also be removed.
+To update a CV, overwrite the file in `public/` with the same filename — no template or config change needed. The paths are link-checked at `generate` time, so a wrong filename fails the build fast.
 
 ---
 
@@ -619,18 +611,18 @@ You don't need to set canonical manually. If you ever need to override on a sing
 
 ### Link checking
 
-`linkChecker` runs at `generate` time and fails the build on broken internal links (status >= 400). Two paths are currently excluded because the files aren't there yet:
+`linkChecker` runs at `generate` time and fails the build on broken internal links (status >= 400). One external link is excluded because crawlers can't validate it:
 
 ```ts
 linkChecker: {
   excludeLinks: [
-    '/jeremy-martin-cv-en.pdf',
-    '/jeremy-martin-cv-fr.pdf',
+    // Instagram serves a login/bot wall to crawlers (non-200); verified manually.
+    'https://www.instagram.com/p/DXeyH-NGswr/',
   ],
 },
 ```
 
-**Remove each entry as you upload the corresponding PDF.** Build fails if a referenced file isn't there — that's the point.
+Only exclude a URL that genuinely can't be fetched at build time. Local assets (like the CV PDFs in `public/`) must **not** be excluded — letting the checker verify they exist is the point.
 
 To exclude an external link from validation (e.g., a third-party site that 503s sometimes), add it to the same array. Don't disable link-check globally — it's caught real bugs every phase.
 
