@@ -333,10 +333,10 @@ export function aboutMarkdown(locale: Locale = 'en'): string {
     L(locale, 'about.thinking', `How to keep designing for the user when the technological possibilities won't stop changing. AI doesn't change the discipline, but it makes it tempting to start with the tool instead of the user's intent. So my current question is the inverse: how do we anchor design around intent first, and only then bring AI generation in?`),
     `## ${L(locale, 'about.hFacts', 'Facts')}`,
     facts.map(([k, v]) => `- **${k}:** ${v}`).join('\n'),
-    `## ${L(locale, 'about.hDownloads', 'Downloads')}`,
+    `## ${L(locale, 'about.hResources', 'Resources')}`,
     [
-      `- [${L(locale, 'about.cvEnLabel', 'Download CV (English)')}](${SITE_URL}/jeremy-martin-cv-en.pdf)`,
-      `- [${L(locale, 'about.cvFrLabel', 'Download CV (French)')}](${SITE_URL}/jeremy-martin-cv-fr.pdf)`,
+      `- [${L(locale, 'about.cvEnLabel', 'CV (English)')}](${SITE_URL}/jeremy-martin-cv-en.pdf)`,
+      `- [${L(locale, 'about.cvFrLabel', 'CV (French)')}](${SITE_URL}/jeremy-martin-cv-fr.pdf)`,
     ].join('\n'),
   ].join('\n\n')}\n`
 }

@@ -437,7 +437,7 @@ Both CV PDFs are shipped and link-checked:
 - `public/jeremy-martin-cv-en.pdf` — English CV
 - `public/jeremy-martin-cv-fr.pdf` — French CV
 
-The `/about` page (and its `/fr/a-propos` twin) renders both as `<a download>` buttons — the current locale's CV as the filled primary, the other language as an active outline button (`app/pages/about.vue`). The llms.txt "Downloads" section links both (`server/llms/builders.ts`). Labels live in the i18n catalog: `about.cvEn` / `about.cvFr` for the page, `llms.about.cvEnLabel` / `cvFrLabel` for the French llms twin.
+The `/about` page (and its `/fr/a-propos` twin) renders both under a "Resources" section as case-study-style resource rows — the shared `<WorkResources>` component, each opening its PDF in a new tab; the visitor's current-locale CV leads (`app/pages/about.vue`). The llms.txt "Resources" section links both (`server/llms/builders.ts`). Labels live in the i18n catalog: `about.cvEn` / `about.cvFr` for the page, `llms.about.cvEnLabel` / `cvFrLabel` for the French llms twin.
 
 To update a CV, overwrite the file in `public/` with the same filename — no template or config change needed. The paths are link-checked at `generate` time, so a wrong filename fails the build fast.
 
