@@ -42,7 +42,7 @@ Get-Process chrome,chromium -ErrorAction SilentlyContinue | Stop-Process -Force
 ### Link-check fails the build
 **Symptom** (Universal): `npm run generate` aborts; the link checker reports an internal link returning status ≥ 400 (commonly a CV PDF path, or a route/file that doesn't exist).
 **Cause:** `linkChecker` runs at `generate` and fails on any broken internal link by design (`nuxt.config.ts` › `linkChecker`). The referenced file isn't on disk, or the path has a typo.
-**Fix:** Confirm the file exists, then fix the source of the link. For a CV that genuinely isn't ready yet, the path stays in `linkChecker.excludeLinks` — but **remove the exclusion the moment the file lands** so the checker starts verifying it.
+**Fix:** Confirm the file exists, then fix the source of the link. If an asset genuinely isn't ready yet, keep its path in `linkChecker.excludeLinks` — but **remove the exclusion the moment the file lands** so the checker starts verifying it.
 
 ```powershell
 # Is the referenced file actually there?

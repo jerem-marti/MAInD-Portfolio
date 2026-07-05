@@ -110,7 +110,7 @@ After the deploy is live, open the deployed URL and check:
 ## Constraints
 
 - **100% static, no runtime server.** `nitro.preset: 'static'` (`nuxt.config.ts:27`). Nothing runs on the host at request time — no API routes, no SSR, no runtime image/OG service (`ogImage.zeroRuntime`, `sitemap.zeroRuntime`, static IPX). Do not introduce code that assumes a Nitro server in production.
-- **The link checker is load-bearing — do not disable it.** It fails the build on broken internal links by design and has caught real bugs. Only add an entry to `linkChecker.excludeLinks` (`nuxt.config.ts:152-160`) for a genuinely uncheckable URL (e.g. a login-walled external page), and **remove the entry the moment the referenced file lands** — e.g. once `public/jeremy-martin-cv-en.pdf` exists, drop `'/jeremy-martin-cv-en.pdf'` so the checker starts verifying it. Wiring the CVs is owned by [docs/content-authoring.md](./content-authoring.md).
+- **The link checker is load-bearing — do not disable it.** It fails the build on broken internal links by design and has caught real bugs. Only add an entry to `linkChecker.excludeLinks` (`nuxt.config.ts` › `linkChecker`) for a genuinely uncheckable URL (e.g. a login-walled external page), and **remove the entry the moment the referenced file can be checked**. Local assets like the CV PDFs (`public/jeremy-martin-cv-{en,fr}.pdf`) are verified, not excluded. The CVs are owned by [docs/content-authoring.md](./content-authoring.md).
 - **Node 22.5+** for builds (native SQLite connector, `nuxt.config.ts:128-131`); hosts pin `NODE_VERSION=22`.
 - **i18n redirect is nginx, not Nuxt.** Keep `detectBrowserLanguage: false` (`nuxt.config.ts:67`); the root redirect lives only in `deploy/nginx-i18n.conf`.
 

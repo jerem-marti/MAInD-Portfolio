@@ -374,8 +374,8 @@
       "thinking": "Comment continuer à concevoir pour l'utilisateur quand les possibilités techniques ne cessent de changer. L'IA ne change pas la discipline, mais elle rend tentant de partir de l'outil plutôt que de l'intention de l'utilisateur. Ma question du moment est donc l'inverse : comment ancrer le design d'abord sur l'intention, et ne faire intervenir l'IA qu'ensuite ?",
       "hFacts": "Repères",
       "hDownloads": "Téléchargements",
-      "cvLabel": "Télécharger le CV (anglais)",
-      "cvNote": "PDF. Un CV en français arrivera plus tard."
+      "cvEnLabel": "Télécharger le CV (anglais)",
+      "cvFrLabel": "Télécharger le CV (français)"
     },
     "contact": {
       "email": "E-mail",
