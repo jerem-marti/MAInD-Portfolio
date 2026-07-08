@@ -14,7 +14,7 @@
 | Describing the work | "agentic experiences (AX)", designed around user intent. Not "AI-driven products". | CLAUDE.md › Voice rules |
 | Tagging an Index row | 2–4 tags, only from `indexTags`. TypeScript enforces it. | `app/data/projects.ts:7-30,36` |
 | Using a client name | UBS name OK in copy; UBS logo never in any image. | CLAUDE.md › Voice rules |
-| Stating a bio fact | Pull from Background facts below (corrected). Languages: FR native + EN B2, no Italian. | This doc › Background facts |
+| Stating a bio fact | Pull from Background facts below (corrected). Languages: FR native + EN C1, no Italian. | This doc › Background facts |
 
 ## Brand thesis
 
@@ -105,7 +105,7 @@ The only bio facts copy may draw on. These **override any stale text** elsewhere
 
 - **Now:** Master of Arts in Interaction Design (MAIND) at SUPSI, Mendrisio; graduating **2027**.
 - **Education (chronological):** CFC Electronics Technician (4-year apprenticeship at HEIA-FR) → CMS preparatory bridge year at EPFL (for *maturité professionnelle* holders) → one semester Microengineering at EPFL (left; state factually, do not over-market) → BSc Media Engineering at HEIG-VD → MAIND at SUPSI.
-- **Languages:** French (native), English (B2). **No Italian.**
+- **Languages:** French (native), English (C1). **No Italian.**
 - **Based:** Mendrisio, Switzerland.
 - **Available:** from **August 2026**.
 - **Festival (Baleinev):** committee 2023–2025; ~1'000 attendees; committee of ~25. Programmer (2023), head of communications (2024), president (2025).

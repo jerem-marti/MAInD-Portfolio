@@ -207,7 +207,7 @@ const intro = (locale: Locale): string => L(locale, 'intro',
   + 'Switzerland, graduating 2027 and available from August 2026. His path runs from a four-year '
   + 'electronics apprenticeship (CFC) through a BSc in Media Engineering at HEIG-VD to interaction '
   + 'design, and his practice spans hardware prototyping, front-end build, and UX research. '
-  + 'He works in French (native) and English (B2). Contact: hello@jeremymartin.ch.')
+  + 'He works in French (native) and English (C1). Contact: hello@jeremymartin.ch.')
 
 const corePages = (locale: Locale): string[] => [
   `- [${L(locale, 'pages.home', 'Home')}](${SITE_URL}${pageMdPath(locale, 'home')}): ${L(locale, 'pages.homeDesc', 'Point of view and the three featured case studies.')}`,
@@ -310,7 +310,7 @@ export function aboutMarkdown(locale: Locale = 'en'): string {
   const facts: Array<[string, string]> = [
     [L(locale, 'about.fCurrentlyK', 'Currently'), L(locale, 'about.fCurrentlyV', 'Master in Interaction Design, SUPSI Mendrisio · graduating 2027')],
     [L(locale, 'about.fPreviouslyK', 'Previously'), L(locale, 'about.fPreviouslyV', 'BSc Media Engineering, HEIG-VD · one semester Microengineering, EPFL · CMS preparatory bridge year, EPFL · CFC Electronics, HEIA-FR')],
-    [L(locale, 'about.fLanguagesK', 'Languages'), L(locale, 'about.fLanguagesV', 'French (native) · English (B2)')],
+    [L(locale, 'about.fLanguagesK', 'Languages'), L(locale, 'about.fLanguagesV', 'French (native) · English (C1)')],
     [L(locale, 'about.fBasedK', 'Based'), L(locale, 'about.fBasedV', 'Mendrisio and Noréaz, Switzerland')],
     [L(locale, 'about.fAvailableK', 'Available'), L(locale, 'about.fAvailableV', 'From August 2026')],
     [L(locale, 'about.fFestivalK', 'Festival'), L(locale, 'about.fFestivalV', `Baleinev: programmer (2023), head of comms (2024), president (2025). Committee ~25, ~1'000 attendees.`)],
