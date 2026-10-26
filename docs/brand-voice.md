@@ -103,11 +103,11 @@ The Index list tag set, verbatim from the `indexTags` array (`app/data/projects.
 
 The only bio facts copy may draw on. These **override any stale text** elsewhere.
 
-- **Now:** Master of Arts in Interaction Design (MAIND) at SUPSI, Mendrisio; graduating **2027**.
+- **Now:** Master of Arts in Interaction Design (MAIND) at SUPSI, Mendrisio; graduating **2027**. Master's internship (part of the MAIND program) as Interaction Designer & Front-End Developer at **Ticinocom SA**, Muralto, hybrid, Oct 2026 to Jul 2027.
 - **Education (chronological):** CFC Electronics Technician (4-year apprenticeship at HEIA-FR) → CMS preparatory bridge year at EPFL (for *maturité professionnelle* holders) → one semester Microengineering at EPFL (left; state factually, do not over-market) → BSc Media Engineering at HEIG-VD → MAIND at SUPSI.
 - **Languages:** French (native), English (C1). **No Italian.**
 - **Based:** Mendrisio, Switzerland.
-- **Available:** from **August 2026**.
+- **Available:** for **full-time roles** from **August 2027** (internship at Ticinocom SA, Muralto, Oct 2026 to Jul 2027).
 - **Festival (Baleinev):** committee 2023–2025; ~1'000 attendees; committee of ~25. Programmer (2023), head of communications (2024), president (2025).
 - **Bachelor thesis — DataBloom:** a tangible interface (a wilting flower) making the energy impact of digital usage visible at home; functional prototype + thesis paper; **published on the MEI research blog** (not "in active use").
 - **Contact:** hello@jeremymartin.ch · LinkedIn `jermarti`.

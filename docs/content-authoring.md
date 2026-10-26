@@ -485,7 +485,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Interaction design master at SUPSI Mendrisio, coming to design from electronics and media engineering. Available from August 2026.',
+        'Interaction design master at SUPSI Mendrisio, coming to design from electronics and media engineering. Available for full-time roles from August 2027.',
     },
   ],
 })
