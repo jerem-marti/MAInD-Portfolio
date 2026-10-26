@@ -20,13 +20,13 @@
     "line": "Jérémy Martin · jeremymartin.ch"
   },
   "common": {
-    "availableLead": "Available for internships from",
-    "availableDate": "August 2026",
+    "availableLead": "Available for full-time roles from",
+    "availableDate": "August 2027",
     "repliesFrEn": "Replies in French or English, usually within a few working days.",
     "portraitAlt": "Studio portrait of Jérémy Martin, shoulder-length curly hair and a moustache, wearing a black t-shirt against a gray backdrop."
   },
   "home": {
-    "lede": "Interaction and product designer, currently working on agentic experiences (AX) designed around human intent and its consequences. Master's student at SUPSI Mendrisio, available from August 2026.",
+    "lede": "Interaction and product designer, currently working on agentic experiences (AX) designed around human intent and its consequences. Master's student at SUPSI Mendrisio, available for full-time roles from August 2027.",
     "heroMeta": "00 / Portfolio · Jérémy Martin · 2026",
     "heroTitleLine1": "Process is",
     "heroTitleLine2": "the artifact.",
@@ -60,7 +60,7 @@
   },
   "about": {
     "metaTitle": "About",
-    "metaDescription": "Interaction design master at SUPSI Mendrisio, coming to design from electronics and media engineering. Available from August 2026.",
+    "metaDescription": "Interaction design master at SUPSI Mendrisio, coming to design from electronics and media engineering. Available for full-time roles from August 2027.",
     "heroLabel": "About",
     "heroBody": "I'm Jérémy Martin, an interaction and product designer currently working on {emphasis} designed around human intent and its consequences. I'm finishing a Master's in Interaction Design at SUPSI in Mendrisio, with a background in electronics and media engineering.",
     "heroEmphasis": "agentic experiences (AX)",
@@ -85,7 +85,7 @@
     "factsLabel": "Facts",
     "facts": {
       "currentlyKey": "Currently",
-      "currentlyValue": "Master in Interaction Design, SUPSI Mendrisio · graduating 2027",
+      "currentlyValue": "Master in Interaction Design, SUPSI Mendrisio · graduating 2027 · master's internship as Interaction Designer & Front-End Developer at Ticinocom SA, Muralto (Oct 2026 to Jul 2027)",
       "previouslyKey": "Previously",
       "previouslyValue": "BSc Media Engineering, HEIG-VD · one semester Microengineering, EPFL · CMS preparatory bridge year, EPFL · CFC Electronics, HEIA-FR",
       "languagesKey": "Languages",
@@ -93,7 +93,7 @@
       "basedKey": "Based",
       "basedValue": "Mendrisio and Noréaz, Switzerland",
       "availableKey": "Available",
-      "availableValue": "From August 2026",
+      "availableValue": "Full-time roles from August 2027",
       "festivalKey": "Festival",
       "festivalValue": "Baleinev: programmer (2023), head of comms (2024), president (2025). Committee ~25, ~1'000 attendees."
     },
@@ -103,7 +103,7 @@
   },
   "contact": {
     "metaTitle": "Contact",
-    "metaDescription": "Write to Jérémy Martin at hello{'@'}jeremymartin.ch. Available for internships from August 2026, based in Mendrisio and Noréaz.",
+    "metaDescription": "Write to Jérémy Martin at hello{'@'}jeremymartin.ch. Available for full-time roles from August 2027, based in Mendrisio and Noréaz.",
     "heroMeta": "00 / Contact",
     "heroTitle": "Write to me.",
     "essentialsLabel": "The essentials",

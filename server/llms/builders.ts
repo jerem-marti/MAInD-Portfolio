@@ -204,7 +204,7 @@ const blockquote = (locale: Locale): string => `> ${L(locale, 'blockquote',
 
 const intro = (locale: Locale): string => L(locale, 'intro',
   'Jérémy is finishing a Master of Arts in Interaction Design at SUPSI in Mendrisio, '
-  + 'Switzerland, graduating 2027 and available from August 2026. His path runs from a four-year '
+  + 'Switzerland, graduating 2027 and available for full-time roles from August 2027. His path runs from a four-year '
   + 'electronics apprenticeship (CFC) through a BSc in Media Engineering at HEIG-VD to interaction '
   + 'design, and his practice spans hardware prototyping, front-end build, and UX research. '
   + 'He works in French (native) and English (C1). Contact: hello@jeremymartin.ch.')
@@ -291,7 +291,7 @@ export function homeMarkdown(locale: Locale = 'en'): string {
 
   return `${[
     `# ${L(locale, 'home.title', 'Process is the artifact.')}`,
-    `> ${L(locale, 'home.blockquote', `Interaction and product designer, currently working on agentic experiences (AX) designed around human intent and its consequences. Master's student at SUPSI Mendrisio, available from August 2026.`)}`,
+    `> ${L(locale, 'home.blockquote', `Interaction and product designer, currently working on agentic experiences (AX) designed around human intent and its consequences. Master's student at SUPSI Mendrisio, available for full-time roles from August 2027.`)}`,
     `## ${L(locale, 'home.hApproach', 'Approach')}`,
     L(locale, 'home.approach', `AI made design generation cheap. Judging whether it is any good did not. What changed is the tool, not the discipline. The work is centered on agentic experiences (AX): designed around human intent, prompts grounded as design decisions, outputs evaluated against the people who use them.`),
     `## ${L(locale, 'home.hSelectedWork', 'Selected work')}`,
@@ -302,17 +302,17 @@ export function homeMarkdown(locale: Locale = 'en'): string {
     `## ${L(locale, 'home.hAbout', 'About')}`,
     L(locale, 'home.about', `Jérémy's current focus is agentic experiences (AX), designed around user intent. His practice spans hardware prototyping, front-end build, and UX research. Based in Mendrisio and Noréaz, Switzerland.`),
     `## ${L(locale, 'home.hContact', 'Contact')}`,
-    L(locale, 'home.contact', 'Available for internships from August 2026. Email hello@jeremymartin.ch. LinkedIn jermarti. Replies in French or English, usually within a few working days.'),
+    L(locale, 'home.contact', 'Available for full-time roles from August 2027. Email hello@jeremymartin.ch. LinkedIn jermarti. Replies in French or English, usually within a few working days.'),
   ].join('\n\n')}\n`
 }
 
 export function aboutMarkdown(locale: Locale = 'en'): string {
   const facts: Array<[string, string]> = [
-    [L(locale, 'about.fCurrentlyK', 'Currently'), L(locale, 'about.fCurrentlyV', 'Master in Interaction Design, SUPSI Mendrisio · graduating 2027')],
+    [L(locale, 'about.fCurrentlyK', 'Currently'), L(locale, 'about.fCurrentlyV', "Master in Interaction Design, SUPSI Mendrisio · graduating 2027 · master's internship as Interaction Designer & Front-End Developer at Ticinocom SA, Muralto (Oct 2026 to Jul 2027)")],
     [L(locale, 'about.fPreviouslyK', 'Previously'), L(locale, 'about.fPreviouslyV', 'BSc Media Engineering, HEIG-VD · one semester Microengineering, EPFL · CMS preparatory bridge year, EPFL · CFC Electronics, HEIA-FR')],
     [L(locale, 'about.fLanguagesK', 'Languages'), L(locale, 'about.fLanguagesV', 'French (native) · English (C1)')],
     [L(locale, 'about.fBasedK', 'Based'), L(locale, 'about.fBasedV', 'Mendrisio and Noréaz, Switzerland')],
-    [L(locale, 'about.fAvailableK', 'Available'), L(locale, 'about.fAvailableV', 'From August 2026')],
+    [L(locale, 'about.fAvailableK', 'Available'), L(locale, 'about.fAvailableV', 'Full-time roles from August 2027')],
     [L(locale, 'about.fFestivalK', 'Festival'), L(locale, 'about.fFestivalV', `Baleinev: programmer (2023), head of comms (2024), president (2025). Committee ~25, ~1'000 attendees.`)],
   ]
 
@@ -344,7 +344,7 @@ export function aboutMarkdown(locale: Locale = 'en'): string {
 export function contactMarkdown(locale: Locale = 'en'): string {
   const essentials = [
     `- ${L(locale, 'contact.email', 'Email')}: [hello@jeremymartin.ch](mailto:hello@jeremymartin.ch)`,
-    `- ${L(locale, 'contact.available', 'Available for internships from August 2026.')}`,
+    `- ${L(locale, 'contact.available', 'Available for full-time roles from August 2027.')}`,
     `- ${L(locale, 'contact.replies', 'Replies in French or English, usually within a few working days.')}`,
     `- ${L(locale, 'contact.linkedin', 'LinkedIn')}: [jermarti](https://www.linkedin.com/in/jermarti)`,
     `- ${L(locale, 'contact.based', 'Based in Mendrisio and Noréaz, Switzerland.')}`,
@@ -352,7 +352,7 @@ export function contactMarkdown(locale: Locale = 'en'): string {
 
   return `${[
     `# ${L(locale, 'contact.title', 'Write to me.')}`,
-    `> ${L(locale, 'contact.blockquote', 'Reach Jérémy Martin at hello@jeremymartin.ch. Available for internships from August 2026, based in Mendrisio and Noréaz.')}`,
+    `> ${L(locale, 'contact.blockquote', 'Reach Jérémy Martin at hello@jeremymartin.ch. Available for full-time roles from August 2027, based in Mendrisio and Noréaz.')}`,
     `## ${L(locale, 'contact.hEssentials', 'The essentials')}`,
     essentials,
   ].join('\n\n')}\n`

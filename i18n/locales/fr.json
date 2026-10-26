@@ -20,13 +20,13 @@
     "line": "Jérémy Martin · jeremymartin.ch"
   },
   "common": {
-    "availableLead": "Disponible pour un stage dès",
-    "availableDate": "août 2026",
+    "availableLead": "Disponible pour un poste dès",
+    "availableDate": "août 2027",
     "repliesFrEn": "Réponse en français ou en anglais, généralement sous quelques jours ouvrables.",
     "portraitAlt": "Portrait studio de Jérémy Martin, cheveux bouclés mi-longs et moustache, en t-shirt noir sur un fond gris."
   },
   "home": {
-    "lede": "Interaction and product designer travaillant actuellement sur les expériences agentiques (AX), conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI de Mendrisio, disponible dès août 2026.",
+    "lede": "Interaction and product designer travaillant actuellement sur les expériences agentiques (AX), conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI de Mendrisio, disponible pour un poste dès août 2027.",
     "heroMeta": "00 / Portfolio · Jérémy Martin · 2026",
     "heroTitleLine1": "La méthode",
     "heroTitleLine2": "comme matière.",
@@ -60,7 +60,7 @@
   },
   "about": {
     "metaTitle": "À propos",
-    "metaDescription": "Étudiant en master de design d'interaction à la SUPSI de Mendrisio, avec un parcours en électronique et en ingénierie des médias. Disponible dès août 2026.",
+    "metaDescription": "Étudiant en master de design d'interaction à la SUPSI de Mendrisio, avec un parcours en électronique et en ingénierie des médias. Disponible pour un poste dès août 2027.",
     "heroLabel": "À propos",
     "heroBody": "Je suis Jérémy Martin, interaction and product designer travaillant actuellement sur les {emphasis} conçues autour de l'intention humaine et de ses conséquences. Je termine un master en design d'interaction à la SUPSI de Mendrisio, avec un parcours en électronique et en ingénierie des médias.",
     "heroEmphasis": "expériences agentiques (AX)",
@@ -85,7 +85,7 @@
     "factsLabel": "Repères",
     "facts": {
       "currentlyKey": "Actuellement",
-      "currentlyValue": "Master en design d'interaction, SUPSI Mendrisio · diplôme en 2027",
+      "currentlyValue": "Master en design d'interaction, SUPSI Mendrisio · diplôme en 2027 · stage de master comme Interaction Designer & Front-End Developer chez Ticinocom SA, Muralto (oct. 2026 à juil. 2027)",
       "previouslyKey": "Auparavant",
       "previouslyValue": "BSc ingénierie des médias, HEIG-VD · un semestre de microtechnique, EPFL · année passerelle CMS, EPFL · CFC électronique, HEIA-FR",
       "languagesKey": "Langues",
@@ -93,7 +93,7 @@
       "basedKey": "Basé à",
       "basedValue": "Mendrisio et Noréaz, Suisse",
       "availableKey": "Disponible",
-      "availableValue": "Dès août 2026",
+      "availableValue": "Pour un poste dès août 2027",
       "festivalKey": "Festival",
       "festivalValue": "Baleinev : programmateur (2023), responsable communication (2024), président (2025). Comité d'environ 25 personnes, environ 1'000 participants."
     },
@@ -103,7 +103,7 @@
   },
   "contact": {
     "metaTitle": "Contact",
-    "metaDescription": "Écrivez à Jérémy Martin à hello{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio et Noréaz.",
+    "metaDescription": "Écrivez à Jérémy Martin à hello{'@'}jeremymartin.ch. Disponible pour un poste dès août 2027, basé à Mendrisio et Noréaz.",
     "heroMeta": "00 / Contact",
     "heroTitle": "Écrivez-moi.",
     "essentialsLabel": "L'essentiel",
@@ -313,7 +313,7 @@
     },
     "header": "Jérémy Martin — Designer d'interaction",
     "blockquote": "Portfolio de Jérémy Martin, designer d'interaction et de produit travaillant sur les expériences agentiques (AX) conçues autour de l'intention de l'utilisateur. Le site montre comment il pense : le processus est l'artefact, les résultats en sont la preuve. Ce fichier indexe le portfolio pour les modèles de langage.",
-    "intro": "Jérémy termine un master of arts en design d'interaction à la SUPSI de Mendrisio, en Suisse, diplômé en 2027 et disponible dès août 2026. Son parcours va d'un apprentissage d'électronique de quatre ans (CFC) à un BSc en ingénierie des médias à la HEIG-VD, puis au design d'interaction, et sa pratique couvre le prototypage hardware, le développement front-end et la recherche UX. Il travaille en français (langue maternelle) et en anglais (C1). Contact : hello{'@'}jeremymartin.ch.",
+    "intro": "Jérémy termine un master of arts en design d'interaction à la SUPSI de Mendrisio, en Suisse, diplômé en 2027 et disponible pour un poste dès août 2027. Son parcours va d'un apprentissage d'électronique de quatre ans (CFC) à un BSc en ingénierie des médias à la HEIG-VD, puis au design d'interaction, et sa pratique couvre le prototypage hardware, le développement front-end et la recherche UX. Il travaille en français (langue maternelle) et en anglais (C1). Contact : hello{'@'}jeremymartin.ch.",
     "pages": {
       "home": "Accueil",
       "homeDesc": "Point de vue et les trois études de cas mises en avant.",
@@ -332,7 +332,7 @@
       "problemLabel": "Problème",
       "outcomeLabel": "Résultat",
       "title": "La méthode comme matière.",
-      "blockquote": "Interaction and product designer travaillant actuellement sur les expériences agentiques (AX), conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI de Mendrisio, disponible dès août 2026.",
+      "blockquote": "Interaction and product designer travaillant actuellement sur les expériences agentiques (AX), conçues autour de l'intention humaine et de ses conséquences. Étudiant en master à la SUPSI de Mendrisio, disponible pour un poste dès août 2027.",
       "hApproach": "Approche",
       "approach": "L'IA a fait chuter le coût de la production de design. Pas celui d'en juger la qualité. Ce qui a changé, c'est l'outil, pas la discipline. Le travail porte sur les expériences agentiques (AX) : conçues autour de l'intention humaine, des prompts ancrés comme des décisions de design, des résultats évalués à l'aune des personnes qui les utilisent.",
       "hSelectedWork": "Projets sélectionnés",
@@ -341,11 +341,11 @@
       "hAbout": "À propos",
       "about": "Jérémy se concentre aujourd'hui sur les expériences agentiques (AX), conçues autour de l'intention de l'utilisateur. Sa pratique couvre le prototypage, le développement front-end et l'UX design. Basé à Mendrisio et Noréaz, Suisse.",
       "hContact": "Contact",
-      "contact": "Disponible pour un stage dès août 2026. E-mail hello{'@'}jeremymartin.ch. LinkedIn jermarti. Réponse en français ou en anglais, généralement sous quelques jours ouvrables."
+      "contact": "Disponible pour un poste dès août 2027. E-mail hello{'@'}jeremymartin.ch. LinkedIn jermarti. Réponse en français ou en anglais, généralement sous quelques jours ouvrables."
     },
     "about": {
       "fCurrentlyK": "Actuellement",
-      "fCurrentlyV": "Master en design d'interaction, SUPSI Mendrisio · diplôme en 2027",
+      "fCurrentlyV": "Master en design d'interaction, SUPSI Mendrisio · diplôme en 2027 · stage de master comme Interaction Designer & Front-End Developer chez Ticinocom SA, Muralto (oct. 2026 à juil. 2027)",
       "fPreviouslyK": "Auparavant",
       "fPreviouslyV": "BSc ingénierie des médias, HEIG-VD · un semestre de microtechnique, EPFL · année passerelle CMS, EPFL · CFC électronique, HEIA-FR",
       "fLanguagesK": "Langues",
@@ -353,7 +353,7 @@
       "fBasedK": "Basé à",
       "fBasedV": "Mendrisio et Noréaz, Suisse",
       "fAvailableK": "Disponible",
-      "fAvailableV": "Dès août 2026",
+      "fAvailableV": "Pour un poste dès août 2027",
       "fFestivalK": "Festival",
       "fFestivalV": "Baleinev : programmateur (2023), responsable communication (2024), président (2025). Comité d'environ 25 personnes, environ 1'000 participants.",
       "title": "À propos",
@@ -379,12 +379,12 @@
     },
     "contact": {
       "email": "E-mail",
-      "available": "Disponible pour un stage dès août 2026.",
+      "available": "Disponible pour un poste dès août 2027.",
       "replies": "Réponse en français ou en anglais, généralement sous quelques jours ouvrables.",
       "linkedin": "LinkedIn",
       "based": "Basé à Mendrisio et Noréaz, Suisse.",
       "title": "Écrivez-moi.",
-      "blockquote": "Contactez Jérémy Martin à hello{'@'}jeremymartin.ch. Disponible pour un stage dès août 2026, basé à Mendrisio et Noréaz.",
+      "blockquote": "Contactez Jérémy Martin à hello{'@'}jeremymartin.ch. Disponible pour un poste dès août 2027, basé à Mendrisio et Noréaz.",
       "hEssentials": "L'essentiel"
     }
   }
